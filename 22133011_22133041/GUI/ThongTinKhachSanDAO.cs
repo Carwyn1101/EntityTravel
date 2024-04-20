@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -78,6 +80,45 @@ namespace GUI
                 string dest = Path.Combine(appDirectory, filename);
                 File.Copy(opf.FileName, dest, true);
             }
+        }
+        public List<UCThongTinKhachSanUser> GetAllKhachSan()
+        {
+            List<UCThongTinKhachSanUser> khachSanList = new List<UCThongTinKhachSanUser>();
+
+            var kSan = from p in db.ThongTinKhachSans select p;
+
+            foreach (var p in kSan)
+            {
+                UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
+                khachSanList.Add(uc);
+            }
+            return khachSanList;
+        }
+        public List<UCThongTinKhachSanUser> SearchKhachSanByDiaDiem(string diaDiem)
+        {
+            List<UCThongTinKhachSanUser> khachSanList = new List<UCThongTinKhachSanUser>();
+            var kSan = from p in db.ThongTinKhachSans
+                       where p.DiaDiemKhachSan == diaDiem
+                       select p;
+            foreach (var p in kSan)
+            {
+                UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
+                khachSanList.Add(uc);
+            }
+            return khachSanList;
+        }
+        public List<UCDanhGia> DataDanhGia(int id)
+        {
+            List<UCDanhGia> khachSanList = new List<UCDanhGia>();
+            var kSan = from p in db.DanhGias
+                       where p.IDKhachSan == id
+                       select p;
+            foreach (var p in kSan)
+            {
+                UCDanhGia uc = new UCDanhGia(p);
+                khachSanList.Add(uc);
+            }              
+            return khachSanList;
         }
     }
 }

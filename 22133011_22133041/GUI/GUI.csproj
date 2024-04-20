@@ -67,6 +67,18 @@
     <Compile Include="ChiTietKhachSanAdmin.Designer.cs">
       <DependentUpon>ChiTietKhachSanAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietKhachSanUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietKhachSanUser.Designer.cs">
+      <DependentUpon>ChiTietKhachSanUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietPhongCuaKhachSanUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietPhongCuaKhachSanUser.Designer.cs">
+      <DependentUpon>ChiTietPhongCuaKhachSanUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,8 +94,15 @@
     <Compile Include="DanhGia.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DanhGiaCuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhGiaCuaKhachHang.Designer.cs">
+      <DependentUpon>DanhGiaCuaKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoanDAO.cs" />
     <Compile Include="ThongTinKhachSanDAO.cs" />
+    <Compile Include="ThongTinPhongKhachSanDAO.cs" />
     <Compile Include="TrangChuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +126,12 @@
     <Compile Include="ThongTinPhongCuaKhachSan.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TrangChuUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChuUser.Designer.cs">
+      <DependentUpon>TrangChuUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="TravelModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,20 +147,53 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TravelModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="UCDanhGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDanhGia.Designer.cs">
+      <DependentUpon>UCDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCThongTinKhachSanAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCThongTinKhachSanAdmin.Designer.cs">
       <DependentUpon>UCThongTinKhachSanAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCThongTinKhachSanUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCThongTinKhachSanUser.Designer.cs">
+      <DependentUpon>UCThongTinKhachSanUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCThongTinPhongKhachSanUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCThongTinPhongKhachSanUser.Designer.cs">
+      <DependentUpon>UCThongTinPhongKhachSanUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemPhongCuaKhachSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemPhongCuaKhachSan.Designer.cs">
+      <DependentUpon>XemPhongCuaKhachSan.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChiTietKhachSanAdmin.resx">
       <DependentUpon>ChiTietKhachSanAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietKhachSanUser.resx">
+      <DependentUpon>ChiTietKhachSanUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietPhongCuaKhachSanUser.resx">
+      <DependentUpon>ChiTietPhongCuaKhachSanUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangThongTinKhachSan.resx">
       <DependentUpon>DangThongTinKhachSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhGiaCuaKhachHang.resx">
+      <DependentUpon>DanhGiaCuaKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,8 +208,23 @@
     <EmbeddedResource Include="TrangChuAdmin.resx">
       <DependentUpon>TrangChuAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrangChuUser.resx">
+      <DependentUpon>TrangChuUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDanhGia.resx">
+      <DependentUpon>UCDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCThongTinKhachSanAdmin.resx">
       <DependentUpon>UCThongTinKhachSanAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCThongTinKhachSanUser.resx">
+      <DependentUpon>UCThongTinKhachSanUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCThongTinPhongKhachSanUser.resx">
+      <DependentUpon>UCThongTinPhongKhachSanUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemPhongCuaKhachSan.resx">
+      <DependentUpon>XemPhongCuaKhachSan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

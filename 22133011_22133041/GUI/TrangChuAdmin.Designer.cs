@@ -29,46 +29,53 @@
         private void InitializeComponent()
         {
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.flpTrangChu = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblTenTaiKhoan = new System.Windows.Forms.Label();
-            this.btnChoThue = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.lblTenTrangChu = new System.Windows.Forms.Label();
             this.pnlTrangChu = new System.Windows.Forms.Panel();
-            this.pic_DangXuat = new System.Windows.Forms.PictureBox();
+            this.lblTenTrangChu = new System.Windows.Forms.Label();
+            this.btnChoThue = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pic_AnhDaiDien = new System.Windows.Forms.PictureBox();
+            this.lblTenTaiKhoan = new System.Windows.Forms.Label();
+            this.pic_DangXuat = new System.Windows.Forms.PictureBox();
+            this.flpTrangChu = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTrangChu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhDaiDien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator1.FillColor = System.Drawing.Color.DarkOrange;
-            this.guna2Separator1.Location = new System.Drawing.Point(57, 148);
+            this.guna2Separator1.Location = new System.Drawing.Point(88, 138);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1288, 22);
-            this.guna2Separator1.TabIndex = 29;
+            this.guna2Separator1.Size = new System.Drawing.Size(1284, 10);
+            this.guna2Separator1.TabIndex = 26;
             // 
-            // flpTrangChu
+            // pnlTrangChu
             // 
-            this.flpTrangChu.AutoScroll = true;
-            this.flpTrangChu.Location = new System.Drawing.Point(3, 162);
-            this.flpTrangChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flpTrangChu.Name = "flpTrangChu";
-            this.flpTrangChu.Size = new System.Drawing.Size(1468, 431);
-            this.flpTrangChu.TabIndex = 28;
+            this.pnlTrangChu.Controls.Add(this.guna2Separator1);
+            this.pnlTrangChu.Controls.Add(this.pic_DangXuat);
+            this.pnlTrangChu.Controls.Add(this.lblTenTaiKhoan);
+            this.pnlTrangChu.Controls.Add(this.pic_AnhDaiDien);
+            this.pnlTrangChu.Controls.Add(this.btnChoThue);
+            this.pnlTrangChu.Controls.Add(this.lblTenTrangChu);
+            this.pnlTrangChu.Location = new System.Drawing.Point(3, 2);
+            this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlTrangChu.Name = "pnlTrangChu";
+            this.pnlTrangChu.Size = new System.Drawing.Size(1468, 146);
+            this.pnlTrangChu.TabIndex = 8;
             // 
-            // lblTenTaiKhoan
+            // lblTenTrangChu
             // 
-            this.lblTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTaiKhoan.Location = new System.Drawing.Point(1230, 110);
-            this.lblTenTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
-            this.lblTenTaiKhoan.Size = new System.Drawing.Size(189, 39);
-            this.lblTenTaiKhoan.TabIndex = 24;
-            this.lblTenTaiKhoan.Text = "Tên Tài Khoản";
-            this.lblTenTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenTrangChu.AutoSize = true;
+            this.lblTenTrangChu.BackColor = System.Drawing.Color.Transparent;
+            this.lblTenTrangChu.Font = new System.Drawing.Font("NSimSun", 40.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenTrangChu.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblTenTrangChu.Location = new System.Drawing.Point(236, 39);
+            this.lblTenTrangChu.Name = "lblTenTrangChu";
+            this.lblTenTrangChu.Size = new System.Drawing.Size(659, 67);
+            this.lblTenTrangChu.TabIndex = 15;
+            this.lblTenTrangChu.Text = "Enjoy your journey";
+            this.lblTenTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnChoThue
             // 
@@ -76,7 +83,7 @@
             this.btnChoThue.Animated = true;
             this.btnChoThue.AutoRoundedCorners = true;
             this.btnChoThue.BackColor = System.Drawing.Color.Transparent;
-            this.btnChoThue.BorderRadius = 19;
+            this.btnChoThue.BorderRadius = 18;
             this.btnChoThue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnChoThue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnChoThue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -86,72 +93,67 @@
             this.btnChoThue.FillColor2 = System.Drawing.Color.PeachPuff;
             this.btnChoThue.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnChoThue.ForeColor = System.Drawing.Color.Black;
-            this.btnChoThue.Location = new System.Drawing.Point(1087, 97);
+            this.btnChoThue.Location = new System.Drawing.Point(1074, 67);
             this.btnChoThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChoThue.Name = "btnChoThue";
-            this.btnChoThue.Size = new System.Drawing.Size(136, 41);
+            this.btnChoThue.Size = new System.Drawing.Size(136, 39);
             this.btnChoThue.TabIndex = 22;
             this.btnChoThue.Text = "Cho Thuê";
             this.btnChoThue.Click += new System.EventHandler(this.btnChoThue_Click);
-            // 
-            // lblTenTrangChu
-            // 
-            this.lblTenTrangChu.AutoSize = true;
-            this.lblTenTrangChu.BackColor = System.Drawing.Color.Transparent;
-            this.lblTenTrangChu.Font = new System.Drawing.Font("NSimSun", 40.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTrangChu.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblTenTrangChu.Location = new System.Drawing.Point(282, 48);
-            this.lblTenTrangChu.Name = "lblTenTrangChu";
-            this.lblTenTrangChu.Size = new System.Drawing.Size(527, 54);
-            this.lblTenTrangChu.TabIndex = 15;
-            this.lblTenTrangChu.Text = "Enjoy your journey";
-            this.lblTenTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlTrangChu
-            // 
-            this.pnlTrangChu.Controls.Add(this.pic_DangXuat);
-            this.pnlTrangChu.Controls.Add(this.lblTenTaiKhoan);
-            this.pnlTrangChu.Controls.Add(this.pic_AnhDaiDien);
-            this.pnlTrangChu.Controls.Add(this.btnChoThue);
-            this.pnlTrangChu.Controls.Add(this.lblTenTrangChu);
-            this.pnlTrangChu.Location = new System.Drawing.Point(3, -4);
-            this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlTrangChu.Name = "pnlTrangChu";
-            this.pnlTrangChu.Size = new System.Drawing.Size(1468, 162);
-            this.pnlTrangChu.TabIndex = 27;
-            // 
-            // pic_DangXuat
-            // 
-            this.pic_DangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.pic_DangXuat.Image = global::GUI.Properties.Resources.icons8_logout;
-            this.pic_DangXuat.Location = new System.Drawing.Point(1408, 66);
-            this.pic_DangXuat.Name = "pic_DangXuat";
-            this.pic_DangXuat.Size = new System.Drawing.Size(38, 41);
-            this.pic_DangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_DangXuat.TabIndex = 25;
-            this.pic_DangXuat.TabStop = false;
             // 
             // pic_AnhDaiDien
             // 
             this.pic_AnhDaiDien.BackColor = System.Drawing.Color.Transparent;
             this.pic_AnhDaiDien.Image = global::GUI.Properties.Resources._8;
-            this.pic_AnhDaiDien.Location = new System.Drawing.Point(1275, 21);
+            this.pic_AnhDaiDien.Location = new System.Drawing.Point(1274, 11);
             this.pic_AnhDaiDien.Margin = new System.Windows.Forms.Padding(4);
             this.pic_AnhDaiDien.Name = "pic_AnhDaiDien";
-            this.pic_AnhDaiDien.Size = new System.Drawing.Size(91, 81);
+            this.pic_AnhDaiDien.Size = new System.Drawing.Size(91, 79);
             this.pic_AnhDaiDien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_AnhDaiDien.TabIndex = 23;
             this.pic_AnhDaiDien.TabStop = false;
             // 
+            // lblTenTaiKhoan
+            // 
+            this.lblTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenTaiKhoan.Location = new System.Drawing.Point(1230, 94);
+            this.lblTenTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
+            this.lblTenTaiKhoan.Size = new System.Drawing.Size(189, 37);
+            this.lblTenTaiKhoan.TabIndex = 24;
+            this.lblTenTaiKhoan.Text = "Tên Tài Khoản";
+            this.lblTenTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_DangXuat
+            // 
+            this.pic_DangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.pic_DangXuat.Image = global::GUI.Properties.Resources.icons8_logout;
+            this.pic_DangXuat.Location = new System.Drawing.Point(1403, 77);
+            this.pic_DangXuat.Name = "pic_DangXuat";
+            this.pic_DangXuat.Size = new System.Drawing.Size(35, 39);
+            this.pic_DangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_DangXuat.TabIndex = 25;
+            this.pic_DangXuat.TabStop = false;
+            this.pic_DangXuat.Click += new System.EventHandler(this.pic_DangXuat_Click);
+            // 
+            // flpTrangChu
+            // 
+            this.flpTrangChu.AutoScroll = true;
+            this.flpTrangChu.Location = new System.Drawing.Point(3, 155);
+            this.flpTrangChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flpTrangChu.Name = "flpTrangChu";
+            this.flpTrangChu.Size = new System.Drawing.Size(1468, 442);
+            this.flpTrangChu.TabIndex = 9;
+            // 
             // TrangChuAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1475, 588);
-            this.Controls.Add(this.guna2Separator1);
+            this.ClientSize = new System.Drawing.Size(1474, 598);
             this.Controls.Add(this.flpTrangChu);
             this.Controls.Add(this.pnlTrangChu);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TrangChuAdmin";
@@ -159,8 +161,8 @@
             this.Text = "TrangChuAdmin";
             this.pnlTrangChu.ResumeLayout(false);
             this.pnlTrangChu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhDaiDien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,13 +170,13 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        public System.Windows.Forms.FlowLayoutPanel flpTrangChu;
+        private System.Windows.Forms.Panel pnlTrangChu;
         private System.Windows.Forms.PictureBox pic_DangXuat;
         private System.Windows.Forms.Label lblTenTaiKhoan;
         private System.Windows.Forms.PictureBox pic_AnhDaiDien;
         private Guna.UI2.WinForms.Guna2GradientButton btnChoThue;
         private System.Windows.Forms.Label lblTenTrangChu;
-        private System.Windows.Forms.Panel pnlTrangChu;
+        public System.Windows.Forms.FlowLayoutPanel flpTrangChu;
     }
 }
 

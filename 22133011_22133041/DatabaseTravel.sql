@@ -103,6 +103,7 @@ insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNg
 
 CREATE TABLE DanhGia
 (
+	IDDanhGia INT PRIMARY KEY IDENTITY,
 	TenKhachHang nvarchar(max),
 	TraiNghiem nvarchar(max),
 	DiemDanhGia nvarchar(max),
@@ -128,6 +129,7 @@ insert into DanhGia values
 
 CREATE TABLE ThongTinKhachHang
 (
+	IDKhachHang INT PRIMARY KEY IDENTITY,
 	TenKhachHang nvarchar(max),
 	SDT nvarchar(max),
 	CCCD nvarchar(max),

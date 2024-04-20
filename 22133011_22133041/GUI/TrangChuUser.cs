@@ -10,29 +10,35 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class TrangChuAdmin : Form
-    {    
-        ThongTinKhachSanDAO kSDAO = new ThongTinKhachSanDAO();
-        int iDNguoiDung;
+    public partial class TrangChuUser : Form
+    {
+        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         bool logOut;
-        public TrangChuAdmin()
+        public TrangChuUser()
         {
             InitializeComponent();
         }
-        public TrangChuAdmin(string TenDangNhap, int IDNguoiDung)
+        public TrangChuUser(string TenDangNhap, int IDNguoiDung)
         {
             InitializeComponent();
             lblTenTaiKhoan.Text = TenDangNhap;
-            iDNguoiDung = IDNguoiDung;
-            kSDAO.LoadData(flpTrangChu, iDNguoiDung);
         }
-        private void btnChoThue_Click(object sender, EventArgs e)
+
+        private void TrangChuUser_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            DangThongTinKhachSan f = new DangThongTinKhachSan(iDNguoiDung, lblTenTaiKhoan.Text);
-            f.ShowDialog();
-            f = null;
-            this.Close();
+            var kSan = from p in db.ThongTinKhachSans select p;
+            foreach (var p in kSan)
+            {
+                UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
+                this.flpTrangChuUser.Controls.Add(uc);
+            }
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            flpTrangChuUser.Controls.Clear();
+            string DiaDiem = cboDiaDiemTimKiem.Text;
+            UCThongTinKhachSanUser f = new UCThongTinKhachSanUser();
+            f.LoadDataTimKiem(flpTrangChuUser, DiaDiem);
         }
 
         private void pic_DangXuat_Click(object sender, EventArgs e)
@@ -48,7 +54,5 @@ namespace GUI
                 this.Close(); // Đóng form đăng nhập khi đã đăng xuất
             }
         }
-
-        
     }
 }

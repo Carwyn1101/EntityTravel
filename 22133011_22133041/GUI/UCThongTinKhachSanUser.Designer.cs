@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class UCThongTinKhachSanAdmin
+    partial class UCThongTinKhachSanUser
     {
         /// <summary> 
         /// Required designer variable.
@@ -44,10 +44,9 @@
             this.pnl.Controls.Add(this.txtTenKhachSan);
             this.pnl.Controls.Add(this.pictureBoxHinhAnh);
             this.pnl.Controls.Add(this.btnChiTiet);
-            this.pnl.Location = new System.Drawing.Point(4, 2);
-            this.pnl.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pnl.Location = new System.Drawing.Point(3, 3);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(626, 260);
+            this.pnl.Size = new System.Drawing.Size(470, 213);
             this.pnl.TabIndex = 7;
             // 
             // txtDiaDiemKhachSan
@@ -55,7 +54,7 @@
             this.txtDiaDiemKhachSan.Animated = true;
             this.txtDiaDiemKhachSan.AutoRoundedCorners = true;
             this.txtDiaDiemKhachSan.BorderColor = System.Drawing.Color.Black;
-            this.txtDiaDiemKhachSan.BorderRadius = 33;
+            this.txtDiaDiemKhachSan.BorderRadius = 26;
             this.txtDiaDiemKhachSan.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiaDiemKhachSan.DefaultText = "Địa điểm";
             this.txtDiaDiemKhachSan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -66,15 +65,15 @@
             this.txtDiaDiemKhachSan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaDiemKhachSan.ForeColor = System.Drawing.Color.Black;
             this.txtDiaDiemKhachSan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiaDiemKhachSan.Location = new System.Drawing.Point(279, 105);
-            this.txtDiaDiemKhachSan.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtDiaDiemKhachSan.Location = new System.Drawing.Point(209, 85);
+            this.txtDiaDiemKhachSan.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtDiaDiemKhachSan.Name = "txtDiaDiemKhachSan";
             this.txtDiaDiemKhachSan.PasswordChar = '\0';
             this.txtDiaDiemKhachSan.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtDiaDiemKhachSan.PlaceholderText = "";
             this.txtDiaDiemKhachSan.ReadOnly = true;
             this.txtDiaDiemKhachSan.SelectedText = "";
-            this.txtDiaDiemKhachSan.Size = new System.Drawing.Size(255, 68);
+            this.txtDiaDiemKhachSan.Size = new System.Drawing.Size(191, 55);
             this.txtDiaDiemKhachSan.TabIndex = 5;
             // 
             // txtTenKhachSan
@@ -82,7 +81,7 @@
             this.txtTenKhachSan.Animated = true;
             this.txtTenKhachSan.AutoRoundedCorners = true;
             this.txtTenKhachSan.BorderColor = System.Drawing.Color.Black;
-            this.txtTenKhachSan.BorderRadius = 33;
+            this.txtTenKhachSan.BorderRadius = 26;
             this.txtTenKhachSan.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenKhachSan.DefaultText = "Tên Khách Sạn";
             this.txtTenKhachSan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -93,15 +92,15 @@
             this.txtTenKhachSan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKhachSan.ForeColor = System.Drawing.Color.Black;
             this.txtTenKhachSan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenKhachSan.Location = new System.Drawing.Point(279, 6);
-            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtTenKhachSan.Location = new System.Drawing.Point(209, 5);
+            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtTenKhachSan.Name = "txtTenKhachSan";
             this.txtTenKhachSan.PasswordChar = '\0';
             this.txtTenKhachSan.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtTenKhachSan.PlaceholderText = "";
             this.txtTenKhachSan.ReadOnly = true;
             this.txtTenKhachSan.SelectedText = "";
-            this.txtTenKhachSan.Size = new System.Drawing.Size(340, 68);
+            this.txtTenKhachSan.Size = new System.Drawing.Size(255, 55);
             this.txtTenKhachSan.TabIndex = 4;
             // 
             // pictureBoxHinhAnh
@@ -111,9 +110,8 @@
             this.pictureBoxHinhAnh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxHinhAnh.Image = global::GUI.Properties.Resources.AnhUCKhachSan;
             this.pictureBoxHinhAnh.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBoxHinhAnh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBoxHinhAnh.Name = "pictureBoxHinhAnh";
-            this.pictureBoxHinhAnh.Size = new System.Drawing.Size(273, 259);
+            this.pictureBoxHinhAnh.Size = new System.Drawing.Size(204, 211);
             this.pictureBoxHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxHinhAnh.TabIndex = 0;
             this.pictureBoxHinhAnh.TabStop = false;
@@ -122,7 +120,7 @@
             // 
             this.btnChiTiet.Animated = true;
             this.btnChiTiet.AutoRoundedCorners = true;
-            this.btnChiTiet.BorderRadius = 27;
+            this.btnChiTiet.BorderRadius = 21;
             this.btnChiTiet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnChiTiet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnChiTiet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -132,22 +130,20 @@
             this.btnChiTiet.FillColor2 = System.Drawing.Color.PeachPuff;
             this.btnChiTiet.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnChiTiet.ForeColor = System.Drawing.Color.Black;
-            this.btnChiTiet.Location = new System.Drawing.Point(444, 196);
-            this.btnChiTiet.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnChiTiet.Location = new System.Drawing.Point(334, 159);
             this.btnChiTiet.Name = "btnChiTiet";
-            this.btnChiTiet.Size = new System.Drawing.Size(175, 57);
+            this.btnChiTiet.Size = new System.Drawing.Size(130, 45);
             this.btnChiTiet.TabIndex = 3;
             this.btnChiTiet.Text = "Chi tiết";
             this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
-            // UCThongTinKhachSanAdmin
+            // UCThongTinKhachSanUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "UCThongTinKhachSanAdmin";
-            this.Size = new System.Drawing.Size(635, 266);
+            this.Name = "UCThongTinKhachSanUser";
+            this.Size = new System.Drawing.Size(477, 219);
             this.pnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHinhAnh)).EndInit();
             this.ResumeLayout(false);
