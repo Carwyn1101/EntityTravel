@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="09caac3405c54d74a87f5f09f6226279" Name="Diagram1">
+        <EntityTypeShape EntityType="TravelModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelModel.ThongTinKhachSan" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelModel.ThongTinPhongCuaKhachSan" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="TravelModel.FK__ThongTinK__IDChu__408F9238" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelModel.FK__ThongTinP__IDKha__436BFEE3" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TravelModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TravelModel.DanhGia" Width="1.5" PointX="5.25" PointY="8.125" />
+        <EntityTypeShape EntityType="TravelModel.ThongTinKhachHang" Width="1.5" PointX="7.5" PointY="2.625" />
+        <AssociationConnector Association="TravelModel.FK__DanhGia__IDKhach__5E1FF51F" />
+        <AssociationConnector Association="TravelModel.FK__ThongTinK__IDPho__60FC61CA" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
