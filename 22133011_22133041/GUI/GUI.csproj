@@ -73,6 +73,12 @@
     <Compile Include="ChiTietKhachSanUser.Designer.cs">
       <DependentUpon>ChiTietKhachSanUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietPhongCuaKhachSanAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietPhongCuaKhachSanAdmin.Designer.cs">
+      <DependentUpon>ChiTietPhongCuaKhachSanAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietPhongCuaKhachSanUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
       <DependentUpon>DanhGiaCuaKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoanDAO.cs" />
+    <Compile Include="ThemPhongChoKhachSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemPhongChoKhachSan.Designer.cs">
+      <DependentUpon>ThemPhongChoKhachSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinKhachSanDAO.cs" />
     <Compile Include="ThongTinPhongKhachSanDAO.cs" />
     <Compile Include="TrangChuAdmin.cs">
@@ -165,6 +177,12 @@
     <Compile Include="UCThongTinKhachSanUser.Designer.cs">
       <DependentUpon>UCThongTinKhachSanUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCThongTinPhongKhachSanAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCThongTinPhongKhachSanAdmin.Designer.cs">
+      <DependentUpon>UCThongTinPhongKhachSanAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCThongTinPhongKhachSanUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietKhachSanUser.resx">
       <DependentUpon>ChiTietKhachSanUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietPhongCuaKhachSanAdmin.resx">
+      <DependentUpon>ChiTietPhongCuaKhachSanAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietPhongCuaKhachSanUser.resx">
       <DependentUpon>ChiTietPhongCuaKhachSanUser.cs</DependentUpon>
@@ -205,6 +226,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThemPhongChoKhachSan.resx">
+      <DependentUpon>ThemPhongChoKhachSan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrangChuAdmin.resx">
       <DependentUpon>TrangChuAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongTinKhachSanUser.resx">
       <DependentUpon>UCThongTinKhachSanUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCThongTinPhongKhachSanAdmin.resx">
+      <DependentUpon>UCThongTinPhongKhachSanAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongTinPhongKhachSanUser.resx">
       <DependentUpon>UCThongTinPhongKhachSanUser.cs</DependentUpon>
@@ -253,6 +280,8 @@
     <None Include="Resources\icons8-logout.gif" />
     <None Include="Resources\8.jpg" />
     <None Include="Resources\9.jpg" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\5.jpg" />
     <Content Include="TravelModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TravelModel.Context.cs</LastGenOutput>

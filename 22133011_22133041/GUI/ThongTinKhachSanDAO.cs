@@ -48,7 +48,7 @@ namespace GUI
                 db.ThongTinKhachSans.Remove(khachSanToRemove);
                 db.SaveChanges();
             }
-            MessageBox.Show("Xoa thông tin khách sạn thành công!");
+            MessageBox.Show("Xoá thông tin khách sạn thành công!");
         }
         public void Sua(ThongTinKhachSan f)
         {

@@ -77,6 +77,7 @@
             this.btnLamMoi.Size = new System.Drawing.Size(165, 43);
             this.btnLamMoi.TabIndex = 171;
             this.btnLamMoi.Text = "Cập Nhật";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // flpPhongKhachSan
             // 
@@ -313,6 +314,7 @@
             this.btnThemPhong.Size = new System.Drawing.Size(165, 43);
             this.btnThemPhong.TabIndex = 158;
             this.btnThemPhong.Text = "Thêm Phòng";
+            this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
             // 
             // richTextBoxMoTa
             // 
@@ -419,6 +421,7 @@
             this.Controls.Add(this.richTextBoxMoTa);
             this.Name = "ChiTietKhachSanAdmin";
             this.Text = "ChiTietKhachSanAdmin";
+            this.Load += new System.EventHandler(this.ChiTietKhachSanAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoaiPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaDiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh3)).EndInit();

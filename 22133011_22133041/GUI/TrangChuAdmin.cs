@@ -17,14 +17,16 @@ namespace GUI
         bool logOut;
         public TrangChuAdmin()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
         public TrangChuAdmin(string TenDangNhap, int IDNguoiDung)
         {
             InitializeComponent();
             lblTenTaiKhoan.Text = TenDangNhap;
             iDNguoiDung = IDNguoiDung;
+            flpTrangChu.Controls.Clear();
             kSDAO.LoadData(flpTrangChu, iDNguoiDung);
+            Program.TrangChuAdminInstance = this;
         }
         private void btnChoThue_Click(object sender, EventArgs e)
         {
@@ -34,7 +36,6 @@ namespace GUI
             f = null;
             this.Close();
         }
-
         private void pic_DangXuat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
