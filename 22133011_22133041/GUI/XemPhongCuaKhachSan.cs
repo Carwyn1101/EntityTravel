@@ -13,6 +13,7 @@ namespace GUI
     public partial class XemPhongCuaKhachSan : Form
     {
         int iDKhachSan;
+        ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         public XemPhongCuaKhachSan()
         {
             InitializeComponent();
@@ -26,8 +27,18 @@ namespace GUI
         private void XemPhongCuaKhachSan_Load(object sender, EventArgs e)
         {
             flpTrangChuKhachSan.Controls.Clear();
-            UCThongTinPhongKhachSanUser f = new UCThongTinPhongKhachSanUser();
-            f.LoadData(flpTrangChuKhachSan, iDKhachSan);
+            pKSanDAO.LoadDanhSachPhongUser(flpTrangChuKhachSan, iDKhachSan);
+        }
+
+        private void btnTimKiemPhong_Click(object sender, EventArgs e)
+        {
+            flpTrangChuKhachSan.Controls.Clear();
+            string loaiPhong = cboLoaiPhong.Text;
+            pKSanDAO.LoadPhongTheoLoaiPhong(flpTrangChuKhachSan, loaiPhong);
+        }
+        public void ReLoad()
+        {
+            pKSanDAO.LoadDanhSachPhongUser(flpTrangChuKhachSan, iDKhachSan);
         }
     }
 }

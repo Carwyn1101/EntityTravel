@@ -12,7 +12,7 @@ namespace GUI
 {
     public partial class UCThongTinKhachSanAdmin : UserControl
     {
-        int iDChuKhachSan; int iDKhachSan;
+        int iDKhachSan;
         private void btnChiTiet_Click(object sender, EventArgs e)
         {           
             ChiTietKhachSanAdmin f = new ChiTietKhachSanAdmin(iDKhachSan);

@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietKhachHang.Designer.cs">
+      <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietKhachSanAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,7 @@
     <Compile Include="DanhGiaCuaKhachHang.Designer.cs">
       <DependentUpon>DanhGiaCuaKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhGiaDAO.cs" />
     <Compile Include="TaiKhoanDAO.cs" />
     <Compile Include="ThemPhongChoKhachSan.cs">
       <SubType>Form</SubType>
@@ -113,6 +120,7 @@
     <Compile Include="ThemPhongChoKhachSan.Designer.cs">
       <DependentUpon>ThemPhongChoKhachSan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinKhachHangDAO.cs" />
     <Compile Include="ThongTinKhachSanDAO.cs" />
     <Compile Include="ThongTinPhongKhachSanDAO.cs" />
     <Compile Include="TrangChuAdmin.cs">
@@ -189,12 +197,21 @@
     <Compile Include="UCThongTinPhongKhachSanUser.Designer.cs">
       <DependentUpon>UCThongTinPhongKhachSanUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="VietDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VietDanhGia.Designer.cs">
+      <DependentUpon>VietDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="XemPhongCuaKhachSan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="XemPhongCuaKhachSan.Designer.cs">
       <DependentUpon>XemPhongCuaKhachSan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChiTietKhachHang.resx">
+      <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietKhachSanAdmin.resx">
       <DependentUpon>ChiTietKhachSanAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongTinPhongKhachSanUser.resx">
       <DependentUpon>UCThongTinPhongKhachSanUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VietDanhGia.resx">
+      <DependentUpon>VietDanhGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XemPhongCuaKhachSan.resx">
       <DependentUpon>XemPhongCuaKhachSan.cs</DependentUpon>

@@ -185,14 +185,14 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flpTrangChuUser;
-        private System.Windows.Forms.Panel pnlTrangChu;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.PictureBox pic_DangXuat;
-        private System.Windows.Forms.PictureBox pic_AnhDaiDien;
-        private System.Windows.Forms.Label lblTenTaiKhoan;
-        private Guna.UI2.WinForms.Guna2GradientButton btnTimKiem;
-        private System.Windows.Forms.ComboBox cboDiaDiemTimKiem;
-        private System.Windows.Forms.Label lblTenTrangChu;
+        public System.Windows.Forms.FlowLayoutPanel flpTrangChuUser;
+        public System.Windows.Forms.Panel pnlTrangChu;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        public System.Windows.Forms.PictureBox pic_DangXuat;
+        public System.Windows.Forms.PictureBox pic_AnhDaiDien;
+        public System.Windows.Forms.Label lblTenTaiKhoan;
+        public Guna.UI2.WinForms.Guna2GradientButton btnTimKiem;
+        public System.Windows.Forms.ComboBox cboDiaDiemTimKiem;
+        public System.Windows.Forms.Label lblTenTrangChu;
     }
 }

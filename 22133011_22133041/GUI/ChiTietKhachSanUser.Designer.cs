@@ -37,16 +37,16 @@
             this.richTextBoxMoTa = new System.Windows.Forms.RichTextBox();
             this.pictureBoxLoaiPhong = new System.Windows.Forms.PictureBox();
             this.pictureBoxDiaDiem = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxAnh1 = new System.Windows.Forms.PictureBox();
+            this.pic_Anh3 = new System.Windows.Forms.PictureBox();
+            this.pic_Anh2 = new System.Windows.Forms.PictureBox();
+            this.pic_Anh4 = new System.Windows.Forms.PictureBox();
+            this.pic_Anh1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoaiPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaDiem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Anh3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Anh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Anh4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Anh1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLoai
@@ -145,45 +145,45 @@
             this.pictureBoxDiaDiem.TabIndex = 133;
             this.pictureBoxDiaDiem.TabStop = false;
             // 
-            // pictureBox4
+            // pic_Anh3
             // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Location = new System.Drawing.Point(621, 74);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(229, 145);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 128;
-            this.pictureBox4.TabStop = false;
+            this.pic_Anh3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Anh3.Location = new System.Drawing.Point(621, 74);
+            this.pic_Anh3.Name = "pic_Anh3";
+            this.pic_Anh3.Size = new System.Drawing.Size(229, 145);
+            this.pic_Anh3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Anh3.TabIndex = 128;
+            this.pic_Anh3.TabStop = false;
             // 
-            // pictureBox3
+            // pic_Anh2
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(386, 74);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(229, 145);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 127;
-            this.pictureBox3.TabStop = false;
+            this.pic_Anh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Anh2.Location = new System.Drawing.Point(386, 74);
+            this.pic_Anh2.Name = "pic_Anh2";
+            this.pic_Anh2.Size = new System.Drawing.Size(229, 145);
+            this.pic_Anh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Anh2.TabIndex = 127;
+            this.pic_Anh2.TabStop = false;
             // 
-            // pictureBox2
+            // pic_Anh4
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(386, 225);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(464, 150);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 126;
-            this.pictureBox2.TabStop = false;
+            this.pic_Anh4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Anh4.Location = new System.Drawing.Point(386, 225);
+            this.pic_Anh4.Name = "pic_Anh4";
+            this.pic_Anh4.Size = new System.Drawing.Size(464, 150);
+            this.pic_Anh4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Anh4.TabIndex = 126;
+            this.pic_Anh4.TabStop = false;
             // 
-            // pictureBoxAnh1
+            // pic_Anh1
             // 
-            this.pictureBoxAnh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxAnh1.Location = new System.Drawing.Point(11, 74);
-            this.pictureBoxAnh1.Name = "pictureBoxAnh1";
-            this.pictureBoxAnh1.Size = new System.Drawing.Size(369, 301);
-            this.pictureBoxAnh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAnh1.TabIndex = 125;
-            this.pictureBoxAnh1.TabStop = false;
+            this.pic_Anh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Anh1.Location = new System.Drawing.Point(11, 74);
+            this.pic_Anh1.Name = "pic_Anh1";
+            this.pic_Anh1.Size = new System.Drawing.Size(369, 301);
+            this.pic_Anh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Anh1.TabIndex = 125;
+            this.pic_Anh1.TabStop = false;
             // 
             // ChiTietKhachSanUser
             // 
@@ -197,10 +197,10 @@
             this.Controls.Add(this.btnXemPhongTrong);
             this.Controls.Add(this.linklbDanhGia);
             this.Controls.Add(this.txtTenKhachSan);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBoxAnh1);
+            this.Controls.Add(this.pic_Anh3);
+            this.Controls.Add(this.pic_Anh2);
+            this.Controls.Add(this.pic_Anh4);
+            this.Controls.Add(this.pic_Anh1);
             this.Controls.Add(this.richTextBoxMoTa);
             this.Name = "ChiTietKhachSanUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -208,10 +208,10 @@
             this.Load += new System.EventHandler(this.ChiTietKhachSanUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoaiPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaDiem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Anh3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Anh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Anh4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Anh1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,17 +219,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblLoai;
-        private System.Windows.Forms.Label lblDiaDiem;
-        private System.Windows.Forms.PictureBox pictureBoxLoaiPhong;
-        private System.Windows.Forms.PictureBox pictureBoxDiaDiem;
-        private Guna.UI2.WinForms.Guna2GradientButton btnXemPhongTrong;
-        private System.Windows.Forms.LinkLabel linklbDanhGia;
-        private System.Windows.Forms.Label txtTenKhachSan;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBoxAnh1;
-        private System.Windows.Forms.RichTextBox richTextBoxMoTa;
+        public System.Windows.Forms.Label lblLoai;
+        public System.Windows.Forms.Label lblDiaDiem;
+        public System.Windows.Forms.PictureBox pictureBoxLoaiPhong;
+        public System.Windows.Forms.PictureBox pictureBoxDiaDiem;
+        public Guna.UI2.WinForms.Guna2GradientButton btnXemPhongTrong;
+        public System.Windows.Forms.LinkLabel linklbDanhGia;
+        public System.Windows.Forms.Label txtTenKhachSan;
+        public System.Windows.Forms.PictureBox pic_Anh3;
+        public System.Windows.Forms.PictureBox pic_Anh2;
+        public System.Windows.Forms.PictureBox pic_Anh4;
+        public System.Windows.Forms.PictureBox pic_Anh1;
+        public System.Windows.Forms.RichTextBox richTextBoxMoTa;
     }
 }

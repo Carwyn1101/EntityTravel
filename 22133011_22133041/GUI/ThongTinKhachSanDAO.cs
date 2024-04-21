@@ -14,6 +14,7 @@ namespace GUI
     public class ThongTinKhachSanDAO
     {
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         public void LoadData(FlowLayoutPanel flpTrangChu, int iDNguoiDung)
         {
             var ketqua = from c in db.ThongTinKhachSans where c.IDChuKhachSan == iDNguoiDung select c;
@@ -38,7 +39,7 @@ namespace GUI
                 IDChuKhachSan = f.IDChuKhachSan,
             });
             db.SaveChanges();
-            MessageBox.Show("Thêm thông tin khách sạn thành công!");
+            MessageBox.Show("Thêm thông tin khách sạn thành công!");           
         }
         public void Xoa(int iDKhachSan)
         {
@@ -81,45 +82,47 @@ namespace GUI
                 File.Copy(opf.FileName, dest, true);
             }
         }
-        public List<UCThongTinKhachSanUser> GetAllKhachSan()
-        {
-            List<UCThongTinKhachSanUser> khachSanList = new List<UCThongTinKhachSanUser>();
-
+        public void GetAllKhachSan(FlowLayoutPanel flpTrangChu)
+        {            
             var kSan = from p in db.ThongTinKhachSans select p;
-
             foreach (var p in kSan)
             {
                 UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
-                khachSanList.Add(uc);
+                flpTrangChu.Controls.Add(uc);
             }
-            return khachSanList;
         }
-        public List<UCThongTinKhachSanUser> SearchKhachSanByDiaDiem(string diaDiem)
+        public void SearchKhachSanByDiaDiem(FlowLayoutPanel flpTrangChuUser, string diaDiem)
         {
-            List<UCThongTinKhachSanUser> khachSanList = new List<UCThongTinKhachSanUser>();
             var kSan = from p in db.ThongTinKhachSans
                        where p.DiaDiemKhachSan == diaDiem
                        select p;
             foreach (var p in kSan)
             {
                 UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
-                khachSanList.Add(uc);
+                flpTrangChuUser.Controls.Add(uc);
             }
-            return khachSanList;
         }
-        public List<UCDanhGia> DataDanhGia(int id)
+        public void LoadChiTietKhachSanUser(ChiTietKhachSanUser f,int iDKSan)
         {
-            List<UCDanhGia> khachSanList = new List<UCDanhGia>();
-            var kSan = from p in db.DanhGias
-                       where p.IDKhachSan == id
-                       select p;
-            foreach (var p in kSan)
+            var kSan = (from p in db.ThongTinKhachSans
+                        where p.IDKhachSan == iDKSan
+                        select p).SingleOrDefault();
+            if (kSan != null)
             {
-                UCDanhGia uc = new UCDanhGia(p);
-                khachSanList.Add(uc);
-            }              
-            return khachSanList;
-        }
+                f.txtTenKhachSan.Text = kSan.TenKhachSan;
+                f.lblDiaDiem.Text = kSan.DiaDiemKhachSan;
+                f.lblLoai.Text = kSan.Loai;
+                f.richTextBoxMoTa.Text = kSan.MoTa;
+                string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
+                string image2 = Path.Combine(appDirectory, kSan.HinhAnh2);
+                string image3 = Path.Combine(appDirectory, kSan.HinhAnh3);
+                string image4 = Path.Combine(appDirectory, kSan.HinhAnh4);
+                f.pic_Anh1.Image = Image.FromFile(image1);
+                f.pic_Anh2.Image = Image.FromFile(image2);
+                f.pic_Anh3.Image = Image.FromFile(image3);
+                f.pic_Anh4.Image = Image.FromFile(image4);
+            }
+        }       
     }
 }
 

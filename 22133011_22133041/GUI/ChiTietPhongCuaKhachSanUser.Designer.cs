@@ -303,6 +303,7 @@
             this.btnThue.Size = new System.Drawing.Size(225, 44);
             this.btnThue.TabIndex = 258;
             this.btnThue.Text = "Thuê";
+            this.btnThue.Click += new System.EventHandler(this.btnThue_Click);
             // 
             // ChiTietPhongCuaKhachSanUser
             // 
@@ -348,31 +349,31 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblHutThuoc2;
-        private System.Windows.Forms.Label lblHutThuoc1;
-        private System.Windows.Forms.Label lblTienNghiPhong6;
-        private System.Windows.Forms.Label lblTienNghiPhong5;
-        private System.Windows.Forms.Label lblTienNghiPhong4;
-        private System.Windows.Forms.Label lblTienNghiPhong3;
-        private System.Windows.Forms.Label lblTienNghiPhong2;
-        private System.Windows.Forms.Label lblTienNghiPhong1;
-        private System.Windows.Forms.Label lblHuongTamNhin2;
-        private System.Windows.Forms.Label lblHuongTamNhin1;
-        private System.Windows.Forms.Label lblTienNghiPhongTam2;
-        private System.Windows.Forms.Label lblTienNghiPhongTam4;
-        private System.Windows.Forms.Label lblTienNghiPhongTam3;
-        private System.Windows.Forms.Label lblTienNghiPhongTam1;
-        private System.Windows.Forms.Label lblGiaPhong;
-        private System.Windows.Forms.Label lblKichThuocPhong;
-        private System.Windows.Forms.Label lblTenPhong;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.PictureBox pic_Anh2;
-        private System.Windows.Forms.Label lblHutThuoc;
-        private System.Windows.Forms.Label lblKichThuoc;
-        private System.Windows.Forms.Label lblTrongPhongTam;
-        private System.Windows.Forms.Label lblhuongTamNhin;
-        private System.Windows.Forms.Label lblTienNghiPhong;
-        private System.Windows.Forms.PictureBox pic_Anh1;
+        public System.Windows.Forms.Label lblHutThuoc2;
+        public System.Windows.Forms.Label lblHutThuoc1;
+        public System.Windows.Forms.Label lblTienNghiPhong6;
+        public System.Windows.Forms.Label lblTienNghiPhong5;
+        public System.Windows.Forms.Label lblTienNghiPhong4;
+        public System.Windows.Forms.Label lblTienNghiPhong3;
+        public System.Windows.Forms.Label lblTienNghiPhong2;
+        public System.Windows.Forms.Label lblTienNghiPhong1;
+        public System.Windows.Forms.Label lblHuongTamNhin2;
+        public System.Windows.Forms.Label lblHuongTamNhin1;
+        public System.Windows.Forms.Label lblTienNghiPhongTam2;
+        public System.Windows.Forms.Label lblTienNghiPhongTam4;
+        public System.Windows.Forms.Label lblTienNghiPhongTam3;
+        public System.Windows.Forms.Label lblTienNghiPhongTam1;
+        public System.Windows.Forms.Label lblGiaPhong;
+        public System.Windows.Forms.Label lblKichThuocPhong;
+        public System.Windows.Forms.Label lblTenPhong;
+        public System.Windows.Forms.Label label28;
+        public System.Windows.Forms.PictureBox pic_Anh2;
+        public System.Windows.Forms.Label lblHutThuoc;
+        public System.Windows.Forms.Label lblKichThuoc;
+        public System.Windows.Forms.Label lblTrongPhongTam;
+        public System.Windows.Forms.Label lblhuongTamNhin;
+        public System.Windows.Forms.Label lblTienNghiPhong;
+        public System.Windows.Forms.PictureBox pic_Anh1;
         private Guna.UI2.WinForms.Guna2GradientButton btnThue;
     }
 }

@@ -13,7 +13,8 @@ namespace GUI
     public partial class ChiTietKhachSanUser : Form
     {
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
-        int IDKSan;
+        ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
+        int iDKSan;
         public ChiTietKhachSanUser()
         {
             InitializeComponent();
@@ -21,31 +22,20 @@ namespace GUI
         public ChiTietKhachSanUser(int iD)
         {
             InitializeComponent();
-            IDKSan = iD;
+            iDKSan = iD;
         }               
         private void ChiTietKhachSanUser_Load(object sender, EventArgs e)
         {
-            var kSan = (from p in db.ThongTinKhachSans
-                        where p.IDKhachSan == IDKSan
-                        select p).SingleOrDefault();
-
-            if (kSan != null)
-            {
-                txtTenKhachSan.Text = kSan.TenKhachSan;
-                lblDiaDiem.Text = kSan.DiaDiemKhachSan;
-                lblLoai.Text = kSan.Loai;
-                richTextBoxMoTa.Text = kSan.MoTa;
-            }
+            kSanDAO.LoadChiTietKhachSanUser(this,iDKSan);           
         }
         private void btnXemPhongTrong_Click(object sender, EventArgs e)
         {
-            XemPhongCuaKhachSan f = new XemPhongCuaKhachSan(IDKSan);
+            XemPhongCuaKhachSan f = new XemPhongCuaKhachSan(iDKSan);
             f.ShowDialog();
         }
-
         private void linklbDanhGia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DanhGiaCuaKhachHang f = new DanhGiaCuaKhachHang(IDKSan);
+            DanhGiaCuaKhachHang f = new DanhGiaCuaKhachHang(iDKSan);
             f.ShowDialog();
         }
     }

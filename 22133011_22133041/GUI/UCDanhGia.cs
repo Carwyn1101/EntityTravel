@@ -24,15 +24,6 @@ namespace GUI
             lblTraiNghiem.Text = dGia.TraiNghiem;
             lblDiemDanhGia.Text = dGia.DiemDanhGia;
             richTextBoxDanhGia.Text = dGia.DanhGiaNguoiDung;         
-        }
-        public void LoadDataDanhGia(FlowLayoutPanel flpDanhGia, int iD)
-        {
-            ThongTinKhachSanDAO khachSanDAO = new ThongTinKhachSanDAO();
-            List<UCDanhGia> khachSanList = khachSanDAO.DataDanhGia(iD);
-            foreach (UCDanhGia uc in khachSanList)
-            {
-                flpDanhGia.Controls.Add(uc);
-            }
-        }
+        }        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace GUI
     public partial class TrangChuUser : Form
     {
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
         bool logOut;
         public TrangChuUser()
         {
@@ -26,19 +28,13 @@ namespace GUI
 
         private void TrangChuUser_Load(object sender, EventArgs e)
         {
-            var kSan = from p in db.ThongTinKhachSans select p;
-            foreach (var p in kSan)
-            {
-                UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
-                this.flpTrangChuUser.Controls.Add(uc);
-            }
+            kSanDAO.GetAllKhachSan(flpTrangChuUser);
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             flpTrangChuUser.Controls.Clear();
-            string DiaDiem = cboDiaDiemTimKiem.Text;
-            UCThongTinKhachSanUser f = new UCThongTinKhachSanUser();
-            f.LoadDataTimKiem(flpTrangChuUser, DiaDiem);
+            string diaDiem = cboDiaDiemTimKiem.Text;
+            kSanDAO.SearchKhachSanByDiaDiem(flpTrangChuUser, diaDiem);
         }
 
         private void pic_DangXuat_Click(object sender, EventArgs e)
@@ -53,6 +49,10 @@ namespace GUI
                 f = null;
                 this.Close(); // Đóng form đăng nhập khi đã đăng xuất
             }
+        }
+        public void ReLoad()
+        {
+            kSanDAO.GetAllKhachSan(flpTrangChuUser);
         }
     }
 }

@@ -31,7 +31,7 @@
             this.pnlTienDe = new System.Windows.Forms.Panel();
             this.btnTimKiemPhong = new System.Windows.Forms.Button();
             this.cboLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.lblLuongKhach = new System.Windows.Forms.Label();
+            this.lblLoaiPhong = new System.Windows.Forms.Label();
             this.lblPhong = new System.Windows.Forms.Label();
             this.flpTrangChuKhachSan = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTienDe.SuspendLayout();
@@ -41,7 +41,7 @@
             // 
             this.pnlTienDe.Controls.Add(this.btnTimKiemPhong);
             this.pnlTienDe.Controls.Add(this.cboLoaiPhong);
-            this.pnlTienDe.Controls.Add(this.lblLuongKhach);
+            this.pnlTienDe.Controls.Add(this.lblLoaiPhong);
             this.pnlTienDe.Controls.Add(this.lblPhong);
             this.pnlTienDe.Location = new System.Drawing.Point(3, 1);
             this.pnlTienDe.Name = "pnlTienDe";
@@ -57,6 +57,7 @@
             this.btnTimKiemPhong.TabIndex = 12;
             this.btnTimKiemPhong.Text = "Tìm kiếm";
             this.btnTimKiemPhong.UseVisualStyleBackColor = true;
+            this.btnTimKiemPhong.Click += new System.EventHandler(this.btnTimKiemPhong_Click);
             // 
             // cboLoaiPhong
             // 
@@ -70,15 +71,15 @@
             this.cboLoaiPhong.Size = new System.Drawing.Size(188, 28);
             this.cboLoaiPhong.TabIndex = 11;
             // 
-            // lblLuongKhach
+            // lblLoaiPhong
             // 
-            this.lblLuongKhach.AutoSize = true;
-            this.lblLuongKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLuongKhach.Location = new System.Drawing.Point(12, 54);
-            this.lblLuongKhach.Name = "lblLuongKhach";
-            this.lblLuongKhach.Size = new System.Drawing.Size(93, 20);
-            this.lblLuongKhach.TabIndex = 8;
-            this.lblLuongKhach.Text = "Loại Phòng";
+            this.lblLoaiPhong.AutoSize = true;
+            this.lblLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoaiPhong.Location = new System.Drawing.Point(12, 54);
+            this.lblLoaiPhong.Name = "lblLoaiPhong";
+            this.lblLoaiPhong.Size = new System.Drawing.Size(93, 20);
+            this.lblLoaiPhong.TabIndex = 8;
+            this.lblLoaiPhong.Text = "Loại Phòng";
             // 
             // lblPhong
             // 
@@ -119,7 +120,7 @@
         private System.Windows.Forms.Panel pnlTienDe;
         private System.Windows.Forms.Button btnTimKiemPhong;
         private System.Windows.Forms.ComboBox cboLoaiPhong;
-        private System.Windows.Forms.Label lblLuongKhach;
+        private System.Windows.Forms.Label lblLoaiPhong;
         private System.Windows.Forms.Label lblPhong;
         private System.Windows.Forms.FlowLayoutPanel flpTrangChuKhachSan;
     }

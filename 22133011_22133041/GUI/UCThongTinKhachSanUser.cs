@@ -28,30 +28,10 @@ namespace GUI
             mota = kqua.MoTa;
             iD = kqua.IDKhachSan;
         }
-
-        public void LoadData(FlowLayoutPanel flpTrangChuUser)
-        {
-            ThongTinKhachSanDAO khachSanDAO = new ThongTinKhachSanDAO();
-            List<UCThongTinKhachSanUser> khachSanList = khachSanDAO.GetAllKhachSan();
-            foreach (UCThongTinKhachSanUser uc in khachSanList)
-            {
-                flpTrangChuUser.Controls.Add(uc);
-            }
-        }
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
             ChiTietKhachSanUser f = new ChiTietKhachSanUser(iD);
             f.ShowDialog();
-        }
-
-        public void LoadDataTimKiem(FlowLayoutPanel flpTrangChu, string dd)
-        {
-            ThongTinKhachSanDAO khachSanDAO = new ThongTinKhachSanDAO();
-            List<UCThongTinKhachSanUser> khachSanList = khachSanDAO.SearchKhachSanByDiaDiem(dd);
-            foreach (UCThongTinKhachSanUser uc in khachSanList)
-            {
-                flpTrangChu.Controls.Add(uc);
-            }
         }
     }
 }

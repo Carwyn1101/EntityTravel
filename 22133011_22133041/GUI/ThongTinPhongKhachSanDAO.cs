@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,18 +12,17 @@ namespace GUI
     internal class ThongTinPhongKhachSanDAO
     {
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
-        public List<UCThongTinPhongKhachSanUser> LoadData(int id)
-        {
-            List<UCThongTinPhongKhachSanUser> PhongList = new List<UCThongTinPhongKhachSanUser>();
+        string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+        public void LoadDanhSachPhongUser(FlowLayoutPanel flpTrangChuKhachSan, int iDKhachSan)
+        {           
             var kSan = from p in db.ThongTinPhongCuaKhachSans
-                       where p.IDKhachSan == id
+                       where p.IDKhachSan == iDKhachSan
                        select p;
             foreach (var p in kSan)
             {
                 UCThongTinPhongKhachSanUser uc = new UCThongTinPhongKhachSanUser(p);
-                PhongList.Add(uc);
+                flpTrangChuKhachSan.Controls.Add(uc);
             }
-            return PhongList;
         }
         public void LoadDanhSachPhongAdmin(FlowLayoutPanel flpTrangChuAdmin, int id)
         {
@@ -101,6 +102,58 @@ namespace GUI
                 db.SaveChanges();
             }
             MessageBox.Show("Sửa thông tin phòng khách sạn thành công!");
+        }
+        public void LoadChiTietPhongUser(ChiTietPhongCuaKhachSanUser f, int iDPhong)
+        {
+            var kSan = (from p in db.ThongTinPhongCuaKhachSans
+                        where p.IDPhong == iDPhong
+                        select p).SingleOrDefault();
+            if (kSan != null)
+            {
+                f.lblTenPhong.Text = kSan.TenPhong;
+                f.lblKichThuocPhong.Text = kSan.KichThuocPhong;
+                f.lblGiaPhong.Text = kSan.GiaPhong;
+                f.lblTienNghiPhongTam1.Text = kSan.TienNghiPhongTam1;
+                f.lblTienNghiPhongTam2.Text = kSan.TienNghiPhongTam2;
+                f.lblTienNghiPhongTam3.Text = kSan.TienNghiPhongTam3;
+                f.lblTienNghiPhongTam4.Text = kSan.TienNghiPhongTam4;
+                f.lblHuongTamNhin1.Text = kSan.HuongTamNhin1;
+                f.lblHuongTamNhin2.Text = kSan.HuongTamNhin2;
+                f.lblTienNghiPhong1.Text = kSan.TienNghiPhong1;
+                f.lblTienNghiPhong2.Text = kSan.TienNghiPhong2;
+                f.lblTienNghiPhong3.Text = kSan.TienNghiPhong3;
+                f.lblTienNghiPhong4.Text = kSan.TienNghiPhong4;
+                f.lblTienNghiPhong5.Text = kSan.TienNghiPhong5;
+                f.lblTienNghiPhong6.Text = kSan.TienNghiPhong6;
+                f.lblHutThuoc1.Text = kSan.HutThuoc1;
+                f.lblHutThuoc2.Text = kSan.HutThuoc2;
+                string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
+                string image2 = Path.Combine(appDirectory, kSan.HinhAnh2);
+                f.pic_Anh1.Image = Image.FromFile(image1);
+                f.pic_Anh2.Image = Image.FromFile(image2);
+            }
+        }
+        public void LoadPhongTheoLoaiPhong(FlowLayoutPanel flpTrangChuKhachSan, string loaiPhong)
+        {
+            var kSan = from p in db.ThongTinPhongCuaKhachSans
+                       where p.TenPhong == loaiPhong
+                       select p;
+            foreach (var p in kSan)
+            {
+                UCThongTinPhongKhachSanUser uc = new UCThongTinPhongKhachSanUser(p);
+                flpTrangChuKhachSan.Controls.Add(uc);
+            }
+        }
+        public void CapNhatTrangThaiPhong(int iDPhong)
+        {
+            var tmp = from p in db.ThongTinPhongCuaKhachSans                       
+                      select p.ThongTinKhachHangs.Count;
+            if (tmp != null)
+            {
+                ThongTinPhongCuaKhachSan pKSan = db.ThongTinPhongCuaKhachSans.Find(iDPhong);
+                pKSan.TrangThai = "Đã được thuê";
+                db.SaveChanges();
+            }            
         }
     }
 }

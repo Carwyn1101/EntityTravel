@@ -60,6 +60,7 @@ namespace GUI
         {
             kSanDAO.Xoa(iDKhachSan);
             this.Close();
+            Program.TrangChuAdminInstance.flpTrangChu.Controls.Clear();
             kSanDAO.LoadData(Program.TrangChuAdminInstance.flpTrangChu, iDChuKhachSan);
             Program.TrangChuAdminInstance.Show();
         }       
@@ -78,6 +79,7 @@ namespace GUI
             kSan.IDChuKhachSan = iDChuKhachSan;
             kSanDAO.Sua(kSan);
             this.Close();
+            Program.TrangChuAdminInstance.flpTrangChu.Controls.Clear();
             kSanDAO.LoadData(Program.TrangChuAdminInstance.flpTrangChu, iDChuKhachSan);
             Program.TrangChuAdminInstance.Show();
         }

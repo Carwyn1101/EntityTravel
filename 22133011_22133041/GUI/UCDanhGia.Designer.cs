@@ -73,10 +73,10 @@
             this.lblDiemDanhGia.AutoSize = false;
             this.lblDiemDanhGia.BackColor = System.Drawing.Color.Transparent;
             this.lblDiemDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiemDanhGia.Location = new System.Drawing.Point(377, 16);
+            this.lblDiemDanhGia.Location = new System.Drawing.Point(377, 4);
             this.lblDiemDanhGia.Margin = new System.Windows.Forms.Padding(4);
             this.lblDiemDanhGia.Name = "lblDiemDanhGia";
-            this.lblDiemDanhGia.Size = new System.Drawing.Size(197, 34);
+            this.lblDiemDanhGia.Size = new System.Drawing.Size(197, 46);
             this.lblDiemDanhGia.TabIndex = 30;
             this.lblDiemDanhGia.Text = "9.0";
             this.lblDiemDanhGia.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;

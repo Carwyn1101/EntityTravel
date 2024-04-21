@@ -12,19 +12,32 @@ namespace GUI
 {
     public partial class DanhGiaCuaKhachHang : Form
     {      
-        int iD;
+        int iDKSan;
+        DanhGiaDAO dGia = new DanhGiaDAO();
         public DanhGiaCuaKhachHang()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
         public DanhGiaCuaKhachHang(int id)
         {
-            this.iD = id;
+            InitializeComponent();
+            iDKSan = id;
         }
         private void DanhGiaCuaKhachHang_Load(object sender, EventArgs e)
         {
-            UCDanhGia f = new UCDanhGia();
-            f.LoadDataDanhGia(flpDanhGia, iD);
+            dGia.LoadDataDanhGia(flpDanhGia, iDKSan);
+        }
+        private void btnVietDanhGia_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            VietDanhGia f = new VietDanhGia(iDKSan);
+            f.ShowDialog();
+            f = null;
+            this.Close();
+        }
+        public void ReLoadData()
+        {
+            dGia.LoadDataDanhGia(flpDanhGia, iDKSan);
         }
     }
 }
