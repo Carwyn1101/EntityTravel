@@ -14,8 +14,7 @@ namespace GUI
     public partial class ChiTietPhongCuaKhachSanAdmin : Form
     {
         int iDKhachSan, iDPhong; string tenAnh1, tenAnh2;
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
-        string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();      
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         public ChiTietPhongCuaKhachSanAdmin()
@@ -72,38 +71,7 @@ namespace GUI
         }
         private void ChiTietPhongCuaKhachSanAdmin_Load(object sender, EventArgs e)
         {
-            var kSan = (from p in db.ThongTinPhongCuaKhachSans
-                        where p.IDPhong == iDPhong
-                        select p).SingleOrDefault();
-
-            if (kSan != null)
-            {
-                iDPhong = kSan.IDPhong;
-                cboTenPhong.Text = kSan.TenPhong;
-                txtKichThuocPhong.Text = kSan.KichThuocPhong;
-                txtGiaPhong.Text = kSan.GiaPhong;
-                cboTienNghiPhongTam1.Text = kSan.TienNghiPhongTam1;
-                cboTienNghiPhongTam2.Text = kSan.TienNghiPhongTam2;
-                cboTienNghiPhongTam3.Text = kSan.TienNghiPhongTam3;
-                cboTienNghiPhongTam4.Text = kSan.TienNghiPhongTam4;
-                cboHuongTamNhin1.Text = kSan.HuongTamNhin1;
-                cboHuongTamNhin2.Text = kSan.HuongTamNhin2;
-                cboTienNghiPhong1.Text = kSan.TienNghiPhong1;
-                cboTienNghiPhong2.Text = kSan.TienNghiPhong2;
-                cboTienNghiPhong3.Text = kSan.TienNghiPhong3;
-                cboTienNghiPhong4.Text = kSan.TienNghiPhong4;
-                cboTienNghiPhong5.Text = kSan.TienNghiPhong5;
-                cboTienNghiPhong6.Text = kSan.TienNghiPhong6;
-                cboHutThuoc1.Text = kSan.HutThuoc1;
-                cboHutThuoc2.Text = kSan.HutThuoc2;
-                txtTrangThai.Text = kSan.TrangThai;
-                tenAnh1 = kSan.HinhAnh1;
-                tenAnh2 = kSan.HinhAnh2;
-                string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
-                string image2 = Path.Combine(appDirectory, kSan.HinhAnh2);               
-                pic_Anh1.Image = Image.FromFile(image1);
-                pic_Anh2.Image = Image.FromFile(image2);             
-            }
+            pKSanDAO.LoadChiTietPhongAdmin(this, iDPhong, out tenAnh1, out tenAnh2);
         }
     }
 }

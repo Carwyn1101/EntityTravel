@@ -12,7 +12,7 @@ namespace GUI
 {
     public partial class UCThongTinPhongKhachSanUser : UserControl
     {
-        int iDPhong;
+        int iDPhong, iDKhachSan;
         public UCThongTinPhongKhachSanUser()
         {
             InitializeComponent();
@@ -25,10 +25,11 @@ namespace GUI
             lblTrangThai.Text = kSan.TrangThai;
             lblSoGiaTien.Text = kSan.GiaPhong;
             iDPhong = kSan.IDPhong;
+            iDKhachSan = (int)kSan.IDKhachSan;
         }
         private void linklblChiTietPhong_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ChiTietPhongCuaKhachSanUser f = new ChiTietPhongCuaKhachSanUser(iDPhong);
+            ChiTietPhongCuaKhachSanUser f = new ChiTietPhongCuaKhachSanUser(iDPhong,iDKhachSan);
             f.ShowDialog();
         }
     }

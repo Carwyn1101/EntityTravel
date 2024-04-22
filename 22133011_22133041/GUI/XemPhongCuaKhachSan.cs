@@ -22,13 +22,12 @@ namespace GUI
         {
             InitializeComponent();
             this.iDKhachSan = iDKhachSan;
-        }
-
-        private void XemPhongCuaKhachSan_Load(object sender, EventArgs e)
-        {
             flpTrangChuKhachSan.Controls.Clear();
             pKSanDAO.LoadDanhSachPhongUser(flpTrangChuKhachSan, iDKhachSan);
+            Program.XemPhongCuaKhachSanInstance = this;
         }
+
+        
 
         private void btnTimKiemPhong_Click(object sender, EventArgs e)
         {

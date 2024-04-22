@@ -26,18 +26,7 @@ namespace GUI
         }
         public void Them(ThongTinKhachSan f)
         {
-            db.ThongTinKhachSans.Add(new ThongTinKhachSan
-            {
-                TenKhachSan = f.TenKhachSan,
-                DiaDiemKhachSan = f.DiaDiemKhachSan,
-                MoTa = f.MoTa,
-                Loai = f.Loai,
-                HinhAnh1 = f.HinhAnh1,
-                HinhAnh2 = f.HinhAnh2,
-                HinhAnh3 = f.HinhAnh3,
-                HinhAnh4 = f.HinhAnh4,
-                IDChuKhachSan = f.IDChuKhachSan,
-            });
+            db.ThongTinKhachSans.Add(f);
             db.SaveChanges();
             MessageBox.Show("Thêm thông tin khách sạn thành công!");           
         }

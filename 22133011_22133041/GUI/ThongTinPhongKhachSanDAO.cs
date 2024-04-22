@@ -14,7 +14,7 @@ namespace GUI
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         public void LoadDanhSachPhongUser(FlowLayoutPanel flpTrangChuKhachSan, int iDKhachSan)
-        {           
+        {
             var kSan = from p in db.ThongTinPhongCuaKhachSans
                        where p.IDKhachSan == iDKhachSan
                        select p;
@@ -27,7 +27,7 @@ namespace GUI
         public void LoadDanhSachPhongAdmin(FlowLayoutPanel flpTrangChuAdmin, int id)
         {
             var phongAdmin = from c in db.ThongTinPhongCuaKhachSans where c.IDKhachSan == id select c;
-            foreach(var p in phongAdmin)
+            foreach (var p in phongAdmin)
             {
                 UCThongTinPhongKhachSanAdmin uc = new UCThongTinPhongKhachSanAdmin(p);
                 flpTrangChuAdmin.Controls.Add(uc);
@@ -35,31 +35,7 @@ namespace GUI
         }
         public void Them(ThongTinPhongCuaKhachSan f)
         {
-            db.ThongTinPhongCuaKhachSans.Add(new ThongTinPhongCuaKhachSan
-            {
-                TenPhong = f.TenPhong,
-                KichThuocPhong = f.KichThuocPhong,
-                GiaPhong = f.GiaPhong,
-                TienNghiPhongTam1 = f.TienNghiPhongTam1,
-                TienNghiPhongTam2 = f.TienNghiPhongTam2,
-                TienNghiPhongTam3 = f.TienNghiPhongTam3,
-                TienNghiPhongTam4 = f.TienNghiPhongTam4,
-                HuongTamNhin1 = f.HuongTamNhin1,
-                HuongTamNhin2 = f.HuongTamNhin2,
-                TienNghiPhong1 = f.TienNghiPhong1,
-                TienNghiPhong2 = f.TienNghiPhong2,
-                TienNghiPhong3 = f.TienNghiPhong3,
-                TienNghiPhong4 = f.TienNghiPhong4,
-                TienNghiPhong5 = f.TienNghiPhong5,
-                TienNghiPhong6 = f.TienNghiPhong6,
-                HutThuoc1 = f.HutThuoc1,
-                HutThuoc2 = f.HutThuoc2,
-                UuDai = null,
-                TrangThai = f.TrangThai,
-                HinhAnh1 = f.HinhAnh1,
-                HinhAnh2 = f.HinhAnh2,
-                IDKhachSan = f.IDKhachSan,
-            });
+            db.ThongTinPhongCuaKhachSans.Add(f);
             db.SaveChanges();
             MessageBox.Show("Thêm thông tin phòng khách sạn thành công!");
         }
@@ -85,7 +61,7 @@ namespace GUI
                 khachSanToUpdate.TienNghiPhongTam2 = f.TienNghiPhongTam2;
                 khachSanToUpdate.TienNghiPhongTam3 = f.TienNghiPhongTam3;
                 khachSanToUpdate.TienNghiPhongTam4 = f.TienNghiPhongTam4;
-                khachSanToUpdate.HuongTamNhin1  = f.HuongTamNhin1;
+                khachSanToUpdate.HuongTamNhin1 = f.HuongTamNhin1;
                 khachSanToUpdate.HuongTamNhin2 = f.HuongTamNhin2;
                 khachSanToUpdate.TienNghiPhong1 = f.TienNghiPhong1;
                 khachSanToUpdate.TienNghiPhong2 = f.TienNghiPhong2;
@@ -98,7 +74,7 @@ namespace GUI
                 khachSanToUpdate.UuDai = null;
                 khachSanToUpdate.TrangThai = f.TrangThai;
                 khachSanToUpdate.HinhAnh1 = f.HinhAnh1;
-                khachSanToUpdate.HinhAnh2 = f.HinhAnh2;              
+                khachSanToUpdate.HinhAnh2 = f.HinhAnh2;
                 db.SaveChanges();
             }
             MessageBox.Show("Sửa thông tin phòng khách sạn thành công!");
@@ -146,14 +122,49 @@ namespace GUI
         }
         public void CapNhatTrangThaiPhong(int iDPhong)
         {
-            var tmp = from p in db.ThongTinPhongCuaKhachSans                       
+            var tmp = from p in db.ThongTinPhongCuaKhachSans
                       select p.ThongTinKhachHangs.Count;
             if (tmp != null)
             {
                 ThongTinPhongCuaKhachSan pKSan = db.ThongTinPhongCuaKhachSans.Find(iDPhong);
                 pKSan.TrangThai = "Đã được thuê";
                 db.SaveChanges();
-            }            
+            }
+        }
+        public void LoadChiTietPhongAdmin(ChiTietPhongCuaKhachSanAdmin f, int iDPhong, out string tenAnh1, out string tenAnh2)
+        {
+            tenAnh1 = string.Empty; tenAnh2 = string.Empty; 
+            var kSan = (from p in db.ThongTinPhongCuaKhachSans
+                        where p.IDPhong == iDPhong
+                        select p).SingleOrDefault();
+            if (kSan != null)
+            {
+                iDPhong = kSan.IDPhong;
+                f.cboTenPhong.Text = kSan.TenPhong;
+                f.txtKichThuocPhong.Text = kSan.KichThuocPhong;
+                f.txtGiaPhong.Text = kSan.GiaPhong;
+                f.cboTienNghiPhongTam1.Text = kSan.TienNghiPhongTam1;
+                f.cboTienNghiPhongTam2.Text = kSan.TienNghiPhongTam2;
+                f.cboTienNghiPhongTam3.Text = kSan.TienNghiPhongTam3;
+                f.cboTienNghiPhongTam4.Text = kSan.TienNghiPhongTam4;
+                f.cboHuongTamNhin1.Text = kSan.HuongTamNhin1;
+                f.cboHuongTamNhin2.Text = kSan.HuongTamNhin2;
+                f.cboTienNghiPhong1.Text = kSan.TienNghiPhong1;
+                f.cboTienNghiPhong2.Text = kSan.TienNghiPhong2;
+                f.cboTienNghiPhong3.Text = kSan.TienNghiPhong3;
+                f.cboTienNghiPhong4.Text = kSan.TienNghiPhong4;
+                f.cboTienNghiPhong5.Text = kSan.TienNghiPhong5;
+                f.cboTienNghiPhong6.Text = kSan.TienNghiPhong6;
+                f.cboHutThuoc1.Text = kSan.HutThuoc1;
+                f.cboHutThuoc2.Text = kSan.HutThuoc2;
+                f.txtTrangThai.Text = kSan.TrangThai;
+                tenAnh1 = kSan.HinhAnh1;
+                tenAnh2 = kSan.HinhAnh2;
+                string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
+                string image2 = Path.Combine(appDirectory, kSan.HinhAnh2);
+                f.pic_Anh1.Image = Image.FromFile(image1);
+                f.pic_Anh2.Image = Image.FromFile(image2);
+            }
         }
     }
 }

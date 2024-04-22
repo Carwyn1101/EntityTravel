@@ -110,3 +110,36 @@ D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133
 D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.pdb
 D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.VietDanhGia.resources
 D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ChiTietKhachHang.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\bin\Debug\GUI.exe.config
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\bin\Debug\GUI.exe
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\bin\Debug\GUI.pdb
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\bin\Debug\EntityFramework.dll
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\bin\Debug\Guna.UI2.dll
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\bin\Debug\EntityFramework.xml
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ChiTietKhachHang.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ChiTietKhachSanAdmin.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ChiTietKhachSanUser.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ChiTietPhongCuaKhachSanAdmin.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ChiTietPhongCuaKhachSanUser.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.DangNhap.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.DangThongTinKhachSan.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.DanhGiaCuaKhachHang.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ThemPhongChoKhachSan.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.TrangChuAdmin.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.TrangChuUser.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCDanhGia.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCThongTinKhachSanAdmin.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCThongTinKhachSanUser.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCThongTinPhongKhachSanAdmin.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCThongTinPhongKhachSanUser.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.VietDanhGia.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.XemPhongCuaKhachSan.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.exe
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.pdb

@@ -14,15 +14,16 @@ namespace GUI
     {
         ThongTinKhachHangDAO kHangDAO = new ThongTinKhachHangDAO();
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
-        int iDPhong;
+        int iDPhong, iDKhachSan;
         public ChiTietKhachHang()
         {
             InitializeComponent();
         }
-        public ChiTietKhachHang(int iDPhong)
+        public ChiTietKhachHang(int iDPhong, int iDKhachSan)
         {
             InitializeComponent();
             this.iDPhong = iDPhong;
+            this.iDKhachSan = iDKhachSan;
         }
         private void btnThue_Click(object sender, EventArgs e)
         {
@@ -37,6 +38,9 @@ namespace GUI
             kHang.IDPhong = iDPhong;
             kHangDAO.Them(kHang);
             pKSanDAO.CapNhatTrangThaiPhong(iDPhong);
+            Program.XemPhongCuaKhachSanInstance.Close();
+            XemPhongCuaKhachSan f = new XemPhongCuaKhachSan(iDKhachSan);
+            f.ShowDialog();
         }
     }
 }

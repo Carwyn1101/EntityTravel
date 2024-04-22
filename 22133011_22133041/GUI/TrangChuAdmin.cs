@@ -13,8 +13,7 @@ namespace GUI
     public partial class TrangChuAdmin : Form
     {    
         ThongTinKhachSanDAO kSDAO = new ThongTinKhachSanDAO();
-        int iDNguoiDung;
-        bool logOut;
+        int iDNguoiDung; bool logOut;
         public TrangChuAdmin()
         {
             InitializeComponent();           
@@ -48,8 +47,6 @@ namespace GUI
                 f = null;
                 this.Close(); // Đóng form đăng nhập khi đã đăng xuất
             }
-        }
-
-        
+        }      
     }
 }

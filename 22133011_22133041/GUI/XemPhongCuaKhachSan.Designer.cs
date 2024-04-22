@@ -108,13 +108,11 @@
             this.Name = "XemPhongCuaKhachSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XemPhongCuaKhachSan";
-            this.Load += new System.EventHandler(this.XemPhongCuaKhachSan_Load);
+            
             this.pnlTienDe.ResumeLayout(false);
             this.pnlTienDe.PerformLayout();
             this.ResumeLayout(false);
-
         }
-
         #endregion
 
         private System.Windows.Forms.Panel pnlTienDe;

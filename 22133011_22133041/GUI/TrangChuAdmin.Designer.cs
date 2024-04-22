@@ -36,6 +36,7 @@
             this.btnChoThue = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblTenTrangChu = new System.Windows.Forms.Label();
             this.flpTrangChu = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnlTrangChu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhDaiDien)).BeginInit();
@@ -45,34 +46,35 @@
             // 
             this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator1.FillColor = System.Drawing.Color.DarkOrange;
-            this.guna2Separator1.Location = new System.Drawing.Point(88, 138);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Separator1.Location = new System.Drawing.Point(66, 112);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1284, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(963, 8);
             this.guna2Separator1.TabIndex = 26;
             // 
             // pnlTrangChu
             // 
+            this.pnlTrangChu.Controls.Add(this.btnThongKe);
             this.pnlTrangChu.Controls.Add(this.guna2Separator1);
             this.pnlTrangChu.Controls.Add(this.pic_DangXuat);
             this.pnlTrangChu.Controls.Add(this.lblTenTaiKhoan);
             this.pnlTrangChu.Controls.Add(this.pic_AnhDaiDien);
             this.pnlTrangChu.Controls.Add(this.btnChoThue);
             this.pnlTrangChu.Controls.Add(this.lblTenTrangChu);
-            this.pnlTrangChu.Location = new System.Drawing.Point(3, 2);
-            this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlTrangChu.Location = new System.Drawing.Point(2, 2);
+            this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTrangChu.Name = "pnlTrangChu";
-            this.pnlTrangChu.Size = new System.Drawing.Size(1468, 146);
+            this.pnlTrangChu.Size = new System.Drawing.Size(1101, 119);
             this.pnlTrangChu.TabIndex = 8;
             // 
             // pic_DangXuat
             // 
             this.pic_DangXuat.BackColor = System.Drawing.Color.Transparent;
             this.pic_DangXuat.Image = global::GUI.Properties.Resources.icons8_logout;
-            this.pic_DangXuat.Location = new System.Drawing.Point(1403, 78);
-            this.pic_DangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_DangXuat.Location = new System.Drawing.Point(1052, 63);
+            this.pic_DangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.pic_DangXuat.Name = "pic_DangXuat";
-            this.pic_DangXuat.Size = new System.Drawing.Size(35, 39);
+            this.pic_DangXuat.Size = new System.Drawing.Size(26, 32);
             this.pic_DangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_DangXuat.TabIndex = 25;
             this.pic_DangXuat.TabStop = false;
@@ -81,10 +83,9 @@
             // lblTenTaiKhoan
             // 
             this.lblTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTaiKhoan.Location = new System.Drawing.Point(1229, 94);
-            this.lblTenTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTenTaiKhoan.Location = new System.Drawing.Point(922, 76);
             this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
-            this.lblTenTaiKhoan.Size = new System.Drawing.Size(189, 37);
+            this.lblTenTaiKhoan.Size = new System.Drawing.Size(142, 30);
             this.lblTenTaiKhoan.TabIndex = 24;
             this.lblTenTaiKhoan.Text = "Tên Tài Khoản";
             this.lblTenTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,10 +94,9 @@
             // 
             this.pic_AnhDaiDien.BackColor = System.Drawing.Color.Transparent;
             this.pic_AnhDaiDien.Image = global::GUI.Properties.Resources._8;
-            this.pic_AnhDaiDien.Location = new System.Drawing.Point(1275, 11);
-            this.pic_AnhDaiDien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_AnhDaiDien.Location = new System.Drawing.Point(956, 9);
             this.pic_AnhDaiDien.Name = "pic_AnhDaiDien";
-            this.pic_AnhDaiDien.Size = new System.Drawing.Size(91, 79);
+            this.pic_AnhDaiDien.Size = new System.Drawing.Size(68, 64);
             this.pic_AnhDaiDien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_AnhDaiDien.TabIndex = 23;
             this.pic_AnhDaiDien.TabStop = false;
@@ -107,7 +107,7 @@
             this.btnChoThue.Animated = true;
             this.btnChoThue.AutoRoundedCorners = true;
             this.btnChoThue.BackColor = System.Drawing.Color.Transparent;
-            this.btnChoThue.BorderRadius = 18;
+            this.btnChoThue.BorderRadius = 15;
             this.btnChoThue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnChoThue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnChoThue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -117,10 +117,10 @@
             this.btnChoThue.FillColor2 = System.Drawing.Color.PeachPuff;
             this.btnChoThue.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnChoThue.ForeColor = System.Drawing.Color.Black;
-            this.btnChoThue.Location = new System.Drawing.Point(1075, 66);
-            this.btnChoThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChoThue.Location = new System.Drawing.Point(806, 63);
+            this.btnChoThue.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoThue.Name = "btnChoThue";
-            this.btnChoThue.Size = new System.Drawing.Size(136, 39);
+            this.btnChoThue.Size = new System.Drawing.Size(102, 32);
             this.btnChoThue.TabIndex = 22;
             this.btnChoThue.Text = "Cho Thuê";
             this.btnChoThue.Click += new System.EventHandler(this.btnChoThue_Click);
@@ -131,9 +131,10 @@
             this.lblTenTrangChu.BackColor = System.Drawing.Color.Transparent;
             this.lblTenTrangChu.Font = new System.Drawing.Font("NSimSun", 40.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenTrangChu.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblTenTrangChu.Location = new System.Drawing.Point(236, 39);
+            this.lblTenTrangChu.Location = new System.Drawing.Point(177, 32);
+            this.lblTenTrangChu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenTrangChu.Name = "lblTenTrangChu";
-            this.lblTenTrangChu.Size = new System.Drawing.Size(659, 67);
+            this.lblTenTrangChu.Size = new System.Drawing.Size(527, 54);
             this.lblTenTrangChu.TabIndex = 15;
             this.lblTenTrangChu.Text = "Enjoy your journey";
             this.lblTenTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,21 +142,43 @@
             // flpTrangChu
             // 
             this.flpTrangChu.AutoScroll = true;
-            this.flpTrangChu.Location = new System.Drawing.Point(3, 155);
-            this.flpTrangChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flpTrangChu.Location = new System.Drawing.Point(2, 126);
+            this.flpTrangChu.Margin = new System.Windows.Forms.Padding(2);
             this.flpTrangChu.Name = "flpTrangChu";
-            this.flpTrangChu.Size = new System.Drawing.Size(1468, 441);
+            this.flpTrangChu.Size = new System.Drawing.Size(1101, 421);
             this.flpTrangChu.TabIndex = 9;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnThongKe.Animated = true;
+            this.btnThongKe.AutoRoundedCorners = true;
+            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.BorderRadius = 15;
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKe.FillColor = System.Drawing.Color.Orange;
+            this.btnThongKe.FillColor2 = System.Drawing.Color.PeachPuff;
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
+            this.btnThongKe.Location = new System.Drawing.Point(806, 9);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(102, 32);
+            this.btnThongKe.TabIndex = 27;
+            this.btnThongKe.Text = "Thống kê";
             // 
             // TrangChuAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1477, 598);
+            this.ClientSize = new System.Drawing.Size(1108, 549);
             this.Controls.Add(this.flpTrangChu);
             this.Controls.Add(this.pnlTrangChu);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TrangChuAdmin";
@@ -179,6 +202,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnChoThue;
         private System.Windows.Forms.Label lblTenTrangChu;
         public System.Windows.Forms.FlowLayoutPanel flpTrangChu;
+        private Guna.UI2.WinForms.Guna2GradientButton btnThongKe;
     }
 }
 
