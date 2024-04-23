@@ -434,24 +434,24 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2GradientButton btnLamMoi;
+        public Guna.UI2.WinForms.Guna2GradientButton btnLamMoi;
         public System.Windows.Forms.FlowLayoutPanel flpPhongKhachSan;
-        private Guna.UI2.WinForms.Guna2GradientButton btnXoa;
-        private Guna.UI2.WinForms.Guna2GradientButton btnLuu;
-        private Guna.UI2.WinForms.Guna2TextBox txtLoai;
-        private Guna.UI2.WinForms.Guna2TextBox txtDiaDiem;
-        private Guna.UI2.WinForms.Guna2TextBox txtTenKhachSan;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh4;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh2;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh3;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh1;
-        private System.Windows.Forms.PictureBox pictureBoxLoaiPhong;
-        private System.Windows.Forms.PictureBox pictureBoxDiaDiem;
-        private Guna.UI2.WinForms.Guna2GradientButton btnThemPhong;
-        private System.Windows.Forms.PictureBox pic_Anh3;
-        private System.Windows.Forms.PictureBox pic_Anh2;
-        private System.Windows.Forms.PictureBox pic_Anh4;
-        private System.Windows.Forms.PictureBox pic_Anh1;
-        private System.Windows.Forms.RichTextBox richTextBoxMoTa;
+        public Guna.UI2.WinForms.Guna2GradientButton btnXoa;
+        public Guna.UI2.WinForms.Guna2GradientButton btnLuu;
+        public Guna.UI2.WinForms.Guna2TextBox txtLoai;
+        public Guna.UI2.WinForms.Guna2TextBox txtDiaDiem;
+        public Guna.UI2.WinForms.Guna2TextBox txtTenKhachSan;
+        public Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh4;
+        public Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh2;
+        public Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh3;
+        public Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh1;
+        public System.Windows.Forms.PictureBox pictureBoxLoaiPhong;
+        public System.Windows.Forms.PictureBox pictureBoxDiaDiem;
+        public Guna.UI2.WinForms.Guna2GradientButton btnThemPhong;
+        public System.Windows.Forms.PictureBox pic_Anh3;
+        public System.Windows.Forms.PictureBox pic_Anh2;
+        public System.Windows.Forms.PictureBox pic_Anh4;
+        public System.Windows.Forms.PictureBox pic_Anh1;
+        public System.Windows.Forms.RichTextBox richTextBoxMoTa;
     }
 }

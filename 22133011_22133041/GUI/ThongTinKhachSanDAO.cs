@@ -84,7 +84,7 @@ namespace GUI
         {
             var kSan = from p in db.ThongTinKhachSans
                        where p.DiaDiemKhachSan == diaDiem
-                       select p;
+                       select p; 
             foreach (var p in kSan)
             {
                 UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
@@ -111,7 +111,34 @@ namespace GUI
                 f.pic_Anh3.Image = Image.FromFile(image3);
                 f.pic_Anh4.Image = Image.FromFile(image4);
             }
-        }       
+        }
+        public void LoadChiTietKhachSanAdmin(ChiTietKhachSanAdmin f, int iDKhachSan, out string tenAnh1, out string tenAnh2, out string tenAnh3, out string tenAnh4, out int iDChuKhachSan)
+        {
+            tenAnh1 = string.Empty; tenAnh2 = string.Empty; tenAnh3 = string.Empty; tenAnh4 = string.Empty; iDChuKhachSan = 0;
+            var kSan = (from p in db.ThongTinKhachSans
+                        where p.IDKhachSan == iDKhachSan
+                        select p).SingleOrDefault();
+            if (kSan != null)
+            {
+                f.txtTenKhachSan.Text = kSan.TenKhachSan;
+                f.txtDiaDiem.Text = kSan.DiaDiemKhachSan;
+                f.txtLoai.Text = kSan.Loai;
+                f.richTextBoxMoTa.Text = kSan.MoTa;
+                tenAnh1 = kSan.HinhAnh1;
+                tenAnh2 = kSan.HinhAnh2;
+                tenAnh3 = kSan.HinhAnh3;
+                tenAnh4 = kSan.HinhAnh4;
+                iDChuKhachSan = (int)kSan.IDChuKhachSan;
+                string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
+                string image2 = Path.Combine(appDirectory, kSan.HinhAnh2);
+                string image3 = Path.Combine(appDirectory, kSan.HinhAnh3);
+                string image4 = Path.Combine(appDirectory, kSan.HinhAnh4);
+                f.pic_Anh1.Image = Image.FromFile(image1);
+                f.pic_Anh2.Image = Image.FromFile(image2);
+                f.pic_Anh3.Image = Image.FromFile(image3);
+                f.pic_Anh4.Image = Image.FromFile(image4);
+            }
+        }
     }
 }
 

@@ -31,30 +31,7 @@ namespace GUI
         }
         private void ChiTietKhachSanAdmin_Load(object sender, EventArgs e)
         {
-            var kSan = (from p in db.ThongTinKhachSans
-                        where p.IDKhachSan == iDKhachSan
-                        select p).SingleOrDefault();
-
-            if (kSan != null)
-            {
-                txtTenKhachSan.Text = kSan.TenKhachSan;
-                txtDiaDiem.Text = kSan.DiaDiemKhachSan;
-                txtLoai.Text = kSan.Loai;
-                richTextBoxMoTa.Text = kSan.MoTa;
-                tenAnh1 = kSan.HinhAnh1;
-                tenAnh2 = kSan.HinhAnh2;
-                tenAnh3 = kSan.HinhAnh3;
-                tenAnh4 = kSan.HinhAnh4;
-                iDChuKhachSan = (int)kSan.IDChuKhachSan;
-                string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
-                string image2 = Path.Combine(appDirectory, kSan.HinhAnh2);
-                string image3 = Path.Combine(appDirectory, kSan.HinhAnh3);
-                string image4 = Path.Combine(appDirectory, kSan.HinhAnh4);
-                pic_Anh1.Image = Image.FromFile(image1);
-                pic_Anh2.Image = Image.FromFile(image2);
-                pic_Anh3.Image = Image.FromFile(image3);
-                pic_Anh4.Image = Image.FromFile(image4);
-            }
+            kSanDAO.LoadChiTietKhachSanAdmin(this, iDKhachSan, out tenAnh1, out tenAnh2, out tenAnh3, out tenAnh4, out iDChuKhachSan);
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {

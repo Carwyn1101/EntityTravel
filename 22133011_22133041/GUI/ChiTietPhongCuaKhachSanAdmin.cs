@@ -13,8 +13,7 @@ namespace GUI
 {
     public partial class ChiTietPhongCuaKhachSanAdmin : Form
     {
-        int iDKhachSan, iDPhong; string tenAnh1, tenAnh2;
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();      
+        int iDKhachSan, iDPhong; string tenAnh1, tenAnh2;     
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         public ChiTietPhongCuaKhachSanAdmin()

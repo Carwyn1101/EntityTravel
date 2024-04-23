@@ -52,18 +52,20 @@
             // lblLoai
             // 
             this.lblLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoai.Location = new System.Drawing.Point(345, 540);
+            this.lblLoai.Location = new System.Drawing.Point(259, 439);
+            this.lblLoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLoai.Name = "lblLoai";
-            this.lblLoai.Size = new System.Drawing.Size(141, 52);
+            this.lblLoai.Size = new System.Drawing.Size(106, 42);
             this.lblLoai.TabIndex = 136;
             this.lblLoai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDiaDiem
             // 
             this.lblDiaDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaDiem.Location = new System.Drawing.Point(72, 540);
+            this.lblDiaDiem.Location = new System.Drawing.Point(54, 439);
+            this.lblDiaDiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiaDiem.Name = "lblDiaDiem";
-            this.lblDiaDiem.Size = new System.Drawing.Size(141, 52);
+            this.lblDiaDiem.Size = new System.Drawing.Size(106, 42);
             this.lblDiaDiem.TabIndex = 135;
             this.lblDiaDiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -71,7 +73,7 @@
             // 
             this.btnXemPhongTrong.Animated = true;
             this.btnXemPhongTrong.AutoRoundedCorners = true;
-            this.btnXemPhongTrong.BorderRadius = 21;
+            this.btnXemPhongTrong.BorderRadius = 17;
             this.btnXemPhongTrong.BorderThickness = 1;
             this.btnXemPhongTrong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnXemPhongTrong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -82,9 +84,10 @@
             this.btnXemPhongTrong.FillColor2 = System.Drawing.Color.White;
             this.btnXemPhongTrong.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnXemPhongTrong.ForeColor = System.Drawing.Color.Black;
-            this.btnXemPhongTrong.Location = new System.Drawing.Point(327, 627);
+            this.btnXemPhongTrong.Location = new System.Drawing.Point(230, 513);
+            this.btnXemPhongTrong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXemPhongTrong.Name = "btnXemPhongTrong";
-            this.btnXemPhongTrong.Size = new System.Drawing.Size(212, 45);
+            this.btnXemPhongTrong.Size = new System.Drawing.Size(159, 37);
             this.btnXemPhongTrong.TabIndex = 132;
             this.btnXemPhongTrong.Text = "Xem phòng trống";
             this.btnXemPhongTrong.Click += new System.EventHandler(this.btnXemPhongTrong_Click);
@@ -94,9 +97,10 @@
             this.linklbDanhGia.AutoSize = true;
             this.linklbDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linklbDanhGia.LinkColor = System.Drawing.Color.Black;
-            this.linklbDanhGia.Location = new System.Drawing.Point(578, 561);
+            this.linklbDanhGia.Location = new System.Drawing.Point(434, 456);
+            this.linklbDanhGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linklbDanhGia.Name = "linklbDanhGia";
-            this.linklbDanhGia.Size = new System.Drawing.Size(133, 25);
+            this.linklbDanhGia.Size = new System.Drawing.Size(107, 20);
             this.linklbDanhGia.TabIndex = 131;
             this.linklbDanhGia.TabStop = true;
             this.linklbDanhGia.Text = "Xem đánh giá";
@@ -107,8 +111,9 @@
             this.txtTenKhachSan.AllowDrop = true;
             this.txtTenKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKhachSan.Location = new System.Drawing.Point(1, 0);
+            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtTenKhachSan.Name = "txtTenKhachSan";
-            this.txtTenKhachSan.Size = new System.Drawing.Size(863, 71);
+            this.txtTenKhachSan.Size = new System.Drawing.Size(647, 58);
             this.txtTenKhachSan.TabIndex = 129;
             this.txtTenKhachSan.Text = "Tên Khách Sạn";
             this.txtTenKhachSan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,10 +121,11 @@
             // richTextBoxMoTa
             // 
             this.richTextBoxMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxMoTa.Location = new System.Drawing.Point(11, 391);
+            this.richTextBoxMoTa.Location = new System.Drawing.Point(8, 318);
+            this.richTextBoxMoTa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBoxMoTa.Name = "richTextBoxMoTa";
             this.richTextBoxMoTa.ReadOnly = true;
-            this.richTextBoxMoTa.Size = new System.Drawing.Size(839, 129);
+            this.richTextBoxMoTa.Size = new System.Drawing.Size(630, 106);
             this.richTextBoxMoTa.TabIndex = 130;
             this.richTextBoxMoTa.Text = resources.GetString("richTextBoxMoTa.Text");
             // 
@@ -127,9 +133,10 @@
             // 
             this.pictureBoxLoaiPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxLoaiPhong.Image = global::GUI.Properties.Resources.AnhUCKhachSan;
-            this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(284, 540);
+            this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(213, 439);
+            this.pictureBoxLoaiPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxLoaiPhong.Name = "pictureBoxLoaiPhong";
-            this.pictureBoxLoaiPhong.Size = new System.Drawing.Size(55, 52);
+            this.pictureBoxLoaiPhong.Size = new System.Drawing.Size(42, 43);
             this.pictureBoxLoaiPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLoaiPhong.TabIndex = 134;
             this.pictureBoxLoaiPhong.TabStop = false;
@@ -138,9 +145,10 @@
             // 
             this.pictureBoxDiaDiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxDiaDiem.Image = global::GUI.Properties.Resources.iconDiaDiem;
-            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(11, 540);
+            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(8, 439);
+            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxDiaDiem.Name = "pictureBoxDiaDiem";
-            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(55, 52);
+            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(42, 43);
             this.pictureBoxDiaDiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxDiaDiem.TabIndex = 133;
             this.pictureBoxDiaDiem.TabStop = false;
@@ -148,9 +156,10 @@
             // pic_Anh3
             // 
             this.pic_Anh3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh3.Location = new System.Drawing.Point(621, 74);
+            this.pic_Anh3.Location = new System.Drawing.Point(466, 60);
+            this.pic_Anh3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic_Anh3.Name = "pic_Anh3";
-            this.pic_Anh3.Size = new System.Drawing.Size(229, 145);
+            this.pic_Anh3.Size = new System.Drawing.Size(172, 118);
             this.pic_Anh3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh3.TabIndex = 128;
             this.pic_Anh3.TabStop = false;
@@ -158,9 +167,10 @@
             // pic_Anh2
             // 
             this.pic_Anh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh2.Location = new System.Drawing.Point(386, 74);
+            this.pic_Anh2.Location = new System.Drawing.Point(290, 60);
+            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic_Anh2.Name = "pic_Anh2";
-            this.pic_Anh2.Size = new System.Drawing.Size(229, 145);
+            this.pic_Anh2.Size = new System.Drawing.Size(172, 118);
             this.pic_Anh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh2.TabIndex = 127;
             this.pic_Anh2.TabStop = false;
@@ -168,9 +178,10 @@
             // pic_Anh4
             // 
             this.pic_Anh4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh4.Location = new System.Drawing.Point(386, 225);
+            this.pic_Anh4.Location = new System.Drawing.Point(290, 183);
+            this.pic_Anh4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic_Anh4.Name = "pic_Anh4";
-            this.pic_Anh4.Size = new System.Drawing.Size(464, 150);
+            this.pic_Anh4.Size = new System.Drawing.Size(348, 122);
             this.pic_Anh4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh4.TabIndex = 126;
             this.pic_Anh4.TabStop = false;
@@ -178,18 +189,19 @@
             // pic_Anh1
             // 
             this.pic_Anh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh1.Location = new System.Drawing.Point(11, 74);
+            this.pic_Anh1.Location = new System.Drawing.Point(8, 60);
+            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic_Anh1.Name = "pic_Anh1";
-            this.pic_Anh1.Size = new System.Drawing.Size(369, 301);
+            this.pic_Anh1.Size = new System.Drawing.Size(277, 245);
             this.pic_Anh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh1.TabIndex = 125;
             this.pic_Anh1.TabStop = false;
             // 
             // ChiTietKhachSanUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 724);
+            this.ClientSize = new System.Drawing.Size(649, 588);
             this.Controls.Add(this.lblLoai);
             this.Controls.Add(this.lblDiaDiem);
             this.Controls.Add(this.pictureBoxLoaiPhong);
@@ -202,6 +214,7 @@
             this.Controls.Add(this.pic_Anh4);
             this.Controls.Add(this.pic_Anh1);
             this.Controls.Add(this.richTextBoxMoTa);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChiTietKhachSanUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTietKhachSanUser";
