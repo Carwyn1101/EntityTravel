@@ -10,6 +10,8 @@ namespace GUI
     {
         public static TrangChuAdmin TrangChuAdminInstance;
         public static XemPhongCuaKhachSan XemPhongCuaKhachSanInstance;
+        public static int iDTaiKhoanInstance;
+        // public static 
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,7 +23,7 @@ namespace GUI
            
             Application.Run(new DangNhap());
             TrangChuAdminInstance = new TrangChuAdmin();
-            XemPhongCuaKhachSanInstance = new XemPhongCuaKhachSan();
+            XemPhongCuaKhachSanInstance = new XemPhongCuaKhachSan();            
         }
         
     }

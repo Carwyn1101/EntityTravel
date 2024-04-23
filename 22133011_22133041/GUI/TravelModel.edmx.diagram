@@ -4,17 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="09caac3405c54d74a87f5f09f6226279" Name="Diagram1">
-        <EntityTypeShape EntityType="TravelModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelModel.ThongTinKhachSan" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TravelModel.ThongTinPhongCuaKhachSan" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <AssociationConnector Association="TravelModel.FK__ThongTinK__IDChu__408F9238" ManuallyRouted="false" />
-        <AssociationConnector Association="TravelModel.FK__ThongTinP__IDKha__436BFEE3" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="TravelModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" />
-        <EntityTypeShape EntityType="TravelModel.DanhGia" Width="1.5" PointX="5.25" PointY="8.125" />
-        <EntityTypeShape EntityType="TravelModel.ThongTinKhachHang" Width="1.5" PointX="7.5" PointY="2.625" />
-        <AssociationConnector Association="TravelModel.FK__DanhGia__IDKhach__5E1FF51F" />
-        <AssociationConnector Association="TravelModel.FK__ThongTinK__IDPho__60FC61CA" />
+      <Diagram DiagramId="dfb6d4f1e858485d93cacb37ea3ae9c0" Name="Diagram1">
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.DanhGia" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.HoaDon" Width="1.5" PointX="7.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinKhachHang" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinKhachSan" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinPhongCuaKhachSan" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DanhGia__IDKhach__6991A7CB" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__HoaDon__IDKhachH__2B5F6B28" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__HoaDon__IDPhong__2C538F61" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinK__IDChu__63D8CE75" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinK__IDKha__25A691D2" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinP__IDKha__66B53B20" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

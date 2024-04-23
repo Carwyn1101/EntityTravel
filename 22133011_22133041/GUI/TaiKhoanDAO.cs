@@ -12,7 +12,8 @@ namespace GUI
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();        
         public void DangNhap(DangNhap f, string TenDangNhap,string loaiTaiKhoan) 
         {           
-            var kq = (from c in db.TaiKhoans where c.TenDangNhap == TenDangNhap select c).SingleOrDefault();   
+            var kq = (from c in db.TaiKhoans where c.TenDangNhap == TenDangNhap select c).SingleOrDefault();
+            Program.iDTaiKhoanInstance = kq.IDNguoiDung;
             if (f.txtTenDangNhap.Text == kq.TenDangNhap && f.txtMatKhau.Text == kq.MatKhau && kq.LoaiNguoiDung == loaiTaiKhoan)
             {
                 MessageBox.Show("Đăng Nhập Thành Công", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);

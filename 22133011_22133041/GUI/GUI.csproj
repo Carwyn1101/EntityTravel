@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietHoaDon.Designer.cs">
+      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,19 @@
       <DependentUpon>DanhGiaCuaKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhGiaDAO.cs" />
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>TravelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonDAO.cs" />
+    <Compile Include="LichSuBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuBook.Designer.cs">
+      <DependentUpon>LichSuBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>TravelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoanDAO.cs" />
     <Compile Include="ThemPhongChoKhachSan.cs">
       <SubType>Form</SubType>
@@ -120,8 +139,17 @@
     <Compile Include="ThemPhongChoKhachSan.Designer.cs">
       <DependentUpon>ThemPhongChoKhachSan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinKhachHang.cs">
+      <DependentUpon>TravelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinKhachHangDAO.cs" />
+    <Compile Include="ThongTinKhachSan.cs">
+      <DependentUpon>TravelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinKhachSanDAO.cs" />
+    <Compile Include="ThongTinPhongCuaKhachSan.cs">
+      <DependentUpon>TravelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinPhongKhachSanDAO.cs" />
     <Compile Include="TrangChuAdmin.cs">
       <SubType>Form</SubType>
@@ -131,21 +159,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>TravelModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TaiKhoan.cs">
-      <DependentUpon>TravelModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ThongTinKhachHang.cs">
-      <DependentUpon>TravelModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ThongTinKhachSan.cs">
-      <DependentUpon>TravelModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ThongTinPhongCuaKhachSan.cs">
-      <DependentUpon>TravelModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="TrangChuUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +222,9 @@
     <Compile Include="XemPhongCuaKhachSan.Designer.cs">
       <DependentUpon>XemPhongCuaKhachSan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChiTietHoaDon.resx">
+      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietKhachHang.resx">
       <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,19 +318,21 @@
     <None Include="Resources\9.jpg" />
     <None Include="Resources\2.jpg" />
     <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="TravelModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TravelModel.Context.cs</LastGenOutput>
       <DependentUpon>TravelModel.edmx</DependentUpon>
+      <LastGenOutput>TravelModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="TravelModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TravelModel.edmx</DependentUpon>
       <LastGenOutput>TravelModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

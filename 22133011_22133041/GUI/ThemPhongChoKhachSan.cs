@@ -49,7 +49,7 @@ namespace GUI
             kSan.TrangThai = "Còn trống";            
             kSan.HinhAnh1 = tenAnh1;
             kSan.HinhAnh2 = tenAnh2;
-            pKSanDAO.Them(kSan);
+            pKSanDAO.Them(kSan);            
             this.Close();
         }
         private void btnThemAnh1_Click(object sender, EventArgs e)

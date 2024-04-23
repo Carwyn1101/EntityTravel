@@ -12,15 +12,20 @@ namespace GUI
     using System;
     using System.Collections.Generic;
     
-    public partial class ThongTinKhachHang
+    public partial class HoaDon
     {
-        public int SoThuTu { get; set; }
+        public int MaHoaDon { get; set; }
         public Nullable<int> IDKhachHang { get; set; }
         public string TenKhachHang { get; set; }
         public string SDT { get; set; }
         public string CCCD { get; set; }
         public string Mail { get; set; }
+        public Nullable<System.DateTime> NgayNhanPhong { get; set; }
+        public Nullable<System.DateTime> NgayTraPhong { get; set; }
+        public Nullable<double> TongTien { get; set; }
+        public Nullable<int> IDPhong { get; set; }
     
         public virtual TaiKhoan TaiKhoan { get; set; }
+        public virtual ThongTinPhongCuaKhachSan ThongTinPhongCuaKhachSan { get; set; }
     }
 }

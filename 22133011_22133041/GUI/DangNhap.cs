@@ -38,6 +38,8 @@ namespace GUI
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             tKDAO.DangNhap(this,txtTenDangNhap.Text,loaiTaiKhoan);
+            
+
         }
         private void chkAccAdmin_CheckedChanged(object sender, EventArgs e)
         {

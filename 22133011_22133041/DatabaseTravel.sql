@@ -15,7 +15,6 @@ insert into TaiKhoan values
 insert into TaiKhoan values
 (2,'user','user','user');
 
-
 CREATE TABLE ThongTinKhachSan
 (
 	IDKhachSan INT PRIMARY KEY IDENTITY,
@@ -44,7 +43,6 @@ insert into ThongTinKhachSan(TenKhachSan, DiaDiemKhachSan, Loai, MoTa, HinhAnh1,
 ('KSan 5',N'Đà Nẵng','Hotel','5 sao','6.jpg','6.jpg','6.jpg','6.jpg',1)
 insert into ThongTinKhachSan(TenKhachSan, DiaDiemKhachSan, Loai, MoTa, HinhAnh1, HinhAnh2, HinhAnh3, HinhAnh4, IDChuKhachSan )values 
 ('KSan 6',N'Đà Nẵng','Hotel','5 sao','6.jpg','6.jpg','6.jpg','6.jpg',1)
-
 
 CREATE TABLE ThongTinPhongCuaKhachSan
 (
@@ -100,7 +98,6 @@ insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNg
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2, TrangThai, IDKhachSan) values 
 (N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',N'Còn Trống',6)
 
-
 CREATE TABLE DanhGia
 (
 	IDDanhGia INT PRIMARY KEY IDENTITY,
@@ -126,21 +123,35 @@ insert into DanhGia values
 insert into DanhGia values 
 (N'F',N'Tuyệt Hảo',N'9+',N'Rất tuyệt vời, 10 điểm',6)
 
-
 CREATE TABLE ThongTinKhachHang
 (
-	IDKhachHang INT PRIMARY KEY IDENTITY,
+	SoThuTu INT PRIMARY KEY IDENTITY,
+	IDKhachHang INT Foreign key References TaiKhoan(IDNguoiDung),
+	TenKhachHang nvarchar(max),
+	SDT nvarchar(max),
+	CCCD nvarchar(max),
+	Mail nvarchar(max),	
+);
+
+SELECT *FROM ThongTinKhachHang
+DROP TABLE ThongTinKhachHang
+
+CREATE TABLE HoaDon
+(
+	MaHoaDon INT PRIMARY KEY IDENTITY,
+	IDKhachHang INT Foreign key References TaiKhoan(IDNguoiDung),
 	TenKhachHang nvarchar(max),
 	SDT nvarchar(max),
 	CCCD nvarchar(max),
 	Mail nvarchar(max),
-	NgayNhanPhong datetime,
-	NgayTraPhong datetime,
+	NgayDatPhong date default GetDate(),
+	NgayNhanPhong date,
+	NgayTraPhong date,
+	TongTien float,
 	IDPhong INT Foreign key References ThongTinPhongCuaKhachSan(IDPhong)
 );
-SELECT *FROM ThongTinKhachHang
-DROP TABLE ThongTinKhachHang
-
+SELECT *FROM HoaDon
+DROP TABLE HoaDon
 insert into ThongTinKhachHang values
 (N'Nguyễn Văn A', '0123456789','99999999','A@gmail.com','2024-2-25','2024-2-27',1)
 insert into ThongTinKhachHang values

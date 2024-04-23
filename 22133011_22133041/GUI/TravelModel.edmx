@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="TravelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DoAnCuoiKyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DanhGia">
           <Key>
             <PropertyRef Name="IDDanhGia" />
@@ -16,15 +16,20 @@
           <Property Name="DanhGiaNguoiDung" Type="nvarchar(max)" />
           <Property Name="IDKhachSan" Type="int" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
+        <EntityType Name="HoaDon">
           <Key>
-            <PropertyRef Name="diagram_id" />
+            <PropertyRef Name="MaHoaDon" />
           </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
+          <Property Name="MaHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDKhachHang" Type="int" />
+          <Property Name="TenKhachHang" Type="nvarchar(max)" />
+          <Property Name="SDT" Type="nvarchar(max)" />
+          <Property Name="CCCD" Type="nvarchar(max)" />
+          <Property Name="Mail" Type="nvarchar(max)" />
+          <Property Name="NgayNhanPhong" Type="date" />
+          <Property Name="NgayTraPhong" Type="date" />
+          <Property Name="TongTien" Type="float" />
+          <Property Name="IDPhong" Type="int" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -37,16 +42,14 @@
         </EntityType>
         <EntityType Name="ThongTinKhachHang">
           <Key>
-            <PropertyRef Name="IDKhachHang" />
+            <PropertyRef Name="SoThuTu" />
           </Key>
-          <Property Name="IDKhachHang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SoThuTu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDKhachHang" Type="int" />
           <Property Name="TenKhachHang" Type="nvarchar(max)" />
           <Property Name="SDT" Type="nvarchar(max)" />
           <Property Name="CCCD" Type="nvarchar(max)" />
           <Property Name="Mail" Type="nvarchar(max)" />
-          <Property Name="NgayNhanPhong" Type="datetime" />
-          <Property Name="NgayTraPhong" Type="datetime" />
-          <Property Name="IDPhong" Type="int" />
         </EntityType>
         <EntityType Name="ThongTinKhachSan">
           <Key>
@@ -91,7 +94,7 @@
           <Property Name="TrangThai" Type="nvarchar(max)" />
           <Property Name="IDKhachSan" Type="int" />
         </EntityType>
-        <Association Name="FK__DanhGia__IDKhach__5E1FF51F">
+        <Association Name="FK__DanhGia__IDKhach__6991A7CB">
           <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="0..1" />
           <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -103,7 +106,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ThongTinK__IDChu__408F9238">
+        <Association Name="FK__HoaDon__IDKhachH__2F2FFC0C">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IDNguoiDung" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IDKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HoaDon__IDPhong__30242045">
+          <End Role="ThongTinPhongCuaKhachSan" Type="Self.ThongTinPhongCuaKhachSan" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTinPhongCuaKhachSan">
+              <PropertyRef Name="IDPhong" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IDPhong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ThongTinK__IDChu__63D8CE75">
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
           <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -115,19 +142,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ThongTinK__IDPho__60FC61CA">
-          <End Role="ThongTinPhongCuaKhachSan" Type="Self.ThongTinPhongCuaKhachSan" Multiplicity="0..1" />
+        <Association Name="FK__ThongTinK__IDKha__25A691D2">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
           <End Role="ThongTinKhachHang" Type="Self.ThongTinKhachHang" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="ThongTinPhongCuaKhachSan">
-              <PropertyRef Name="IDPhong" />
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IDNguoiDung" />
             </Principal>
             <Dependent Role="ThongTinKhachHang">
-              <PropertyRef Name="IDPhong" />
+              <PropertyRef Name="IDKhachHang" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ThongTinP__IDKha__436BFEE3">
+        <Association Name="FK__ThongTinP__IDKha__66B53B20">
           <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="0..1" />
           <End Role="ThongTinPhongCuaKhachSan" Type="Self.ThongTinPhongCuaKhachSan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -139,26 +166,34 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TravelModelStoreContainer">
+        <EntityContainer Name="DoAnCuoiKyModelStoreContainer">
           <EntitySet Name="DanhGia" EntityType="Self.DanhGia" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThongTinKhachHang" EntityType="Self.ThongTinKhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThongTinKhachSan" EntityType="Self.ThongTinKhachSan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThongTinPhongCuaKhachSan" EntityType="Self.ThongTinPhongCuaKhachSan" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__DanhGia__IDKhach__5E1FF51F" Association="Self.FK__DanhGia__IDKhach__5E1FF51F">
+          <AssociationSet Name="FK__DanhGia__IDKhach__6991A7CB" Association="Self.FK__DanhGia__IDKhach__6991A7CB">
             <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSan" />
             <End Role="DanhGia" EntitySet="DanhGia" />
           </AssociationSet>
-          <AssociationSet Name="FK__ThongTinK__IDChu__408F9238" Association="Self.FK__ThongTinK__IDChu__408F9238">
+          <AssociationSet Name="FK__HoaDon__IDKhachH__2F2FFC0C" Association="Self.FK__HoaDon__IDKhachH__2F2FFC0C">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HoaDon__IDPhong__30242045" Association="Self.FK__HoaDon__IDPhong__30242045">
+            <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSan" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ThongTinK__IDChu__63D8CE75" Association="Self.FK__ThongTinK__IDChu__63D8CE75">
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
             <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSan" />
           </AssociationSet>
-          <AssociationSet Name="FK__ThongTinK__IDPho__60FC61CA" Association="Self.FK__ThongTinK__IDPho__60FC61CA">
-            <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSan" />
+          <AssociationSet Name="FK__ThongTinK__IDKha__25A691D2" Association="Self.FK__ThongTinK__IDKha__25A691D2">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
             <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHang" />
           </AssociationSet>
-          <AssociationSet Name="FK__ThongTinP__IDKha__436BFEE3" Association="Self.FK__ThongTinP__IDKha__436BFEE3">
+          <AssociationSet Name="FK__ThongTinP__IDKha__66B53B20" Association="Self.FK__ThongTinP__IDKha__66B53B20">
             <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSan" />
             <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSan" />
           </AssociationSet>
@@ -166,7 +201,36 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="TravelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DoAnCuoiKyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DanhGia">
+          <Key>
+            <PropertyRef Name="IDDanhGia" />
+          </Key>
+          <Property Name="IDDanhGia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenKhachHang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TraiNghiem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DiemDanhGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DanhGiaNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDKhachSan" Type="Int32" />
+          <NavigationProperty Name="ThongTinKhachSan" Relationship="Self.FK__DanhGia__IDKhach__6991A7CB" FromRole="DanhGia" ToRole="ThongTinKhachSan" />
+        </EntityType>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="MaHoaDon" />
+          </Key>
+          <Property Name="MaHoaDon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDKhachHang" Type="Int32" />
+          <Property Name="TenKhachHang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CCCD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NgayNhanPhong" Type="DateTime" Precision="0" />
+          <Property Name="NgayTraPhong" Type="DateTime" Precision="0" />
+          <Property Name="TongTien" Type="Double" />
+          <Property Name="IDPhong" Type="Int32" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__HoaDon__IDKhachH__2B5F6B28" FromRole="HoaDon" ToRole="TaiKhoan" />
+          <NavigationProperty Name="ThongTinPhongCuaKhachSan" Relationship="Self.FK__HoaDon__IDPhong__2C538F61" FromRole="HoaDon" ToRole="ThongTinPhongCuaKhachSan" />
+        </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
             <PropertyRef Name="IDNguoiDung" />
@@ -175,7 +239,21 @@
           <Property Name="TenDangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LoaiNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ThongTinKhachSans" Relationship="Self.FK__ThongTinK__IDChu__408F9238" FromRole="TaiKhoan" ToRole="ThongTinKhachSan" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__IDKhachH__2B5F6B28" FromRole="TaiKhoan" ToRole="HoaDon" />
+          <NavigationProperty Name="ThongTinKhachSans" Relationship="Self.FK__ThongTinK__IDChu__63D8CE75" FromRole="TaiKhoan" ToRole="ThongTinKhachSan" />
+          <NavigationProperty Name="ThongTinKhachHangs" Relationship="Self.FK__ThongTinK__IDKha__25A691D2" FromRole="TaiKhoan" ToRole="ThongTinKhachHang" />
+        </EntityType>
+        <EntityType Name="ThongTinKhachHang">
+          <Key>
+            <PropertyRef Name="SoThuTu" />
+          </Key>
+          <Property Name="SoThuTu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDKhachHang" Type="Int32" />
+          <Property Name="TenKhachHang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CCCD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__ThongTinK__IDKha__25A691D2" FromRole="ThongTinKhachHang" ToRole="TaiKhoan" />
         </EntityType>
         <EntityType Name="ThongTinKhachSan">
           <Key>
@@ -191,9 +269,9 @@
           <Property Name="HinhAnh3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="HinhAnh4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="IDChuKhachSan" Type="Int32" />
-          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__ThongTinK__IDChu__408F9238" FromRole="ThongTinKhachSan" ToRole="TaiKhoan" />
-          <NavigationProperty Name="ThongTinPhongCuaKhachSans" Relationship="Self.FK__ThongTinP__IDKha__436BFEE3" FromRole="ThongTinKhachSan" ToRole="ThongTinPhongCuaKhachSan" />
-          <NavigationProperty Name="DanhGias" Relationship="TravelModel.FK__DanhGia__IDKhach__5E1FF51F" FromRole="ThongTinKhachSan" ToRole="DanhGia" />
+          <NavigationProperty Name="DanhGias" Relationship="Self.FK__DanhGia__IDKhach__6991A7CB" FromRole="ThongTinKhachSan" ToRole="DanhGia" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__ThongTinK__IDChu__63D8CE75" FromRole="ThongTinKhachSan" ToRole="TaiKhoan" />
+          <NavigationProperty Name="ThongTinPhongCuaKhachSans" Relationship="Self.FK__ThongTinP__IDKha__66B53B20" FromRole="ThongTinKhachSan" ToRole="ThongTinPhongCuaKhachSan" />
         </EntityType>
         <EntityType Name="ThongTinPhongCuaKhachSan">
           <Key>
@@ -222,10 +300,46 @@
           <Property Name="HinhAnh2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TrangThai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="IDKhachSan" Type="Int32" />
-          <NavigationProperty Name="ThongTinKhachSan" Relationship="Self.FK__ThongTinP__IDKha__436BFEE3" FromRole="ThongTinPhongCuaKhachSan" ToRole="ThongTinKhachSan" />
-          <NavigationProperty Name="ThongTinKhachHangs" Relationship="TravelModel.FK__ThongTinK__IDPho__60FC61CA" FromRole="ThongTinPhongCuaKhachSan" ToRole="ThongTinKhachHang" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__IDPhong__2C538F61" FromRole="ThongTinPhongCuaKhachSan" ToRole="HoaDon" />
+          <NavigationProperty Name="ThongTinKhachSan" Relationship="Self.FK__ThongTinP__IDKha__66B53B20" FromRole="ThongTinPhongCuaKhachSan" ToRole="ThongTinKhachSan" />
         </EntityType>
-        <Association Name="FK__ThongTinK__IDChu__408F9238">
+        <Association Name="FK__DanhGia__IDKhach__6991A7CB">
+          <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="0..1" />
+          <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTinKhachSan">
+              <PropertyRef Name="IDKhachSan" />
+            </Principal>
+            <Dependent Role="DanhGia">
+              <PropertyRef Name="IDKhachSan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HoaDon__IDKhachH__2B5F6B28">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IDNguoiDung" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IDKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HoaDon__IDPhong__2C538F61">
+          <End Role="ThongTinPhongCuaKhachSan" Type="Self.ThongTinPhongCuaKhachSan" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTinPhongCuaKhachSan">
+              <PropertyRef Name="IDPhong" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IDPhong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ThongTinK__IDChu__63D8CE75">
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
           <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -237,7 +351,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ThongTinP__IDKha__436BFEE3">
+        <Association Name="FK__ThongTinK__IDKha__25A691D2">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="ThongTinKhachHang" Type="Self.ThongTinKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IDNguoiDung" />
+            </Principal>
+            <Dependent Role="ThongTinKhachHang">
+              <PropertyRef Name="IDKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ThongTinP__IDKha__66B53B20">
           <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="0..1" />
           <End Role="ThongTinPhongCuaKhachSan" Type="Self.ThongTinPhongCuaKhachSan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -250,97 +376,73 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DoAnCuoiKyEntity" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DanhGias" EntityType="Self.DanhGia" />
+          <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
           <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+          <EntitySet Name="ThongTinKhachHangs" EntityType="Self.ThongTinKhachHang" />
           <EntitySet Name="ThongTinKhachSans" EntityType="Self.ThongTinKhachSan" />
           <EntitySet Name="ThongTinPhongCuaKhachSans" EntityType="Self.ThongTinPhongCuaKhachSan" />
-          <AssociationSet Name="FK__ThongTinK__IDChu__408F9238" Association="Self.FK__ThongTinK__IDChu__408F9238">
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-            <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ThongTinP__IDKha__436BFEE3" Association="Self.FK__ThongTinP__IDKha__436BFEE3">
-            <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
-            <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
-          </AssociationSet>
-          <EntitySet Name="sysdiagrams" EntityType="TravelModel.sysdiagram" />
-          <EntitySet Name="DanhGias" EntityType="TravelModel.DanhGia" />
-          <EntitySet Name="ThongTinKhachHangs" EntityType="TravelModel.ThongTinKhachHang" />
-          <AssociationSet Name="FK__DanhGia__IDKhach__5E1FF51F" Association="TravelModel.FK__DanhGia__IDKhach__5E1FF51F">
+          <AssociationSet Name="FK__DanhGia__IDKhach__6991A7CB" Association="Self.FK__DanhGia__IDKhach__6991A7CB">
             <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
             <End Role="DanhGia" EntitySet="DanhGias" />
           </AssociationSet>
-          <AssociationSet Name="FK__ThongTinK__IDPho__60FC61CA" Association="TravelModel.FK__ThongTinK__IDPho__60FC61CA">
+          <AssociationSet Name="FK__HoaDon__IDKhachH__2B5F6B28" Association="Self.FK__HoaDon__IDKhachH__2B5F6B28">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HoaDon__IDPhong__2C538F61" Association="Self.FK__HoaDon__IDPhong__2C538F61">
             <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ThongTinK__IDChu__63D8CE75" Association="Self.FK__ThongTinK__IDChu__63D8CE75">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ThongTinK__IDKha__25A691D2" Association="Self.FK__ThongTinK__IDKha__25A691D2">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
             <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHangs" />
           </AssociationSet>
+          <AssociationSet Name="FK__ThongTinP__IDKha__66B53B20" Association="Self.FK__ThongTinP__IDKha__66B53B20">
+            <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
+            <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
+          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="DanhGia">
-          <Key>
-            <PropertyRef Name="IDDanhGia" />
-          </Key>
-          <Property Name="IDDanhGia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenKhachHang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="TraiNghiem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="DiemDanhGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="DanhGiaNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="IDKhachSan" Type="Int32" />
-          <NavigationProperty Name="ThongTinKhachSan" Relationship="TravelModel.FK__DanhGia__IDKhach__5E1FF51F" FromRole="DanhGia" ToRole="ThongTinKhachSan" />
-        </EntityType>
-        <EntityType Name="ThongTinKhachHang">
-          <Key>
-            <PropertyRef Name="IDKhachHang" />
-          </Key>
-          <Property Name="IDKhachHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenKhachHang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="SDT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CCCD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NgayNhanPhong" Type="DateTime" Precision="3" />
-          <Property Name="NgayTraPhong" Type="DateTime" Precision="3" />
-          <Property Name="IDPhong" Type="Int32" />
-          <NavigationProperty Name="ThongTinPhongCuaKhachSan" Relationship="TravelModel.FK__ThongTinK__IDPho__60FC61CA" FromRole="ThongTinKhachHang" ToRole="ThongTinPhongCuaKhachSan" />
-        </EntityType>
-        <Association Name="FK__DanhGia__IDKhach__5E1FF51F">
-          <End Type="TravelModel.ThongTinKhachSan" Role="ThongTinKhachSan" Multiplicity="0..1" />
-          <End Type="TravelModel.DanhGia" Role="DanhGia" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ThongTinKhachSan">
-              <PropertyRef Name="IDKhachSan" />
-            </Principal>
-            <Dependent Role="DanhGia">
-              <PropertyRef Name="IDKhachSan" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ThongTinK__IDPho__60FC61CA">
-          <End Type="TravelModel.ThongTinPhongCuaKhachSan" Role="ThongTinPhongCuaKhachSan" Multiplicity="0..1" />
-          <End Type="TravelModel.ThongTinKhachHang" Role="ThongTinKhachHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ThongTinPhongCuaKhachSan">
-              <PropertyRef Name="IDPhong" />
-            </Principal>
-            <Dependent Role="ThongTinKhachHang">
-              <PropertyRef Name="IDPhong" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TravelModelStoreContainer" CdmEntityContainer="DoAnCuoiKyEntity">
+        <EntityContainerMapping StorageEntityContainer="DoAnCuoiKyModelStoreContainer" CdmEntityContainer="DoAnCuoiKyEntity">
+          <EntitySetMapping Name="DanhGias">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.DanhGia">
+              <MappingFragment StoreEntitySet="DanhGia">
+                <ScalarProperty Name="IDDanhGia" ColumnName="IDDanhGia" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="TraiNghiem" ColumnName="TraiNghiem" />
+                <ScalarProperty Name="DiemDanhGia" ColumnName="DiemDanhGia" />
+                <ScalarProperty Name="DanhGiaNguoiDung" ColumnName="DanhGiaNguoiDung" />
+                <ScalarProperty Name="IDKhachSan" ColumnName="IDKhachSan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDons">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
+                <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="NgayNhanPhong" ColumnName="NgayNhanPhong" />
+                <ScalarProperty Name="NgayTraPhong" ColumnName="NgayTraPhong" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TaiKhoans">
-            <EntityTypeMapping TypeName="TravelModel.TaiKhoan">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
                 <ScalarProperty Name="IDNguoiDung" ColumnName="IDNguoiDung" />
                 <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
@@ -349,8 +451,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ThongTinKhachHangs">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.ThongTinKhachHang">
+              <MappingFragment StoreEntitySet="ThongTinKhachHang">
+                <ScalarProperty Name="SoThuTu" ColumnName="SoThuTu" />
+                <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ThongTinKhachSans">
-            <EntityTypeMapping TypeName="TravelModel.ThongTinKhachSan">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.ThongTinKhachSan">
               <MappingFragment StoreEntitySet="ThongTinKhachSan">
                 <ScalarProperty Name="IDKhachSan" ColumnName="IDKhachSan" />
                 <ScalarProperty Name="TenKhachSan" ColumnName="TenKhachSan" />
@@ -366,7 +480,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ThongTinPhongCuaKhachSans">
-            <EntityTypeMapping TypeName="TravelModel.ThongTinPhongCuaKhachSan">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.ThongTinPhongCuaKhachSan">
               <MappingFragment StoreEntitySet="ThongTinPhongCuaKhachSan">
                 <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
                 <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
@@ -391,43 +505,6 @@
                 <ScalarProperty Name="HinhAnh2" ColumnName="HinhAnh2" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="IDKhachSan" ColumnName="IDKhachSan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="TravelModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DanhGias">
-            <EntityTypeMapping TypeName="TravelModel.DanhGia">
-              <MappingFragment StoreEntitySet="DanhGia">
-                <ScalarProperty Name="IDKhachSan" ColumnName="IDKhachSan" />
-                <ScalarProperty Name="DanhGiaNguoiDung" ColumnName="DanhGiaNguoiDung" />
-                <ScalarProperty Name="DiemDanhGia" ColumnName="DiemDanhGia" />
-                <ScalarProperty Name="TraiNghiem" ColumnName="TraiNghiem" />
-                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
-                <ScalarProperty Name="IDDanhGia" ColumnName="IDDanhGia" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ThongTinKhachHangs">
-            <EntityTypeMapping TypeName="TravelModel.ThongTinKhachHang">
-              <MappingFragment StoreEntitySet="ThongTinKhachHang">
-                <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
-                <ScalarProperty Name="NgayTraPhong" ColumnName="NgayTraPhong" />
-                <ScalarProperty Name="NgayNhanPhong" ColumnName="NgayNhanPhong" />
-                <ScalarProperty Name="Mail" ColumnName="Mail" />
-                <ScalarProperty Name="CCCD" ColumnName="CCCD" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
-                <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

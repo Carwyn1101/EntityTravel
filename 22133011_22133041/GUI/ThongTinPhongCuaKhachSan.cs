@@ -17,7 +17,7 @@ namespace GUI
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ThongTinPhongCuaKhachSan()
         {
-            this.ThongTinKhachHangs = new HashSet<ThongTinKhachHang>();
+            this.HoaDons = new HashSet<HoaDon>();
         }
     
         public int IDPhong { get; set; }
@@ -44,8 +44,8 @@ namespace GUI
         public string TrangThai { get; set; }
         public Nullable<int> IDKhachSan { get; set; }
     
-        public virtual ThongTinKhachSan ThongTinKhachSan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThongTinKhachHang> ThongTinKhachHangs { get; set; }
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public virtual ThongTinKhachSan ThongTinKhachSan { get; set; }
     }
 }

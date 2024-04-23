@@ -30,6 +30,7 @@ namespace GUI
         private void btnXoa_Click(object sender, EventArgs e)
         {
             pKSanDAO.Xoa(iDPhong);
+            this.Hide();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace GUI
 
         private void btnSuaAnh2_Click(object sender, EventArgs e)
         {
-            kSanDAO.SaveImage(pic_Anh1, out tenAnh1);
+            kSanDAO.SaveImage(pic_Anh2, out tenAnh2);
         }
         private void ChiTietPhongCuaKhachSanAdmin_Load(object sender, EventArgs e)
         {

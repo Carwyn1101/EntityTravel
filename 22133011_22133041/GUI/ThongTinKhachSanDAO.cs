@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace GUI
 {
@@ -21,7 +22,7 @@ namespace GUI
             foreach (var k in ketqua)
             {
                 UCThongTinKhachSanAdmin uc = new UCThongTinKhachSanAdmin(k);
-                flpTrangChu.Controls.Add(uc);
+                flpTrangChu.Controls.Add(uc);              
             }
         }
         public void Them(ThongTinKhachSan f)
@@ -32,13 +33,33 @@ namespace GUI
         }
         public void Xoa(int iDKhachSan)
         {
-            var khachSanToRemove = db.ThongTinKhachSans.FirstOrDefault(k => k.IDKhachSan == iDKhachSan);
-            if (khachSanToRemove != null)
+            var danhGiaToRemove = from h in db.DanhGias where h.IDKhachSan == iDKhachSan select h;
+            if(danhGiaToRemove != null)
             {
-                db.ThongTinKhachSans.Remove(khachSanToRemove);
-                db.SaveChanges();
+                foreach (var tmp in danhGiaToRemove)
+                {
+                    db.DanhGias.Remove(tmp);
+                }                   
             }
-            MessageBox.Show("Xoá thông tin khách sạn thành công!");
+            var phongToRemove = from k in db.ThongTinPhongCuaKhachSans where k.IDKhachSan == iDKhachSan && k.TrangThai == "Đã được thuê" select k;
+            if (phongToRemove == null)
+            {
+                foreach (var tmp in phongToRemove)
+                {
+                    db.ThongTinPhongCuaKhachSans.Remove(tmp);
+                }
+                var khachSanToRemove = db.ThongTinKhachSans.FirstOrDefault(k => k.IDKhachSan == iDKhachSan);
+                if (khachSanToRemove != null)
+                {
+                    db.ThongTinKhachSans.Remove(khachSanToRemove);
+                    db.SaveChanges();
+                }
+                MessageBox.Show("Xoá thông tin khách sạn thành công!");
+            }
+            else 
+            {
+                MessageBox.Show("Khách sạn đang có phòng được thuê không thể xóa!");
+            }
         }
         public void Sua(ThongTinKhachSan f)
         {

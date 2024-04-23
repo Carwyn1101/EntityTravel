@@ -7,14 +7,15 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    internal class ThongTinKhachHangDAO
+    internal class HoaDonDAO
     {
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
-        public void Them(ThongTinKhachHang kHang)
-        {           
-            db.ThongTinKhachHangs.Add(kHang);            
+        public void Them(HoaDon hDon)
+        {
+            db.HoaDons.Add(hDon);
             db.SaveChanges();
-           // MessageBox.Show("Thuê thành công!");
+            MessageBox.Show("Thuê thành công!");
         }
+        
     }
 }

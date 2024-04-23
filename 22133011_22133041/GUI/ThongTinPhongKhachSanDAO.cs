@@ -122,8 +122,8 @@ namespace GUI
         }
         public void CapNhatTrangThaiPhong(int iDPhong)
         {
-            var tmp = from p in db.ThongTinPhongCuaKhachSans
-                      select p.ThongTinKhachHangs.Count;
+            var tmp = from p in db.ThongTinPhongCuaKhachSans where p.IDPhong == iDPhong
+                      select p;
             if (tmp != null)
             {
                 ThongTinPhongCuaKhachSan pKSan = db.ThongTinPhongCuaKhachSans.Find(iDPhong);

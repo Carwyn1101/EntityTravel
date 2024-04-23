@@ -25,22 +25,19 @@ namespace GUI
             this.iDPhong = iDPhong;
             this.iDKhachSan = iDKhachSan;
         }
-        private void btnThue_Click(object sender, EventArgs e)
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
             this.Hide();
             ThongTinKhachHang kHang = new ThongTinKhachHang();
+            kHang.IDKhachHang = Program.iDTaiKhoanInstance; 
             kHang.TenKhachHang = txtTenKhachHang.Text;
             kHang.SDT = txtSoDienThoai.Text;
             kHang.CCCD = txtCCCD.Text;
-            kHang.Mail = txtMail.Text;
-            kHang.NgayNhanPhong = dateTimePickerNgayNhan.Value;
-            kHang.NgayTraPhong = dateTimePickerNgayTra.Value;
-            kHang.IDPhong = iDPhong;
-            kHangDAO.Them(kHang);
-            pKSanDAO.CapNhatTrangThaiPhong(iDPhong);
-            Program.XemPhongCuaKhachSanInstance.Close();
-            XemPhongCuaKhachSan f = new XemPhongCuaKhachSan(iDKhachSan);
+            kHang.Mail = txtMail.Text;           
+            kHangDAO.Them(kHang);            
+            ChiTietHoaDon f = new ChiTietHoaDon(iDKhachSan,iDPhong);
             f.ShowDialog();
-        }
+        }       
     }
 }
