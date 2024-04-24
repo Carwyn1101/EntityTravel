@@ -9,7 +9,7 @@ namespace GUI
 {
     public class TaiKhoanDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();        
+        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         public void DangNhap(DangNhap f, string TenDangNhap,string loaiTaiKhoan) 
         {           
             var kq = (from c in db.TaiKhoans where c.TenDangNhap == TenDangNhap select c).SingleOrDefault();

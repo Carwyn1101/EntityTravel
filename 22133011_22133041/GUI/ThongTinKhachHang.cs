@@ -14,6 +14,12 @@ namespace GUI
     
     public partial class ThongTinKhachHang
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ThongTinKhachHang()
+        {
+            this.HoaDons = new HashSet<HoaDon>();
+        }
+    
         public int SoThuTu { get; set; }
         public Nullable<int> IDKhachHang { get; set; }
         public string TenKhachHang { get; set; }
@@ -21,6 +27,8 @@ namespace GUI
         public string CCCD { get; set; }
         public string Mail { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

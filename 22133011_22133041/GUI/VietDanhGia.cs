@@ -34,7 +34,7 @@ namespace GUI
             dGia.DanhGiaNguoiDung = richTextBoxDanhGia.Text;
             dGiaDAO.Them(dGia);
             this.Hide();
-            DanhGiaCuaKhachHang f = new DanhGiaCuaKhachHang(iDKSan);
+            DanhGiaCuaKhachHang f = new DanhGiaCuaKhachHang();
             f.ShowDialog();
             f.ReLoadData();
             f = null;

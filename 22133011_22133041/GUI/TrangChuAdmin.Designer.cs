@@ -30,13 +30,13 @@
         {
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.pnlTrangChu = new System.Windows.Forms.Panel();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pic_DangXuat = new System.Windows.Forms.PictureBox();
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
             this.pic_AnhDaiDien = new System.Windows.Forms.PictureBox();
             this.btnChoThue = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblTenTrangChu = new System.Windows.Forms.Label();
             this.flpTrangChu = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThongKe = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnlTrangChu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhDaiDien)).BeginInit();
@@ -66,6 +66,29 @@
             this.pnlTrangChu.Name = "pnlTrangChu";
             this.pnlTrangChu.Size = new System.Drawing.Size(1101, 119);
             this.pnlTrangChu.TabIndex = 8;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnThongKe.Animated = true;
+            this.btnThongKe.AutoRoundedCorners = true;
+            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.BorderRadius = 15;
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKe.FillColor = System.Drawing.Color.Orange;
+            this.btnThongKe.FillColor2 = System.Drawing.Color.PeachPuff;
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
+            this.btnThongKe.Location = new System.Drawing.Point(806, 9);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(102, 32);
+            this.btnThongKe.TabIndex = 27;
+            this.btnThongKe.Text = "Thống kê";
             // 
             // pic_DangXuat
             // 
@@ -145,31 +168,8 @@
             this.flpTrangChu.Location = new System.Drawing.Point(2, 126);
             this.flpTrangChu.Margin = new System.Windows.Forms.Padding(2);
             this.flpTrangChu.Name = "flpTrangChu";
-            this.flpTrangChu.Size = new System.Drawing.Size(1101, 421);
+            this.flpTrangChu.Size = new System.Drawing.Size(1101, 412);
             this.flpTrangChu.TabIndex = 9;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnThongKe.Animated = true;
-            this.btnThongKe.AutoRoundedCorners = true;
-            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.BorderRadius = 15;
-            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThongKe.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThongKe.FillColor = System.Drawing.Color.Orange;
-            this.btnThongKe.FillColor2 = System.Drawing.Color.PeachPuff;
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
-            this.btnThongKe.Location = new System.Drawing.Point(806, 9);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(102, 32);
-            this.btnThongKe.TabIndex = 27;
-            this.btnThongKe.Text = "Thống kê";
             // 
             // TrangChuAdmin
             // 
@@ -184,6 +184,7 @@
             this.Name = "TrangChuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChuAdmin";
+            this.Load += new System.EventHandler(this.TrangChuAdmin_Load);
             this.pnlTrangChu.ResumeLayout(false);
             this.pnlTrangChu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).EndInit();

@@ -14,6 +14,7 @@ namespace GUI
     {    
         ThongTinKhachSanDAO kSDAO = new ThongTinKhachSanDAO();
         int iDNguoiDung; bool logOut;
+        DatPhongDAO dpDAO = new DatPhongDAO();
         public TrangChuAdmin()
         {
             InitializeComponent();           
@@ -23,8 +24,7 @@ namespace GUI
             InitializeComponent();
             lblTenTaiKhoan.Text = TenDangNhap;
             iDNguoiDung = IDNguoiDung;
-            flpTrangChu.Controls.Clear();
-            kSDAO.LoadData(flpTrangChu, iDNguoiDung);
+            flpTrangChu.Controls.Clear();          
             Program.TrangChuAdminInstance = this;
         }
         private void btnChoThue_Click(object sender, EventArgs e)
@@ -47,6 +47,11 @@ namespace GUI
                 f = null;
                 this.Close(); // Đóng form đăng nhập khi đã đăng xuất
             }
-        }      
+        }
+        private void TrangChuAdmin_Load(object sender, EventArgs e)
+        {
+            dpDAO.TrangThaiLoad(sender,e);
+            kSDAO.LoadData(flpTrangChu, iDNguoiDung);
+        }
     }
 }

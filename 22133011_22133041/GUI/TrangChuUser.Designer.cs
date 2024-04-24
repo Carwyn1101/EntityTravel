@@ -30,6 +30,7 @@
         {
             this.flpTrangChuUser = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTrangChu = new System.Windows.Forms.Panel();
+            this.btnLichSuBook = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.pic_DangXuat = new System.Windows.Forms.PictureBox();
             this.pic_AnhDaiDien = new System.Windows.Forms.PictureBox();
@@ -37,7 +38,6 @@
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cboDiaDiemTimKiem = new System.Windows.Forms.ComboBox();
             this.lblTenTrangChu = new System.Windows.Forms.Label();
-            this.btnLichSuBook = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnlTrangChu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhDaiDien)).BeginInit();
@@ -47,7 +47,7 @@
             // 
             this.flpTrangChuUser.AutoScroll = true;
             this.flpTrangChuUser.Location = new System.Drawing.Point(3, 125);
-            this.flpTrangChuUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpTrangChuUser.Margin = new System.Windows.Forms.Padding(2);
             this.flpTrangChuUser.Name = "flpTrangChuUser";
             this.flpTrangChuUser.Size = new System.Drawing.Size(1088, 359);
             this.flpTrangChuUser.TabIndex = 11;
@@ -63,17 +63,41 @@
             this.pnlTrangChu.Controls.Add(this.cboDiaDiemTimKiem);
             this.pnlTrangChu.Controls.Add(this.lblTenTrangChu);
             this.pnlTrangChu.Location = new System.Drawing.Point(3, 1);
-            this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTrangChu.Name = "pnlTrangChu";
             this.pnlTrangChu.Size = new System.Drawing.Size(1088, 119);
             this.pnlTrangChu.TabIndex = 10;
+            // 
+            // btnLichSuBook
+            // 
+            this.btnLichSuBook.Animated = true;
+            this.btnLichSuBook.AutoRoundedCorners = true;
+            this.btnLichSuBook.BackColor = System.Drawing.Color.Transparent;
+            this.btnLichSuBook.BorderColor = System.Drawing.Color.White;
+            this.btnLichSuBook.BorderRadius = 15;
+            this.btnLichSuBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichSuBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichSuBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLichSuBook.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLichSuBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLichSuBook.FillColor = System.Drawing.Color.Orange;
+            this.btnLichSuBook.FillColor2 = System.Drawing.Color.PeachPuff;
+            this.btnLichSuBook.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnLichSuBook.ForeColor = System.Drawing.Color.Black;
+            this.btnLichSuBook.Location = new System.Drawing.Point(784, 10);
+            this.btnLichSuBook.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLichSuBook.Name = "btnLichSuBook";
+            this.btnLichSuBook.Size = new System.Drawing.Size(127, 32);
+            this.btnLichSuBook.TabIndex = 30;
+            this.btnLichSuBook.Text = "Lịch Sử Book";
+            this.btnLichSuBook.Click += new System.EventHandler(this.btnLichSuBook_Click);
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator1.FillColor = System.Drawing.Color.DarkOrange;
             this.guna2Separator1.Location = new System.Drawing.Point(48, 107);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(963, 8);
             this.guna2Separator1.TabIndex = 27;
@@ -84,7 +108,7 @@
             this.pic_DangXuat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_DangXuat.Image = global::GUI.Properties.Resources.icons8_logout;
             this.pic_DangXuat.Location = new System.Drawing.Point(1041, 41);
-            this.pic_DangXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_DangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.pic_DangXuat.Name = "pic_DangXuat";
             this.pic_DangXuat.Size = new System.Drawing.Size(30, 32);
             this.pic_DangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,7 +154,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
             this.btnTimKiem.Location = new System.Drawing.Point(784, 62);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(127, 32);
             this.btnTimKiem.TabIndex = 20;
@@ -148,7 +172,7 @@
             "Nha Trang",
             "Khác"});
             this.cboDiaDiemTimKiem.Location = new System.Drawing.Point(215, 41);
-            this.cboDiaDiemTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboDiaDiemTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.cboDiaDiemTimKiem.Name = "cboDiaDiemTimKiem";
             this.cboDiaDiemTimKiem.Size = new System.Drawing.Size(551, 34);
             this.cboDiaDiemTimKiem.TabIndex = 16;
@@ -167,29 +191,6 @@
             this.lblTenTrangChu.Text = "Travel\r\n";
             this.lblTenTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnLichSuBook
-            // 
-            this.btnLichSuBook.Animated = true;
-            this.btnLichSuBook.AutoRoundedCorners = true;
-            this.btnLichSuBook.BackColor = System.Drawing.Color.Transparent;
-            this.btnLichSuBook.BorderColor = System.Drawing.Color.White;
-            this.btnLichSuBook.BorderRadius = 15;
-            this.btnLichSuBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLichSuBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLichSuBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLichSuBook.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLichSuBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLichSuBook.FillColor = System.Drawing.Color.Orange;
-            this.btnLichSuBook.FillColor2 = System.Drawing.Color.PeachPuff;
-            this.btnLichSuBook.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.btnLichSuBook.ForeColor = System.Drawing.Color.Black;
-            this.btnLichSuBook.Location = new System.Drawing.Point(784, 10);
-            this.btnLichSuBook.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLichSuBook.Name = "btnLichSuBook";
-            this.btnLichSuBook.Size = new System.Drawing.Size(127, 32);
-            this.btnLichSuBook.TabIndex = 30;
-            this.btnLichSuBook.Text = "Lịch Sử Book";
-            // 
             // TrangChuUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,7 +198,7 @@
             this.ClientSize = new System.Drawing.Size(1095, 488);
             this.Controls.Add(this.flpTrangChuUser);
             this.Controls.Add(this.pnlTrangChu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TrangChuUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChuUser";

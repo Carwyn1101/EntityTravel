@@ -11,10 +11,15 @@ using System.Windows.Forms;
 namespace GUI
 {
     public partial class LichSuBook : Form
-    {
+    {       
+        DatPhongDAO dpDAO = new DatPhongDAO();
         public LichSuBook()
         {
             InitializeComponent();
         }
-    }
+        private void LichSuBook_Load(object sender, EventArgs e)
+        {
+            dpDAO.LichSuBookLoad(flpLichSuBook);
+        }      
+    }   
 }

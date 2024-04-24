@@ -15,6 +15,7 @@ namespace GUI
     {
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
+        DatPhongDAO dpDAO = new DatPhongDAO();
         bool logOut;
         public TrangChuUser()
         {
@@ -28,7 +29,9 @@ namespace GUI
 
         private void TrangChuUser_Load(object sender, EventArgs e)
         {
+            dpDAO.TrangThaiLoad(sender,e);
             kSanDAO.GetAllKhachSan(flpTrangChuUser);
+
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -53,6 +56,13 @@ namespace GUI
         public void ReLoad()
         {
             kSanDAO.GetAllKhachSan(flpTrangChuUser);
+        }
+
+        private void btnLichSuBook_Click(object sender, EventArgs e)
+        {
+            LichSuBook f = new LichSuBook();
+            f.ShowDialog();
+            Program.LichSuBookInstance = f;
         }
     }
 }

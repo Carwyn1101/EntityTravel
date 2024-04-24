@@ -26,10 +26,12 @@ namespace GUI
         }
     
         public virtual DbSet<DanhGia> DanhGias { get; set; }
+        public virtual DbSet<DatPhong> DatPhongs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<ThongTinKhachHang> ThongTinKhachHangs { get; set; }
         public virtual DbSet<ThongTinKhachSan> ThongTinKhachSans { get; set; }
         public virtual DbSet<ThongTinPhongCuaKhachSan> ThongTinPhongCuaKhachSans { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

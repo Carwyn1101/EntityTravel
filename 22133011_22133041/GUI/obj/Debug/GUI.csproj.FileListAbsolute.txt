@@ -144,3 +144,6 @@ C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\
 C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.exe
 C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.pdb
 C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ChiTietHoaDon.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.LichSuBook.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCChuaHoanThanh.resources
+C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCHoanThanh.resources

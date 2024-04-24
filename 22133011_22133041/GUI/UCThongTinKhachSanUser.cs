@@ -30,7 +30,8 @@ namespace GUI
         }
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
-            ChiTietKhachSanUser f = new ChiTietKhachSanUser(iD);
+            Program.iDKhachSanInstance = iD;
+            ChiTietKhachSanUser f = new ChiTietKhachSanUser();
             f.ShowDialog();
         }
     }

@@ -13,22 +13,20 @@ namespace GUI
 {
     public partial class ChiTietPhongCuaKhachSanUser : Form
     {        
-        int iDPhong, iDKhachSan;
+   
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
-        public ChiTietPhongCuaKhachSanUser(int iDPhong, int iDKhachSan)
+        public ChiTietPhongCuaKhachSanUser()
         {
-            InitializeComponent();
-            this.iDPhong = iDPhong;
-            this.iDKhachSan = iDKhachSan;
+            InitializeComponent();           
         }
         private void ChiTietPhongCuaKhachSanUser_Load(object sender, EventArgs e)
         {
-            pKSanDAO.LoadChiTietPhongUser(this, iDPhong);
+            pKSanDAO.LoadChiTietPhongUser(this, Program.iDPhongInstance);
         }
         private void btnThue_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChiTietKhachHang f = new ChiTietKhachHang(iDPhong,iDKhachSan);
+            ChiTietKhachHang f = new ChiTietKhachHang();
             f.ShowDialog();
             f = null;
             this.Close();

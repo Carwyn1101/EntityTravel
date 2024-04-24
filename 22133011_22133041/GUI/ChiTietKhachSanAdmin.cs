@@ -14,7 +14,7 @@ namespace GUI
     public partial class ChiTietKhachSanAdmin : Form
     {
         string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();   
+        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         string tenAnh1, tenAnh2, tenAnh3, tenAnh4;

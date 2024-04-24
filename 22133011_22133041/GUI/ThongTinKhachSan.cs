@@ -19,6 +19,7 @@ namespace GUI
         {
             this.DanhGias = new HashSet<DanhGia>();
             this.ThongTinPhongCuaKhachSans = new HashSet<ThongTinPhongCuaKhachSan>();
+            this.DatPhongs = new HashSet<DatPhong>();
         }
     
         public int IDKhachSan { get; set; }
@@ -37,5 +38,7 @@ namespace GUI
         public virtual TaiKhoan TaiKhoan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ThongTinPhongCuaKhachSan> ThongTinPhongCuaKhachSans { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DatPhong> DatPhongs { get; set; }
     }
 }

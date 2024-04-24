@@ -29,7 +29,8 @@ namespace GUI
         }
         private void linklblChiTietPhong_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ChiTietPhongCuaKhachSanUser f = new ChiTietPhongCuaKhachSanUser(iDPhong,iDKhachSan);
+            Program.iDPhongInstance = iDPhong;  
+            ChiTietPhongCuaKhachSanUser f = new ChiTietPhongCuaKhachSanUser();
             f.ShowDialog();
         }
     }

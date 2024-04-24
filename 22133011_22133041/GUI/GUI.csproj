@@ -119,6 +119,10 @@
       <DependentUpon>DanhGiaCuaKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhGiaDAO.cs" />
+    <Compile Include="DatPhong.cs">
+      <DependentUpon>TravelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatPhongDAO.cs" />
     <Compile Include="HoaDon.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
@@ -128,6 +132,9 @@
     </Compile>
     <Compile Include="LichSuBook.Designer.cs">
       <DependentUpon>LichSuBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
@@ -180,11 +187,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TravelModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="UCChuaHoanThanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChuaHoanThanh.Designer.cs">
+      <DependentUpon>UCChuaHoanThanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCDanhGia.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCDanhGia.Designer.cs">
       <DependentUpon>UCDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHoanThanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHoanThanh.Designer.cs">
+      <DependentUpon>UCHoanThanh.cs</DependentUpon>
     </Compile>
     <Compile Include="UCThongTinKhachSanAdmin.cs">
       <SubType>UserControl</SubType>
@@ -249,6 +268,9 @@
     <EmbeddedResource Include="DanhGiaCuaKhachHang.resx">
       <DependentUpon>DanhGiaCuaKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LichSuBook.resx">
+      <DependentUpon>LichSuBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -268,8 +290,14 @@
     <EmbeddedResource Include="TrangChuUser.resx">
       <DependentUpon>TrangChuUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCChuaHoanThanh.resx">
+      <DependentUpon>UCChuaHoanThanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCDanhGia.resx">
       <DependentUpon>UCDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHoanThanh.resx">
+      <DependentUpon>UCHoanThanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongTinKhachSanAdmin.resx">
       <DependentUpon>UCThongTinKhachSanAdmin.cs</DependentUpon>

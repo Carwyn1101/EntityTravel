@@ -14,18 +14,10 @@ namespace GUI
     {
         ThongTinKhachHangDAO kHangDAO = new ThongTinKhachHangDAO();
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
-        int iDPhong, iDKhachSan;
         public ChiTietKhachHang()
         {
             InitializeComponent();
-        }
-        public ChiTietKhachHang(int iDPhong, int iDKhachSan)
-        {
-            InitializeComponent();
-            this.iDPhong = iDPhong;
-            this.iDKhachSan = iDKhachSan;
-        }
-
+        }      
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -35,8 +27,8 @@ namespace GUI
             kHang.SDT = txtSoDienThoai.Text;
             kHang.CCCD = txtCCCD.Text;
             kHang.Mail = txtMail.Text;           
-            kHangDAO.Them(kHang);            
-            ChiTietHoaDon f = new ChiTietHoaDon(iDKhachSan,iDPhong);
+            kHangDAO.Them(kHang);
+            ChiTietHoaDon f = new ChiTietHoaDon(kHang);
             f.ShowDialog();
         }       
     }
