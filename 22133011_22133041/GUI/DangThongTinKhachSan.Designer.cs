@@ -58,10 +58,10 @@
             this.cboLoaiPhong.Items.AddRange(new object[] {
             "Hotel",
             "Homestay"});
-            this.cboLoaiPhong.Location = new System.Drawing.Point(276, 576);
-            this.cboLoaiPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboLoaiPhong.Location = new System.Drawing.Point(368, 709);
+            this.cboLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cboLoaiPhong.Name = "cboLoaiPhong";
-            this.cboLoaiPhong.Size = new System.Drawing.Size(132, 25);
+            this.cboLoaiPhong.Size = new System.Drawing.Size(175, 28);
             this.cboLoaiPhong.TabIndex = 125;
             // 
             // txtTenKhachSan
@@ -79,13 +79,13 @@
             this.txtTenKhachSan.ForeColor = System.Drawing.Color.Black;
             this.txtTenKhachSan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenKhachSan.Location = new System.Drawing.Point(1, -1);
-            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.txtTenKhachSan.Name = "txtTenKhachSan";
             this.txtTenKhachSan.PasswordChar = '\0';
             this.txtTenKhachSan.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtTenKhachSan.PlaceholderText = "";
             this.txtTenKhachSan.SelectedText = "";
-            this.txtTenKhachSan.Size = new System.Drawing.Size(839, 65);
+            this.txtTenKhachSan.Size = new System.Drawing.Size(1119, 80);
             this.txtTenKhachSan.TabIndex = 123;
             this.txtTenKhachSan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -98,17 +98,17 @@
             "Nha Trang",
             "Huế",
             "Khác"});
-            this.cboDiaDiem.Location = new System.Drawing.Point(64, 576);
-            this.cboDiaDiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboDiaDiem.Location = new System.Drawing.Point(85, 709);
+            this.cboDiaDiem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cboDiaDiem.Name = "cboDiaDiem";
-            this.cboDiaDiem.Size = new System.Drawing.Size(132, 25);
+            this.cboDiaDiem.Size = new System.Drawing.Size(175, 28);
             this.cboDiaDiem.TabIndex = 122;
             // 
             // btnDangBai
             // 
             this.btnDangBai.Animated = true;
             this.btnDangBai.AutoRoundedCorners = true;
-            this.btnDangBai.BorderRadius = 22;
+            this.btnDangBai.BorderRadius = 27;
             this.btnDangBai.BorderThickness = 1;
             this.btnDangBai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDangBai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -119,10 +119,10 @@
             this.btnDangBai.FillColor2 = System.Drawing.Color.White;
             this.btnDangBai.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnDangBai.ForeColor = System.Drawing.Color.Black;
-            this.btnDangBai.Location = new System.Drawing.Point(539, 558);
-            this.btnDangBai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDangBai.Location = new System.Drawing.Point(719, 687);
+            this.btnDangBai.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnDangBai.Name = "btnDangBai";
-            this.btnDangBai.Size = new System.Drawing.Size(180, 46);
+            this.btnDangBai.Size = new System.Drawing.Size(240, 57);
             this.btnDangBai.TabIndex = 121;
             this.btnDangBai.Text = "Lưu";
             this.btnDangBai.Click += new System.EventHandler(this.btnDangBai_Click);
@@ -130,10 +130,10 @@
             // txtMoTa
             // 
             this.txtMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoTa.Location = new System.Drawing.Point(3, 410);
-            this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMoTa.Location = new System.Drawing.Point(4, 505);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(839, 130);
+            this.txtMoTa.Size = new System.Drawing.Size(1117, 159);
             this.txtMoTa.TabIndex = 119;
             this.txtMoTa.Text = "Nhập mô tả ở đây";
             // 
@@ -141,10 +141,10 @@
             // 
             this.btnThemAnh4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThemAnh4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemAnh4.Location = new System.Drawing.Point(539, 346);
-            this.btnThemAnh4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemAnh4.Location = new System.Drawing.Point(719, 426);
+            this.btnThemAnh4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThemAnh4.Name = "btnThemAnh4";
-            this.btnThemAnh4.Size = new System.Drawing.Size(123, 34);
+            this.btnThemAnh4.Size = new System.Drawing.Size(164, 42);
             this.btnThemAnh4.TabIndex = 118;
             this.btnThemAnh4.Text = "Thêm ảnh";
             this.btnThemAnh4.UseVisualStyleBackColor = true;
@@ -154,10 +154,10 @@
             // 
             this.btnThemAnh3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThemAnh3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemAnh3.Location = new System.Drawing.Point(660, 173);
-            this.btnThemAnh3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemAnh3.Location = new System.Drawing.Point(880, 213);
+            this.btnThemAnh3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThemAnh3.Name = "btnThemAnh3";
-            this.btnThemAnh3.Size = new System.Drawing.Size(119, 34);
+            this.btnThemAnh3.Size = new System.Drawing.Size(159, 42);
             this.btnThemAnh3.TabIndex = 117;
             this.btnThemAnh3.Text = "Thêm ảnh";
             this.btnThemAnh3.UseVisualStyleBackColor = true;
@@ -167,10 +167,10 @@
             // 
             this.btnThemAnh2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThemAnh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemAnh2.Location = new System.Drawing.Point(427, 173);
-            this.btnThemAnh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemAnh2.Location = new System.Drawing.Point(569, 213);
+            this.btnThemAnh2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThemAnh2.Name = "btnThemAnh2";
-            this.btnThemAnh2.Size = new System.Drawing.Size(119, 34);
+            this.btnThemAnh2.Size = new System.Drawing.Size(159, 42);
             this.btnThemAnh2.TabIndex = 116;
             this.btnThemAnh2.Text = "Thêm ảnh";
             this.btnThemAnh2.UseVisualStyleBackColor = true;
@@ -180,10 +180,10 @@
             // 
             this.btnThemAnh1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThemAnh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemAnh1.Location = new System.Drawing.Point(113, 346);
-            this.btnThemAnh1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemAnh1.Location = new System.Drawing.Point(151, 426);
+            this.btnThemAnh1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThemAnh1.Name = "btnThemAnh1";
-            this.btnThemAnh1.Size = new System.Drawing.Size(123, 34);
+            this.btnThemAnh1.Size = new System.Drawing.Size(164, 42);
             this.btnThemAnh1.TabIndex = 115;
             this.btnThemAnh1.Text = "Thêm ảnh";
             this.btnThemAnh1.UseVisualStyleBackColor = true;
@@ -192,10 +192,10 @@
             // pictureBoxLoaiPhong
             // 
             this.pictureBoxLoaiPhong.Image = global::GUI.Properties.Resources.AnhUCKhachSan;
-            this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(215, 552);
-            this.pictureBoxLoaiPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(287, 679);
+            this.pictureBoxLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBoxLoaiPhong.Name = "pictureBoxLoaiPhong";
-            this.pictureBoxLoaiPhong.Size = new System.Drawing.Size(55, 52);
+            this.pictureBoxLoaiPhong.Size = new System.Drawing.Size(73, 64);
             this.pictureBoxLoaiPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLoaiPhong.TabIndex = 124;
             this.pictureBoxLoaiPhong.TabStop = false;
@@ -203,10 +203,10 @@
             // pictureBoxDiaDiem
             // 
             this.pictureBoxDiaDiem.Image = global::GUI.Properties.Resources.iconDiaDiem;
-            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(3, 552);
-            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(4, 679);
+            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBoxDiaDiem.Name = "pictureBoxDiaDiem";
-            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(55, 52);
+            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(73, 64);
             this.pictureBoxDiaDiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxDiaDiem.TabIndex = 120;
             this.pictureBoxDiaDiem.TabStop = false;
@@ -214,10 +214,10 @@
             // pic_Anh3
             // 
             this.pic_Anh3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh3.Location = new System.Drawing.Point(607, 66);
-            this.pic_Anh3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_Anh3.Location = new System.Drawing.Point(809, 81);
+            this.pic_Anh3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pic_Anh3.Name = "pic_Anh3";
-            this.pic_Anh3.Size = new System.Drawing.Size(235, 100);
+            this.pic_Anh3.Size = new System.Drawing.Size(313, 123);
             this.pic_Anh3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh3.TabIndex = 114;
             this.pic_Anh3.TabStop = false;
@@ -225,10 +225,10 @@
             // pic_Anh2
             // 
             this.pic_Anh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh2.Location = new System.Drawing.Point(379, 66);
-            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_Anh2.Location = new System.Drawing.Point(505, 81);
+            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pic_Anh2.Name = "pic_Anh2";
-            this.pic_Anh2.Size = new System.Drawing.Size(221, 100);
+            this.pic_Anh2.Size = new System.Drawing.Size(294, 123);
             this.pic_Anh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh2.TabIndex = 113;
             this.pic_Anh2.TabStop = false;
@@ -236,10 +236,10 @@
             // pic_Anh4
             // 
             this.pic_Anh4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh4.Location = new System.Drawing.Point(379, 213);
-            this.pic_Anh4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_Anh4.Location = new System.Drawing.Point(505, 262);
+            this.pic_Anh4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pic_Anh4.Name = "pic_Anh4";
-            this.pic_Anh4.Size = new System.Drawing.Size(462, 119);
+            this.pic_Anh4.Size = new System.Drawing.Size(615, 146);
             this.pic_Anh4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh4.TabIndex = 112;
             this.pic_Anh4.TabStop = false;
@@ -247,19 +247,19 @@
             // pic_Anh1
             // 
             this.pic_Anh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh1.Location = new System.Drawing.Point(1, 66);
-            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_Anh1.Location = new System.Drawing.Point(1, 81);
+            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pic_Anh1.Name = "pic_Anh1";
-            this.pic_Anh1.Size = new System.Drawing.Size(371, 265);
+            this.pic_Anh1.Size = new System.Drawing.Size(494, 326);
             this.pic_Anh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh1.TabIndex = 111;
             this.pic_Anh1.TabStop = false;
             // 
             // DangThongTinKhachSan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 616);
+            this.ClientSize = new System.Drawing.Size(1127, 758);
             this.Controls.Add(this.cboLoaiPhong);
             this.Controls.Add(this.pictureBoxLoaiPhong);
             this.Controls.Add(this.txtTenKhachSan);
@@ -275,7 +275,9 @@
             this.Controls.Add(this.pic_Anh2);
             this.Controls.Add(this.pic_Anh4);
             this.Controls.Add(this.pic_Anh1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DangThongTinKhachSan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangThongTinKhachSan";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoaiPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaDiem)).EndInit();

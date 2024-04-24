@@ -16,5 +16,6 @@ namespace GUI
             db.SaveChanges();
            // MessageBox.Show("Thuê thành công!");
         }
+
     }
 }

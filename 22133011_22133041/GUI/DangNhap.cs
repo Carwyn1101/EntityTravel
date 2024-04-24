@@ -14,6 +14,7 @@ namespace GUI
     {
         string loaiTaiKhoan;
         TaiKhoanDAO tKDAO = new TaiKhoanDAO();
+        CheckGiaTri check = new CheckGiaTri();
         bool loggedOut = false;
         public DangNhap()
         {
@@ -37,9 +38,16 @@ namespace GUI
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            tKDAO.DangNhap(this,txtTenDangNhap.Text,loaiTaiKhoan);
-            
-
+            if (check.AttachValidatingEventToTextBoxes(this))
+            {
+                MessageBox.Show("Đăng nhập", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //tKDAO.DangNhap(this, txtTenDangNhap.Text, loaiTaiKhoan);
+            }
+            else 
+            {
+                MessageBox.Show("Không được để trống, vui lòng nhập dữ liệu", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenDangNhap.Focus();
+            }
         }
         private void chkAccAdmin_CheckedChanged(object sender, EventArgs e)
         {

@@ -64,8 +64,11 @@
             this.cboLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLoaiPhong.FormattingEnabled = true;
             this.cboLoaiPhong.Items.AddRange(new object[] {
-            "Phong Giuong Doi",
-            "Phong Giuong Don"});
+            "Phòng giường đôi",
+            "Phòng giường đơn",
+            "Phòng 2 giường đơn",
+            "Phòng 2 giường đôi",
+            "Khác"});
             this.cboLoaiPhong.Location = new System.Drawing.Point(16, 84);
             this.cboLoaiPhong.Name = "cboLoaiPhong";
             this.cboLoaiPhong.Size = new System.Drawing.Size(188, 28);
@@ -108,10 +111,10 @@
             this.Name = "XemPhongCuaKhachSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XemPhongCuaKhachSan";
-            
             this.pnlTienDe.ResumeLayout(false);
             this.pnlTienDe.PerformLayout();
             this.ResumeLayout(false);
+
         }
         #endregion
 
