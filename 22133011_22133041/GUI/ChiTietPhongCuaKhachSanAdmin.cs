@@ -64,7 +64,6 @@ namespace GUI
         {
             kSanDAO.SaveImage(pic_Anh1, out tenAnh1);
         }
-
         private void btnSuaAnh2_Click(object sender, EventArgs e)
         {
             kSanDAO.SaveImage(pic_Anh2, out tenAnh2);

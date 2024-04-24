@@ -29,7 +29,7 @@ namespace GUI
         {
             flpTrangChuKhachSan.Controls.Clear();
             string loaiPhong = cboLoaiPhong.Text;
-            pKSanDAO.LoadPhongTheoLoaiPhong(flpTrangChuKhachSan, loaiPhong);
+            pKSanDAO.LoadPhongTheoLoaiPhong(flpTrangChuKhachSan, loaiPhong, Program.iDKhachSanInstance);
         }
         public void ReLoad()
         {

@@ -14,6 +14,7 @@ namespace GUI
     {
         int iDKSan;
         DanhGiaDAO dGiaDAO = new DanhGiaDAO();
+        CheckGiaTri check = new CheckGiaTri();
         public VietDanhGia()
         {
             InitializeComponent();
@@ -26,19 +27,27 @@ namespace GUI
 
         private void btnDangBai_Click(object sender, EventArgs e)
         {
-            DanhGia dGia = new DanhGia();
-            dGia.IDKhachSan = iDKSan;
-            dGia.TenKhachHang = cboTenKhachHang.Text;
-            dGia.TraiNghiem = cboTraiNghiem.Text;
-            dGia.DiemDanhGia = cboDiemDanhGia.Text;
-            dGia.DanhGiaNguoiDung = richTextBoxDanhGia.Text;
-            dGiaDAO.Them(dGia);
-            this.Hide();
-            DanhGiaCuaKhachHang f = new DanhGiaCuaKhachHang();
-            f.ShowDialog();
-            f.ReLoadData();
-            f = null;
-            this.Close();
+            if(check.CheckValid(this))
+            {
+                DanhGia dGia = new DanhGia();
+                dGia.IDKhachSan = iDKSan;
+                dGia.TenKhachHang = cboTenKhachHang.Text;
+                dGia.TraiNghiem = cboTraiNghiem.Text;
+                dGia.DiemDanhGia = cboDiemDanhGia.Text;
+                dGia.DanhGiaNguoiDung = richTextBoxDanhGia.Text;
+                dGiaDAO.Them(dGia);
+                this.Hide();
+                DanhGiaCuaKhachHang f = new DanhGiaCuaKhachHang();
+                f.ShowDialog();
+                f.ReLoadData();
+                f = null;
+                this.Close();
+            }   
+            else
+            {
+                MessageBox.Show("Không được để trống, vui lòng nhập dữ liệu", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }    
+            
         }
     }
 }

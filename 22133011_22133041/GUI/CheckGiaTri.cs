@@ -10,35 +10,68 @@ namespace GUI
 {
     internal class CheckGiaTri
     {
-        ErrorProvider errorProvider = new ErrorProvider();
-        bool ValidateIsNotNullOrWhitespace(Guna2TextBox textBox)
+        public bool ValidTextBoxIsNotNullOrWhitespace(Guna2TextBox textBox)
         {
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                return true;
-            }
-            return false;
+            return !string.IsNullOrWhiteSpace(textBox.Text);
         }
-        public bool AttachValidatingEventToTextBoxes(Control parentControl)
+        public bool ValidRichTextBoxIsNotNullOrWhitespace(RichTextBox rtextBox)
         {
-            //bool valid = true;
+            return !string.IsNullOrWhiteSpace(rtextBox.Text);
+        }
+
+        public bool ValidComboBoxIsNotNullOrWhitespace(ComboBox cbBox)
+        {
+            return !(cbBox.SelectedItem == null || string.IsNullOrWhiteSpace(cbBox.Text));
+        }
+        public bool ValidPictureBoxIsNotNullOrWhitespace(PictureBox pictureBox)
+        {           
+            return !(pictureBox.Image == null);
+        }
+        public bool CheckValid(Control parentControl)
+        {
+            bool valid = true;
+
             foreach (Control control in parentControl.Controls)
             {
                 if (control is Guna2TextBox textBox)
                 {
-                    if (ValidateIsNotNullOrWhitespace(textBox))
+                    if (!ValidTextBoxIsNotNullOrWhitespace(textBox))
                     {
-                        //valid = false;
-                        return false;
+                        valid = false;
+                        break;
                     }
                 }
-                else if (control.HasChildren)
+                else if (control is ComboBox cbBox)
                 {
-                    AttachValidatingEventToTextBoxes(control); // Gọi đệ quy để duyệt qua tất cả các control con
+                    if (!ValidComboBoxIsNotNullOrWhitespace(cbBox))
+                    {
+                        valid = false;
+                        break;
+                    }
+                }
+                else if (control is PictureBox pictureBox)
+                {
+                    if (!ValidPictureBoxIsNotNullOrWhitespace(pictureBox))
+                    {
+                        valid = false;
+                        break;
+                    }
+                }
+                else if (control is RichTextBox rtextBox)
+                {
+                    if (!ValidRichTextBoxIsNotNullOrWhitespace(rtextBox))
+                    {
+                        valid = false;
+                        break;
+                    }
+                }
+                else if (!CheckValid(control))
+                {
+                    valid = false;
+                    break;
                 }
             }
-            //return valid;
-            return true;
-        }
+            return valid;
+        }       
     }
 }

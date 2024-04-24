@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
-            this.ErrorProviderUsername = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ErrorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
             this.PanelLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.ImageButtonFB = new Guna.UI2.WinForms.Guna2ImageButton();
             this.LabelLogin = new System.Windows.Forms.Label();
@@ -44,20 +41,10 @@
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).BeginInit();
             this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ErrorProviderUsername
-            // 
-            this.ErrorProviderUsername.ContainerControl = this;
-            // 
-            // ErrorProviderPassword
-            // 
-            this.ErrorProviderPassword.ContainerControl = this;
             // 
             // PanelLogin
             // 
@@ -269,10 +256,10 @@
             // 
             this.PictureBox.Image = global::GUI.Properties.Resources._9;
             this.PictureBox.ImageRotate = 0F;
-            this.PictureBox.Location = new System.Drawing.Point(671, -58);
+            this.PictureBox.Location = new System.Drawing.Point(678, -80);
             this.PictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(667, 791);
+            this.PictureBox.Size = new System.Drawing.Size(667, 813);
             this.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox.TabIndex = 8;
             this.PictureBox.TabStop = false;
@@ -289,8 +276,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangNhap";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DangNhap_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderPassword)).EndInit();
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBTwitter)).EndInit();
@@ -300,8 +285,6 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.ErrorProvider ErrorProviderUsername;
         public Guna.UI2.WinForms.Guna2Panel PanelLogin;
         public Guna.UI2.WinForms.Guna2ImageButton ImageButtonFB;
         public System.Windows.Forms.Label LabelLogin;
@@ -314,6 +297,5 @@
         public Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
         public Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
         public Guna.UI2.WinForms.Guna2PictureBox PictureBox;
-        public System.Windows.Forms.ErrorProvider ErrorProviderPassword;
     }
 }

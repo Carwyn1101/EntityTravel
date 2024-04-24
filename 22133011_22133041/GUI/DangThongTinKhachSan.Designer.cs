@@ -43,6 +43,7 @@
             this.pic_Anh2 = new System.Windows.Forms.PictureBox();
             this.pic_Anh4 = new System.Windows.Forms.PictureBox();
             this.pic_Anh1 = new System.Windows.Forms.PictureBox();
+            this.lblNhapMoTa = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoaiPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh3)).BeginInit();
@@ -69,7 +70,7 @@
             this.txtTenKhachSan.BorderColor = System.Drawing.Color.Black;
             this.txtTenKhachSan.BorderThickness = 0;
             this.txtTenKhachSan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenKhachSan.DefaultText = "Nhập tên khách sạn của bạn";
+            this.txtTenKhachSan.DefaultText = "Vui lòng nhập tên khách sạn của bạn";
             this.txtTenKhachSan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenKhachSan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenKhachSan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -88,6 +89,8 @@
             this.txtTenKhachSan.Size = new System.Drawing.Size(1119, 80);
             this.txtTenKhachSan.TabIndex = 123;
             this.txtTenKhachSan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTenKhachSan.TextChanged += new System.EventHandler(this.txtTenKhachSan_TextChanged);
+            this.txtTenKhachSan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTenKhachSan_MouseClick);
             // 
             // cboDiaDiem
             // 
@@ -135,7 +138,7 @@
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Size = new System.Drawing.Size(1117, 159);
             this.txtMoTa.TabIndex = 119;
-            this.txtMoTa.Text = "Nhập mô tả ở đây";
+            this.txtMoTa.Text = "";
             // 
             // btnThemAnh4
             // 
@@ -255,11 +258,21 @@
             this.pic_Anh1.TabIndex = 111;
             this.pic_Anh1.TabStop = false;
             // 
+            // lblNhapMoTa
+            // 
+            this.lblNhapMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNhapMoTa.Location = new System.Drawing.Point(12, 480);
+            this.lblNhapMoTa.Name = "lblNhapMoTa";
+            this.lblNhapMoTa.Size = new System.Drawing.Size(169, 23);
+            this.lblNhapMoTa.TabIndex = 126;
+            this.lblNhapMoTa.Text = "Nhập mô tả bên dưới";
+            // 
             // DangThongTinKhachSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 758);
+            this.Controls.Add(this.lblNhapMoTa);
             this.Controls.Add(this.cboLoaiPhong);
             this.Controls.Add(this.pictureBoxLoaiPhong);
             this.Controls.Add(this.txtTenKhachSan);
@@ -275,7 +288,7 @@
             this.Controls.Add(this.pic_Anh2);
             this.Controls.Add(this.pic_Anh4);
             this.Controls.Add(this.pic_Anh1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DangThongTinKhachSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangThongTinKhachSan";
@@ -306,5 +319,6 @@
         public System.Windows.Forms.PictureBox pic_Anh2;
         public System.Windows.Forms.PictureBox pic_Anh4;
         public System.Windows.Forms.PictureBox pic_Anh1;
+        private System.Windows.Forms.Label lblNhapMoTa;
     }
 }

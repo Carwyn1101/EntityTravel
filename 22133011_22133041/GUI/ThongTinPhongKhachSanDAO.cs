@@ -109,10 +109,10 @@ namespace GUI
                 f.pic_Anh2.Image = Image.FromFile(image2);
             }
         }
-        public void LoadPhongTheoLoaiPhong(FlowLayoutPanel flpTrangChuKhachSan, string loaiPhong)
+        public void LoadPhongTheoLoaiPhong(FlowLayoutPanel flpTrangChuKhachSan, string loaiPhong, int iDKhachSan)
         {
             var kSan = from p in db.ThongTinPhongCuaKhachSans
-                       where p.TenPhong == loaiPhong
+                       where p.TenPhong == loaiPhong && p.IDKhachSan == iDKhachSan
                        select p;
             foreach (var p in kSan)
             {

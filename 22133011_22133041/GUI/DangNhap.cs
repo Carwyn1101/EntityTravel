@@ -38,10 +38,9 @@ namespace GUI
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (check.AttachValidatingEventToTextBoxes(this))
+            if (check.CheckValid(this))
             {
-                MessageBox.Show("Đăng nhập", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //tKDAO.DangNhap(this, txtTenDangNhap.Text, loaiTaiKhoan);
+                tKDAO.DangNhap(this, txtTenDangNhap.Text, loaiTaiKhoan);
             }
             else 
             {
