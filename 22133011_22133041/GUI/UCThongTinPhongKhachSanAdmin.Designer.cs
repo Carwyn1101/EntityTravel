@@ -35,8 +35,8 @@
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.lblSoGiaTien = new System.Windows.Forms.Label();
             this.pnl2 = new System.Windows.Forms.Panel();
-            this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnl1.SuspendLayout();
             this.pnl2.SuspendLayout();
             this.SuspendLayout();
@@ -45,10 +45,9 @@
             // 
             this.lblKichThuocPhong.AutoSize = true;
             this.lblKichThuocPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKichThuocPhong.Location = new System.Drawing.Point(178, 54);
-            this.lblKichThuocPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKichThuocPhong.Location = new System.Drawing.Point(237, 66);
             this.lblKichThuocPhong.Name = "lblKichThuocPhong";
-            this.lblKichThuocPhong.Size = new System.Drawing.Size(27, 20);
+            this.lblKichThuocPhong.Size = new System.Drawing.Size(34, 25);
             this.lblKichThuocPhong.TabIndex = 6;
             this.lblKichThuocPhong.Text = "10";
             // 
@@ -57,10 +56,9 @@
             this.linklblChiTietPhong.AutoSize = true;
             this.linklblChiTietPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linklblChiTietPhong.LinkColor = System.Drawing.Color.Blue;
-            this.linklblChiTietPhong.Location = new System.Drawing.Point(8, 12);
-            this.linklblChiTietPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linklblChiTietPhong.Location = new System.Drawing.Point(11, 15);
             this.linklblChiTietPhong.Name = "linklblChiTietPhong";
-            this.linklblChiTietPhong.Size = new System.Drawing.Size(161, 24);
+            this.linklblChiTietPhong.Size = new System.Drawing.Size(201, 29);
             this.linklblChiTietPhong.TabIndex = 5;
             this.linklblChiTietPhong.TabStop = true;
             this.linklblChiTietPhong.Text = "Phòng \"ABCDEF\"";
@@ -70,10 +68,9 @@
             // 
             this.lblKichThuoc.AutoSize = true;
             this.lblKichThuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKichThuoc.Location = new System.Drawing.Point(8, 54);
-            this.lblKichThuoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKichThuoc.Location = new System.Drawing.Point(11, 66);
             this.lblKichThuoc.Name = "lblKichThuoc";
-            this.lblKichThuoc.Size = new System.Drawing.Size(173, 20);
+            this.lblKichThuoc.Size = new System.Drawing.Size(221, 25);
             this.lblKichThuoc.TabIndex = 1;
             this.lblKichThuoc.Text = "Kích Thước Phòng(m2):";
             // 
@@ -83,20 +80,19 @@
             this.pnl1.Controls.Add(this.lblKichThuocPhong);
             this.pnl1.Controls.Add(this.linklblChiTietPhong);
             this.pnl1.Controls.Add(this.lblKichThuoc);
-            this.pnl1.Location = new System.Drawing.Point(2, 2);
-            this.pnl1.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl1.Location = new System.Drawing.Point(3, 2);
+            this.pnl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl1.Name = "pnl1";
-            this.pnl1.Size = new System.Drawing.Size(286, 116);
+            this.pnl1.Size = new System.Drawing.Size(381, 142);
             this.pnl1.TabIndex = 12;
             // 
             // lblGiaTien
             // 
             this.lblGiaTien.AutoSize = true;
             this.lblGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaTien.Location = new System.Drawing.Point(13, 12);
-            this.lblGiaTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGiaTien.Location = new System.Drawing.Point(17, 15);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(72, 20);
+            this.lblGiaTien.Size = new System.Drawing.Size(92, 25);
             this.lblGiaTien.TabIndex = 0;
             this.lblGiaTien.Text = "Giá Tiền:";
             // 
@@ -104,10 +100,9 @@
             // 
             this.lblSoGiaTien.AutoSize = true;
             this.lblSoGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoGiaTien.Location = new System.Drawing.Point(98, 12);
-            this.lblSoGiaTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSoGiaTien.Location = new System.Drawing.Point(131, 15);
             this.lblSoGiaTien.Name = "lblSoGiaTien";
-            this.lblSoGiaTien.Size = new System.Drawing.Size(118, 20);
+            this.lblSoGiaTien.Size = new System.Drawing.Size(146, 25);
             this.lblSoGiaTien.TabIndex = 1;
             this.lblSoGiaTien.Text = "1.000.000 VNĐ";
             // 
@@ -118,46 +113,47 @@
             this.pnl2.Controls.Add(this.lblTrangThai);
             this.pnl2.Controls.Add(this.lblGiaTien);
             this.pnl2.Controls.Add(this.lblSoGiaTien);
-            this.pnl2.Location = new System.Drawing.Point(282, 2);
-            this.pnl2.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl2.Location = new System.Drawing.Point(376, 2);
+            this.pnl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl2.Name = "pnl2";
-            this.pnl2.Size = new System.Drawing.Size(404, 116);
+            this.pnl2.Size = new System.Drawing.Size(538, 142);
             this.pnl2.TabIndex = 13;
-            // 
-            // lblTrangThai
-            // 
-            this.lblTrangThai.AutoSize = false;
-            this.lblTrangThai.BackColor = System.Drawing.Color.Transparent;
-            this.lblTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.Location = new System.Drawing.Point(126, 82);
-            this.lblTrangThai.Margin = new System.Windows.Forms.Padding(2);
-            this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(166, 29);
-            this.lblTrangThai.TabIndex = 3;
-            this.lblTrangThai.Text = "Trạng thái";
-            this.lblTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(17, 82);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(23, 101);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(91, 29);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(121, 36);
             this.guna2HtmlLabel1.TabIndex = 5;
             this.guna2HtmlLabel1.Text = "Trạng thái:";
-            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTrangThai
+            // 
+            this.lblTrangThai.AutoSize = false;
+            this.lblTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.lblTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrangThai.Location = new System.Drawing.Point(168, 101);
+            this.lblTrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.Size = new System.Drawing.Size(221, 36);
+            this.lblTrangThai.TabIndex = 3;
+            this.lblTrangThai.Text = "Trạng thái";
+            this.lblTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UCThongTinPhongKhachSanAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl1);
             this.Controls.Add(this.pnl2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCThongTinPhongKhachSanAdmin";
-            this.Size = new System.Drawing.Size(688, 120);
+            this.Size = new System.Drawing.Size(917, 148);
             this.pnl1.ResumeLayout(false);
             this.pnl1.PerformLayout();
             this.pnl2.ResumeLayout(false);

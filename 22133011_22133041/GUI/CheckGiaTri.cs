@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace GUI
 {
@@ -21,11 +23,53 @@ namespace GUI
 
         public bool ValidComboBoxIsNotNullOrWhitespace(ComboBox cbBox)
         {
-            return !(cbBox.SelectedItem == null || string.IsNullOrWhiteSpace(cbBox.Text));
+            return !string.IsNullOrWhiteSpace(cbBox.Text);
         }
         public bool ValidPictureBoxIsNotNullOrWhitespace(PictureBox pictureBox)
         {           
             return !(pictureBox.Image == null);
+        }
+        public bool ValidPhoneNumber(string phoneNumber)
+        {
+            //Kiểm tra số điện thoại có 10 chữ số và bắt đầu bằng số 0
+
+            phoneNumber = phoneNumber.Replace(" ", "").Replace("-", "");
+
+            if (phoneNumber.Length != 10)
+            {
+                return false;
+            }
+
+            if (!phoneNumber.StartsWith("0"))
+            {
+                return false;
+            }
+
+            foreach (char c in phoneNumber)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public bool ValidEmail(string email)
+        {
+            // Biểu thức chính quy để kiểm tra định dạng email
+            string emailPattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+
+            // Kiểm tra email sử dụng biểu thức chính quy
+            return Regex.IsMatch(email, emailPattern);
+        }
+        public bool NgayCheckOut(DateTime ngayNhanPhong, DateTime ngayTraPhong)
+        {
+            return ngayTraPhong > ngayNhanPhong;
+        }
+        public bool NgayCheckIn(DateTime ngayNhanPhong)
+        {
+            DateTime currentTime = DateTime.Now;
+            return ngayNhanPhong.Date >= currentTime.Date;
         }
         public bool CheckValid(Control parentControl)
         {

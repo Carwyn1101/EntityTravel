@@ -40,14 +40,37 @@ namespace GUI
             MessageBox.Show("Thêm thông tin phòng khách sạn thành công!");
         }
         public void Xoa(int iDPhongKhachSan)
-        {
-            var khachSanToRemove = db.ThongTinPhongCuaKhachSans.FirstOrDefault(k => k.IDPhong == iDPhongKhachSan);
-            if (khachSanToRemove != null)
+        {           
+            var phong = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDPhong == iDPhongKhachSan && c1.TrangThai == "Đã Được Thuê" select c1;
+            if (phong.Any())
             {
-                db.ThongTinPhongCuaKhachSans.Remove(khachSanToRemove);
-                db.SaveChanges();
+                MessageBox.Show("Phòng đang được thuê không thể thực hiện!");
             }
-            MessageBox.Show("Xoá thông tin phòng khách sạn thành công!");
+            else
+            {
+                var datPhong = from p in db.DatPhongs where p.IDPhong == iDPhongKhachSan select p;
+                if (datPhong.Any())
+                {
+                    foreach (var tmp in datPhong)
+                    {
+                        db.DatPhongs.Remove(tmp);
+                    }
+                    db.SaveChanges();
+                }
+                var hDon = from b in db.HoaDons where b.IDPhong == iDPhongKhachSan select b;
+                if (hDon.Any())
+                {
+                    foreach (var tmp in hDon)
+                    {
+                        db.HoaDons.Remove(tmp);
+                    }
+                    db.SaveChanges();
+                }
+                var phongKS = db.ThongTinPhongCuaKhachSans.FirstOrDefault(c2 => c2.IDPhong == iDPhongKhachSan);
+                db.ThongTinPhongCuaKhachSans.Remove(phongKS);
+                db.SaveChanges();
+                MessageBox.Show("Xoá thông tin phòng khách sạn thành công!");
+            }
         }
         public void Sua(ThongTinPhongCuaKhachSan f)
         {

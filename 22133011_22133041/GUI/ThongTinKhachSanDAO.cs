@@ -32,23 +32,41 @@ namespace GUI
             MessageBox.Show("Thêm thông tin khách sạn thành công!");           
         }
         public void Xoa(int iDKhachSan)
-        {
-            var danhGia = from c in db.DanhGias where c.IDKhachSan == iDKhachSan select c;
-            if (danhGia.Any())
-            { 
-                foreach (var tmp in danhGia)
-                {
-                    db.DanhGias.Remove(tmp);
-                }
-                db.SaveChanges();
-            }
+        {            
             var phong = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan && c1.TrangThai == "Đã Được Thuê" select c1;
-            if(phong.Any())
+            if (phong.Any())
             {
                 MessageBox.Show("Khách sạn hiện có phòng đang cho thuê không thể thực hiện!");
             }
-            else 
+            else
             {
+                var danhGia = from c in db.DanhGias where c.IDKhachSan == iDKhachSan select c;
+                if (danhGia.Any())
+                {
+                    foreach (var tmp in danhGia)
+                    {
+                        db.DanhGias.Remove(tmp);
+                    }
+                    db.SaveChanges();
+                }
+                var datPhong = from p in db.DatPhongs where p.IDKhachSan == iDKhachSan select p;
+                if (datPhong.Any())
+                {
+                    foreach (var tmp in datPhong)
+                    {
+                        db.DatPhongs.Remove(tmp);
+                    }
+                    db.SaveChanges();
+                }
+                var hDon = from b in db.HoaDons where b.ThongTinPhongCuaKhachSan.IDKhachSan == iDKhachSan select b;
+                if (hDon.Any())
+                {
+                    foreach (var tmp in hDon)
+                    {
+                        db.HoaDons.Remove(tmp);
+                    }
+                    db.SaveChanges();
+                }
                 var phong1 = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan && c1.TrangThai == "Còn Trống" select c1;
                 foreach (var tmp in phong1)
                 {
@@ -59,7 +77,7 @@ namespace GUI
                 db.ThongTinKhachSans.Remove(khachSan);
                 db.SaveChanges();
                 MessageBox.Show("Xóa khách sạn thành công!");
-            }           
+            }
         }
         public void Sua(ThongTinKhachSan f)
         {

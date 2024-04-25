@@ -39,9 +39,9 @@ namespace GUI
                 {
                     var trangThai = db.ThongTinPhongCuaKhachSans.FirstOrDefault(h => h.IDPhong == k.IDPhong);                  
                     trangThai.TrangThai = "Còn Trống";
-                    db.SaveChanges();
                 }
             }
+            db.SaveChanges();
         }
         public void LichSuBookLoad(FlowLayoutPanel flpLichSuBook)
         {

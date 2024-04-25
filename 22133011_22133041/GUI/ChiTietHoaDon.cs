@@ -16,6 +16,7 @@ namespace GUI
         DatPhongDAO datPhongDAO = new DatPhongDAO();
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        CheckGiaTri check = new CheckGiaTri();
         DateTime ngayNhanPhong, ngayTraPhong;
         int stt;
         public ChiTietHoaDon()
@@ -33,33 +34,48 @@ namespace GUI
             txtMail.Text = kHang.Mail;
             var tmp = (from c in db.ThongTinPhongCuaKhachSans where c.IDPhong == Program.iDPhongInstance select c).FirstOrDefault();
             txtGiaPhong.Text = tmp.GiaPhong;
+            dtpNgayNhanPhong.Value = DateTime.Now;
         }
         private void btnThue_Click(object sender, EventArgs e)
         {
-            HoaDon hd = new HoaDon();
-            hd.SoThuTuKhachHang = stt;
-            hd.TenKhachHang = txtTenKhachHang.Text;
-            hd.SDT = txtSoDienThoai.Text;
-            hd.CCCD = txtCCCD.Text;
-            hd.Mail = txtMail.Text;
-            hd.NgayDatPhong = DateTime.Now;
-            hd.NgayNhanPhong = ngayNhanPhong;
-            hd.NgayTraPhong = ngayTraPhong;
-            hd.TongTien = txtTongTienThanhToan.Text;
-            hd.IDPhong = Program.iDPhongInstance;
-            hoaDonDAO.Them(hd);
-            //
-            DatPhong dp = new DatPhong();
-            dp.NgayNhanPhong = ngayNhanPhong;
-            dp.NgayTraPhong = ngayTraPhong;
-            dp.IDPhong = Program.iDPhongInstance;
-            dp.IDKhachSan = Program.iDKhachSanInstance;
-            dp.IDKhachHang = Program.iDTaiKhoanInstance;
-            datPhongDAO.Them(dp);        
-            pKSanDAO.CapNhatTrangThaiPhong(Program.iDPhongInstance);
-            Program.XemPhongCuaKhachSanInstance.Close();
-            XemPhongCuaKhachSan f = new XemPhongCuaKhachSan(Program.iDKhachSanInstance);
-            f.ShowDialog();
+            if(check.NgayCheckIn(dtpNgayNhanPhong.Value.Date))
+            {
+                if (check.NgayCheckOut(dtpNgayNhanPhong.Value.Date, dtpNgayTraPhong.Value.Date))
+                {
+                    HoaDon hd = new HoaDon();
+                    hd.SoThuTuKhachHang = stt;
+                    hd.TenKhachHang = txtTenKhachHang.Text;
+                    hd.SDT = txtSoDienThoai.Text;
+                    hd.CCCD = txtCCCD.Text;
+                    hd.Mail = txtMail.Text;
+                    hd.NgayDatPhong = DateTime.Now;
+                    hd.NgayNhanPhong = ngayNhanPhong;
+                    hd.NgayTraPhong = ngayTraPhong;
+                    hd.TongTien = txtTongTienThanhToan.Text;
+                    hd.IDPhong = Program.iDPhongInstance;
+                    hoaDonDAO.Them(hd);
+                    //
+                    DatPhong dp = new DatPhong();
+                    dp.NgayNhanPhong = ngayNhanPhong;
+                    dp.NgayTraPhong = ngayTraPhong;
+                    dp.IDPhong = Program.iDPhongInstance;
+                    dp.IDKhachSan = Program.iDKhachSanInstance;
+                    dp.IDKhachHang = Program.iDTaiKhoanInstance;
+                    datPhongDAO.Them(dp);
+                    pKSanDAO.CapNhatTrangThaiPhong(Program.iDPhongInstance);
+                    Program.XemPhongCuaKhachSanInstance.Close();
+                    XemPhongCuaKhachSan f = new XemPhongCuaKhachSan(Program.iDKhachSanInstance);
+                    f.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Thời gian trả phòng không hợp lệ, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thời gian nhận phòng không hợp lệ, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }       
         }
         private void TinhTongTien()
         {

@@ -36,27 +36,31 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 12);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 15);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(442, 41);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(559, 54);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Danh sách phòng bạn đã đặt";
             // 
             // flpLichSuBook
             // 
+            this.flpLichSuBook.AutoScroll = true;
             this.flpLichSuBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpLichSuBook.Location = new System.Drawing.Point(12, 59);
+            this.flpLichSuBook.Location = new System.Drawing.Point(16, 73);
+            this.flpLichSuBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flpLichSuBook.Name = "flpLichSuBook";
-            this.flpLichSuBook.Size = new System.Drawing.Size(684, 615);
+            this.flpLichSuBook.Size = new System.Drawing.Size(911, 756);
             this.flpLichSuBook.TabIndex = 1;
             // 
             // LichSuBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 686);
+            this.ClientSize = new System.Drawing.Size(944, 844);
             this.Controls.Add(this.flpLichSuBook);
             this.Controls.Add(this.guna2HtmlLabel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LichSuBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LichSuBook";

@@ -45,7 +45,7 @@ namespace GUI
             }   
             else
             {
-                MessageBox.Show("Không được để trống, vui lòng nhập dữ liệu", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không được để trống, vui lòng nhập dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }    
             
         }
