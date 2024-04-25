@@ -64,7 +64,7 @@
             this.pnlTrangChu.Location = new System.Drawing.Point(2, 2);
             this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTrangChu.Name = "pnlTrangChu";
-            this.pnlTrangChu.Size = new System.Drawing.Size(1101, 119);
+            this.pnlTrangChu.Size = new System.Drawing.Size(1095, 119);
             this.pnlTrangChu.TabIndex = 8;
             // 
             // btnThongKe
@@ -168,7 +168,7 @@
             this.flpTrangChu.Location = new System.Drawing.Point(2, 126);
             this.flpTrangChu.Margin = new System.Windows.Forms.Padding(2);
             this.flpTrangChu.Name = "flpTrangChu";
-            this.flpTrangChu.Size = new System.Drawing.Size(1101, 412);
+            this.flpTrangChu.Size = new System.Drawing.Size(1095, 350);
             this.flpTrangChu.TabIndex = 9;
             // 
             // TrangChuAdmin
@@ -176,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1108, 549);
+            this.ClientSize = new System.Drawing.Size(1101, 479);
             this.Controls.Add(this.flpTrangChu);
             this.Controls.Add(this.pnlTrangChu);
             this.MaximizeBox = false;

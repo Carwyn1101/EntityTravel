@@ -36,6 +36,7 @@
             this.lblSoGiaTien = new System.Windows.Forms.Label();
             this.pnl2 = new System.Windows.Forms.Panel();
             this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnl1.SuspendLayout();
             this.pnl2.SuspendLayout();
             this.SuspendLayout();
@@ -95,9 +96,9 @@
             this.lblGiaTien.Location = new System.Drawing.Point(13, 12);
             this.lblGiaTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(68, 20);
+            this.lblGiaTien.Size = new System.Drawing.Size(72, 20);
             this.lblGiaTien.TabIndex = 0;
-            this.lblGiaTien.Text = "Giá Tiền";
+            this.lblGiaTien.Text = "Giá Tiền:";
             // 
             // lblSoGiaTien
             // 
@@ -113,6 +114,7 @@
             // pnl2
             // 
             this.pnl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl2.Controls.Add(this.guna2HtmlLabel1);
             this.pnl2.Controls.Add(this.lblTrangThai);
             this.pnl2.Controls.Add(this.lblGiaTien);
             this.pnl2.Controls.Add(this.lblSoGiaTien);
@@ -127,13 +129,26 @@
             this.lblTrangThai.AutoSize = false;
             this.lblTrangThai.BackColor = System.Drawing.Color.Transparent;
             this.lblTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.Location = new System.Drawing.Point(164, 82);
+            this.lblTrangThai.Location = new System.Drawing.Point(126, 82);
             this.lblTrangThai.Margin = new System.Windows.Forms.Padding(2);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(166, 29);
             this.lblTrangThai.TabIndex = 3;
             this.lblTrangThai.Text = "Trạng thái";
-            this.lblTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(17, 82);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(91, 29);
+            this.guna2HtmlLabel1.TabIndex = 5;
+            this.guna2HtmlLabel1.Text = "Trạng thái:";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // UCThongTinPhongKhachSanAdmin
             // 
@@ -161,5 +176,6 @@
         public System.Windows.Forms.Label lblSoGiaTien;
         public System.Windows.Forms.Panel pnl2;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblTrangThai;
+        public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

@@ -16,6 +16,17 @@ namespace GUI
             db.SaveChanges();
             MessageBox.Show("Thuê thành công!");
         }
+        public void LoadData(ChiTietKhachHangAdmin f)
+        {
+            var chiTietKhachHang = db.HoaDons.FirstOrDefault(c => c.IDPhong == Program.iDPhongInstance);
+            f.txtTenKhachHang.Text = chiTietKhachHang.TenKhachHang; 
+            f.txtSoDienThoai.Text = chiTietKhachHang.SDT;
+            f.txtCCCD.Text = chiTietKhachHang.CCCD;
+            f.txtMail.Text = chiTietKhachHang.Mail;
+            f.txtNgayNhan.Text = chiTietKhachHang.NgayNhanPhong.ToString();
+            f.txtNgayTra.Text = chiTietKhachHang.NgayTraPhong.ToString();
+            f.txtTongTienThanhToan.Text = chiTietKhachHang.TongTien;
+        }
         
     }
 }

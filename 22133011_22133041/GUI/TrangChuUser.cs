@@ -61,8 +61,9 @@ namespace GUI
         private void btnLichSuBook_Click(object sender, EventArgs e)
         {
             LichSuBook f = new LichSuBook();
-            f.ShowDialog();
             Program.LichSuBookInstance = f;
+            f.ShowDialog();
+            
         }
     }
 }

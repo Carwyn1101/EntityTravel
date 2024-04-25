@@ -14,8 +14,9 @@ namespace GUI
     {
         int iDKhachSan;
         private void btnChiTiet_Click(object sender, EventArgs e)
-        {           
-            ChiTietKhachSanAdmin f = new ChiTietKhachSanAdmin(iDKhachSan);
+        {
+            Program.iDKhachSanInstance = iDKhachSan;
+            ChiTietKhachSanAdmin f = new ChiTietKhachSanAdmin();
             f.ShowDialog();          
         }       
         public UCThongTinKhachSanAdmin()

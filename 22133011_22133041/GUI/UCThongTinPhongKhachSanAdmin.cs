@@ -23,13 +23,14 @@ namespace GUI
             linklblChiTietPhong.Text = pKSan.TenPhong;
             lblKichThuocPhong.Text = pKSan.KichThuocPhong;
             lblTrangThai.Text = pKSan.TrangThai;
-            lblSoGiaTien.Text = pKSan.GiaPhong;
+            lblSoGiaTien.Text = pKSan.GiaPhong + " " + "VND";
             iDPhong = (int)pKSan.IDPhong;
             iDKhachSan = (int)pKSan.IDKhachSan;
         }
         private void linklblChiTietPhong_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ChiTietPhongCuaKhachSanAdmin f = new ChiTietPhongCuaKhachSanAdmin(iDKhachSan,iDPhong);
+            Program.iDPhongInstance = iDPhong;
+            ChiTietPhongCuaKhachSanAdmin f = new ChiTietPhongCuaKhachSanAdmin();
             f.ShowDialog();
         }
     }

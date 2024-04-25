@@ -37,7 +37,7 @@ namespace GUI
             {
                 if(k.NgayTraPhong < check)
                 {
-                    var trangThai = db.ThongTinPhongCuaKhachSans.FirstOrDefault(h => h.IDPhong == k.IDPhong);
+                    var trangThai = db.ThongTinPhongCuaKhachSans.FirstOrDefault(h => h.IDPhong == k.IDPhong);                  
                     trangThai.TrangThai = "Còn Trống";
                     db.SaveChanges();
                 }

@@ -86,9 +86,9 @@
             this.panel3.Controls.Add(this.lblNgayTraPhong);
             this.panel3.Controls.Add(this.lblNgayNhan);
             this.panel3.Controls.Add(this.lblNgayNhanPhong);
-            this.panel3.Location = new System.Drawing.Point(213, 3);
+            this.panel3.Location = new System.Drawing.Point(205, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(465, 130);
+            this.panel3.Size = new System.Drawing.Size(464, 130);
             this.panel3.TabIndex = 4;
             // 
             // guna2HtmlLabel2
@@ -170,7 +170,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "UCHoanThanh";
-            this.Size = new System.Drawing.Size(681, 135);
+            this.Size = new System.Drawing.Size(671, 135);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);

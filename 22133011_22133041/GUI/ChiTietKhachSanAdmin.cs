@@ -13,38 +13,31 @@ namespace GUI
 {
     public partial class ChiTietKhachSanAdmin : Form
     {
-        string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
-        string tenAnh1, tenAnh2, tenAnh3, tenAnh4;
-        int iDKhachSan, iDChuKhachSan;    
+        string tenAnh1, tenAnh2, tenAnh3, tenAnh4;    
         public ChiTietKhachSanAdmin()
         {
-            InitializeComponent();         
-        }
-        public ChiTietKhachSanAdmin(int IDKhachSan)
-        {
             InitializeComponent();
-            iDKhachSan = IDKhachSan;           
-            pKSanDAO.LoadDanhSachPhongAdmin(flpPhongKhachSan, iDKhachSan);
-        }
+            pKSanDAO.LoadDanhSachPhongAdmin(flpPhongKhachSan, Program.iDKhachSanInstance);
+            Program.flpPhongInstance = flpPhongKhachSan;
+        }      
         private void ChiTietKhachSanAdmin_Load(object sender, EventArgs e)
         {
-            kSanDAO.LoadChiTietKhachSanAdmin(this, iDKhachSan, out tenAnh1, out tenAnh2, out tenAnh3, out tenAnh4, out iDChuKhachSan);
+            kSanDAO.LoadChiTietKhachSanAdmin(this, Program.iDKhachSanInstance, out tenAnh1, out tenAnh2, out tenAnh3, out tenAnh4);
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            kSanDAO.Xoa(iDKhachSan);
+            kSanDAO.Xoa(Program.iDKhachSanInstance);
             this.Close();
             Program.TrangChuAdminInstance.flpTrangChu.Controls.Clear();
-            kSanDAO.LoadData(Program.TrangChuAdminInstance.flpTrangChu, iDChuKhachSan);
+            kSanDAO.LoadData(Program.TrangChuAdminInstance.flpTrangChu, Program.iDTaiKhoanInstance);
             Program.TrangChuAdminInstance.Show();
         }       
         private void btnLuu_Click(object sender, EventArgs e)
         {
             ThongTinKhachSan kSan = new ThongTinKhachSan();
-            kSan.IDKhachSan = iDKhachSan;
+            kSan.IDKhachSan = Program.iDKhachSanInstance;
             kSan.TenKhachSan = txtTenKhachSan.Text;
             kSan.DiaDiemKhachSan = txtDiaDiem.Text;
             kSan.Loai = txtLoai.Text;
@@ -53,24 +46,24 @@ namespace GUI
             kSan.HinhAnh2 = tenAnh2;
             kSan.HinhAnh3 = tenAnh3;
             kSan.HinhAnh4 = tenAnh4; 
-            kSan.IDChuKhachSan = iDChuKhachSan;
+            kSan.IDChuKhachSan = Program.iDTaiKhoanInstance;
             kSanDAO.Sua(kSan);
             this.Close();
             Program.TrangChuAdminInstance.flpTrangChu.Controls.Clear();
-            kSanDAO.LoadData(Program.TrangChuAdminInstance.flpTrangChu, iDChuKhachSan);
+            kSanDAO.LoadData(Program.TrangChuAdminInstance.flpTrangChu, Program.iDTaiKhoanInstance);
             Program.TrangChuAdminInstance.Show();
         }
 
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
-            ThemPhongChoKhachSan f = new ThemPhongChoKhachSan(iDKhachSan);
+            ThemPhongChoKhachSan f = new ThemPhongChoKhachSan(Program.iDKhachSanInstance);
             f.ShowDialog();
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             flpPhongKhachSan.Controls.Clear();
-            pKSanDAO.LoadDanhSachPhongAdmin(flpPhongKhachSan, iDKhachSan);
+            pKSanDAO.LoadDanhSachPhongAdmin(flpPhongKhachSan, Program.iDKhachSanInstance);
         }
         private void btnSuaAnh1_Click(object sender, EventArgs e)
         {

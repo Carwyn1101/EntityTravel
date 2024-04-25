@@ -133,9 +133,9 @@ namespace GUI
                 f.pic_Anh4.Image = Image.FromFile(image4);
             }
         }
-        public void LoadChiTietKhachSanAdmin(ChiTietKhachSanAdmin f, int iDKhachSan, out string tenAnh1, out string tenAnh2, out string tenAnh3, out string tenAnh4, out int iDChuKhachSan)
+        public void LoadChiTietKhachSanAdmin(ChiTietKhachSanAdmin f, int iDKhachSan, out string tenAnh1, out string tenAnh2, out string tenAnh3, out string tenAnh4)
         {
-            tenAnh1 = string.Empty; tenAnh2 = string.Empty; tenAnh3 = string.Empty; tenAnh4 = string.Empty; iDChuKhachSan = 0;
+            tenAnh1 = string.Empty; tenAnh2 = string.Empty; tenAnh3 = string.Empty; tenAnh4 = string.Empty; 
             var kSan = (from p in db.ThongTinKhachSans
                         where p.IDKhachSan == iDKhachSan
                         select p).SingleOrDefault();
@@ -149,7 +149,6 @@ namespace GUI
                 tenAnh2 = kSan.HinhAnh2;
                 tenAnh3 = kSan.HinhAnh3;
                 tenAnh4 = kSan.HinhAnh4;
-                iDChuKhachSan = (int)kSan.IDChuKhachSan;
                 string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
                 string image2 = Path.Combine(appDirectory, kSan.HinhAnh2);
                 string image3 = Path.Combine(appDirectory, kSan.HinhAnh3);

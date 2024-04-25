@@ -16,7 +16,7 @@ namespace GUI
         public void LoadDanhSachPhongUser(FlowLayoutPanel flpTrangChuKhachSan, int iDKhachSan)
         {
             var kSan = from p in db.ThongTinPhongCuaKhachSans
-                       where p.IDKhachSan == iDKhachSan
+                       where p.IDKhachSan == iDKhachSan && p.TrangThai == "Còn Trống"
                        select p;
             foreach (var p in kSan)
             {
@@ -71,12 +71,12 @@ namespace GUI
                 khachSanToUpdate.TienNghiPhong6 = f.TienNghiPhong6;
                 khachSanToUpdate.HutThuoc1 = f.HutThuoc1;
                 khachSanToUpdate.HutThuoc2 = f.HutThuoc2;
-                khachSanToUpdate.UuDai = null;
+                khachSanToUpdate.UuDai = f.UuDai;
                 khachSanToUpdate.TrangThai = f.TrangThai;
                 khachSanToUpdate.HinhAnh1 = f.HinhAnh1;
-                khachSanToUpdate.HinhAnh2 = f.HinhAnh2;
-                db.SaveChanges();
+                khachSanToUpdate.HinhAnh2 = f.HinhAnh2;               
             }
+            db.SaveChanges();
             MessageBox.Show("Sửa thông tin phòng khách sạn thành công!");
         }
         public void LoadChiTietPhongUser(ChiTietPhongCuaKhachSanUser f, int iDPhong)
