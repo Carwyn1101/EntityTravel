@@ -52,6 +52,6 @@ namespace GUI
         {
             dpDAO.TrangThaiLoad(sender,e);
             kSDAO.LoadData(flpTrangChu, iDNguoiDung);
-        }
+        }       
     }
 }

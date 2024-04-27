@@ -1,5 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DoAnCuoiKyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DoAnCuoiKyEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DanhGias" EntityType="DoAnCuoiKyModel.DanhGia" />
+    <EntitySet Name="DatPhongs" EntityType="DoAnCuoiKyModel.DatPhong" />
+    <EntitySet Name="HoaDons" EntityType="DoAnCuoiKyModel.HoaDon" />
+    <EntitySet Name="MaGiamGias" EntityType="DoAnCuoiKyModel.MaGiamGia" />
+    <EntitySet Name="TaiKhoans" EntityType="DoAnCuoiKyModel.TaiKhoan" />
+    <EntitySet Name="ThongTinKhachHangs" EntityType="DoAnCuoiKyModel.ThongTinKhachHang" />
+    <EntitySet Name="ThongTinKhachSans" EntityType="DoAnCuoiKyModel.ThongTinKhachSan" />
+    <EntitySet Name="ThongTinPhongCuaKhachSans" EntityType="DoAnCuoiKyModel.ThongTinPhongCuaKhachSan" />
+    <AssociationSet Name="FK__DanhGia__IDKhach__290D0E62" Association="DoAnCuoiKyModel.FK__DanhGia__IDKhach__290D0E62">
+      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
+      <End Role="DanhGia" EntitySet="DanhGias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DatPhong__IDKhac__2EC5E7B8" Association="DoAnCuoiKyModel.FK__DatPhong__IDKhac__2EC5E7B8">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DatPhong__IDKhac__30AE302A" Association="DoAnCuoiKyModel.FK__DatPhong__IDKhac__30AE302A">
+      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DatPhong__IDPhon__2FBA0BF1" Association="DoAnCuoiKyModel.FK__DatPhong__IDPhon__2FBA0BF1">
+      <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__IDPhong__3572E547" Association="DoAnCuoiKyModel.FK__HoaDon__IDPhong__3572E547">
+      <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__SoThuTuK__338A9CD5" Association="DoAnCuoiKyModel.FK__HoaDon__SoThuTuK__338A9CD5">
+      <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHangs" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MaGiamGia__IDKha__2630A1B7" Association="DoAnCuoiKyModel.FK__MaGiamGia__IDKha__2630A1B7">
+      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
+      <End Role="MaGiamGia" EntitySet="MaGiamGias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThongTinK__IDChu__2077C861" Association="DoAnCuoiKyModel.FK__ThongTinK__IDChu__2077C861">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThongTinK__IDKha__2BE97B0D" Association="DoAnCuoiKyModel.FK__ThongTinK__IDKha__2BE97B0D">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThongTinP__IDKha__2354350C" Association="DoAnCuoiKyModel.FK__ThongTinP__IDKha__2354350C">
+      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
+      <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="DanhGia">
     <Key>
       <PropertyRef Name="IDDanhGia" />
@@ -10,7 +60,7 @@
     <Property Name="DiemDanhGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="DanhGiaNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IDKhachSan" Type="Int32" />
-    <NavigationProperty Name="ThongTinKhachSan" Relationship="Self.FK__DanhGia__IDKhach__0ABD916C" FromRole="DanhGia" ToRole="ThongTinKhachSan" />
+    <NavigationProperty Name="ThongTinKhachSan" Relationship="DoAnCuoiKyModel.FK__DanhGia__IDKhach__290D0E62" FromRole="DanhGia" ToRole="ThongTinKhachSan" />
   </EntityType>
   <EntityType Name="DatPhong">
     <Key>
@@ -19,12 +69,13 @@
     <Property Name="MaDatPhong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NgayNhanPhong" Type="DateTime" Precision="0" />
     <Property Name="NgayTraPhong" Type="DateTime" Precision="0" />
-    <Property Name="IDPhong" Type="Int32" />
-    <NavigationProperty Name="ThongTinPhongCuaKhachSan" Relationship="Self.FK__DatPhong__IDPhon__10766AC2" FromRole="DatPhong" ToRole="ThongTinPhongCuaKhachSan" />
+    <Property Name="TrangThai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IDKhachHang" Type="Int32" />
+    <Property Name="IDPhong" Type="Int32" />
     <Property Name="IDKhachSan" Type="Int32" />
-    <NavigationProperty Name="TaiKhoan" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDKhac__40257DE4" FromRole="DatPhong" ToRole="TaiKhoan" />
-    <NavigationProperty Name="ThongTinKhachSan" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDKhac__420DC656" FromRole="DatPhong" ToRole="ThongTinKhachSan" />
+    <NavigationProperty Name="TaiKhoan" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDKhac__2EC5E7B8" FromRole="DatPhong" ToRole="TaiKhoan" />
+    <NavigationProperty Name="ThongTinKhachSan" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDKhac__30AE302A" FromRole="DatPhong" ToRole="ThongTinKhachSan" />
+    <NavigationProperty Name="ThongTinPhongCuaKhachSan" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDPhon__2FBA0BF1" FromRole="DatPhong" ToRole="ThongTinPhongCuaKhachSan" />
   </EntityType>
   <EntityType Name="HoaDon">
     <Key>
@@ -41,8 +92,18 @@
     <Property Name="NgayTraPhong" Type="DateTime" Precision="0" />
     <Property Name="TongTien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IDPhong" Type="Int32" />
-    <NavigationProperty Name="ThongTinPhongCuaKhachSan" Relationship="Self.FK__HoaDon__IDPhong__1AF3F935" FromRole="HoaDon" ToRole="ThongTinPhongCuaKhachSan" />
-    <NavigationProperty Name="ThongTinKhachHang" Relationship="Self.FK__HoaDon__SoThuTuK__190BB0C3" FromRole="HoaDon" ToRole="ThongTinKhachHang" />
+    <NavigationProperty Name="ThongTinPhongCuaKhachSan" Relationship="DoAnCuoiKyModel.FK__HoaDon__IDPhong__3572E547" FromRole="HoaDon" ToRole="ThongTinPhongCuaKhachSan" />
+    <NavigationProperty Name="ThongTinKhachHang" Relationship="DoAnCuoiKyModel.FK__HoaDon__SoThuTuK__338A9CD5" FromRole="HoaDon" ToRole="ThongTinKhachHang" />
+  </EntityType>
+  <EntityType Name="MaGiamGia">
+    <Key>
+      <PropertyRef Name="SoThuTu" />
+    </Key>
+    <Property Name="SoThuTu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTri" Type="Int32" />
+    <Property Name="IDKhachSan" Type="Int32" />
+    <NavigationProperty Name="ThongTinKhachSan" Relationship="DoAnCuoiKyModel.FK__MaGiamGia__IDKha__2630A1B7" FromRole="MaGiamGia" ToRole="ThongTinKhachSan" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -52,9 +113,9 @@
     <Property Name="TenDangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="LoaiNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ThongTinKhachSans" Relationship="Self.FK__ThongTinK__IDChu__0504B816" FromRole="TaiKhoan" ToRole="ThongTinKhachSan" />
-    <NavigationProperty Name="ThongTinKhachHangs" Relationship="Self.FK__ThongTinK__IDKha__0D99FE17" FromRole="TaiKhoan" ToRole="ThongTinKhachHang" />
-    <NavigationProperty Name="DatPhongs" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDKhac__40257DE4" FromRole="TaiKhoan" ToRole="DatPhong" />
+    <NavigationProperty Name="DatPhongs" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDKhac__2EC5E7B8" FromRole="TaiKhoan" ToRole="DatPhong" />
+    <NavigationProperty Name="ThongTinKhachSans" Relationship="DoAnCuoiKyModel.FK__ThongTinK__IDChu__2077C861" FromRole="TaiKhoan" ToRole="ThongTinKhachSan" />
+    <NavigationProperty Name="ThongTinKhachHangs" Relationship="DoAnCuoiKyModel.FK__ThongTinK__IDKha__2BE97B0D" FromRole="TaiKhoan" ToRole="ThongTinKhachHang" />
   </EntityType>
   <EntityType Name="ThongTinKhachHang">
     <Key>
@@ -66,8 +127,8 @@
     <Property Name="SDT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="CCCD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__SoThuTuK__190BB0C3" FromRole="ThongTinKhachHang" ToRole="HoaDon" />
-    <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__ThongTinK__IDKha__0D99FE17" FromRole="ThongTinKhachHang" ToRole="TaiKhoan" />
+    <NavigationProperty Name="HoaDons" Relationship="DoAnCuoiKyModel.FK__HoaDon__SoThuTuK__338A9CD5" FromRole="ThongTinKhachHang" ToRole="HoaDon" />
+    <NavigationProperty Name="TaiKhoan" Relationship="DoAnCuoiKyModel.FK__ThongTinK__IDKha__2BE97B0D" FromRole="ThongTinKhachHang" ToRole="TaiKhoan" />
   </EntityType>
   <EntityType Name="ThongTinKhachSan">
     <Key>
@@ -83,10 +144,11 @@
     <Property Name="HinhAnh3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="HinhAnh4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IDChuKhachSan" Type="Int32" />
-    <NavigationProperty Name="DanhGias" Relationship="Self.FK__DanhGia__IDKhach__0ABD916C" FromRole="ThongTinKhachSan" ToRole="DanhGia" />
-    <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__ThongTinK__IDChu__0504B816" FromRole="ThongTinKhachSan" ToRole="TaiKhoan" />
-    <NavigationProperty Name="ThongTinPhongCuaKhachSans" Relationship="Self.FK__ThongTinP__IDKha__07E124C1" FromRole="ThongTinKhachSan" ToRole="ThongTinPhongCuaKhachSan" />
-    <NavigationProperty Name="DatPhongs" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDKhac__420DC656" FromRole="ThongTinKhachSan" ToRole="DatPhong" />
+    <NavigationProperty Name="DanhGias" Relationship="DoAnCuoiKyModel.FK__DanhGia__IDKhach__290D0E62" FromRole="ThongTinKhachSan" ToRole="DanhGia" />
+    <NavigationProperty Name="DatPhongs" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDKhac__30AE302A" FromRole="ThongTinKhachSan" ToRole="DatPhong" />
+    <NavigationProperty Name="MaGiamGias" Relationship="DoAnCuoiKyModel.FK__MaGiamGia__IDKha__2630A1B7" FromRole="ThongTinKhachSan" ToRole="MaGiamGia" />
+    <NavigationProperty Name="TaiKhoan" Relationship="DoAnCuoiKyModel.FK__ThongTinK__IDChu__2077C861" FromRole="ThongTinKhachSan" ToRole="TaiKhoan" />
+    <NavigationProperty Name="ThongTinPhongCuaKhachSans" Relationship="DoAnCuoiKyModel.FK__ThongTinP__IDKha__2354350C" FromRole="ThongTinKhachSan" ToRole="ThongTinPhongCuaKhachSan" />
   </EntityType>
   <EntityType Name="ThongTinPhongCuaKhachSan">
     <Key>
@@ -113,15 +175,14 @@
     <Property Name="UuDai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="HinhAnh1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="HinhAnh2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IDKhachSan" Type="Int32" />
-    <NavigationProperty Name="DatPhongs" Relationship="Self.FK__DatPhong__IDPhon__10766AC2" FromRole="ThongTinPhongCuaKhachSan" ToRole="DatPhong" />
-    <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__IDPhong__1AF3F935" FromRole="ThongTinPhongCuaKhachSan" ToRole="HoaDon" />
-    <NavigationProperty Name="ThongTinKhachSan" Relationship="Self.FK__ThongTinP__IDKha__07E124C1" FromRole="ThongTinPhongCuaKhachSan" ToRole="ThongTinKhachSan" />
+    <NavigationProperty Name="DatPhongs" Relationship="DoAnCuoiKyModel.FK__DatPhong__IDPhon__2FBA0BF1" FromRole="ThongTinPhongCuaKhachSan" ToRole="DatPhong" />
+    <NavigationProperty Name="HoaDons" Relationship="DoAnCuoiKyModel.FK__HoaDon__IDPhong__3572E547" FromRole="ThongTinPhongCuaKhachSan" ToRole="HoaDon" />
+    <NavigationProperty Name="ThongTinKhachSan" Relationship="DoAnCuoiKyModel.FK__ThongTinP__IDKha__2354350C" FromRole="ThongTinPhongCuaKhachSan" ToRole="ThongTinKhachSan" />
   </EntityType>
-  <Association Name="FK__DanhGia__IDKhach__0ABD916C">
-    <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="0..1" />
-    <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
+  <Association Name="FK__DanhGia__IDKhach__290D0E62">
+    <End Type="DoAnCuoiKyModel.ThongTinKhachSan" Role="ThongTinKhachSan" Multiplicity="0..1" />
+    <End Type="DoAnCuoiKyModel.DanhGia" Role="DanhGia" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ThongTinKhachSan">
         <PropertyRef Name="IDKhachSan" />
@@ -131,135 +192,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DatPhong__IDPhon__10766AC2">
-    <End Role="ThongTinPhongCuaKhachSan" Type="Self.ThongTinPhongCuaKhachSan" Multiplicity="0..1" />
-    <End Role="DatPhong" Type="Self.DatPhong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ThongTinPhongCuaKhachSan">
-        <PropertyRef Name="IDPhong" />
-      </Principal>
-      <Dependent Role="DatPhong">
-        <PropertyRef Name="IDPhong" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__HoaDon__IDPhong__1AF3F935">
-    <End Role="ThongTinPhongCuaKhachSan" Type="Self.ThongTinPhongCuaKhachSan" Multiplicity="0..1" />
-    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ThongTinPhongCuaKhachSan">
-        <PropertyRef Name="IDPhong" />
-      </Principal>
-      <Dependent Role="HoaDon">
-        <PropertyRef Name="IDPhong" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__HoaDon__SoThuTuK__190BB0C3">
-    <End Role="ThongTinKhachHang" Type="Self.ThongTinKhachHang" Multiplicity="0..1" />
-    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ThongTinKhachHang">
-        <PropertyRef Name="SoThuTu" />
-      </Principal>
-      <Dependent Role="HoaDon">
-        <PropertyRef Name="SoThuTuKhachHang" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ThongTinK__IDChu__0504B816">
-    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
-    <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TaiKhoan">
-        <PropertyRef Name="IDNguoiDung" />
-      </Principal>
-      <Dependent Role="ThongTinKhachSan">
-        <PropertyRef Name="IDChuKhachSan" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ThongTinK__IDKha__0D99FE17">
-    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
-    <End Role="ThongTinKhachHang" Type="Self.ThongTinKhachHang" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TaiKhoan">
-        <PropertyRef Name="IDNguoiDung" />
-      </Principal>
-      <Dependent Role="ThongTinKhachHang">
-        <PropertyRef Name="IDKhachHang" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ThongTinP__IDKha__07E124C1">
-    <End Role="ThongTinKhachSan" Type="Self.ThongTinKhachSan" Multiplicity="0..1" />
-    <End Role="ThongTinPhongCuaKhachSan" Type="Self.ThongTinPhongCuaKhachSan" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ThongTinKhachSan">
-        <PropertyRef Name="IDKhachSan" />
-      </Principal>
-      <Dependent Role="ThongTinPhongCuaKhachSan">
-        <PropertyRef Name="IDKhachSan" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityContainer Name="DoAnCuoiKyEntity" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="DanhGias" EntityType="Self.DanhGia" />
-    <EntitySet Name="DatPhongs" EntityType="Self.DatPhong" />
-    <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
-    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
-    <EntitySet Name="ThongTinKhachHangs" EntityType="Self.ThongTinKhachHang" />
-    <EntitySet Name="ThongTinKhachSans" EntityType="Self.ThongTinKhachSan" />
-    <EntitySet Name="ThongTinPhongCuaKhachSans" EntityType="Self.ThongTinPhongCuaKhachSan" />
-    <AssociationSet Name="FK__DanhGia__IDKhach__0ABD916C" Association="Self.FK__DanhGia__IDKhach__0ABD916C">
-      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
-      <End Role="DanhGia" EntitySet="DanhGias" />
-    </AssociationSet>
-    <AssociationSet Name="FK__DatPhong__IDPhon__10766AC2" Association="Self.FK__DatPhong__IDPhon__10766AC2">
-      <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
-      <End Role="DatPhong" EntitySet="DatPhongs" />
-    </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__IDPhong__1AF3F935" Association="Self.FK__HoaDon__IDPhong__1AF3F935">
-      <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
-      <End Role="HoaDon" EntitySet="HoaDons" />
-    </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__SoThuTuK__190BB0C3" Association="Self.FK__HoaDon__SoThuTuK__190BB0C3">
-      <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHangs" />
-      <End Role="HoaDon" EntitySet="HoaDons" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ThongTinK__IDChu__0504B816" Association="Self.FK__ThongTinK__IDChu__0504B816">
-      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ThongTinK__IDKha__0D99FE17" Association="Self.FK__ThongTinK__IDKha__0D99FE17">
-      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-      <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHangs" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ThongTinP__IDKha__07E124C1" Association="Self.FK__ThongTinP__IDKha__07E124C1">
-      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
-      <End Role="ThongTinPhongCuaKhachSan" EntitySet="ThongTinPhongCuaKhachSans" />
-    </AssociationSet>
-    <EntitySet Name="sysdiagrams" EntityType="DoAnCuoiKyModel.sysdiagram" />
-    <AssociationSet Name="FK__DatPhong__IDKhac__40257DE4" Association="DoAnCuoiKyModel.FK__DatPhong__IDKhac__40257DE4">
-      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-      <End Role="DatPhong" EntitySet="DatPhongs" />
-    </AssociationSet>
-    <AssociationSet Name="FK__DatPhong__IDKhac__420DC656" Association="DoAnCuoiKyModel.FK__DatPhong__IDKhac__420DC656">
-      <End Role="ThongTinKhachSan" EntitySet="ThongTinKhachSans" />
-      <End Role="DatPhong" EntitySet="DatPhongs" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <Association Name="FK__DatPhong__IDKhac__40257DE4">
+  <Association Name="FK__DatPhong__IDKhac__2EC5E7B8">
     <End Type="DoAnCuoiKyModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
     <End Type="DoAnCuoiKyModel.DatPhong" Role="DatPhong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -271,7 +204,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DatPhong__IDKhac__420DC656">
+  <Association Name="FK__DatPhong__IDKhac__30AE302A">
     <End Type="DoAnCuoiKyModel.ThongTinKhachSan" Role="ThongTinKhachSan" Multiplicity="0..1" />
     <End Type="DoAnCuoiKyModel.DatPhong" Role="DatPhong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -279,6 +212,90 @@
         <PropertyRef Name="IDKhachSan" />
       </Principal>
       <Dependent Role="DatPhong">
+        <PropertyRef Name="IDKhachSan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DatPhong__IDPhon__2FBA0BF1">
+    <End Type="DoAnCuoiKyModel.ThongTinPhongCuaKhachSan" Role="ThongTinPhongCuaKhachSan" Multiplicity="0..1" />
+    <End Type="DoAnCuoiKyModel.DatPhong" Role="DatPhong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTinPhongCuaKhachSan">
+        <PropertyRef Name="IDPhong" />
+      </Principal>
+      <Dependent Role="DatPhong">
+        <PropertyRef Name="IDPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__IDPhong__3572E547">
+    <End Type="DoAnCuoiKyModel.ThongTinPhongCuaKhachSan" Role="ThongTinPhongCuaKhachSan" Multiplicity="0..1" />
+    <End Type="DoAnCuoiKyModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTinPhongCuaKhachSan">
+        <PropertyRef Name="IDPhong" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="IDPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__SoThuTuK__338A9CD5">
+    <End Type="DoAnCuoiKyModel.ThongTinKhachHang" Role="ThongTinKhachHang" Multiplicity="0..1" />
+    <End Type="DoAnCuoiKyModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTinKhachHang">
+        <PropertyRef Name="SoThuTu" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="SoThuTuKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MaGiamGia__IDKha__2630A1B7">
+    <End Type="DoAnCuoiKyModel.ThongTinKhachSan" Role="ThongTinKhachSan" Multiplicity="0..1" />
+    <End Type="DoAnCuoiKyModel.MaGiamGia" Role="MaGiamGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTinKhachSan">
+        <PropertyRef Name="IDKhachSan" />
+      </Principal>
+      <Dependent Role="MaGiamGia">
+        <PropertyRef Name="IDKhachSan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThongTinK__IDChu__2077C861">
+    <End Type="DoAnCuoiKyModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
+    <End Type="DoAnCuoiKyModel.ThongTinKhachSan" Role="ThongTinKhachSan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="ThongTinKhachSan">
+        <PropertyRef Name="IDChuKhachSan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThongTinK__IDKha__2BE97B0D">
+    <End Type="DoAnCuoiKyModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
+    <End Type="DoAnCuoiKyModel.ThongTinKhachHang" Role="ThongTinKhachHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="ThongTinKhachHang">
+        <PropertyRef Name="IDKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThongTinP__IDKha__2354350C">
+    <End Type="DoAnCuoiKyModel.ThongTinKhachSan" Role="ThongTinKhachSan" Multiplicity="0..1" />
+    <End Type="DoAnCuoiKyModel.ThongTinPhongCuaKhachSan" Role="ThongTinPhongCuaKhachSan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTinKhachSan">
+        <PropertyRef Name="IDKhachSan" />
+      </Principal>
+      <Dependent Role="ThongTinPhongCuaKhachSan">
         <PropertyRef Name="IDKhachSan" />
       </Dependent>
     </ReferentialConstraint>

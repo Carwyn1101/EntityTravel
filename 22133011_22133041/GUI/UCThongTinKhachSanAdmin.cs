@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,8 @@ namespace GUI
 {
     public partial class UCThongTinKhachSanAdmin : UserControl
     {
-        int iDKhachSan;
-        private void btnChiTiet_Click(object sender, EventArgs e)
-        {
-            Program.iDKhachSanInstance = iDKhachSan;
-            ChiTietKhachSanAdmin f = new ChiTietKhachSanAdmin();
-            f.ShowDialog();          
-        }       
+        int iDKhachSan; 
+        string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         public UCThongTinKhachSanAdmin()
         {
             InitializeComponent();
@@ -27,8 +23,16 @@ namespace GUI
         {
             InitializeComponent();
             iDKhachSan = kSan.IDKhachSan;
-            txtTenKhachSan.Text = kSan.TenKhachSan;
-            txtDiaDiemKhachSan.Text = kSan.DiaDiemKhachSan;                   
+            lblTenKhachSan.Text = kSan.TenKhachSan;
+            lblDiaDiemKhachSan.Text = kSan.DiaDiemKhachSan;
+            string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
+            pic_Anh1.Image = Image.FromFile(image1);
+        }
+        private void pnl_MouseClick(object sender, MouseEventArgs e)
+        {
+            Program.iDKhachSanInstance = iDKhachSan;
+            ChiTietKhachSanAdmin f = new ChiTietKhachSanAdmin();
+            f.ShowDialog();
         }
     }
 }

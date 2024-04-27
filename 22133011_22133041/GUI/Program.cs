@@ -23,8 +23,7 @@ namespace GUI
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-           
+            Application.SetCompatibleTextRenderingDefault(false);          
             Application.Run(new DangNhap());
             TrangChuAdminInstance = new TrangChuAdmin();
             XemPhongCuaKhachSanInstance = new XemPhongCuaKhachSan();

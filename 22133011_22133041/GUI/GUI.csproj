@@ -140,9 +140,10 @@
     <Compile Include="LichSuBook.Designer.cs">
       <DependentUpon>LichSuBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
+    <Compile Include="MaGiamGia.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MaGiamGiaDAO.cs" />
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
@@ -152,6 +153,12 @@
     </Compile>
     <Compile Include="ThemPhongChoKhachSan.Designer.cs">
       <DependentUpon>ThemPhongChoKhachSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemUuDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemUuDai.Designer.cs">
+      <DependentUpon>ThemUuDai.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinKhachHang.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
@@ -293,6 +300,9 @@
     </Compile>
     <EmbeddedResource Include="ThemPhongChoKhachSan.resx">
       <DependentUpon>ThemPhongChoKhachSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemUuDai.resx">
+      <DependentUpon>ThemUuDai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChuAdmin.resx">
       <DependentUpon>TrangChuAdmin.cs</DependentUpon>

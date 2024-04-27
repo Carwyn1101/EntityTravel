@@ -20,8 +20,7 @@ namespace GUI
         public void Xoa(int maDatPhong)
         {
             var remove = db.DatPhongs.FirstOrDefault(k => k.MaDatPhong == maDatPhong);
-            var trangThai = db.ThongTinPhongCuaKhachSans.FirstOrDefault(h=> h.IDPhong == remove.IDPhong);
-            trangThai.TrangThai = "Còn Trống";
+            var trangThai = db.ThongTinPhongCuaKhachSans.FirstOrDefault(h=> h.IDPhong == remove.IDPhong);           
             db.SaveChanges();
             if (remove != null)
             {
@@ -38,7 +37,7 @@ namespace GUI
                 if(k.NgayTraPhong < check)
                 {
                     var trangThai = db.ThongTinPhongCuaKhachSans.FirstOrDefault(h => h.IDPhong == k.IDPhong);                  
-                    trangThai.TrangThai = "Còn Trống";
+                    
                 }
             }
             db.SaveChanges();

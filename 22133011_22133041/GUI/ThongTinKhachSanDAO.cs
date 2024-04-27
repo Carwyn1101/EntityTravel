@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
@@ -22,7 +23,8 @@ namespace GUI
             foreach (var k in ketqua)
             {
                 UCThongTinKhachSanAdmin uc = new UCThongTinKhachSanAdmin(k);
-                flpTrangChu.Controls.Add(uc);              
+                uc.Margin = new Padding(10);
+                flpTrangChu.Controls.Add(uc);                                   
             }
         }
         public void Them(ThongTinKhachSan f)
@@ -33,7 +35,7 @@ namespace GUI
         }
         public void Xoa(int iDKhachSan)
         {            
-            var phong = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan && c1.TrangThai == "Đã Được Thuê" select c1;
+            var phong = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
             if (phong.Any())
             {
                 MessageBox.Show("Khách sạn hiện có phòng đang cho thuê không thể thực hiện!");
@@ -67,7 +69,7 @@ namespace GUI
                     }
                     db.SaveChanges();
                 }
-                var phong1 = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan && c1.TrangThai == "Còn Trống" select c1;
+                var phong1 = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
                 foreach (var tmp in phong1)
                 {
                     db.ThongTinPhongCuaKhachSans.Remove(tmp);
@@ -116,6 +118,7 @@ namespace GUI
             foreach (var p in kSan)
             {
                 UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
+                uc.Margin = new Padding(10);
                 flpTrangChu.Controls.Add(uc);
             }
         }
@@ -127,6 +130,7 @@ namespace GUI
             foreach (var p in kSan)
             {
                 UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
+                uc.Margin = new Padding(10);
                 flpTrangChuUser.Controls.Add(uc);
             }
         }

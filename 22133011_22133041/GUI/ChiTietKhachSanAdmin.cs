@@ -69,6 +69,13 @@ namespace GUI
         {
             kSanDAO.SaveImage(pic_Anh1, out tenAnh1);
         }
+
+        private void btnThemMaUuDai_Click(object sender, EventArgs e)
+        {
+            ThemUuDai f = new ThemUuDai();
+            f.ShowDialog();
+        }
+
         private void btnSuaAnh2_Click(object sender, EventArgs e)
         {
             kSanDAO.SaveImage(pic_Anh2, out tenAnh2);

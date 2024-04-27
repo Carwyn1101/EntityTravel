@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -16,7 +17,7 @@ namespace GUI
         public void LoadDanhSachPhongUser(FlowLayoutPanel flpTrangChuKhachSan, int iDKhachSan)
         {
             var kSan = from p in db.ThongTinPhongCuaKhachSans
-                       where p.IDKhachSan == iDKhachSan && p.TrangThai == "Còn Trống"
+                       where p.IDKhachSan == iDKhachSan 
                        select p;
             foreach (var p in kSan)
             {
@@ -30,6 +31,7 @@ namespace GUI
             foreach (var p in phongAdmin)
             {
                 UCThongTinPhongKhachSanAdmin uc = new UCThongTinPhongKhachSanAdmin(p);
+                uc.Margin = new Padding(5);
                 flpTrangChuAdmin.Controls.Add(uc);
             }
         }
@@ -41,7 +43,7 @@ namespace GUI
         }
         public void Xoa(int iDPhongKhachSan)
         {           
-            var phong = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDPhong == iDPhongKhachSan && c1.TrangThai == "Đã Được Thuê" select c1;
+            var phong = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDPhong == iDPhongKhachSan select c1;
             if (phong.Any())
             {
                 MessageBox.Show("Phòng đang được thuê không thể thực hiện!");
@@ -95,7 +97,6 @@ namespace GUI
                 khachSanToUpdate.HutThuoc1 = f.HutThuoc1;
                 khachSanToUpdate.HutThuoc2 = f.HutThuoc2;
                 khachSanToUpdate.UuDai = f.UuDai;
-                khachSanToUpdate.TrangThai = f.TrangThai;
                 khachSanToUpdate.HinhAnh1 = f.HinhAnh1;
                 khachSanToUpdate.HinhAnh2 = f.HinhAnh2;               
             }
@@ -150,7 +151,6 @@ namespace GUI
             if (tmp != null)
             {
                 ThongTinPhongCuaKhachSan pKSan = db.ThongTinPhongCuaKhachSans.Find(iDPhong);
-                pKSan.TrangThai = "Đã được thuê";
                 db.SaveChanges();
             }
         }
@@ -180,7 +180,6 @@ namespace GUI
                 f.cboTienNghiPhong6.Text = kSan.TienNghiPhong6;
                 f.cboHutThuoc1.Text = kSan.HutThuoc1;
                 f.cboHutThuoc2.Text = kSan.HutThuoc2;
-                f.txtTrangThai.Text = kSan.TrangThai;
                 tenAnh1 = kSan.HinhAnh1;
                 tenAnh2 = kSan.HinhAnh2;
                 string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);

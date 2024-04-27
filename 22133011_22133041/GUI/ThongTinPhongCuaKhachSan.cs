@@ -42,7 +42,6 @@ namespace GUI
         public string UuDai { get; set; }
         public string HinhAnh1 { get; set; }
         public string HinhAnh2 { get; set; }
-        public string TrangThai { get; set; }
         public Nullable<int> IDKhachSan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

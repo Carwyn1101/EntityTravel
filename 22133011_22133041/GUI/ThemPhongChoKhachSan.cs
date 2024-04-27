@@ -33,7 +33,7 @@ namespace GUI
                 kSan.IDKhachSan = iDKhachSan;
                 kSan.TenPhong = cboTenPhong.Text;
                 kSan.KichThuocPhong = txtKichThuocPhong.Text;
-                kSan.GiaPhong = txtGiaPhong.Text;
+                kSan.GiaPhong = txtGiaPhong.Text.Replace(".",",");
                 kSan.TienNghiPhongTam1 = cboTienNghiPhongTam1.Text;
                 kSan.TienNghiPhongTam2 = cboTienNghiPhongTam2.Text;
                 kSan.TienNghiPhongTam3 = cboTienNghiPhongTam3.Text;
@@ -49,17 +49,17 @@ namespace GUI
                 kSan.HutThuoc1 = cboHutThuoc1.Text;
                 kSan.HutThuoc2 = cboHutThuoc2.Text;
                 kSan.UuDai = null;
-                kSan.TrangThai = "Còn trống";
                 kSan.HinhAnh1 = tenAnh1;
                 kSan.HinhAnh2 = tenAnh2;
                 pKSanDAO.Them(kSan);
                 this.Close();
+                Program.flpPhongInstance.Controls.Clear();
+                pKSanDAO.LoadDanhSachPhongAdmin(Program.flpPhongInstance, Program.iDKhachSanInstance);
             }  
             else
             {
                 MessageBox.Show("Không được để trống, vui lòng nhập dữ liệu", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }    
-            
+            }
         }
         private void btnThemAnh1_Click(object sender, EventArgs e)
         {

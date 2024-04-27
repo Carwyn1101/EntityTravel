@@ -49,7 +49,7 @@
             this.panel1.Controls.Add(this.lblTenKhachSan);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(208, 130);
+            this.panel1.Size = new System.Drawing.Size(216, 130);
             this.panel1.TabIndex = 2;
             // 
             // lblTenPhong
@@ -86,9 +86,9 @@
             this.panel3.Controls.Add(this.lblNgayTraPhong);
             this.panel3.Controls.Add(this.lblNgayNhan);
             this.panel3.Controls.Add(this.lblNgayNhanPhong);
-            this.panel3.Location = new System.Drawing.Point(205, 3);
+            this.panel3.Location = new System.Drawing.Point(213, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(464, 130);
+            this.panel3.Size = new System.Drawing.Size(459, 130);
             this.panel3.TabIndex = 4;
             // 
             // guna2HtmlLabel2
@@ -96,7 +96,7 @@
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(150, 101);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(168, 103);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(200, 22);
             this.guna2HtmlLabel2.TabIndex = 10;
@@ -108,7 +108,7 @@
             this.lblNgayTra.AutoSize = false;
             this.lblNgayTra.BackColor = System.Drawing.Color.Transparent;
             this.lblNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTra.Location = new System.Drawing.Point(150, 51);
+            this.lblNgayTra.Location = new System.Drawing.Point(168, 53);
             this.lblNgayTra.Name = "lblNgayTra";
             this.lblNgayTra.Size = new System.Drawing.Size(200, 22);
             this.lblNgayTra.TabIndex = 9;
@@ -120,7 +120,7 @@
             this.lblTrangThai.AutoSize = false;
             this.lblTrangThai.BackColor = System.Drawing.Color.Transparent;
             this.lblTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.Location = new System.Drawing.Point(3, 101);
+            this.lblTrangThai.Location = new System.Drawing.Point(21, 103);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(91, 22);
             this.lblTrangThai.TabIndex = 8;
@@ -132,7 +132,7 @@
             this.lblNgayTraPhong.AutoSize = false;
             this.lblNgayTraPhong.BackColor = System.Drawing.Color.Transparent;
             this.lblNgayTraPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTraPhong.Location = new System.Drawing.Point(3, 51);
+            this.lblNgayTraPhong.Location = new System.Drawing.Point(21, 53);
             this.lblNgayTraPhong.Name = "lblNgayTraPhong";
             this.lblNgayTraPhong.Size = new System.Drawing.Size(141, 22);
             this.lblNgayTraPhong.TabIndex = 7;
@@ -144,7 +144,7 @@
             this.lblNgayNhan.AutoSize = false;
             this.lblNgayNhan.BackColor = System.Drawing.Color.Transparent;
             this.lblNgayNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayNhan.Location = new System.Drawing.Point(150, 3);
+            this.lblNgayNhan.Location = new System.Drawing.Point(168, 5);
             this.lblNgayNhan.Name = "lblNgayNhan";
             this.lblNgayNhan.Size = new System.Drawing.Size(200, 22);
             this.lblNgayNhan.TabIndex = 6;
@@ -156,7 +156,7 @@
             this.lblNgayNhanPhong.AutoSize = false;
             this.lblNgayNhanPhong.BackColor = System.Drawing.Color.Transparent;
             this.lblNgayNhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayNhanPhong.Location = new System.Drawing.Point(3, 3);
+            this.lblNgayNhanPhong.Location = new System.Drawing.Point(21, 5);
             this.lblNgayNhanPhong.Name = "lblNgayNhanPhong";
             this.lblNgayNhanPhong.Size = new System.Drawing.Size(141, 22);
             this.lblNgayNhanPhong.TabIndex = 5;
@@ -170,7 +170,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "UCHoanThanh";
-            this.Size = new System.Drawing.Size(671, 135);
+            this.Size = new System.Drawing.Size(675, 135);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);

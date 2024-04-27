@@ -17,12 +17,13 @@ namespace GUI
         public int MaDatPhong { get; set; }
         public Nullable<System.DateTime> NgayNhanPhong { get; set; }
         public Nullable<System.DateTime> NgayTraPhong { get; set; }
-        public Nullable<int> IDPhong { get; set; }
+        public string TrangThai { get; set; }
         public Nullable<int> IDKhachHang { get; set; }
+        public Nullable<int> IDPhong { get; set; }
         public Nullable<int> IDKhachSan { get; set; }
     
-        public virtual ThongTinPhongCuaKhachSan ThongTinPhongCuaKhachSan { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
         public virtual ThongTinKhachSan ThongTinKhachSan { get; set; }
+        public virtual ThongTinPhongCuaKhachSan ThongTinPhongCuaKhachSan { get; set; }
     }
 }

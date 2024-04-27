@@ -22,7 +22,6 @@ namespace GUI
             InitializeComponent();
             linklblChiTietPhong.Text = kSan.TenPhong;
             lblKichThuocPhong.Text = kSan.KichThuocPhong;
-            lblTrangThai.Text = kSan.TrangThai ;
             lblUuDai.Text = kSan.UuDai ;
             lblSoGiaTien.Text = kSan.GiaPhong;           
             if (string.IsNullOrEmpty(lblUuDai.Text))

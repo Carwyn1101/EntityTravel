@@ -22,7 +22,6 @@ namespace GUI
             InitializeComponent();
             linklblChiTietPhong.Text = pKSan.TenPhong;
             lblKichThuocPhong.Text = pKSan.KichThuocPhong;
-            lblTrangThai.Text = pKSan.TrangThai;
             lblSoGiaTien.Text = pKSan.GiaPhong + " " + "VND";
             iDPhong = (int)pKSan.IDPhong;
             iDKhachSan = (int)pKSan.IDKhachSan;

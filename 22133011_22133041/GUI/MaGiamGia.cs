@@ -12,12 +12,13 @@ namespace GUI
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class MaGiamGia
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int SoThuTu { get; set; }
+        public string Ten { get; set; }
+        public Nullable<int> GiaTri { get; set; }
+        public Nullable<int> IDKhachSan { get; set; }
+    
+        public virtual ThongTinKhachSan ThongTinKhachSan { get; set; }
     }
 }

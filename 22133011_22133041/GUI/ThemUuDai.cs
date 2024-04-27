@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class ChiTietKhachHangAdmin : Form
-    {      
-        public ChiTietKhachHangAdmin()
+    public partial class ThemUuDai : Form
+    {
+        public ThemUuDai()
         {
             InitializeComponent();
-        }     
+        }
     }
 }

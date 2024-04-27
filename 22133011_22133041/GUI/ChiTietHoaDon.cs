@@ -17,8 +17,7 @@ namespace GUI
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         CheckGiaTri check = new CheckGiaTri();
-        DateTime ngayNhanPhong, ngayTraPhong;
-        int stt;
+        DateTime ngayNhanPhong, ngayTraPhong;int stt;
         public ChiTietHoaDon()
         {
             InitializeComponent();
@@ -35,6 +34,7 @@ namespace GUI
             var tmp = (from c in db.ThongTinPhongCuaKhachSans where c.IDPhong == Program.iDPhongInstance select c).FirstOrDefault();
             txtGiaPhong.Text = tmp.GiaPhong;
             dtpNgayNhanPhong.Value = DateTime.Now;
+            dtpNgayTraPhong.Value = DateTime.Now;
         }
         private void btnThue_Click(object sender, EventArgs e)
         {
@@ -79,8 +79,8 @@ namespace GUI
         }
         private void TinhTongTien()
         {
-            ngayNhanPhong = dtpNgayNhanPhong.Value; //
-            ngayTraPhong = dtpNgayTraPhong.Value; //
+            ngayNhanPhong = dtpNgayNhanPhong.Value; 
+            ngayTraPhong = dtpNgayTraPhong.Value; 
 
             DateTime tmpNgayNhanPhong = dtpNgayNhanPhong.Value.Date;
             DateTime tmpNgayTraPhong = dtpNgayTraPhong.Value.Date;         

@@ -85,7 +85,7 @@
             this.btnXemPhongTrong.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnXemPhongTrong.ForeColor = System.Drawing.Color.Black;
             this.btnXemPhongTrong.Location = new System.Drawing.Point(230, 513);
-            this.btnXemPhongTrong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXemPhongTrong.Margin = new System.Windows.Forms.Padding(2);
             this.btnXemPhongTrong.Name = "btnXemPhongTrong";
             this.btnXemPhongTrong.Size = new System.Drawing.Size(159, 37);
             this.btnXemPhongTrong.TabIndex = 132;
@@ -110,6 +110,7 @@
             // 
             this.txtTenKhachSan.AllowDrop = true;
             this.txtTenKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhachSan.ForeColor = System.Drawing.Color.DarkOrange;
             this.txtTenKhachSan.Location = new System.Drawing.Point(1, 0);
             this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtTenKhachSan.Name = "txtTenKhachSan";
@@ -122,7 +123,7 @@
             // 
             this.richTextBoxMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxMoTa.Location = new System.Drawing.Point(8, 318);
-            this.richTextBoxMoTa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxMoTa.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxMoTa.Name = "richTextBoxMoTa";
             this.richTextBoxMoTa.ReadOnly = true;
             this.richTextBoxMoTa.Size = new System.Drawing.Size(630, 106);
@@ -134,7 +135,7 @@
             this.pictureBoxLoaiPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxLoaiPhong.Image = global::GUI.Properties.Resources.AnhUCKhachSan;
             this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(213, 439);
-            this.pictureBoxLoaiPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxLoaiPhong.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxLoaiPhong.Name = "pictureBoxLoaiPhong";
             this.pictureBoxLoaiPhong.Size = new System.Drawing.Size(42, 43);
             this.pictureBoxLoaiPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +147,7 @@
             this.pictureBoxDiaDiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxDiaDiem.Image = global::GUI.Properties.Resources.iconDiaDiem;
             this.pictureBoxDiaDiem.Location = new System.Drawing.Point(8, 439);
-            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxDiaDiem.Name = "pictureBoxDiaDiem";
             this.pictureBoxDiaDiem.Size = new System.Drawing.Size(42, 43);
             this.pictureBoxDiaDiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,7 +158,7 @@
             // 
             this.pic_Anh3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Anh3.Location = new System.Drawing.Point(466, 60);
-            this.pic_Anh3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_Anh3.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Anh3.Name = "pic_Anh3";
             this.pic_Anh3.Size = new System.Drawing.Size(172, 118);
             this.pic_Anh3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +169,7 @@
             // 
             this.pic_Anh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Anh2.Location = new System.Drawing.Point(290, 60);
-            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Anh2.Name = "pic_Anh2";
             this.pic_Anh2.Size = new System.Drawing.Size(172, 118);
             this.pic_Anh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,7 +180,7 @@
             // 
             this.pic_Anh4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Anh4.Location = new System.Drawing.Point(290, 183);
-            this.pic_Anh4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_Anh4.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Anh4.Name = "pic_Anh4";
             this.pic_Anh4.Size = new System.Drawing.Size(348, 122);
             this.pic_Anh4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +191,7 @@
             // 
             this.pic_Anh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Anh1.Location = new System.Drawing.Point(8, 60);
-            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Anh1.Name = "pic_Anh1";
             this.pic_Anh1.Size = new System.Drawing.Size(277, 245);
             this.pic_Anh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -201,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 588);
+            this.ClientSize = new System.Drawing.Size(649, 576);
             this.Controls.Add(this.lblLoai);
             this.Controls.Add(this.lblDiaDiem);
             this.Controls.Add(this.pictureBoxLoaiPhong);
@@ -214,7 +215,7 @@
             this.Controls.Add(this.pic_Anh4);
             this.Controls.Add(this.pic_Anh1);
             this.Controls.Add(this.richTextBoxMoTa);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChiTietKhachSanUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTietKhachSanUser";

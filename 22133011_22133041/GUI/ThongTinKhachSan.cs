@@ -18,8 +18,9 @@ namespace GUI
         public ThongTinKhachSan()
         {
             this.DanhGias = new HashSet<DanhGia>();
-            this.ThongTinPhongCuaKhachSans = new HashSet<ThongTinPhongCuaKhachSan>();
             this.DatPhongs = new HashSet<DatPhong>();
+            this.MaGiamGias = new HashSet<MaGiamGia>();
+            this.ThongTinPhongCuaKhachSans = new HashSet<ThongTinPhongCuaKhachSan>();
         }
     
         public int IDKhachSan { get; set; }
@@ -35,10 +36,12 @@ namespace GUI
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DanhGia> DanhGias { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DatPhong> DatPhongs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MaGiamGia> MaGiamGias { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ThongTinPhongCuaKhachSan> ThongTinPhongCuaKhachSans { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DatPhong> DatPhongs { get; set; }
     }
 }

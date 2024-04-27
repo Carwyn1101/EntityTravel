@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace GUI
     {
         string loaiKSan, mota;
         int iD;
-
+        string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         public UCThongTinKhachSanUser()
         {
             InitializeComponent();
@@ -22,13 +23,15 @@ namespace GUI
         public UCThongTinKhachSanUser(ThongTinKhachSan kqua)
         {
             InitializeComponent();
-            txtTenKhachSan.Text = kqua.TenKhachSan;
-            txtDiaDiemKhachSan.Text = kqua.DiaDiemKhachSan;
+            lblTenKhachSan.Text = kqua.TenKhachSan;
+            lblDiaDiemKhachSan.Text = kqua.DiaDiemKhachSan;
             loaiKSan = kqua.Loai;
             mota = kqua.MoTa;
             iD = kqua.IDKhachSan;
+            string image1 = Path.Combine(appDirectory, kqua.HinhAnh1);
+            pic_Anh.Image = Image.FromFile(image1);
         }
-        private void btnChiTiet_Click(object sender, EventArgs e)
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
             Program.iDKhachSanInstance = iD;
             ChiTietKhachSanUser f = new ChiTietKhachSanUser();
