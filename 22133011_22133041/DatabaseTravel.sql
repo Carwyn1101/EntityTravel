@@ -95,10 +95,10 @@ insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNg
 GO
 CREATE TABLE MaGiamGia
 (
-	SoThuTu INT PRIMARY KEY IDENTITY,
-	Ten nvarchar(max),
+	STTMa INT PRIMARY KEY IDENTITY, 
+	MaGiam nvarchar(max),
 	GiaTri int,
-	IDKhachSan INT Foreign key References ThongTinKhachSan(IDKhachSan) 
+	IDKhachSan INT Foreign key References ThongTinKhachSan(IDKhachSan),
 );
 CREATE TABLE DanhGia
 (
@@ -162,10 +162,12 @@ CREATE TABLE HoaDon
 SELECT *FROM TaiKhoan
 SELECT *FROM ThongTinKhachSan
 SELECT *FROM ThongTinPhongCuaKhachSan
+SELECT *FROM MaGiamGia
 SELECT *FROM DanhGia
 SELECT *FROM ThongTinKhachHang
 SELECT *FROM DatPhong
 SELECT *FROM HoaDon
+
 
 DROP TABLE HoaDon
 Go
@@ -174,6 +176,8 @@ Go
 DROP TABLE ThongTinKhachHang
 Go
 DROP TABLE DanhGia
+Go
+DROP TABLE MaGiamGia
 Go
 DROP TABLE ThongTinPhongCuaKhachSan
 Go

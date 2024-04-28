@@ -15,13 +15,13 @@ namespace GUI
         HoaDonDAO hoaDonDAO = new HoaDonDAO();
         DatPhongDAO datPhongDAO = new DatPhongDAO();
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         CheckGiaTri check = new CheckGiaTri();
-        DateTime ngayNhanPhong, ngayTraPhong;int stt;
+        DateTime ngayNhanPhong, ngayTraPhong;
+        int stt;
         public ChiTietHoaDon()
         {
             InitializeComponent();
-
         }
         public ChiTietHoaDon(ThongTinKhachHang kHang)
         {
@@ -31,7 +31,7 @@ namespace GUI
             txtSoDienThoai.Text = kHang.SDT;
             txtCCCD.Text = kHang.CCCD;
             txtMail.Text = kHang.Mail;
-            var tmp = (from c in db.ThongTinPhongCuaKhachSans where c.IDPhong == Program.iDPhongInstance select c).FirstOrDefault();
+            var tmp = (from c in dB.ThongTinPhongCuaKhachSans where c.IDPhong == Program.iDPhongInstance select c).FirstOrDefault();
             txtGiaPhong.Text = tmp.GiaPhong;
             dtpNgayNhanPhong.Value = DateTime.Now;
             dtpNgayTraPhong.Value = DateTime.Now;
@@ -53,8 +53,7 @@ namespace GUI
                     hd.NgayTraPhong = ngayTraPhong;
                     hd.TongTien = txtTongTienThanhToan.Text;
                     hd.IDPhong = Program.iDPhongInstance;
-                    hoaDonDAO.Them(hd);
-                    //
+                    hoaDonDAO.Them(hd);                   
                     DatPhong dp = new DatPhong();
                     dp.NgayNhanPhong = ngayNhanPhong;
                     dp.NgayTraPhong = ngayTraPhong;
@@ -81,16 +80,12 @@ namespace GUI
         {
             ngayNhanPhong = dtpNgayNhanPhong.Value; 
             ngayTraPhong = dtpNgayTraPhong.Value; 
-
             DateTime tmpNgayNhanPhong = dtpNgayNhanPhong.Value.Date;
             DateTime tmpNgayTraPhong = dtpNgayTraPhong.Value.Date;         
-
             TimeSpan khoangThoiGianThue = tmpNgayTraPhong - tmpNgayNhanPhong;
             int soNgayThue = khoangThoiGianThue.Days;
-
             decimal giaPhong = decimal.Parse(txtGiaPhong.Text);  
-            decimal tongTien = soNgayThue * giaPhong;
-       
+            decimal tongTien = soNgayThue * giaPhong;      
             txtTongTienThanhToan.Text = tongTien.ToString("N0"); 
         }
         private void dtpNgayNhanPhong_ValueChanged(object sender, EventArgs e)

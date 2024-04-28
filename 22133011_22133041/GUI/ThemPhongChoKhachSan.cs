@@ -12,7 +12,8 @@ namespace GUI
 {
     public partial class ThemPhongChoKhachSan : Form
     {
-        int iDKhachSan; string tenAnh1,tenAnh2;
+        int iDKhachSan; 
+        string tenAnh1,tenAnh2;
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
         CheckGiaTri check = new CheckGiaTri();
@@ -20,10 +21,10 @@ namespace GUI
         {
             InitializeComponent();
         }
-        public ThemPhongChoKhachSan(int IDKhachSan)
+        public ThemPhongChoKhachSan(int iDKhachSan)
         {
             InitializeComponent();
-            iDKhachSan = IDKhachSan;
+            this.iDKhachSan = iDKhachSan;
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {

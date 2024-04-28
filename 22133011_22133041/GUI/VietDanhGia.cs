@@ -24,7 +24,6 @@ namespace GUI
             InitializeComponent();
             iDKSan = iD;
         }
-
         private void btnDangBai_Click(object sender, EventArgs e)
         {
             if(check.CheckValid(this))
@@ -46,8 +45,7 @@ namespace GUI
             else
             {
                 MessageBox.Show("Không được để trống, vui lòng nhập dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }    
-            
+            }              
         }
     }
 }

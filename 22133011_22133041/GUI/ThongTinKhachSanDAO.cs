@@ -15,11 +15,11 @@ namespace GUI
 {
     public class ThongTinKhachSanDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         public void LoadData(FlowLayoutPanel flpTrangChu, int iDNguoiDung)
         {
-            var ketqua = from c in db.ThongTinKhachSans where c.IDChuKhachSan == iDNguoiDung select c;
+            var ketqua = from c in dB.ThongTinKhachSans where c.IDChuKhachSan == iDNguoiDung select c;
             foreach (var k in ketqua)
             {
                 UCThongTinKhachSanAdmin uc = new UCThongTinKhachSanAdmin(k);
@@ -29,61 +29,61 @@ namespace GUI
         }
         public void Them(ThongTinKhachSan f)
         {
-            db.ThongTinKhachSans.Add(f);
-            db.SaveChanges();
+            dB.ThongTinKhachSans.Add(f);
+            dB.SaveChanges();
             MessageBox.Show("Thêm thông tin khách sạn thành công!");           
         }
         public void Xoa(int iDKhachSan)
         {            
-            var phong = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
+            var phong = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
             if (phong.Any())
             {
                 MessageBox.Show("Khách sạn hiện có phòng đang cho thuê không thể thực hiện!");
             }
             else
             {
-                var danhGia = from c in db.DanhGias where c.IDKhachSan == iDKhachSan select c;
+                var danhGia = from c in dB.DanhGias where c.IDKhachSan == iDKhachSan select c;
                 if (danhGia.Any())
                 {
                     foreach (var tmp in danhGia)
                     {
-                        db.DanhGias.Remove(tmp);
+                        dB.DanhGias.Remove(tmp);
                     }
-                    db.SaveChanges();
+                    dB.SaveChanges();
                 }
-                var datPhong = from p in db.DatPhongs where p.IDKhachSan == iDKhachSan select p;
+                var datPhong = from p in dB.DatPhongs where p.IDKhachSan == iDKhachSan select p;
                 if (datPhong.Any())
                 {
                     foreach (var tmp in datPhong)
                     {
-                        db.DatPhongs.Remove(tmp);
+                        dB.DatPhongs.Remove(tmp);
                     }
-                    db.SaveChanges();
+                    dB.SaveChanges();
                 }
-                var hDon = from b in db.HoaDons where b.ThongTinPhongCuaKhachSan.IDKhachSan == iDKhachSan select b;
+                var hDon = from b in dB.HoaDons where b.ThongTinPhongCuaKhachSan.IDKhachSan == iDKhachSan select b;
                 if (hDon.Any())
                 {
                     foreach (var tmp in hDon)
                     {
-                        db.HoaDons.Remove(tmp);
+                        dB.HoaDons.Remove(tmp);
                     }
-                    db.SaveChanges();
+                    dB.SaveChanges();
                 }
-                var phong1 = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
+                var phong1 = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
                 foreach (var tmp in phong1)
                 {
-                    db.ThongTinPhongCuaKhachSans.Remove(tmp);
+                    dB.ThongTinPhongCuaKhachSans.Remove(tmp);
                 }
-                db.SaveChanges();
-                var khachSan = db.ThongTinKhachSans.FirstOrDefault(c2 => c2.IDKhachSan == iDKhachSan);
-                db.ThongTinKhachSans.Remove(khachSan);
-                db.SaveChanges();
+                dB.SaveChanges();
+                var khachSan = dB.ThongTinKhachSans.FirstOrDefault(c2 => c2.IDKhachSan == iDKhachSan);
+                dB.ThongTinKhachSans.Remove(khachSan);
+                dB.SaveChanges();
                 MessageBox.Show("Xóa khách sạn thành công!");
             }
         }
         public void Sua(ThongTinKhachSan f)
         {
-            var khachSanToUpdate = db.ThongTinKhachSans.FirstOrDefault(k => k.IDKhachSan == f.IDKhachSan);
+            var khachSanToUpdate = dB.ThongTinKhachSans.FirstOrDefault(k => k.IDKhachSan == f.IDKhachSan);
             if (khachSanToUpdate != null)
             {
                 khachSanToUpdate.TenKhachSan = f.TenKhachSan;
@@ -94,7 +94,7 @@ namespace GUI
                 khachSanToUpdate.HinhAnh2 = f.HinhAnh2;
                 khachSanToUpdate.HinhAnh3 = f.HinhAnh3;
                 khachSanToUpdate.HinhAnh4 = f.HinhAnh4;
-                db.SaveChanges();
+                dB.SaveChanges();
             }
             MessageBox.Show("Sửa thông tin khách sạn thành công!");
         }
@@ -114,7 +114,7 @@ namespace GUI
         }
         public void GetAllKhachSan(FlowLayoutPanel flpTrangChu)
         {            
-            var kSan = from p in db.ThongTinKhachSans select p;
+            var kSan = from p in dB.ThongTinKhachSans select p;
             foreach (var p in kSan)
             {
                 UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
@@ -124,7 +124,7 @@ namespace GUI
         }
         public void SearchKhachSanByDiaDiem(FlowLayoutPanel flpTrangChuUser, string diaDiem)
         {
-            var kSan = from p in db.ThongTinKhachSans
+            var kSan = from p in dB.ThongTinKhachSans
                        where p.DiaDiemKhachSan == diaDiem
                        select p; 
             foreach (var p in kSan)
@@ -134,9 +134,9 @@ namespace GUI
                 flpTrangChuUser.Controls.Add(uc);
             }
         }
-        public void LoadChiTietKhachSanUser(ChiTietKhachSanUser f,int iDKSan)
+        public void LoadChiTietKhachSanUser(ChiTietKhachSanUser f, int iDKSan)
         {
-            var kSan = (from p in db.ThongTinKhachSans
+            var kSan = (from p in dB.ThongTinKhachSans
                         where p.IDKhachSan == iDKSan
                         select p).SingleOrDefault();
             if (kSan != null)
@@ -158,7 +158,7 @@ namespace GUI
         public void LoadChiTietKhachSanAdmin(ChiTietKhachSanAdmin f, int iDKhachSan, out string tenAnh1, out string tenAnh2, out string tenAnh3, out string tenAnh4)
         {
             tenAnh1 = string.Empty; tenAnh2 = string.Empty; tenAnh3 = string.Empty; tenAnh4 = string.Empty; 
-            var kSan = (from p in db.ThongTinKhachSans
+            var kSan = (from p in dB.ThongTinKhachSans
                         where p.IDKhachSan == iDKhachSan
                         select p).SingleOrDefault();
             if (kSan != null)

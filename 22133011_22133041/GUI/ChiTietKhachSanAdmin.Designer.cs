@@ -41,13 +41,13 @@
             this.btnSuaAnh1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnThemPhong = new Guna.UI2.WinForms.Guna2GradientButton();
             this.richTextBoxMoTa = new System.Windows.Forms.RichTextBox();
+            this.btnThemMaUuDai = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBoxLoaiPhong = new System.Windows.Forms.PictureBox();
             this.pictureBoxDiaDiem = new System.Windows.Forms.PictureBox();
             this.pic_Anh3 = new System.Windows.Forms.PictureBox();
             this.pic_Anh2 = new System.Windows.Forms.PictureBox();
             this.pic_Anh4 = new System.Windows.Forms.PictureBox();
             this.pic_Anh1 = new System.Windows.Forms.PictureBox();
-            this.btnThemMaUuDai = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoaiPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh3)).BeginInit();
@@ -60,10 +60,10 @@
             // 
             this.flpPhongKhachSan.AutoScroll = true;
             this.flpPhongKhachSan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpPhongKhachSan.Location = new System.Drawing.Point(754, 13);
-            this.flpPhongKhachSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpPhongKhachSan.Location = new System.Drawing.Point(1005, 16);
+            this.flpPhongKhachSan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.flpPhongKhachSan.Name = "flpPhongKhachSan";
-            this.flpPhongKhachSan.Size = new System.Drawing.Size(661, 546);
+            this.flpPhongKhachSan.Size = new System.Drawing.Size(881, 672);
             this.flpPhongKhachSan.TabIndex = 170;
             // 
             // btnXoa
@@ -79,10 +79,10 @@
             this.btnXoa.FillColor2 = System.Drawing.Color.White;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.Location = new System.Drawing.Point(529, 596);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Location = new System.Drawing.Point(705, 734);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(87, 30);
+            this.btnXoa.Size = new System.Drawing.Size(116, 37);
             this.btnXoa.TabIndex = 169;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -100,10 +100,10 @@
             this.btnLuu.FillColor2 = System.Drawing.Color.White;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
-            this.btnLuu.Location = new System.Drawing.Point(652, 596);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLuu.Location = new System.Drawing.Point(869, 734);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(86, 30);
+            this.btnLuu.Size = new System.Drawing.Size(115, 37);
             this.btnLuu.TabIndex = 168;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -120,13 +120,13 @@
             this.txtLoai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoai.ForeColor = System.Drawing.Color.Black;
             this.txtLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLoai.Location = new System.Drawing.Point(298, 596);
-            this.txtLoai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLoai.Location = new System.Drawing.Point(397, 734);
+            this.txtLoai.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtLoai.Name = "txtLoai";
             this.txtLoai.PasswordChar = '\0';
             this.txtLoai.PlaceholderText = "";
             this.txtLoai.SelectedText = "";
-            this.txtLoai.Size = new System.Drawing.Size(178, 30);
+            this.txtLoai.Size = new System.Drawing.Size(237, 37);
             this.txtLoai.TabIndex = 167;
             // 
             // txtDiaDiem
@@ -141,13 +141,13 @@
             this.txtDiaDiem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtDiaDiem.ForeColor = System.Drawing.Color.Black;
             this.txtDiaDiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiaDiem.Location = new System.Drawing.Point(61, 596);
-            this.txtDiaDiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDiaDiem.Location = new System.Drawing.Point(81, 734);
+            this.txtDiaDiem.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtDiaDiem.Name = "txtDiaDiem";
             this.txtDiaDiem.PasswordChar = '\0';
             this.txtDiaDiem.PlaceholderText = "";
             this.txtDiaDiem.SelectedText = "";
-            this.txtDiaDiem.Size = new System.Drawing.Size(178, 31);
+            this.txtDiaDiem.Size = new System.Drawing.Size(237, 38);
             this.txtDiaDiem.TabIndex = 166;
             // 
             // txtTenKhachSan
@@ -164,14 +164,14 @@
             this.txtTenKhachSan.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.txtTenKhachSan.ForeColor = System.Drawing.Color.DarkOrange;
             this.txtTenKhachSan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenKhachSan.Location = new System.Drawing.Point(6, 13);
-            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtTenKhachSan.Location = new System.Drawing.Point(8, 16);
+            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.txtTenKhachSan.Name = "txtTenKhachSan";
             this.txtTenKhachSan.PasswordChar = '\0';
             this.txtTenKhachSan.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtTenKhachSan.PlaceholderText = "";
             this.txtTenKhachSan.SelectedText = "";
-            this.txtTenKhachSan.Size = new System.Drawing.Size(735, 44);
+            this.txtTenKhachSan.Size = new System.Drawing.Size(980, 54);
             this.txtTenKhachSan.TabIndex = 165;
             this.txtTenKhachSan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -188,10 +188,10 @@
             this.btnSuaAnh4.FillColor2 = System.Drawing.Color.White;
             this.btnSuaAnh4.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnSuaAnh4.ForeColor = System.Drawing.Color.Black;
-            this.btnSuaAnh4.Location = new System.Drawing.Point(483, 401);
-            this.btnSuaAnh4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSuaAnh4.Location = new System.Drawing.Point(644, 494);
+            this.btnSuaAnh4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSuaAnh4.Name = "btnSuaAnh4";
-            this.btnSuaAnh4.Size = new System.Drawing.Size(105, 25);
+            this.btnSuaAnh4.Size = new System.Drawing.Size(140, 31);
             this.btnSuaAnh4.TabIndex = 164;
             this.btnSuaAnh4.Text = "Chỉnh sửa";
             this.btnSuaAnh4.Click += new System.EventHandler(this.btnSuaAnh4_Click);
@@ -209,10 +209,10 @@
             this.btnSuaAnh2.FillColor2 = System.Drawing.Color.White;
             this.btnSuaAnh2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnSuaAnh2.ForeColor = System.Drawing.Color.Black;
-            this.btnSuaAnh2.Location = new System.Drawing.Point(381, 203);
-            this.btnSuaAnh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSuaAnh2.Location = new System.Drawing.Point(508, 250);
+            this.btnSuaAnh2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSuaAnh2.Name = "btnSuaAnh2";
-            this.btnSuaAnh2.Size = new System.Drawing.Size(105, 25);
+            this.btnSuaAnh2.Size = new System.Drawing.Size(140, 31);
             this.btnSuaAnh2.TabIndex = 163;
             this.btnSuaAnh2.Text = "Chỉnh sửa";
             this.btnSuaAnh2.Click += new System.EventHandler(this.btnSuaAnh2_Click);
@@ -230,10 +230,10 @@
             this.btnSuaAnh3.FillColor2 = System.Drawing.Color.White;
             this.btnSuaAnh3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnSuaAnh3.ForeColor = System.Drawing.Color.Black;
-            this.btnSuaAnh3.Location = new System.Drawing.Point(593, 203);
-            this.btnSuaAnh3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSuaAnh3.Location = new System.Drawing.Point(791, 250);
+            this.btnSuaAnh3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSuaAnh3.Name = "btnSuaAnh3";
-            this.btnSuaAnh3.Size = new System.Drawing.Size(105, 25);
+            this.btnSuaAnh3.Size = new System.Drawing.Size(140, 31);
             this.btnSuaAnh3.TabIndex = 162;
             this.btnSuaAnh3.Text = "Chỉnh sửa";
             this.btnSuaAnh3.Click += new System.EventHandler(this.btnSuaAnh3_Click);
@@ -251,10 +251,10 @@
             this.btnSuaAnh1.FillColor2 = System.Drawing.Color.White;
             this.btnSuaAnh1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnSuaAnh1.ForeColor = System.Drawing.Color.Black;
-            this.btnSuaAnh1.Location = new System.Drawing.Point(95, 401);
-            this.btnSuaAnh1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSuaAnh1.Location = new System.Drawing.Point(127, 494);
+            this.btnSuaAnh1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSuaAnh1.Name = "btnSuaAnh1";
-            this.btnSuaAnh1.Size = new System.Drawing.Size(105, 25);
+            this.btnSuaAnh1.Size = new System.Drawing.Size(140, 31);
             this.btnSuaAnh1.TabIndex = 161;
             this.btnSuaAnh1.Text = "Chỉnh sửa";
             this.btnSuaAnh1.Click += new System.EventHandler(this.btnSuaAnh1_Click);
@@ -272,10 +272,10 @@
             this.btnThemPhong.FillColor2 = System.Drawing.Color.White;
             this.btnThemPhong.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnThemPhong.ForeColor = System.Drawing.Color.Black;
-            this.btnThemPhong.Location = new System.Drawing.Point(1191, 596);
-            this.btnThemPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemPhong.Location = new System.Drawing.Point(1588, 734);
+            this.btnThemPhong.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThemPhong.Name = "btnThemPhong";
-            this.btnThemPhong.Size = new System.Drawing.Size(142, 29);
+            this.btnThemPhong.Size = new System.Drawing.Size(189, 36);
             this.btnThemPhong.TabIndex = 158;
             this.btnThemPhong.Text = "Thêm Phòng";
             this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
@@ -283,80 +283,12 @@
             // richTextBoxMoTa
             // 
             this.richTextBoxMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxMoTa.Location = new System.Drawing.Point(6, 437);
-            this.richTextBoxMoTa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxMoTa.Location = new System.Drawing.Point(8, 538);
+            this.richTextBoxMoTa.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.richTextBoxMoTa.Name = "richTextBoxMoTa";
-            this.richTextBoxMoTa.Size = new System.Drawing.Size(735, 122);
+            this.richTextBoxMoTa.Size = new System.Drawing.Size(979, 149);
             this.richTextBoxMoTa.TabIndex = 157;
             this.richTextBoxMoTa.Text = resources.GetString("richTextBoxMoTa.Text");
-            // 
-            // pictureBoxLoaiPhong
-            // 
-            this.pictureBoxLoaiPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxLoaiPhong.Image = global::GUI.Properties.Resources.AnhUCKhachSan;
-            this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(244, 578);
-            this.pictureBoxLoaiPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLoaiPhong.Name = "pictureBoxLoaiPhong";
-            this.pictureBoxLoaiPhong.Size = new System.Drawing.Size(48, 49);
-            this.pictureBoxLoaiPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLoaiPhong.TabIndex = 160;
-            this.pictureBoxLoaiPhong.TabStop = false;
-            // 
-            // pictureBoxDiaDiem
-            // 
-            this.pictureBoxDiaDiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxDiaDiem.Image = global::GUI.Properties.Resources.iconDiaDiem;
-            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(6, 577);
-            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxDiaDiem.Name = "pictureBoxDiaDiem";
-            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(48, 49);
-            this.pictureBoxDiaDiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxDiaDiem.TabIndex = 159;
-            this.pictureBoxDiaDiem.TabStop = false;
-            // 
-            // pic_Anh3
-            // 
-            this.pic_Anh3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh3.Location = new System.Drawing.Point(540, 63);
-            this.pic_Anh3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_Anh3.Name = "pic_Anh3";
-            this.pic_Anh3.Size = new System.Drawing.Size(201, 132);
-            this.pic_Anh3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_Anh3.TabIndex = 156;
-            this.pic_Anh3.TabStop = false;
-            // 
-            // pic_Anh2
-            // 
-            this.pic_Anh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh2.Location = new System.Drawing.Point(333, 63);
-            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_Anh2.Name = "pic_Anh2";
-            this.pic_Anh2.Size = new System.Drawing.Size(201, 132);
-            this.pic_Anh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_Anh2.TabIndex = 155;
-            this.pic_Anh2.TabStop = false;
-            // 
-            // pic_Anh4
-            // 
-            this.pic_Anh4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh4.Location = new System.Drawing.Point(336, 237);
-            this.pic_Anh4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_Anh4.Name = "pic_Anh4";
-            this.pic_Anh4.Size = new System.Drawing.Size(405, 152);
-            this.pic_Anh4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_Anh4.TabIndex = 154;
-            this.pic_Anh4.TabStop = false;
-            // 
-            // pic_Anh1
-            // 
-            this.pic_Anh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Anh1.Location = new System.Drawing.Point(6, 63);
-            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_Anh1.Name = "pic_Anh1";
-            this.pic_Anh1.Size = new System.Drawing.Size(323, 326);
-            this.pic_Anh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_Anh1.TabIndex = 153;
-            this.pic_Anh1.TabStop = false;
             // 
             // btnThemMaUuDai
             // 
@@ -371,19 +303,87 @@
             this.btnThemMaUuDai.FillColor2 = System.Drawing.Color.White;
             this.btnThemMaUuDai.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnThemMaUuDai.ForeColor = System.Drawing.Color.Black;
-            this.btnThemMaUuDai.Location = new System.Drawing.Point(890, 596);
-            this.btnThemMaUuDai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemMaUuDai.Location = new System.Drawing.Point(1187, 734);
+            this.btnThemMaUuDai.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnThemMaUuDai.Name = "btnThemMaUuDai";
-            this.btnThemMaUuDai.Size = new System.Drawing.Size(142, 29);
+            this.btnThemMaUuDai.Size = new System.Drawing.Size(189, 36);
             this.btnThemMaUuDai.TabIndex = 171;
             this.btnThemMaUuDai.Text = "Thêm Ưu Đãi";
             this.btnThemMaUuDai.Click += new System.EventHandler(this.btnThemMaUuDai_Click);
             // 
+            // pictureBoxLoaiPhong
+            // 
+            this.pictureBoxLoaiPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxLoaiPhong.Image = global::GUI.Properties.Resources.building;
+            this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(325, 711);
+            this.pictureBoxLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBoxLoaiPhong.Name = "pictureBoxLoaiPhong";
+            this.pictureBoxLoaiPhong.Size = new System.Drawing.Size(63, 60);
+            this.pictureBoxLoaiPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLoaiPhong.TabIndex = 160;
+            this.pictureBoxLoaiPhong.TabStop = false;
+            // 
+            // pictureBoxDiaDiem
+            // 
+            this.pictureBoxDiaDiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxDiaDiem.Image = global::GUI.Properties.Resources.map_marker;
+            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(8, 710);
+            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBoxDiaDiem.Name = "pictureBoxDiaDiem";
+            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(63, 60);
+            this.pictureBoxDiaDiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxDiaDiem.TabIndex = 159;
+            this.pictureBoxDiaDiem.TabStop = false;
+            // 
+            // pic_Anh3
+            // 
+            this.pic_Anh3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Anh3.Location = new System.Drawing.Point(720, 78);
+            this.pic_Anh3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pic_Anh3.Name = "pic_Anh3";
+            this.pic_Anh3.Size = new System.Drawing.Size(267, 162);
+            this.pic_Anh3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Anh3.TabIndex = 156;
+            this.pic_Anh3.TabStop = false;
+            // 
+            // pic_Anh2
+            // 
+            this.pic_Anh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Anh2.Location = new System.Drawing.Point(444, 78);
+            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pic_Anh2.Name = "pic_Anh2";
+            this.pic_Anh2.Size = new System.Drawing.Size(267, 162);
+            this.pic_Anh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Anh2.TabIndex = 155;
+            this.pic_Anh2.TabStop = false;
+            // 
+            // pic_Anh4
+            // 
+            this.pic_Anh4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Anh4.Location = new System.Drawing.Point(448, 292);
+            this.pic_Anh4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pic_Anh4.Name = "pic_Anh4";
+            this.pic_Anh4.Size = new System.Drawing.Size(539, 187);
+            this.pic_Anh4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Anh4.TabIndex = 154;
+            this.pic_Anh4.TabStop = false;
+            // 
+            // pic_Anh1
+            // 
+            this.pic_Anh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Anh1.Location = new System.Drawing.Point(8, 78);
+            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pic_Anh1.Name = "pic_Anh1";
+            this.pic_Anh1.Size = new System.Drawing.Size(430, 401);
+            this.pic_Anh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Anh1.TabIndex = 153;
+            this.pic_Anh1.TabStop = false;
+            // 
             // ChiTietKhachSanAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1420, 644);
+            this.ClientSize = new System.Drawing.Size(1893, 793);
             this.Controls.Add(this.btnThemMaUuDai);
             this.Controls.Add(this.btnSuaAnh4);
             this.Controls.Add(this.flpPhongKhachSan);
@@ -403,6 +403,7 @@
             this.Controls.Add(this.pic_Anh4);
             this.Controls.Add(this.pic_Anh1);
             this.Controls.Add(this.richTextBoxMoTa);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ChiTietKhachSanAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTietKhachSanAdmin";
@@ -414,7 +415,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -144,6 +144,9 @@
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MaGiamGiaDAO.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>TravelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
@@ -369,6 +372,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building.png" />
+    <None Include="Resources\building %281%29.png" />
+    <None Include="Resources\map-marker.png" />
+    <None Include="Resources\hand.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\add-image.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TravelModel.Context.tt">

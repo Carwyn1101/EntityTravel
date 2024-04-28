@@ -53,13 +53,11 @@ namespace GUI
             kSanDAO.LoadData(Program.TrangChuAdminInstance.flpTrangChu, Program.iDTaiKhoanInstance);
             Program.TrangChuAdminInstance.Show();
         }
-
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
             ThemPhongChoKhachSan f = new ThemPhongChoKhachSan(Program.iDKhachSanInstance);
             f.ShowDialog();
         }
-
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             flpPhongKhachSan.Controls.Clear();
@@ -69,13 +67,11 @@ namespace GUI
         {
             kSanDAO.SaveImage(pic_Anh1, out tenAnh1);
         }
-
         private void btnThemMaUuDai_Click(object sender, EventArgs e)
         {
             ThemUuDai f = new ThemUuDai();
             f.ShowDialog();
         }
-
         private void btnSuaAnh2_Click(object sender, EventArgs e)
         {
             kSanDAO.SaveImage(pic_Anh2, out tenAnh2);

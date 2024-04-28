@@ -12,7 +12,6 @@ namespace GUI
 {
     public partial class UCDanhGia : UserControl
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         public UCDanhGia()
         {
             InitializeComponent();

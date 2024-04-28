@@ -12,14 +12,14 @@ namespace GUI
 {
     public partial class LichSuBook : Form
     {       
-        DatPhongDAO dpDAO = new DatPhongDAO();
+        DatPhongDAO dPDAO = new DatPhongDAO();
         public LichSuBook()
         {
             InitializeComponent();
         }
         private void LichSuBook_Load(object sender, EventArgs e)
         {
-            dpDAO.LichSuBookLoad(flpLichSuBook);
+            dPDAO.LichSuBookLoad(flpLichSuBook);
         }      
     }   
 }

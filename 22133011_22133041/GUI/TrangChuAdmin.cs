@@ -14,16 +14,16 @@ namespace GUI
     {    
         ThongTinKhachSanDAO kSDAO = new ThongTinKhachSanDAO();
         int iDNguoiDung; bool logOut;
-        DatPhongDAO dpDAO = new DatPhongDAO();
+        DatPhongDAO dPDAO = new DatPhongDAO();
         public TrangChuAdmin()
         {
             InitializeComponent();           
         }
-        public TrangChuAdmin(string TenDangNhap, int IDNguoiDung)
+        public TrangChuAdmin(string tenDangNhap, int iDNguoiDung)
         {
             InitializeComponent();
-            lblTenTaiKhoan.Text = TenDangNhap;
-            iDNguoiDung = IDNguoiDung;
+            lblTenTaiKhoan.Text = tenDangNhap;
+            this.iDNguoiDung = iDNguoiDung;
             flpTrangChu.Controls.Clear();          
             Program.TrangChuAdminInstance = this;
         }
@@ -33,7 +33,7 @@ namespace GUI
             DangThongTinKhachSan f = new DangThongTinKhachSan(iDNguoiDung, lblTenTaiKhoan.Text);
             f.ShowDialog();
             f = null;
-            this.Close();
+            this.Show();
         }
         private void pic_DangXuat_Click(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@ namespace GUI
         }
         private void TrangChuAdmin_Load(object sender, EventArgs e)
         {
-            dpDAO.TrangThaiLoad(sender,e);
+            dPDAO.TrangThaiLoad(sender,e);
             kSDAO.LoadData(flpTrangChu, iDNguoiDung);
         }       
     }

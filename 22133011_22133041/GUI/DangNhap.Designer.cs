@@ -61,9 +61,10 @@
             this.PanelLogin.Controls.Add(this.btnDangNhap);
             this.PanelLogin.Controls.Add(this.txtMatKhau);
             this.PanelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin.Location = new System.Drawing.Point(2, 2);
+            this.PanelLogin.Location = new System.Drawing.Point(3, 2);
+            this.PanelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelLogin.Name = "PanelLogin";
-            this.PanelLogin.Size = new System.Drawing.Size(500, 594);
+            this.PanelLogin.Size = new System.Drawing.Size(667, 732);
             this.PanelLogin.TabIndex = 7;
             // 
             // ImageButtonFB
@@ -75,10 +76,11 @@
             this.ImageButtonFB.ImageOffset = new System.Drawing.Point(0, 0);
             this.ImageButtonFB.ImageRotate = 0F;
             this.ImageButtonFB.ImageSize = new System.Drawing.Size(60, 60);
-            this.ImageButtonFB.Location = new System.Drawing.Point(102, 459);
+            this.ImageButtonFB.Location = new System.Drawing.Point(136, 565);
+            this.ImageButtonFB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ImageButtonFB.Name = "ImageButtonFB";
             this.ImageButtonFB.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ImageButtonFB.Size = new System.Drawing.Size(70, 70);
+            this.ImageButtonFB.Size = new System.Drawing.Size(93, 86);
             this.ImageButtonFB.TabIndex = 23;
             // 
             // LabelLogin
@@ -86,18 +88,20 @@
             this.LabelLogin.AutoSize = true;
             this.LabelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelLogin.ForeColor = System.Drawing.Color.DarkOrange;
-            this.LabelLogin.Location = new System.Drawing.Point(155, 63);
+            this.LabelLogin.Location = new System.Drawing.Point(207, 78);
+            this.LabelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelLogin.Name = "LabelLogin";
-            this.LabelLogin.Size = new System.Drawing.Size(195, 73);
+            this.LabelLogin.Size = new System.Drawing.Size(237, 91);
             this.LabelLogin.TabIndex = 22;
             this.LabelLogin.Text = "Login";
             // 
             // LabelFollow
             // 
             this.LabelFollow.AutoSize = true;
-            this.LabelFollow.Location = new System.Drawing.Point(174, 420);
+            this.LabelFollow.Location = new System.Drawing.Point(232, 517);
+            this.LabelFollow.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelFollow.Name = "LabelFollow";
-            this.LabelFollow.Size = new System.Drawing.Size(149, 13);
+            this.LabelFollow.Size = new System.Drawing.Size(194, 16);
             this.LabelFollow.TabIndex = 21;
             this.LabelFollow.Text = "----------------Follow Us----------------";
             this.LabelFollow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -106,7 +110,7 @@
             // 
             this.txtTenDangNhap.AutoRoundedCorners = true;
             this.txtTenDangNhap.BackColor = System.Drawing.Color.Transparent;
-            this.txtTenDangNhap.BorderRadius = 17;
+            this.txtTenDangNhap.BorderRadius = 22;
             this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenDangNhap.DefaultText = "";
             this.txtTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -121,8 +125,8 @@
             this.txtTenDangNhap.HoverState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtTenDangNhap.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenDangNhap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtTenDangNhap.Location = new System.Drawing.Point(124, 176);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(165, 217);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.PasswordChar = '\0';
             this.txtTenDangNhap.PlaceholderText = "Username";
@@ -132,7 +136,7 @@
             this.txtTenDangNhap.ShadowDecoration.Depth = 20;
             this.txtTenDangNhap.ShadowDecoration.Enabled = true;
             this.txtTenDangNhap.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.txtTenDangNhap.Size = new System.Drawing.Size(255, 37);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(340, 46);
             this.txtTenDangNhap.TabIndex = 19;
             this.txtTenDangNhap.Tag = "";
             this.txtTenDangNhap.WordWrap = false;
@@ -140,9 +144,10 @@
             // PBTwitter
             // 
             this.PBTwitter.Image = ((System.Drawing.Image)(resources.GetObject("PBTwitter.Image")));
-            this.PBTwitter.Location = new System.Drawing.Point(211, 459);
+            this.PBTwitter.Location = new System.Drawing.Point(281, 565);
+            this.PBTwitter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PBTwitter.Name = "PBTwitter";
-            this.PBTwitter.Size = new System.Drawing.Size(84, 70);
+            this.PBTwitter.Size = new System.Drawing.Size(112, 86);
             this.PBTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBTwitter.TabIndex = 17;
             this.PBTwitter.TabStop = false;
@@ -157,18 +162,20 @@
             this.ImageButtonInsta.ImageOffset = new System.Drawing.Point(0, 0);
             this.ImageButtonInsta.ImageRotate = 0F;
             this.ImageButtonInsta.ImageSize = new System.Drawing.Size(70, 70);
-            this.ImageButtonInsta.Location = new System.Drawing.Point(336, 459);
+            this.ImageButtonInsta.Location = new System.Drawing.Point(448, 565);
+            this.ImageButtonInsta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ImageButtonInsta.Name = "ImageButtonInsta";
             this.ImageButtonInsta.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.ImageButtonInsta.Size = new System.Drawing.Size(64, 64);
+            this.ImageButtonInsta.Size = new System.Drawing.Size(85, 79);
             this.ImageButtonInsta.TabIndex = 7;
             // 
             // chkAccUser
             // 
             this.chkAccUser.AutoSize = true;
-            this.chkAccUser.Location = new System.Drawing.Point(332, 361);
+            this.chkAccUser.Location = new System.Drawing.Point(443, 444);
+            this.chkAccUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkAccUser.Name = "chkAccUser";
-            this.chkAccUser.Size = new System.Drawing.Size(47, 17);
+            this.chkAccUser.Size = new System.Drawing.Size(57, 20);
             this.chkAccUser.TabIndex = 10;
             this.chkAccUser.TabStop = true;
             this.chkAccUser.Text = "User";
@@ -178,9 +185,10 @@
             // chkAccAdmin
             // 
             this.chkAccAdmin.AutoSize = true;
-            this.chkAccAdmin.Location = new System.Drawing.Point(124, 361);
+            this.chkAccAdmin.Location = new System.Drawing.Point(165, 444);
+            this.chkAccAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkAccAdmin.Name = "chkAccAdmin";
-            this.chkAccAdmin.Size = new System.Drawing.Size(54, 17);
+            this.chkAccAdmin.Size = new System.Drawing.Size(66, 20);
             this.chkAccAdmin.TabIndex = 9;
             this.chkAccAdmin.TabStop = true;
             this.chkAccAdmin.Text = "Admin";
@@ -190,7 +198,7 @@
             // btnDangNhap
             // 
             this.btnDangNhap.AutoRoundedCorners = true;
-            this.btnDangNhap.BorderRadius = 16;
+            this.btnDangNhap.BorderRadius = 20;
             this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -200,9 +208,10 @@
             this.btnDangNhap.FillColor2 = System.Drawing.Color.PeachPuff;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(124, 310);
+            this.btnDangNhap.Location = new System.Drawing.Point(165, 382);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(255, 34);
+            this.btnDangNhap.Size = new System.Drawing.Size(340, 42);
             this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "Login";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -211,7 +220,7 @@
             // 
             this.txtMatKhau.AutoRoundedCorners = true;
             this.txtMatKhau.BackColor = System.Drawing.Color.Transparent;
-            this.txtMatKhau.BorderRadius = 17;
+            this.txtMatKhau.BorderRadius = 22;
             this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatKhau.DefaultText = "";
             this.txtMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -226,8 +235,8 @@
             this.txtMatKhau.HoverState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtMatKhau.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatKhau.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtMatKhau.Location = new System.Drawing.Point(124, 233);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMatKhau.Location = new System.Drawing.Point(165, 287);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.PlaceholderText = "Password";
@@ -237,7 +246,7 @@
             this.txtMatKhau.ShadowDecoration.Depth = 20;
             this.txtMatKhau.ShadowDecoration.Enabled = true;
             this.txtMatKhau.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.txtMatKhau.Size = new System.Drawing.Size(255, 37);
+            this.txtMatKhau.Size = new System.Drawing.Size(340, 46);
             this.txtMatKhau.TabIndex = 20;
             this.txtMatKhau.Tag = "";
             this.txtMatKhau.WordWrap = false;
@@ -247,20 +256,22 @@
             // 
             this.PictureBox.Image = global::GUI.Properties.Resources._9;
             this.PictureBox.ImageRotate = 0F;
-            this.PictureBox.Location = new System.Drawing.Point(502, -65);
+            this.PictureBox.Location = new System.Drawing.Point(669, -80);
+            this.PictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(506, 661);
+            this.PictureBox.Size = new System.Drawing.Size(675, 814);
             this.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox.TabIndex = 8;
             this.PictureBox.TabStop = false;
             // 
             // DangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 599);
+            this.ClientSize = new System.Drawing.Size(1339, 737);
             this.Controls.Add(this.PanelLogin);
             this.Controls.Add(this.PictureBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangNhap";

@@ -9,10 +9,10 @@ namespace GUI
 {
     public class TaiKhoanDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
-        public void DangNhap(DangNhap f, string TenDangNhap,string loaiTaiKhoan) 
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
+        public void DangNhap(DangNhap f, string tenDangNhap,string loaiTaiKhoan) 
         {           
-            var kq = (from c in db.TaiKhoans where c.TenDangNhap == TenDangNhap select c).SingleOrDefault();
+            var kq = (from c in dB.TaiKhoans where c.TenDangNhap == tenDangNhap select c).SingleOrDefault();
             Program.iDTaiKhoanInstance = kq.IDNguoiDung;
             if (f.txtTenDangNhap.Text == kq.TenDangNhap && f.txtMatKhau.Text == kq.MatKhau && kq.LoaiNguoiDung == loaiTaiKhoan)
             {

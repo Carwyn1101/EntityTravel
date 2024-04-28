@@ -14,8 +14,8 @@ namespace GUI
     
     public partial class MaGiamGia
     {
-        public int SoThuTu { get; set; }
-        public string Ten { get; set; }
+        public int STTMa { get; set; }
+        public string MaGiam { get; set; }
         public Nullable<int> GiaTri { get; set; }
         public Nullable<int> IDKhachSan { get; set; }
     

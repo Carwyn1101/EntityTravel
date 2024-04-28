@@ -9,13 +9,11 @@ namespace GUI
 {
     internal class ThongTinKhachHangDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         public void Them(ThongTinKhachHang kHang)
         {           
-            db.ThongTinKhachHangs.Add(kHang);            
-            db.SaveChanges();
-           // MessageBox.Show("Thuê thành công!");
+            dB.ThongTinKhachHangs.Add(kHang);            
+            dB.SaveChanges();
         }
-
     }
 }

@@ -9,11 +9,11 @@ namespace GUI
 {
     internal class MaGiamGiaDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         public void Them(MaGiamGia giamGia)
         {
-            db.MaGiamGias.Add(giamGia);
-            db.SaveChanges();
+            dB.MaGiamGias.Add(giamGia);
+            dB.SaveChanges();
             MessageBox.Show("Thêm thành công!");
         }
     }

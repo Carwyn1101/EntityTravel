@@ -16,5 +16,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            MaGiamGia maGiamGia = new MaGiamGia();
+            txtMaGiamGia.Text = maGiamGia.MaGiam;
+        }
     }
 }

@@ -12,11 +12,11 @@ namespace GUI
 {
     internal class ThongTinPhongKhachSanDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         public void LoadDanhSachPhongUser(FlowLayoutPanel flpTrangChuKhachSan, int iDKhachSan)
         {
-            var kSan = from p in db.ThongTinPhongCuaKhachSans
+            var kSan = from p in dB.ThongTinPhongCuaKhachSans
                        where p.IDKhachSan == iDKhachSan 
                        select p;
             foreach (var p in kSan)
@@ -25,9 +25,9 @@ namespace GUI
                 flpTrangChuKhachSan.Controls.Add(uc);
             }
         }
-        public void LoadDanhSachPhongAdmin(FlowLayoutPanel flpTrangChuAdmin, int id)
+        public void LoadDanhSachPhongAdmin(FlowLayoutPanel flpTrangChuAdmin, int iD)
         {
-            var phongAdmin = from c in db.ThongTinPhongCuaKhachSans where c.IDKhachSan == id select c;
+            var phongAdmin = from c in dB.ThongTinPhongCuaKhachSans where c.IDKhachSan == iD select c;
             foreach (var p in phongAdmin)
             {
                 UCThongTinPhongKhachSanAdmin uc = new UCThongTinPhongKhachSanAdmin(p);
@@ -37,46 +37,46 @@ namespace GUI
         }
         public void Them(ThongTinPhongCuaKhachSan f)
         {
-            db.ThongTinPhongCuaKhachSans.Add(f);
-            db.SaveChanges();
+            dB.ThongTinPhongCuaKhachSans.Add(f);
+            dB.SaveChanges();
             MessageBox.Show("Thêm thông tin phòng khách sạn thành công!");
         }
         public void Xoa(int iDPhongKhachSan)
         {           
-            var phong = from c1 in db.ThongTinPhongCuaKhachSans where c1.IDPhong == iDPhongKhachSan select c1;
+            var phong = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDPhong == iDPhongKhachSan select c1;
             if (phong.Any())
             {
                 MessageBox.Show("Phòng đang được thuê không thể thực hiện!");
             }
             else
             {
-                var datPhong = from p in db.DatPhongs where p.IDPhong == iDPhongKhachSan select p;
+                var datPhong = from p in dB.DatPhongs where p.IDPhong == iDPhongKhachSan select p;
                 if (datPhong.Any())
                 {
                     foreach (var tmp in datPhong)
                     {
-                        db.DatPhongs.Remove(tmp);
+                        dB.DatPhongs.Remove(tmp);
                     }
-                    db.SaveChanges();
+                    dB.SaveChanges();
                 }
-                var hDon = from b in db.HoaDons where b.IDPhong == iDPhongKhachSan select b;
+                var hDon = from b in dB.HoaDons where b.IDPhong == iDPhongKhachSan select b;
                 if (hDon.Any())
                 {
                     foreach (var tmp in hDon)
                     {
-                        db.HoaDons.Remove(tmp);
+                        dB.HoaDons.Remove(tmp);
                     }
-                    db.SaveChanges();
+                    dB.SaveChanges();
                 }
-                var phongKS = db.ThongTinPhongCuaKhachSans.FirstOrDefault(c2 => c2.IDPhong == iDPhongKhachSan);
-                db.ThongTinPhongCuaKhachSans.Remove(phongKS);
-                db.SaveChanges();
+                var phongKS = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(c2 => c2.IDPhong == iDPhongKhachSan);
+                dB.ThongTinPhongCuaKhachSans.Remove(phongKS);
+                dB.SaveChanges();
                 MessageBox.Show("Xoá thông tin phòng khách sạn thành công!");
             }
         }
         public void Sua(ThongTinPhongCuaKhachSan f)
         {
-            var khachSanToUpdate = db.ThongTinPhongCuaKhachSans.FirstOrDefault(k => k.IDPhong == f.IDPhong);
+            var khachSanToUpdate = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(k => k.IDPhong == f.IDPhong);
             if (khachSanToUpdate != null)
             {
                 khachSanToUpdate.TenPhong = f.TenPhong;
@@ -100,12 +100,12 @@ namespace GUI
                 khachSanToUpdate.HinhAnh1 = f.HinhAnh1;
                 khachSanToUpdate.HinhAnh2 = f.HinhAnh2;               
             }
-            db.SaveChanges();
+            dB.SaveChanges();
             MessageBox.Show("Sửa thông tin phòng khách sạn thành công!");
         }
         public void LoadChiTietPhongUser(ChiTietPhongCuaKhachSanUser f, int iDPhong)
         {
-            var kSan = (from p in db.ThongTinPhongCuaKhachSans
+            var kSan = (from p in dB.ThongTinPhongCuaKhachSans
                         where p.IDPhong == iDPhong
                         select p).SingleOrDefault();
             if (kSan != null)
@@ -135,7 +135,7 @@ namespace GUI
         }
         public void LoadPhongTheoLoaiPhong(FlowLayoutPanel flpTrangChuKhachSan, string loaiPhong, int iDKhachSan)
         {
-            var kSan = from p in db.ThongTinPhongCuaKhachSans
+            var kSan = from p in dB.ThongTinPhongCuaKhachSans
                        where p.TenPhong == loaiPhong && p.IDKhachSan == iDKhachSan
                        select p;
             foreach (var p in kSan)
@@ -146,18 +146,13 @@ namespace GUI
         }
         public void CapNhatTrangThaiPhong(int iDPhong)
         {
-            var tmp = from p in db.ThongTinPhongCuaKhachSans where p.IDPhong == iDPhong
-                      select p;
-            if (tmp != null)
-            {
-                ThongTinPhongCuaKhachSan pKSan = db.ThongTinPhongCuaKhachSans.Find(iDPhong);
-                db.SaveChanges();
-            }
+            ThongTinPhongCuaKhachSan pKSan = dB.ThongTinPhongCuaKhachSans.Find(iDPhong);
+            dB.SaveChanges();
         }
         public void LoadChiTietPhongAdmin(ChiTietPhongCuaKhachSanAdmin f, int iDPhong, out string tenAnh1, out string tenAnh2)
         {
             tenAnh1 = string.Empty; tenAnh2 = string.Empty; 
-            var kSan = (from p in db.ThongTinPhongCuaKhachSans
+            var kSan = (from p in dB.ThongTinPhongCuaKhachSans
                         where p.IDPhong == iDPhong
                         select p).SingleOrDefault();
             if (kSan != null)

@@ -14,17 +14,17 @@ namespace GUI
     {
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
         CheckGiaTri check = new CheckGiaTri();
-        string tenAnh1, tenAnh2, tenAnh3, tenAnh4,tenDangNhap;
+        string tenAnh1, tenAnh2, tenAnh3, tenAnh4, tenDangNhap;
         int iDNguoiDung;
         public DangThongTinKhachSan()
         {
             InitializeComponent();
-        }
-        public DangThongTinKhachSan(int IDNguoiDung,string TenDangNhap)
+        }       
+        public DangThongTinKhachSan(int iDNguoiDung,string tenDangNhap)
         {
             InitializeComponent();
-            iDNguoiDung = IDNguoiDung;
-            tenDangNhap = TenDangNhap;
+            this.iDNguoiDung = iDNguoiDung;
+            this.tenDangNhap = tenDangNhap;
         }     
         private void btnDangBai_Click(object sender, EventArgs e)
         {
@@ -58,22 +58,27 @@ namespace GUI
         private void txtTenKhachSan_TextChanged(object sender, EventArgs e)
         {
             txtTenKhachSan.PlaceholderText = "Vui lòng nhập tên khách sạn của bạn";
+            txtTenKhachSan.PlaceholderForeColor = System.Drawing.Color.DarkOrange;
         }
         private void btnThemAnh1_Click(object sender, EventArgs e)
         {
             kSanDAO.SaveImage(pic_Anh1, out tenAnh1);
+            btnThemAnh1.SendToBack();
         }
         private void btnThemAnh2_Click(object sender, EventArgs e)
         {
             kSanDAO.SaveImage(pic_Anh2, out tenAnh2);
+            btnThemAnh2.SendToBack();
         }
         private void btnThemAnh3_Click(object sender, EventArgs e)
         {
             kSanDAO.SaveImage(pic_Anh3, out tenAnh3);
+            btnThemAnh3.SendToBack();
         }
         private void btnThemAnh4_Click(object sender, EventArgs e)
         {
             kSanDAO.SaveImage(pic_Anh4, out tenAnh4);
+            btnThemAnh4.SendToBack();
         }
     }
 }

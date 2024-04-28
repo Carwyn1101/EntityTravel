@@ -11,8 +11,7 @@ using System.Windows.Forms;
 namespace GUI
 {
     public partial class DanhGiaCuaKhachHang : Form
-    {      
-        
+    {             
         DanhGiaDAO dGia = new DanhGiaDAO();
         public DanhGiaCuaKhachHang()
         {

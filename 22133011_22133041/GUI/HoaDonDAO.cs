@@ -9,11 +9,11 @@ namespace GUI
 {
     internal class HoaDonDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         public void Them(HoaDon hDon)
         {
-            db.HoaDons.Add(hDon);
-            db.SaveChanges();
+            dB.HoaDons.Add(hDon);
+            dB.SaveChanges();
             MessageBox.Show("Đặt phòng thành công!");
         }       
     }

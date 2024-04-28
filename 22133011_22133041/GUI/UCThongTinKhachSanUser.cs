@@ -20,15 +20,15 @@ namespace GUI
         {
             InitializeComponent();
         }
-        public UCThongTinKhachSanUser(ThongTinKhachSan kqua)
+        public UCThongTinKhachSanUser(ThongTinKhachSan kQua)
         {
             InitializeComponent();
-            lblTenKhachSan.Text = kqua.TenKhachSan;
-            lblDiaDiemKhachSan.Text = kqua.DiaDiemKhachSan;
-            loaiKSan = kqua.Loai;
-            mota = kqua.MoTa;
-            iD = kqua.IDKhachSan;
-            string image1 = Path.Combine(appDirectory, kqua.HinhAnh1);
+            lblTenKhachSan.Text = kQua.TenKhachSan;
+            lblDiaDiemKhachSan.Text = kQua.DiaDiemKhachSan;
+            loaiKSan = kQua.Loai;
+            mota = kQua.MoTa;
+            iD = kQua.IDKhachSan;
+            string image1 = Path.Combine(appDirectory, kQua.HinhAnh1);
             pic_Anh.Image = Image.FromFile(image1);
         }
         private void panel1_MouseClick(object sender, MouseEventArgs e)

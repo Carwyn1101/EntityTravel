@@ -222,7 +222,6 @@
             this.Text = "ChiTietKhachHang";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

@@ -13,7 +13,7 @@ namespace GUI
     public partial class UCChuaHoanThanh : UserControl
     {
         int maDatPhong;
-        DatPhongDAO dpDAO = new DatPhongDAO();
+        DatPhongDAO dPDAO = new DatPhongDAO();
         public UCChuaHoanThanh()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace GUI
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            dpDAO.Xoa(maDatPhong);
+            dPDAO.Xoa(maDatPhong);
             Program.LichSuBookInstance.Controls.Clear();
             LichSuBook f = new LichSuBook();
             f.ShowDialog();

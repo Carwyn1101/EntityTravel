@@ -13,7 +13,6 @@ namespace GUI
 {
     public partial class ChiTietPhongCuaKhachSanUser : Form
     {        
-   
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         public ChiTietPhongCuaKhachSanUser()
         {

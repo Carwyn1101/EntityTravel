@@ -34,8 +34,8 @@ namespace GUI
         }             
         private void linklbChiTiet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {                                   
-                ChiTietKhachHangAdmin f = new ChiTietKhachHangAdmin();
-                f.ShowDialog();          
+            ChiTietKhachHangAdmin f = new ChiTietKhachHangAdmin();
+            f.ShowDialog();          
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {

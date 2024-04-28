@@ -13,25 +13,22 @@ namespace GUI
 {
     public partial class TrangChuUser : Form
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
-        DatPhongDAO dpDAO = new DatPhongDAO();
+        DatPhongDAO dPDAO = new DatPhongDAO();
         bool logOut;
         public TrangChuUser()
         {
             InitializeComponent();
         }
-        public TrangChuUser(string TenDangNhap, int IDNguoiDung)
+        public TrangChuUser(string tenDangNhap, int iDNguoiDung)
         {
             InitializeComponent();
-            lblTenTaiKhoan.Text = TenDangNhap;
+            lblTenTaiKhoan.Text = tenDangNhap;
         }
-
         private void TrangChuUser_Load(object sender, EventArgs e)
         {
-            dpDAO.TrangThaiLoad(sender,e);
+            dPDAO.TrangThaiLoad(sender,e);
             kSanDAO.GetAllKhachSan(flpTrangChuUser);
-
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -39,7 +36,6 @@ namespace GUI
             string diaDiem = cboDiaDiemTimKiem.Text;
             kSanDAO.SearchKhachSanByDiaDiem(flpTrangChuUser, diaDiem);
         }
-
         private void pic_DangXuat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -57,13 +53,11 @@ namespace GUI
         {
             kSanDAO.GetAllKhachSan(flpTrangChuUser);
         }
-
         private void btnLichSuBook_Click(object sender, EventArgs e)
         {
             LichSuBook f = new LichSuBook();
             Program.LichSuBookInstance = f;
-            f.ShowDialog();
-            
+            f.ShowDialog();            
         }
     }
 }

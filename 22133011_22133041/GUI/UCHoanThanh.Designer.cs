@@ -47,9 +47,10 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblTenPhong);
             this.panel1.Controls.Add(this.lblTenKhachSan);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 130);
+            this.panel1.Size = new System.Drawing.Size(287, 160);
             this.panel1.TabIndex = 2;
             // 
             // lblTenPhong
@@ -57,9 +58,10 @@
             this.lblTenPhong.AutoSize = false;
             this.lblTenPhong.BackColor = System.Drawing.Color.Transparent;
             this.lblTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenPhong.Location = new System.Drawing.Point(3, 67);
+            this.lblTenPhong.Location = new System.Drawing.Point(4, 82);
+            this.lblTenPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblTenPhong.Name = "lblTenPhong";
-            this.lblTenPhong.Size = new System.Drawing.Size(200, 22);
+            this.lblTenPhong.Size = new System.Drawing.Size(267, 27);
             this.lblTenPhong.TabIndex = 1;
             this.lblTenPhong.Text = "TenPhong";
             this.lblTenPhong.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -70,9 +72,10 @@
             this.lblTenKhachSan.AutoSize = false;
             this.lblTenKhachSan.BackColor = System.Drawing.Color.Transparent;
             this.lblTenKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenKhachSan.Location = new System.Drawing.Point(3, -5);
+            this.lblTenKhachSan.Location = new System.Drawing.Point(4, -6);
+            this.lblTenKhachSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblTenKhachSan.Name = "lblTenKhachSan";
-            this.lblTenKhachSan.Size = new System.Drawing.Size(200, 44);
+            this.lblTenKhachSan.Size = new System.Drawing.Size(267, 54);
             this.lblTenKhachSan.TabIndex = 1;
             this.lblTenKhachSan.Text = "TenKhachSan";
             this.lblTenKhachSan.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -86,9 +89,10 @@
             this.panel3.Controls.Add(this.lblNgayTraPhong);
             this.panel3.Controls.Add(this.lblNgayNhan);
             this.panel3.Controls.Add(this.lblNgayNhanPhong);
-            this.panel3.Location = new System.Drawing.Point(213, 3);
+            this.panel3.Location = new System.Drawing.Point(284, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(459, 130);
+            this.panel3.Size = new System.Drawing.Size(611, 160);
             this.panel3.TabIndex = 4;
             // 
             // guna2HtmlLabel2
@@ -96,9 +100,10 @@
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(168, 103);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(224, 127);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(200, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(267, 27);
             this.guna2HtmlLabel2.TabIndex = 10;
             this.guna2HtmlLabel2.Text = "Đã hoàn thành";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,9 +113,10 @@
             this.lblNgayTra.AutoSize = false;
             this.lblNgayTra.BackColor = System.Drawing.Color.Transparent;
             this.lblNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTra.Location = new System.Drawing.Point(168, 53);
+            this.lblNgayTra.Location = new System.Drawing.Point(224, 65);
+            this.lblNgayTra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblNgayTra.Name = "lblNgayTra";
-            this.lblNgayTra.Size = new System.Drawing.Size(200, 22);
+            this.lblNgayTra.Size = new System.Drawing.Size(267, 27);
             this.lblNgayTra.TabIndex = 9;
             this.lblNgayTra.Text = "24-4-2024";
             this.lblNgayTra.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -120,33 +126,36 @@
             this.lblTrangThai.AutoSize = false;
             this.lblTrangThai.BackColor = System.Drawing.Color.Transparent;
             this.lblTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.Location = new System.Drawing.Point(21, 103);
+            this.lblTrangThai.Location = new System.Drawing.Point(28, 127);
+            this.lblTrangThai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(91, 22);
+            this.lblTrangThai.Size = new System.Drawing.Size(121, 27);
             this.lblTrangThai.TabIndex = 8;
             this.lblTrangThai.Text = "Trạng thái:";
-            this.lblTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNgayTraPhong
             // 
             this.lblNgayTraPhong.AutoSize = false;
             this.lblNgayTraPhong.BackColor = System.Drawing.Color.Transparent;
             this.lblNgayTraPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTraPhong.Location = new System.Drawing.Point(21, 53);
+            this.lblNgayTraPhong.Location = new System.Drawing.Point(14, 65);
+            this.lblNgayTraPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblNgayTraPhong.Name = "lblNgayTraPhong";
-            this.lblNgayTraPhong.Size = new System.Drawing.Size(141, 22);
+            this.lblNgayTraPhong.Size = new System.Drawing.Size(188, 27);
             this.lblNgayTraPhong.TabIndex = 7;
             this.lblNgayTraPhong.Text = "Ngày trả phòng:";
-            this.lblNgayTraPhong.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNgayTraPhong.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNgayNhan
             // 
             this.lblNgayNhan.AutoSize = false;
             this.lblNgayNhan.BackColor = System.Drawing.Color.Transparent;
             this.lblNgayNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayNhan.Location = new System.Drawing.Point(168, 5);
+            this.lblNgayNhan.Location = new System.Drawing.Point(224, 6);
+            this.lblNgayNhan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblNgayNhan.Name = "lblNgayNhan";
-            this.lblNgayNhan.Size = new System.Drawing.Size(200, 22);
+            this.lblNgayNhan.Size = new System.Drawing.Size(267, 27);
             this.lblNgayNhan.TabIndex = 6;
             this.lblNgayNhan.Text = "24-4-2024";
             this.lblNgayNhan.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,21 +165,23 @@
             this.lblNgayNhanPhong.AutoSize = false;
             this.lblNgayNhanPhong.BackColor = System.Drawing.Color.Transparent;
             this.lblNgayNhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayNhanPhong.Location = new System.Drawing.Point(21, 5);
+            this.lblNgayNhanPhong.Location = new System.Drawing.Point(28, 6);
+            this.lblNgayNhanPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblNgayNhanPhong.Name = "lblNgayNhanPhong";
-            this.lblNgayNhanPhong.Size = new System.Drawing.Size(141, 22);
+            this.lblNgayNhanPhong.Size = new System.Drawing.Size(188, 27);
             this.lblNgayNhanPhong.TabIndex = 5;
             this.lblNgayNhanPhong.Text = "Ngày nhận phòng:";
-            this.lblNgayNhanPhong.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNgayNhanPhong.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UCHoanThanh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCHoanThanh";
-            this.Size = new System.Drawing.Size(675, 135);
+            this.Size = new System.Drawing.Size(900, 166);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);

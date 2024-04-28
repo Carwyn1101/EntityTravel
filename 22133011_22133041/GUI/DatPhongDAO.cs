@@ -10,45 +10,45 @@ namespace GUI
 {
     internal class DatPhongDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         DateTime check = DateTime.Now;
         public void Them(DatPhong dPhong)
         {
-            db.DatPhongs.Add(dPhong);
-            db.SaveChanges();
+            dB.DatPhongs.Add(dPhong);
+            dB.SaveChanges();
         }
         public void Xoa(int maDatPhong)
         {
-            var remove = db.DatPhongs.FirstOrDefault(k => k.MaDatPhong == maDatPhong);
-            var trangThai = db.ThongTinPhongCuaKhachSans.FirstOrDefault(h=> h.IDPhong == remove.IDPhong);           
-            db.SaveChanges();
+            var remove = dB.DatPhongs.FirstOrDefault(k => k.MaDatPhong == maDatPhong);
+            var trangThai = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(h=> h.IDPhong == remove.IDPhong);
+            dB.SaveChanges();
             if (remove != null)
             {
-                db.DatPhongs.Remove(remove);
-                db.SaveChanges();
+                dB.DatPhongs.Remove(remove);
+                dB.SaveChanges();
             }
             MessageBox.Show("Hủy phòng khách sạn thành công!");
         }
         public void TrangThaiLoad(object sender, EventArgs e)
         {
-            var kq = from c in db.DatPhongs select c;
+            var kq = from c in dB.DatPhongs select c;
             foreach(var k in kq) 
             {
                 if(k.NgayTraPhong < check)
                 {
-                    var trangThai = db.ThongTinPhongCuaKhachSans.FirstOrDefault(h => h.IDPhong == k.IDPhong);                  
+                    var trangThai = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(h => h.IDPhong == k.IDPhong);                  
                     
                 }
             }
-            db.SaveChanges();
+            dB.SaveChanges();
         }
         public void LichSuBookLoad(FlowLayoutPanel flpLichSuBook)
         {
-            var kq = from c in db.DatPhongs where c.IDKhachHang == Program.iDTaiKhoanInstance select c;
+            var kq = from c in dB.DatPhongs where c.IDKhachHang == Program.iDTaiKhoanInstance select c;
             foreach (var k in kq)
             {
-                var tenKhachSan = db.ThongTinKhachSans.FirstOrDefault(tmp => tmp.IDKhachSan == k.IDKhachSan);
-                var tenPhong = db.ThongTinPhongCuaKhachSans.FirstOrDefault(tmp => tmp.IDPhong == k.IDPhong);
+                var tenKhachSan = dB.ThongTinKhachSans.FirstOrDefault(tmp => tmp.IDKhachSan == k.IDKhachSan);
+                var tenPhong = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(tmp => tmp.IDPhong == k.IDPhong);
                 if (k.NgayTraPhong < check)
                 {
 

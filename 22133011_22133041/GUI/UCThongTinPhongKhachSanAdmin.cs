@@ -12,7 +12,7 @@ namespace GUI
 {
     public partial class UCThongTinPhongKhachSanAdmin : UserControl
     {
-        int iDKhachSan,iDPhong;
+        int iDKhachSan, iDPhong;
         public UCThongTinPhongKhachSanAdmin()
         {
             InitializeComponent();

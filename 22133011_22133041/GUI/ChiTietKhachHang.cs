@@ -13,7 +13,6 @@ namespace GUI
     public partial class ChiTietKhachHang : Form
     {
         ThongTinKhachHangDAO kHangDAO = new ThongTinKhachHangDAO();
-        ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         CheckGiaTri check = new CheckGiaTri();
         public ChiTietKhachHang()
         {

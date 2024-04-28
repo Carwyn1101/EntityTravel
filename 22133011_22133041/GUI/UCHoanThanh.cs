@@ -12,7 +12,6 @@ namespace GUI
 {
     public partial class UCHoanThanh : UserControl
     {
-       
         public UCHoanThanh()
         {
             InitializeComponent();
@@ -23,8 +22,7 @@ namespace GUI
             lblTenKhachSan.Text = tenKhachSan;
             lblTenPhong.Text = tenPhong;
             lblNgayNhan.Text = ngayNhan.ToString("dd/MM/yyyy");
-            lblNgayTra.Text = ngayTra.ToString("dd/MM/yyyy");
-            
+            lblNgayTra.Text = ngayTra.ToString("dd/MM/yyyy");            
         }
     }
 }

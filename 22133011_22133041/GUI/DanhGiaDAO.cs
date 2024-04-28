@@ -9,10 +9,10 @@ namespace GUI
 {
     internal class DanhGiaDAO
     {
-        DoAnCuoiKyEntity db = new DoAnCuoiKyEntity();
+        DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         public void LoadDataDanhGia(FlowLayoutPanel flpDanhGia, int iD)
         {
-            var kSan = from p in db.DanhGias
+            var kSan = from p in dB.DanhGias
                        where p.IDKhachSan == iD
                        select p;
             foreach (var p in kSan)
@@ -23,8 +23,8 @@ namespace GUI
         }
         public void Them(DanhGia dGia)
         {
-            db.DanhGias.Add(dGia);
-            db.SaveChanges();
+            dB.DanhGias.Add(dGia);
+            dB.SaveChanges();
             MessageBox.Show("Thêm đánh giá thành công!");
         }
     }

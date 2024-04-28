@@ -29,7 +29,6 @@ namespace GUI
             XemPhongCuaKhachSanInstance = new XemPhongCuaKhachSan();
             LichSuBookInstance = new LichSuBook();
             flpPhongInstance = new FlowLayoutPanel();
-        }
-        
+        }       
     }
 }
