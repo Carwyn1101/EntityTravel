@@ -40,10 +40,10 @@
             // 
             this.btnVietDanhGia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVietDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVietDanhGia.Location = new System.Drawing.Point(664, 7);
+            this.btnVietDanhGia.Location = new System.Drawing.Point(655, 7);
             this.btnVietDanhGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVietDanhGia.Name = "btnVietDanhGia";
-            this.btnVietDanhGia.Size = new System.Drawing.Size(133, 39);
+            this.btnVietDanhGia.Size = new System.Drawing.Size(147, 39);
             this.btnVietDanhGia.TabIndex = 1;
             this.btnVietDanhGia.Text = "Viết đánh giá";
             this.btnVietDanhGia.UseVisualStyleBackColor = true;

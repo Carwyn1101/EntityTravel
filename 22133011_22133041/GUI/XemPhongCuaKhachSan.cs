@@ -13,8 +13,8 @@ namespace GUI
     public partial class XemPhongCuaKhachSan : Form
     {
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
-        DatPhongDAO datPhongDAO = new DatPhongDAO();
-        
+        DatPhongDAO datPhongDAO = new DatPhongDAO();   
+        CheckGiaTri check = new CheckGiaTri();
         public XemPhongCuaKhachSan()
         {
             InitializeComponent();
@@ -34,10 +34,24 @@ namespace GUI
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            flpTrangChuKhachSan.Controls.Clear();          
-            Program.ngayNhanInstance = dtpNgayNhanPhong.Value;
-            Program.ngayTraInstance = dtpNgayTraPhong.Value;           
-            datPhongDAO.LoadPhongTrong(Program.ngayNhanInstance, Program.ngayTraInstance, flpTrangChuKhachSan);
+            if(check.NgayCheckIn(dtpNgayNhanPhong.Value))
+            {
+                if(check.NgayCheckOut(dtpNgayNhanPhong.Value, dtpNgayTraPhong.Value))
+                {
+                    flpTrangChuKhachSan.Controls.Clear();
+                    Program.ngayNhanInstance = dtpNgayNhanPhong.Value;
+                    Program.ngayTraInstance = dtpNgayTraPhong.Value;
+                    datPhongDAO.LoadPhongTrong(Program.ngayNhanInstance, Program.ngayTraInstance, flpTrangChuKhachSan);
+                } 
+                else
+                {
+                    MessageBox.Show("Ngày trả phòng không hợp lệ, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ngày nhận phòng không hợp lệ, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
         }
     }
 }

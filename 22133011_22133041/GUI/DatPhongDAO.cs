@@ -51,14 +51,14 @@ namespace GUI
         }
         public void LoadPhongTrong(DateTime ngayNhan, DateTime ngayTra, FlowLayoutPanel flp)
         {
-            var phongTrong = dB.ThongTinPhongCuaKhachSans.Where(p => p.IDKhachSan == Program.iDKhachSanInstance &&!dB.DatPhongs.Any(d => d.IDPhong == p.IDPhong && d.IDKhachSan == Program.iDKhachSanInstance &&
-                                            ((ngayNhan >= d.NgayNhanPhong && ngayNhan < d.NgayTraPhong)||(ngayTra > d.NgayNhanPhong && ngayTra <= d.NgayTraPhong)))).ToList();
+            var phongTrong = dB.ThongTinPhongCuaKhachSans.Where(p => p.IDKhachSan == Program.iDKhachSanInstance && !dB.DatPhongs.Any(d => d.IDPhong == p.IDPhong && d.IDKhachSan == Program.iDKhachSanInstance &&
+                                            ((ngayNhan >= d.NgayNhanPhong && ngayNhan < d.NgayTraPhong) || (ngayTra > d.NgayNhanPhong && ngayTra <= d.NgayTraPhong) || (ngayNhan <= d.NgayNhanPhong && ngayTra >= d.NgayTraPhong)))).ToList();
 
             foreach (var tmp in phongTrong)
             {
                 UCThongTinPhongKhachSanUser uc = new UCThongTinPhongKhachSanUser(tmp);
                 flp.Controls.Add(uc);
-            }    
+            }
         }
     }
 }
