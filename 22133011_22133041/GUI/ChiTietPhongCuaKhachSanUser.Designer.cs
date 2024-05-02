@@ -311,7 +311,7 @@
             this.btnThue.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnThue.ForeColor = System.Drawing.Color.Black;
             this.btnThue.Location = new System.Drawing.Point(804, 566);
-            this.btnThue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThue.Margin = new System.Windows.Forms.Padding(4);
             this.btnThue.Name = "btnThue";
             this.btnThue.Size = new System.Drawing.Size(185, 39);
             this.btnThue.TabIndex = 258;
@@ -322,9 +322,9 @@
             // 
             this.pic_Anh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Anh2.Location = new System.Drawing.Point(16, 322);
-            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Anh2.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Anh2.Name = "pic_Anh2";
-            this.pic_Anh2.Size = new System.Drawing.Size(423, 283);
+            this.pic_Anh2.Size = new System.Drawing.Size(423, 301);
             this.pic_Anh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh2.TabIndex = 265;
             this.pic_Anh2.TabStop = false;
@@ -333,9 +333,9 @@
             // 
             this.pic_Anh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Anh1.Location = new System.Drawing.Point(16, 15);
-            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Anh1.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Anh1.Name = "pic_Anh1";
-            this.pic_Anh1.Size = new System.Drawing.Size(423, 283);
+            this.pic_Anh1.Size = new System.Drawing.Size(423, 299);
             this.pic_Anh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Anh1.TabIndex = 259;
             this.pic_Anh1.TabStop = false;
@@ -344,7 +344,7 @@
             // 
             this.guna2VSeparator1.FillColor = System.Drawing.Color.Black;
             this.guna2VSeparator1.Location = new System.Drawing.Point(1025, 374);
-            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(13, 89);
             this.guna2VSeparator1.TabIndex = 284;
@@ -353,7 +353,7 @@
             // 
             this.guna2VSeparator2.FillColor = System.Drawing.Color.Black;
             this.guna2VSeparator2.Location = new System.Drawing.Point(1025, 212);
-            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2VSeparator2.Name = "guna2VSeparator2";
             this.guna2VSeparator2.Size = new System.Drawing.Size(13, 86);
             this.guna2VSeparator2.TabIndex = 285;
@@ -362,7 +362,7 @@
             // 
             this.guna2VSeparator3.FillColor = System.Drawing.Color.Black;
             this.guna2VSeparator3.Location = new System.Drawing.Point(477, 212);
-            this.guna2VSeparator3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2VSeparator3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2VSeparator3.Name = "guna2VSeparator3";
             this.guna2VSeparator3.Size = new System.Drawing.Size(13, 86);
             this.guna2VSeparator3.TabIndex = 286;
@@ -371,7 +371,7 @@
             // 
             this.guna2VSeparator4.FillColor = System.Drawing.Color.Black;
             this.guna2VSeparator4.Location = new System.Drawing.Point(477, 374);
-            this.guna2VSeparator4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2VSeparator4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2VSeparator4.Name = "guna2VSeparator4";
             this.guna2VSeparator4.Size = new System.Drawing.Size(13, 146);
             this.guna2VSeparator4.TabIndex = 287;

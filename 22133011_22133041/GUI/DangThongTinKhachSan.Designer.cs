@@ -63,7 +63,7 @@
             this.cboLoaiPhong.Items.AddRange(new object[] {
             "Hotel",
             "Homestay"});
-            this.cboLoaiPhong.Location = new System.Drawing.Point(383, 720);
+            this.cboLoaiPhong.Location = new System.Drawing.Point(409, 720);
             this.cboLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cboLoaiPhong.Name = "cboLoaiPhong";
             this.cboLoaiPhong.Size = new System.Drawing.Size(175, 28);
@@ -124,10 +124,10 @@
             this.btnDangBai.FillColor2 = System.Drawing.Color.White;
             this.btnDangBai.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnDangBai.ForeColor = System.Drawing.Color.Black;
-            this.btnDangBai.Location = new System.Drawing.Point(799, 707);
+            this.btnDangBai.Location = new System.Drawing.Point(842, 707);
             this.btnDangBai.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnDangBai.Name = "btnDangBai";
-            this.btnDangBai.Size = new System.Drawing.Size(133, 41);
+            this.btnDangBai.Size = new System.Drawing.Size(160, 41);
             this.btnDangBai.TabIndex = 121;
             this.btnDangBai.Text = "Lưu";
             this.btnDangBai.Click += new System.EventHandler(this.btnDangBai_Click);
@@ -165,7 +165,7 @@
             // pictureBoxLoaiPhong
             // 
             this.pictureBoxLoaiPhong.Image = global::GUI.Properties.Resources.building;
-            this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(301, 684);
+            this.pictureBoxLoaiPhong.Location = new System.Drawing.Point(328, 684);
             this.pictureBoxLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBoxLoaiPhong.Name = "pictureBoxLoaiPhong";
             this.pictureBoxLoaiPhong.Size = new System.Drawing.Size(73, 64);

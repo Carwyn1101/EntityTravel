@@ -51,7 +51,6 @@ namespace GUI
             hd.TongTien = txtTongTienThanhToan.Text;
             hd.IDPhong = Program.iDPhongInstance;
             hoaDonDAO.Them(hd);
-
             DatPhong dp = new DatPhong();
             dp.NgayNhanPhong = DateTime.ParseExact(txtNgayNhanPhong.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
             dp.NgayTraPhong = DateTime.ParseExact(txtNgayTraPhong.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);

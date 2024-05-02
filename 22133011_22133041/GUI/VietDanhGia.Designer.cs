@@ -56,11 +56,16 @@
             // 
             this.cboDiemDanhGia.FormattingEnabled = true;
             this.cboDiemDanhGia.Items.AddRange(new object[] {
-            "1-3",
-            "3-5",
-            "5-7",
-            "7-5",
-            "9+"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.cboDiemDanhGia.Location = new System.Drawing.Point(397, 15);
             this.cboDiemDanhGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboDiemDanhGia.Name = "cboDiemDanhGia";

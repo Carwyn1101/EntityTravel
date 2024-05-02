@@ -33,7 +33,6 @@ namespace GUI
                 var tenPhong = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(tmp => tmp.IDPhong == k.IDPhong);
                 if (k.NgayTraPhong < check)
                 {
-
                     UCHoanThanh uc = new UCHoanThanh(tenKhachSan.TenKhachSan, tenPhong.TenPhong, k.NgayNhanPhong.Value, k.NgayTraPhong.Value);
                     flpLichSuBook.Controls.Add(uc);
                 }

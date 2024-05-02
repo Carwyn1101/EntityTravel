@@ -246,6 +246,7 @@
     <Compile Include="UCThongTinPhongKhachSanUser.Designer.cs">
       <DependentUpon>UCThongTinPhongKhachSanUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="UuDaiDAO.cs" />
     <Compile Include="VietDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -382,6 +383,7 @@
     <None Include="Resources\add-image.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\comment.png" />
     <Content Include="TravelModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TravelModel.edmx</DependentUpon>

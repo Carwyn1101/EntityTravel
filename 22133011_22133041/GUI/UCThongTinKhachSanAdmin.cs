@@ -28,7 +28,7 @@ namespace GUI
             string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
             pic_Anh1.Image = Image.FromFile(image1);
         }
-        private void pnl_MouseClick(object sender, MouseEventArgs e)
+        private void pnlKhachSan_Click(object sender, EventArgs e)
         {
             Program.iDKhachSanInstance = iDKhachSan;
             ChiTietKhachSanAdmin f = new ChiTietKhachSanAdmin();

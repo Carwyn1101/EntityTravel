@@ -14,6 +14,8 @@ insert into TaiKhoan values
 (2,'user','user','user');
 insert into TaiKhoan values
 (3,'duong','123','admin');
+insert into TaiKhoan values
+(4,'phuc','123','admin');
 Go
 CREATE TABLE ThongTinKhachSan
 (
@@ -95,8 +97,8 @@ insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNg
 GO
 CREATE TABLE MaGiamGia
 (
-	STTMa INT PRIMARY KEY IDENTITY, 
-	MaGiam nvarchar(max),
+	STTMa INT PRIMARY KEY IDENTITY,
+	MaGiam nvarchar(30),
 	GiaTri int,
 	IDKhachSan INT Foreign key References ThongTinKhachSan(IDKhachSan),
 );

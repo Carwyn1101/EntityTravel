@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\TravelModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133041\GUI\TravelModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
