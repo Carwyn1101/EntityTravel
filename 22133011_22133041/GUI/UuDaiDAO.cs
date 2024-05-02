@@ -16,7 +16,7 @@ namespace GUI
         {
             var kq = from p in dB.MaGiamGias where p.IDKhachSan == iDKSan select new { p.STTMa, p.MaGiam, p.GiaTri };
             f.dtgvDanhSachMaGiam.DataSource = kq.ToList();
-            f.dtgvDanhSachMaGiam.Refresh();
+            f.dtgvDanhSachMaGiam.Refresh();        
         }
         public void AddBinding(ThemUuDai f)
         {
@@ -45,6 +45,15 @@ namespace GUI
             mGiam.GiaTri = int.Parse(f.cboGiaTriMa.Text);           
             dB.SaveChanges();
             MessageBox.Show("Sửa Ưu Đãi Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public int? LoadGiaTriVoucher(int idKhachSan, string tenMa)
+        {
+            var ketQua = (from c in dB.MaGiamGias where c.IDKhachSan == idKhachSan && c.MaGiam == tenMa select c).SingleOrDefault();
+            if (ketQua == null)
+            {
+                return 0;
+            }    
+            return ketQua.GiaTri;
         }
     }
 }

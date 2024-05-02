@@ -14,7 +14,7 @@ namespace GUI
     {
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         DatPhongDAO datPhongDAO = new DatPhongDAO();
-        string loaiPhong;
+        
         public XemPhongCuaKhachSan()
         {
             InitializeComponent();
@@ -34,11 +34,9 @@ namespace GUI
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            flpTrangChuKhachSan.Controls.Clear();
-            loaiPhong = cboLoaiPhong.Text;
+            flpTrangChuKhachSan.Controls.Clear();          
             Program.ngayNhanInstance = dtpNgayNhanPhong.Value;
-            Program.ngayTraInstance = dtpNgayTraPhong.Value;
-            pKSanDAO.LoadPhongTheoLoaiPhong(flpTrangChuKhachSan, loaiPhong, Program.iDKhachSanInstance);
+            Program.ngayTraInstance = dtpNgayTraPhong.Value;           
             datPhongDAO.LoadPhongTrong(Program.ngayNhanInstance, Program.ngayTraInstance, flpTrangChuKhachSan);
         }
     }

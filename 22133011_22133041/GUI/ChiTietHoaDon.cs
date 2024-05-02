@@ -18,7 +18,8 @@ namespace GUI
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
         DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         CheckGiaTri check = new CheckGiaTri();       
-        int stt;
+        UuDaiDAO uuDaiDAO = new UuDaiDAO();
+        int stt; string tmpTongTien;
         public ChiTietHoaDon()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace GUI
             txtCCCD.Text = kHang.CCCD;
             txtMail.Text = kHang.Mail;
             var tmp = (from c in dB.ThongTinPhongCuaKhachSans where c.IDPhong == Program.iDPhongInstance select c).FirstOrDefault();
-            txtGiaPhong.Text = tmp.GiaPhong.ToString();
+            txtGiaPhong.Text = tmp.GiaPhong?.ToString("N0");
             txtNgayNhanPhong.Text = Program.ngayNhanInstance.ToString("yyyy-MM-dd");
             txtNgayTraPhong.Text = Program.ngayTraInstance.ToString("yyyy-MM-dd");
             TinhTongTien();
@@ -71,7 +72,19 @@ namespace GUI
             int soNgayThue = khoangThoiGianThue.Days;
             decimal giaPhong = decimal.Parse(txtGiaPhong.Text);  
             decimal tongTien = soNgayThue * giaPhong;      
-            txtTongTienThanhToan.Text = tongTien.ToString("N0"); 
-        }    
+            txtTongTienThanhToan.Text = tongTien.ToString("N0");
+            tmpTongTien = txtTongTienThanhToan.Text;
+        }
+        private void btnDungVoucher_Click(object sender, EventArgs e)
+        {
+            if(txtTongTienThanhToan.Text!=tmpTongTien) txtTongTienThanhToan.Text = tmpTongTien;
+            int? tmp = uuDaiDAO.LoadGiaTriVoucher(Program.iDKhachSanInstance,txtUuDai.Text);
+            decimal tienGiam = decimal.Parse(txtTongTienThanhToan.Text)* (decimal)tmp/100;
+            txtTongTienThanhToan.Text = (decimal.Parse(txtTongTienThanhToan.Text) - tienGiam).ToString("N0");
+        }
+        private void txtUuDai_TextChanged(object sender, EventArgs e)
+        {
+            txtTongTienThanhToan.Text = tmpTongTien;
+        }
     }
 }

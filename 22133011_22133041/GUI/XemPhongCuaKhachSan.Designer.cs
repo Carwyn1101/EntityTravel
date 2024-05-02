@@ -34,8 +34,6 @@
             this.lblNgayNhanPhong = new System.Windows.Forms.Label();
             this.dtpNgayTraPhong = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpNgayNhanPhong = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.cboLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.lblLoaiPhong = new System.Windows.Forms.Label();
             this.lblPhong = new System.Windows.Forms.Label();
             this.flpTrangChuKhachSan = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTienDe.SuspendLayout();
@@ -49,11 +47,9 @@
             this.pnlTienDe.Controls.Add(this.lblNgayNhanPhong);
             this.pnlTienDe.Controls.Add(this.dtpNgayTraPhong);
             this.pnlTienDe.Controls.Add(this.dtpNgayNhanPhong);
-            this.pnlTienDe.Controls.Add(this.cboLoaiPhong);
-            this.pnlTienDe.Controls.Add(this.lblLoaiPhong);
             this.pnlTienDe.Controls.Add(this.lblPhong);
             this.pnlTienDe.Location = new System.Drawing.Point(2, 1);
-            this.pnlTienDe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlTienDe.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTienDe.Name = "pnlTienDe";
             this.pnlTienDe.Size = new System.Drawing.Size(596, 118);
             this.pnlTienDe.TabIndex = 6;
@@ -62,8 +58,8 @@
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
             this.btnTimKiem.Image = global::GUI.Properties.Resources.search;
-            this.btnTimKiem.Location = new System.Drawing.Point(551, 65);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Location = new System.Drawing.Point(501, 65);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(29, 26);
             this.btnTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,7 +71,7 @@
             // 
             this.lblNgayTraPhong.AutoSize = true;
             this.lblNgayTraPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTraPhong.Location = new System.Drawing.Point(357, 44);
+            this.lblNgayTraPhong.Location = new System.Drawing.Point(264, 44);
             this.lblNgayTraPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayTraPhong.Name = "lblNgayTraPhong";
             this.lblNgayTraPhong.Size = new System.Drawing.Size(112, 17);
@@ -86,7 +82,7 @@
             // 
             this.lblNgayNhanPhong.AutoSize = true;
             this.lblNgayNhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayNhanPhong.Location = new System.Drawing.Point(166, 44);
+            this.lblNgayNhanPhong.Location = new System.Drawing.Point(28, 44);
             this.lblNgayNhanPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayNhanPhong.Name = "lblNgayNhanPhong";
             this.lblNgayNhanPhong.Size = new System.Drawing.Size(124, 17);
@@ -98,8 +94,8 @@
             this.dtpNgayTraPhong.Checked = true;
             this.dtpNgayTraPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayTraPhong.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayTraPhong.Location = new System.Drawing.Point(360, 68);
-            this.dtpNgayTraPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpNgayTraPhong.Location = new System.Drawing.Point(267, 68);
+            this.dtpNgayTraPhong.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayTraPhong.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayTraPhong.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayTraPhong.Name = "dtpNgayTraPhong";
@@ -112,41 +108,14 @@
             this.dtpNgayNhanPhong.Checked = true;
             this.dtpNgayNhanPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayNhanPhong.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayNhanPhong.Location = new System.Drawing.Point(169, 68);
-            this.dtpNgayNhanPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpNgayNhanPhong.Location = new System.Drawing.Point(31, 68);
+            this.dtpNgayNhanPhong.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayNhanPhong.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayNhanPhong.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayNhanPhong.Name = "dtpNgayNhanPhong";
             this.dtpNgayNhanPhong.Size = new System.Drawing.Size(187, 23);
             this.dtpNgayNhanPhong.TabIndex = 13;
             this.dtpNgayNhanPhong.Value = new System.DateTime(2024, 4, 28, 14, 2, 53, 395);
-            // 
-            // cboLoaiPhong
-            // 
-            this.cboLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLoaiPhong.FormattingEnabled = true;
-            this.cboLoaiPhong.Items.AddRange(new object[] {
-            "Phòng giường đôi",
-            "Phòng giường đơn",
-            "Phòng 2 giường đơn",
-            "Phòng 2 giường đôi",
-            "Khác"});
-            this.cboLoaiPhong.Location = new System.Drawing.Point(13, 68);
-            this.cboLoaiPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cboLoaiPhong.Name = "cboLoaiPhong";
-            this.cboLoaiPhong.Size = new System.Drawing.Size(142, 25);
-            this.cboLoaiPhong.TabIndex = 11;
-            // 
-            // lblLoaiPhong
-            // 
-            this.lblLoaiPhong.AutoSize = true;
-            this.lblLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoaiPhong.Location = new System.Drawing.Point(9, 44);
-            this.lblLoaiPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLoaiPhong.Name = "lblLoaiPhong";
-            this.lblLoaiPhong.Size = new System.Drawing.Size(80, 17);
-            this.lblLoaiPhong.TabIndex = 8;
-            this.lblLoaiPhong.Text = "Loại Phòng";
             // 
             // lblPhong
             // 
@@ -163,7 +132,7 @@
             // 
             this.flpTrangChuKhachSan.AutoScroll = true;
             this.flpTrangChuKhachSan.Location = new System.Drawing.Point(2, 122);
-            this.flpTrangChuKhachSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpTrangChuKhachSan.Margin = new System.Windows.Forms.Padding(2);
             this.flpTrangChuKhachSan.Name = "flpTrangChuKhachSan";
             this.flpTrangChuKhachSan.Size = new System.Drawing.Size(596, 492);
             this.flpTrangChuKhachSan.TabIndex = 7;
@@ -175,7 +144,7 @@
             this.ClientSize = new System.Drawing.Size(601, 617);
             this.Controls.Add(this.pnlTienDe);
             this.Controls.Add(this.flpTrangChuKhachSan);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "XemPhongCuaKhachSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XemPhongCuaKhachSan";
@@ -188,8 +157,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlTienDe;
-        private System.Windows.Forms.ComboBox cboLoaiPhong;
-        private System.Windows.Forms.Label lblLoaiPhong;
         private System.Windows.Forms.Label lblPhong;
         private System.Windows.Forms.FlowLayoutPanel flpTrangChuKhachSan;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayNhanPhong;

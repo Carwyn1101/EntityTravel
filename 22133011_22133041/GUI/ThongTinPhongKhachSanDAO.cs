@@ -132,18 +132,7 @@ namespace GUI
                 f.pic_Anh1.Image = Image.FromFile(image1);
                 f.pic_Anh2.Image = Image.FromFile(image2);
             }
-        }
-        public void LoadPhongTheoLoaiPhong(FlowLayoutPanel flpTrangChuKhachSan, string loaiPhong, int iDKhachSan)
-        {
-            var kSan = from p in dB.ThongTinPhongCuaKhachSans
-                       where p.TenPhong == loaiPhong && p.IDKhachSan == iDKhachSan
-                       select p;
-            foreach (var p in kSan)
-            {
-                UCThongTinPhongKhachSanUser uc = new UCThongTinPhongKhachSanUser(p);
-                flpTrangChuKhachSan.Controls.Add(uc);
-            }
-        }
+        }      
         public void CapNhatTrangThaiPhong(int iDPhong)
         {
             ThongTinPhongCuaKhachSan pKSan = dB.ThongTinPhongCuaKhachSans.Find(iDPhong);
@@ -159,7 +148,7 @@ namespace GUI
             var giaTienTrungBinh = giaTiens.Any() ? giaTiens.Average() : (double?)null;
 
             // Sử dụng định dạng tùy chỉnh để bảo toàn số 0
-            return giaTienTrungBinh?.ToString("0.000");
+            return giaTienTrungBinh?.ToString("N0");
         }
         public void LoadChiTietPhongAdmin(ChiTietPhongCuaKhachSanAdmin f, int iDPhong, out string tenAnh1, out string tenAnh2)
         {

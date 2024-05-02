@@ -31,13 +31,13 @@
             this.flpTrangChuUser = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTrangChu = new System.Windows.Forms.Panel();
             this.btnLichSuBook = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.pic_DangXuat = new System.Windows.Forms.PictureBox();
+            this.pic_AnhDaiDien = new System.Windows.Forms.PictureBox();
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cboDiaDiemTimKiem = new System.Windows.Forms.ComboBox();
             this.lblTenTrangChu = new System.Windows.Forms.Label();
-            this.pic_DangXuat = new System.Windows.Forms.PictureBox();
-            this.pic_AnhDaiDien = new System.Windows.Forms.PictureBox();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.pnlTrangChu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DangXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhDaiDien)).BeginInit();
@@ -47,7 +47,7 @@
             // 
             this.flpTrangChuUser.AutoScroll = true;
             this.flpTrangChuUser.Location = new System.Drawing.Point(3, 136);
-            this.flpTrangChuUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpTrangChuUser.Margin = new System.Windows.Forms.Padding(2);
             this.flpTrangChuUser.Name = "flpTrangChuUser";
             this.flpTrangChuUser.Size = new System.Drawing.Size(1119, 348);
             this.flpTrangChuUser.TabIndex = 11;
@@ -62,7 +62,7 @@
             this.pnlTrangChu.Controls.Add(this.cboDiaDiemTimKiem);
             this.pnlTrangChu.Controls.Add(this.lblTenTrangChu);
             this.pnlTrangChu.Location = new System.Drawing.Point(3, 1);
-            this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlTrangChu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTrangChu.Name = "pnlTrangChu";
             this.pnlTrangChu.Size = new System.Drawing.Size(1119, 119);
             this.pnlTrangChu.TabIndex = 10;
@@ -84,22 +84,37 @@
             this.btnLichSuBook.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnLichSuBook.ForeColor = System.Drawing.Color.Black;
             this.btnLichSuBook.Location = new System.Drawing.Point(805, 10);
-            this.btnLichSuBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLichSuBook.Margin = new System.Windows.Forms.Padding(2);
             this.btnLichSuBook.Name = "btnLichSuBook";
             this.btnLichSuBook.Size = new System.Drawing.Size(127, 32);
             this.btnLichSuBook.TabIndex = 30;
             this.btnLichSuBook.Text = "Lịch Sử Book";
             this.btnLichSuBook.Click += new System.EventHandler(this.btnLichSuBook_Click);
             // 
-            // guna2Separator1
+            // pic_DangXuat
             // 
-            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator1.FillColor = System.Drawing.Color.DarkOrange;
-            this.guna2Separator1.Location = new System.Drawing.Point(3, 124);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1119, 10);
-            this.guna2Separator1.TabIndex = 27;
+            this.pic_DangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.pic_DangXuat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_DangXuat.Image = global::GUI.Properties.Resources.icons8_logout;
+            this.pic_DangXuat.Location = new System.Drawing.Point(1075, 45);
+            this.pic_DangXuat.Margin = new System.Windows.Forms.Padding(2);
+            this.pic_DangXuat.Name = "pic_DangXuat";
+            this.pic_DangXuat.Size = new System.Drawing.Size(30, 32);
+            this.pic_DangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_DangXuat.TabIndex = 29;
+            this.pic_DangXuat.TabStop = false;
+            this.pic_DangXuat.Click += new System.EventHandler(this.pic_DangXuat_Click);
+            // 
+            // pic_AnhDaiDien
+            // 
+            this.pic_AnhDaiDien.BackColor = System.Drawing.Color.Transparent;
+            this.pic_AnhDaiDien.Image = global::GUI.Properties.Resources._8;
+            this.pic_AnhDaiDien.Location = new System.Drawing.Point(984, 10);
+            this.pic_AnhDaiDien.Name = "pic_AnhDaiDien";
+            this.pic_AnhDaiDien.Size = new System.Drawing.Size(68, 64);
+            this.pic_AnhDaiDien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_AnhDaiDien.TabIndex = 28;
+            this.pic_AnhDaiDien.TabStop = false;
             // 
             // lblTenTaiKhoan
             // 
@@ -128,7 +143,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
             this.btnTimKiem.Location = new System.Drawing.Point(805, 68);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(127, 32);
             this.btnTimKiem.TabIndex = 20;
@@ -143,10 +158,9 @@
             this.cboDiaDiemTimKiem.Items.AddRange(new object[] {
             "Huế",
             "Đà Nẵng",
-            "Nha Trang",
-            "Khác"});
+            "Nha Trang"});
             this.cboDiaDiemTimKiem.Location = new System.Drawing.Point(227, 41);
-            this.cboDiaDiemTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboDiaDiemTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.cboDiaDiemTimKiem.Name = "cboDiaDiemTimKiem";
             this.cboDiaDiemTimKiem.Size = new System.Drawing.Size(551, 34);
             this.cboDiaDiemTimKiem.TabIndex = 16;
@@ -164,31 +178,17 @@
             this.lblTenTrangChu.TabIndex = 15;
             this.lblTenTrangChu.Text = "Travel\r\n";
             this.lblTenTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenTrangChu.Click += new System.EventHandler(this.lblTenTrangChu_Click);
             // 
-            // pic_DangXuat
+            // guna2Separator1
             // 
-            this.pic_DangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.pic_DangXuat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_DangXuat.Image = global::GUI.Properties.Resources.icons8_logout;
-            this.pic_DangXuat.Location = new System.Drawing.Point(1075, 45);
-            this.pic_DangXuat.Margin = new System.Windows.Forms.Padding(2);
-            this.pic_DangXuat.Name = "pic_DangXuat";
-            this.pic_DangXuat.Size = new System.Drawing.Size(30, 32);
-            this.pic_DangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_DangXuat.TabIndex = 29;
-            this.pic_DangXuat.TabStop = false;
-            this.pic_DangXuat.Click += new System.EventHandler(this.pic_DangXuat_Click);
-            // 
-            // pic_AnhDaiDien
-            // 
-            this.pic_AnhDaiDien.BackColor = System.Drawing.Color.Transparent;
-            this.pic_AnhDaiDien.Image = global::GUI.Properties.Resources._8;
-            this.pic_AnhDaiDien.Location = new System.Drawing.Point(984, 10);
-            this.pic_AnhDaiDien.Name = "pic_AnhDaiDien";
-            this.pic_AnhDaiDien.Size = new System.Drawing.Size(68, 64);
-            this.pic_AnhDaiDien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_AnhDaiDien.TabIndex = 28;
-            this.pic_AnhDaiDien.TabStop = false;
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillColor = System.Drawing.Color.DarkOrange;
+            this.guna2Separator1.Location = new System.Drawing.Point(3, 124);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(1119, 10);
+            this.guna2Separator1.TabIndex = 27;
             // 
             // TrangChuUser
             // 
@@ -198,7 +198,7 @@
             this.Controls.Add(this.flpTrangChuUser);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.pnlTrangChu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TrangChuUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChuUser";

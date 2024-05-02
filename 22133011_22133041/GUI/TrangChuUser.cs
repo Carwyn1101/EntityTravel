@@ -58,5 +58,10 @@ namespace GUI
             Program.LichSuBookInstance = f;
             f.ShowDialog();            
         }
+        private void lblTenTrangChu_Click(object sender, EventArgs e)
+        {
+            flpTrangChuUser.Controls.Clear();
+            ReLoad();
+        }
     }
 }

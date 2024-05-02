@@ -20,8 +20,8 @@ namespace GUI
         {
             InitializeComponent();
             linklblChiTietPhong.Text = kSan.TenPhong;
-            lblKichThuocPhong.Text = kSan.KichThuocPhong;           
-            lblSoGiaTien.Text = kSan.GiaPhong.ToString();           
+            lblKichThuocPhong.Text = kSan.KichThuocPhong;
+            lblSoGiaTien.Text = kSan.GiaPhong?.ToString("N0");
             Program.iDPhongInstance = kSan.IDPhong;          
         }
         private void linklblChiTietPhong_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
