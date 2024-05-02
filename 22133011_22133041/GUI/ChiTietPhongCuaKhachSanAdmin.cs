@@ -50,7 +50,7 @@ namespace GUI
             kSan.IDPhong = Program.iDPhongInstance;
             kSan.TenPhong = cboTenPhong.Text;
             kSan.KichThuocPhong = txtKichThuocPhong.Text;
-            kSan.GiaPhong = float.Parse(txtGiaPhong.Text.Replace(".", ","));
+            kSan.GiaPhong = float.Parse(txtGiaPhong.Text.Replace(".", "").Replace(",", ""));
             kSan.TienNghiPhongTam1 = cboTienNghiPhongTam1.Text;
             kSan.TienNghiPhongTam2 = cboTienNghiPhongTam2.Text;
             kSan.TienNghiPhongTam3 = cboTienNghiPhongTam3.Text;

@@ -12,9 +12,15 @@ namespace GUI
 {
     public partial class ChiTietKhachHangAdmin : Form
     {      
+        ThongTinKhachHangDAO kHangDAO = new ThongTinKhachHangDAO();
         public ChiTietKhachHangAdmin()
         {
             InitializeComponent();
-        }     
+        }
+
+        private void ChiTietKhachHangAdmin_Load(object sender, EventArgs e)
+        {
+            kHangDAO.LoadKhachHang(Program.iDPhongInstance, flpChiTietKhachHang);
+        }
     }
 }

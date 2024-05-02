@@ -112,7 +112,7 @@ namespace GUI
             {
                 f.lblTenPhong.Text = kSan.TenPhong;
                 f.lblKichThuocPhong.Text = kSan.KichThuocPhong;
-                f.lblGiaPhong.Text = kSan.GiaPhong.ToString();
+                f.lblGiaPhong.Text = kSan.GiaPhong?.ToString("N0");
                 f.lblTienNghiPhongTam1.Text = kSan.TienNghiPhongTam1;
                 f.lblTienNghiPhongTam2.Text = kSan.TienNghiPhongTam2;
                 f.lblTienNghiPhongTam3.Text = kSan.TienNghiPhongTam3;
@@ -161,7 +161,7 @@ namespace GUI
                 iDPhong = kSan.IDPhong;
                 f.cboTenPhong.Text = kSan.TenPhong;
                 f.txtKichThuocPhong.Text = kSan.KichThuocPhong;
-                f.txtGiaPhong.Text = kSan.GiaPhong.ToString();
+                f.txtGiaPhong.Text = kSan.GiaPhong?.ToString("N0");
                 f.cboTienNghiPhongTam1.Text = kSan.TienNghiPhongTam1;
                 f.cboTienNghiPhongTam2.Text = kSan.TienNghiPhongTam2;
                 f.cboTienNghiPhongTam3.Text = kSan.TienNghiPhongTam3;

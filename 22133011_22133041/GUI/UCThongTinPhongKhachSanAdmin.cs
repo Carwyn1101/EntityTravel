@@ -22,7 +22,7 @@ namespace GUI
             InitializeComponent();
             linklblChiTietPhong.Text = pKSan.TenPhong;
             lblKichThuocPhong.Text = pKSan.KichThuocPhong;
-            lblSoGiaTien.Text = pKSan.GiaPhong + " " + "VND";
+            lblSoGiaTien.Text = pKSan.GiaPhong?.ToString("N0") + " " + "VND";
             iDPhong = (int)pKSan.IDPhong;
             iDKhachSan = (int)pKSan.IDKhachSan;
         }

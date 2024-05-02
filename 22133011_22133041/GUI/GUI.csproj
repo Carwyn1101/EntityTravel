@@ -221,6 +221,12 @@
     <Compile Include="UCHoanThanh.Designer.cs">
       <DependentUpon>UCHoanThanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCThongTinKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCThongTinKhachHang.Designer.cs">
+      <DependentUpon>UCThongTinKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCThongTinKhachSanAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCHoanThanh.resx">
       <DependentUpon>UCHoanThanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCThongTinKhachHang.resx">
+      <DependentUpon>UCThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCThongTinKhachSanAdmin.resx">
       <DependentUpon>UCThongTinKhachSanAdmin.cs</DependentUpon>

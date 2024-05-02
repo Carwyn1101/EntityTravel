@@ -33,7 +33,7 @@ namespace GUI
             var danhGias = dB.DanhGias.Where(dg => dg.IDKhachSan == idKhachSan).ToList();
             // Tính trung bình các điểm đánh giá
             var diemTrungBinh = danhGias.Any() ? danhGias.Average(dg => dg.DiemDanhGia) : 0;
-            diem = diemTrungBinh;
-        }        
+            diem = Math.Round((double)diemTrungBinh, 1);
+        }
     }
 }

@@ -44,7 +44,7 @@
             this.lblDiaDiemKhachSan.BackColor = System.Drawing.Color.Transparent;
             this.lblDiaDiemKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiaDiemKhachSan.Location = new System.Drawing.Point(180, 50);
-            this.lblDiaDiemKhachSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblDiaDiemKhachSan.Margin = new System.Windows.Forms.Padding(2);
             this.lblDiaDiemKhachSan.Name = "lblDiaDiemKhachSan";
             this.lblDiaDiemKhachSan.Size = new System.Drawing.Size(77, 22);
             this.lblDiaDiemKhachSan.TabIndex = 2;
@@ -56,7 +56,7 @@
             this.lblTenKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenKhachSan.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblTenKhachSan.Location = new System.Drawing.Point(180, 2);
-            this.lblTenKhachSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblTenKhachSan.Margin = new System.Windows.Forms.Padding(2);
             this.lblTenKhachSan.Name = "lblTenKhachSan";
             this.lblTenKhachSan.Size = new System.Drawing.Size(167, 31);
             this.lblTenKhachSan.TabIndex = 1;
@@ -72,7 +72,7 @@
             this.pnlKhachSan.Controls.Add(this.lblDiaDiemKhachSan);
             this.pnlKhachSan.Controls.Add(this.linklblDiemDanhGia);
             this.pnlKhachSan.Location = new System.Drawing.Point(2, 0);
-            this.pnlKhachSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlKhachSan.Margin = new System.Windows.Forms.Padding(2);
             this.pnlKhachSan.Name = "pnlKhachSan";
             this.pnlKhachSan.Size = new System.Drawing.Size(523, 188);
             this.pnlKhachSan.TabIndex = 6;
@@ -83,8 +83,8 @@
             this.lblGiaTien.AutoSize = false;
             this.lblGiaTien.BackColor = System.Drawing.Color.Transparent;
             this.lblGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaTien.Location = new System.Drawing.Point(388, 160);
-            this.lblGiaTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblGiaTien.Location = new System.Drawing.Point(401, 160);
+            this.lblGiaTien.Margin = new System.Windows.Forms.Padding(2);
             this.lblGiaTien.Name = "lblGiaTien";
             this.lblGiaTien.Size = new System.Drawing.Size(597, 23);
             this.lblGiaTien.TabIndex = 7;
@@ -96,7 +96,7 @@
             this.lblGia.BackColor = System.Drawing.Color.Transparent;
             this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGia.Location = new System.Drawing.Point(368, 129);
-            this.lblGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblGia.Margin = new System.Windows.Forms.Padding(2);
             this.lblGia.Name = "lblGia";
             this.lblGia.Size = new System.Drawing.Size(672, 27);
             this.lblGia.TabIndex = 7;
@@ -109,7 +109,7 @@
             this.pic_Anh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Anh.Image = global::GUI.Properties.Resources.AnhUCKhachSan;
             this.pic_Anh.Location = new System.Drawing.Point(-3, -1);
-            this.pic_Anh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_Anh.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Anh.Name = "pic_Anh";
             this.pic_Anh.Size = new System.Drawing.Size(179, 188);
             this.pic_Anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlKhachSan);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCThongTinKhachSanUser";
             this.Size = new System.Drawing.Size(527, 190);
             this.pnlKhachSan.ResumeLayout(false);

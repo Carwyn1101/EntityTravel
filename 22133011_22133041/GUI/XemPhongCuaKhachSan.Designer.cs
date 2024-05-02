@@ -42,6 +42,7 @@
             // 
             // pnlTienDe
             // 
+            this.pnlTienDe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlTienDe.Controls.Add(this.btnTimKiem);
             this.pnlTienDe.Controls.Add(this.lblNgayTraPhong);
             this.pnlTienDe.Controls.Add(this.lblNgayNhanPhong);
@@ -51,14 +52,14 @@
             this.pnlTienDe.Location = new System.Drawing.Point(2, 1);
             this.pnlTienDe.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTienDe.Name = "pnlTienDe";
-            this.pnlTienDe.Size = new System.Drawing.Size(596, 118);
+            this.pnlTienDe.Size = new System.Drawing.Size(606, 118);
             this.pnlTienDe.TabIndex = 6;
             // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
             this.btnTimKiem.Image = global::GUI.Properties.Resources.search;
-            this.btnTimKiem.Location = new System.Drawing.Point(501, 65);
+            this.btnTimKiem.Location = new System.Drawing.Point(500, 58);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(29, 26);
@@ -82,7 +83,7 @@
             // 
             this.lblNgayNhanPhong.AutoSize = true;
             this.lblNgayNhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayNhanPhong.Location = new System.Drawing.Point(28, 44);
+            this.lblNgayNhanPhong.Location = new System.Drawing.Point(14, 44);
             this.lblNgayNhanPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayNhanPhong.Name = "lblNgayNhanPhong";
             this.lblNgayNhanPhong.Size = new System.Drawing.Size(124, 17);
@@ -94,7 +95,7 @@
             this.dtpNgayTraPhong.Checked = true;
             this.dtpNgayTraPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayTraPhong.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayTraPhong.Location = new System.Drawing.Point(267, 68);
+            this.dtpNgayTraPhong.Location = new System.Drawing.Point(267, 77);
             this.dtpNgayTraPhong.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayTraPhong.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayTraPhong.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -108,7 +109,7 @@
             this.dtpNgayNhanPhong.Checked = true;
             this.dtpNgayNhanPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayNhanPhong.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayNhanPhong.Location = new System.Drawing.Point(31, 68);
+            this.dtpNgayNhanPhong.Location = new System.Drawing.Point(17, 77);
             this.dtpNgayNhanPhong.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayNhanPhong.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayNhanPhong.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -134,14 +135,14 @@
             this.flpTrangChuKhachSan.Location = new System.Drawing.Point(2, 122);
             this.flpTrangChuKhachSan.Margin = new System.Windows.Forms.Padding(2);
             this.flpTrangChuKhachSan.Name = "flpTrangChuKhachSan";
-            this.flpTrangChuKhachSan.Size = new System.Drawing.Size(596, 492);
+            this.flpTrangChuKhachSan.Size = new System.Drawing.Size(606, 492);
             this.flpTrangChuKhachSan.TabIndex = 7;
             // 
             // XemPhongCuaKhachSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 617);
+            this.ClientSize = new System.Drawing.Size(610, 617);
             this.Controls.Add(this.pnlTienDe);
             this.Controls.Add(this.flpTrangChuKhachSan);
             this.Margin = new System.Windows.Forms.Padding(2);
