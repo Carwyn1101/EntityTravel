@@ -32,7 +32,7 @@ namespace GUI
                 dGia.IDKhachSan = iDKSan;
                 dGia.TenKhachHang = cboTenKhachHang.Text;
                 dGia.TraiNghiem = cboTraiNghiem.Text;
-                dGia.DiemDanhGia = cboDiemDanhGia.Text;
+                dGia.DiemDanhGia = int.Parse(cboDiemDanhGia.Text);
                 dGia.DanhGiaNguoiDung = richTextBoxDanhGia.Text;
                 dGiaDAO.Them(dGia);
                 this.Hide();

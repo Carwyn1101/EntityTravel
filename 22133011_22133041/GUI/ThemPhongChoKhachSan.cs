@@ -34,7 +34,7 @@ namespace GUI
                 kSan.IDKhachSan = iDKhachSan;
                 kSan.TenPhong = cboTenPhong.Text;
                 kSan.KichThuocPhong = txtKichThuocPhong.Text;
-                kSan.GiaPhong = txtGiaPhong.Text.Replace(".",",");
+                kSan.GiaPhong = float.Parse(txtGiaPhong.Text.Replace(".",","));
                 kSan.TienNghiPhongTam1 = cboTienNghiPhongTam1.Text;
                 kSan.TienNghiPhongTam2 = cboTienNghiPhongTam2.Text;
                 kSan.TienNghiPhongTam3 = cboTienNghiPhongTam3.Text;

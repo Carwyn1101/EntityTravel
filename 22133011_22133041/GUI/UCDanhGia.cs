@@ -21,7 +21,7 @@ namespace GUI
             InitializeComponent();
             lblTenKhachHang.Text = dGia.TenKhachHang;
             lblTraiNghiem.Text = dGia.TraiNghiem;
-            lblDiemDanhGia.Text = dGia.DiemDanhGia;
+            lblDiemDanhGia.Text = dGia.DiemDanhGia.ToString();
             richTextBoxDanhGia.Text = dGia.DanhGiaNguoiDung;         
         }        
     }

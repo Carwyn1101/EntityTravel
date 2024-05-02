@@ -112,7 +112,7 @@ namespace GUI
             {
                 f.lblTenPhong.Text = kSan.TenPhong;
                 f.lblKichThuocPhong.Text = kSan.KichThuocPhong;
-                f.lblGiaPhong.Text = kSan.GiaPhong;
+                f.lblGiaPhong.Text = kSan.GiaPhong.ToString();
                 f.lblTienNghiPhongTam1.Text = kSan.TienNghiPhongTam1;
                 f.lblTienNghiPhongTam2.Text = kSan.TienNghiPhongTam2;
                 f.lblTienNghiPhongTam3.Text = kSan.TienNghiPhongTam3;
@@ -149,6 +149,18 @@ namespace GUI
             ThongTinPhongCuaKhachSan pKSan = dB.ThongTinPhongCuaKhachSans.Find(iDPhong);
             dB.SaveChanges();
         }
+        public string TrungBinhGiaTien(int idKhachSan)
+        {
+            var giaTiens = dB.ThongTinPhongCuaKhachSans
+                            .Where(p => p.IDKhachSan == idKhachSan)
+                            .Select(p => p.GiaPhong)
+                            .ToList();
+
+            var giaTienTrungBinh = giaTiens.Any() ? giaTiens.Average() : (double?)null;
+
+            // Sử dụng định dạng tùy chỉnh để bảo toàn số 0
+            return giaTienTrungBinh?.ToString("0.000");
+        }
         public void LoadChiTietPhongAdmin(ChiTietPhongCuaKhachSanAdmin f, int iDPhong, out string tenAnh1, out string tenAnh2)
         {
             tenAnh1 = string.Empty; tenAnh2 = string.Empty; 
@@ -160,7 +172,7 @@ namespace GUI
                 iDPhong = kSan.IDPhong;
                 f.cboTenPhong.Text = kSan.TenPhong;
                 f.txtKichThuocPhong.Text = kSan.KichThuocPhong;
-                f.txtGiaPhong.Text = kSan.GiaPhong;
+                f.txtGiaPhong.Text = kSan.GiaPhong.ToString();
                 f.cboTienNghiPhongTam1.Text = kSan.TienNghiPhongTam1;
                 f.cboTienNghiPhongTam2.Text = kSan.TienNghiPhongTam2;
                 f.cboTienNghiPhongTam3.Text = kSan.TienNghiPhongTam3;

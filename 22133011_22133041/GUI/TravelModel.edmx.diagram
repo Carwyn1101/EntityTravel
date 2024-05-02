@@ -5,25 +5,25 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5924df92479f441da1b1f39eade80997" Name="Diagram1">
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.DanhGia" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.DatPhong" Width="1.5" PointX="7.5" PointY="14.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.HoaDon" Width="1.5" PointX="7.5" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.MaGiamGia" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinKhachHang" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinKhachSan" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinPhongCuaKhachSan" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__DanhGia__IDKhach__0D99FE17" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__DatPhong__IDKhac__1352D76D" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__DatPhong__IDKhac__153B1FDF" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__DatPhong__IDPhon__1446FBA6" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__HoaDon__IDPhong__19FFD4FC" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__HoaDon__SoThuTuK__18178C8A" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__MaGiamGia__IDKha__0ABD916C" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinK__IDChu__0504B816" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinK__IDKha__10766AC2" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinP__IDKha__07E124C1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.DanhGia" Width="1.5" PointX="5.25" PointY="16.625" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.DatPhong" Width="1.5" PointX="7.5" PointY="9.75" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.HoaDon" Width="1.5" PointX="7.5" PointY="14" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.MaGiamGia" Width="1.5" PointX="5.25" PointY="13.875" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinKhachHang" Width="1.5" PointX="3" PointY="19.75" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinKhachSan" Width="1.5" PointX="3" PointY="11.125" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ThongTinPhongCuaKhachSan" Width="1.5" PointX="5.25" PointY="7.25" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DanhGia__IDKhach__390E6C01" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DatPhong__IDKhac__3EC74557" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DatPhong__IDKhac__40AF8DC9" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DatPhong__IDPhon__3FBB6990" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__HoaDon__IDPhong__457442E6" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__HoaDon__SoThuTuK__438BFA74" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__MaGiamGia__IDKha__3631FF56" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinK__IDChu__30792600" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinK__IDKha__3BEAD8AC" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__ThongTinP__IDKha__335592AB" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

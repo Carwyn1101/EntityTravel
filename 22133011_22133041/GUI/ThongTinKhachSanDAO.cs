@@ -17,6 +17,8 @@ namespace GUI
     {
         DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+        DanhGiaDAO dGiaDAO = new DanhGiaDAO();
+        ThongTinPhongKhachSanDAO pKSDAO = new ThongTinPhongKhachSanDAO();
         public void LoadData(FlowLayoutPanel flpTrangChu, int iDNguoiDung)
         {
             var ketqua = from c in dB.ThongTinKhachSans where c.IDChuKhachSan == iDNguoiDung select c;
@@ -119,6 +121,9 @@ namespace GUI
             {
                 UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
                 uc.Margin = new Padding(10);
+                double? diem; dGiaDAO.TrungBinhDiemDanhGia(p.IDKhachSan, out diem);
+                uc.linklblDiemDanhGia.Text = diem.ToString();
+                uc.lblGiaTien.Text = pKSDAO.TrungBinhGiaTien(p.IDKhachSan) + " " + "VND";
                 flpTrangChu.Controls.Add(uc);
             }
         }

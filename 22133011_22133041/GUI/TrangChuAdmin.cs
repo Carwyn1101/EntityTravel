@@ -50,7 +50,7 @@ namespace GUI
         }
         private void TrangChuAdmin_Load(object sender, EventArgs e)
         {
-            dPDAO.TrangThaiLoad(sender,e);
+            
             kSDAO.LoadData(flpTrangChu, iDNguoiDung);
         }       
     }

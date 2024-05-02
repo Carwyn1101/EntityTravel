@@ -15,6 +15,8 @@ namespace GUI
         public static int iDTaiKhoanInstance;
         public static int iDKhachSanInstance;
         public static int iDPhongInstance;
+        public static DateTime ngayNhanInstance;
+        public static DateTime ngayTraInstance;
         // public static 
         /// <summary>
         /// The main entry point for the application.

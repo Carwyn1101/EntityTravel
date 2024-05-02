@@ -11,12 +11,7 @@ namespace GUI
     internal class DatPhongDAO
     {
         DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
-        DateTime check = DateTime.Now;
-        public void Them(DatPhong dPhong)
-        {
-            dB.DatPhongs.Add(dPhong);
-            dB.SaveChanges();
-        }
+        DateTime check = DateTime.Now;       
         public void Xoa(int maDatPhong)
         {
             var remove = dB.DatPhongs.FirstOrDefault(k => k.MaDatPhong == maDatPhong);
@@ -28,19 +23,6 @@ namespace GUI
                 dB.SaveChanges();
             }
             MessageBox.Show("Hủy phòng khách sạn thành công!");
-        }
-        public void TrangThaiLoad(object sender, EventArgs e)
-        {
-            var kq = from c in dB.DatPhongs select c;
-            foreach(var k in kq) 
-            {
-                if(k.NgayTraPhong < check)
-                {
-                    var trangThai = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(h => h.IDPhong == k.IDPhong);                  
-                    
-                }
-            }
-            dB.SaveChanges();
         }
         public void LichSuBookLoad(FlowLayoutPanel flpLichSuBook)
         {
@@ -61,6 +43,23 @@ namespace GUI
                     flpLichSuBook.Controls.Add(uc);
                 }
             }
+        }
+        public void Them(DatPhong dPhong)
+        {
+            dPhong.TrangThai = "Đã được thuê";
+            dB.DatPhongs.Add(dPhong);
+            dB.SaveChanges();           
+        }
+        public void LoadPhongTrong(DateTime ngayNhan, DateTime ngayTra, FlowLayoutPanel flp)
+        {
+            var phongTrong = dB.ThongTinPhongCuaKhachSans.Where(p => p.IDKhachSan == Program.iDKhachSanInstance &&!dB.DatPhongs.Any(d => d.IDPhong == p.IDPhong && d.IDKhachSan == Program.iDKhachSanInstance &&
+                                            ((ngayNhan >= d.NgayNhanPhong && ngayNhan < d.NgayTraPhong)||(ngayTra > d.NgayNhanPhong && ngayTra <= d.NgayTraPhong)))).ToList();
+
+            foreach (var tmp in phongTrong)
+            {
+                UCThongTinPhongKhachSanUser uc = new UCThongTinPhongKhachSanUser(tmp);
+                flp.Controls.Add(uc);
+            }    
         }
     }
 }

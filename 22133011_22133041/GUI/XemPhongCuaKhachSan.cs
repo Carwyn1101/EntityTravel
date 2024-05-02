@@ -13,8 +13,8 @@ namespace GUI
     public partial class XemPhongCuaKhachSan : Form
     {
         ThongTinPhongKhachSanDAO pKSanDAO = new ThongTinPhongKhachSanDAO();
+        DatPhongDAO datPhongDAO = new DatPhongDAO();
         string loaiPhong;
-        DateTime ngayNhanPhong, ngayTraPhong;
         public XemPhongCuaKhachSan()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace GUI
         {
             InitializeComponent();           
             flpTrangChuKhachSan.Controls.Clear();
-            pKSanDAO.LoadDanhSachPhongUser(flpTrangChuKhachSan, Program.iDKhachSanInstance);
+           // pKSanDAO.LoadDanhSachPhongUser(flpTrangChuKhachSan, Program.iDKhachSanInstance);
             Program.XemPhongCuaKhachSanInstance = this;
             dtpNgayNhanPhong.Value = DateTime.Now;
             dtpNgayTraPhong.Value = DateTime.Now;
@@ -36,9 +36,10 @@ namespace GUI
         {
             flpTrangChuKhachSan.Controls.Clear();
             loaiPhong = cboLoaiPhong.Text;
-            ngayNhanPhong = dtpNgayNhanPhong.Value;
-            ngayTraPhong = dtpNgayTraPhong.Value;
+            Program.ngayNhanInstance = dtpNgayNhanPhong.Value;
+            Program.ngayTraInstance = dtpNgayTraPhong.Value;
             pKSanDAO.LoadPhongTheoLoaiPhong(flpTrangChuKhachSan, loaiPhong, Program.iDKhachSanInstance);
+            datPhongDAO.LoadPhongTrong(Program.ngayNhanInstance, Program.ngayTraInstance, flpTrangChuKhachSan);
         }
     }
 }

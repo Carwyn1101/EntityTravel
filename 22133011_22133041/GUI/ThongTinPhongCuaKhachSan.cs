@@ -24,7 +24,7 @@ namespace GUI
         public int IDPhong { get; set; }
         public string TenPhong { get; set; }
         public string KichThuocPhong { get; set; }
-        public string GiaPhong { get; set; }
+        public Nullable<double> GiaPhong { get; set; }
         public string TienNghiPhongTam1 { get; set; }
         public string TienNghiPhongTam2 { get; set; }
         public string TienNghiPhongTam3 { get; set; }

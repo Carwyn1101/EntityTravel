@@ -17,7 +17,7 @@ namespace GUI
         public int IDDanhGia { get; set; }
         public string TenKhachHang { get; set; }
         public string TraiNghiem { get; set; }
-        public string DiemDanhGia { get; set; }
+        public Nullable<int> DiemDanhGia { get; set; }
         public string DanhGiaNguoiDung { get; set; }
         public Nullable<int> IDKhachSan { get; set; }
     

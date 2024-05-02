@@ -26,8 +26,7 @@ namespace GUI
             lblTenTaiKhoan.Text = tenDangNhap;
         }
         private void TrangChuUser_Load(object sender, EventArgs e)
-        {
-            dPDAO.TrangThaiLoad(sender,e);
+        {            
             kSanDAO.GetAllKhachSan(flpTrangChuUser);
         }
         private void btnTimKiem_Click(object sender, EventArgs e)

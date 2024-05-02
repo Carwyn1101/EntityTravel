@@ -13,7 +13,6 @@ namespace GUI
 {
     public partial class UCThongTinKhachSanUser : UserControl
     {
-        string loaiKSan, mota;
         int iD;
         string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         public UCThongTinKhachSanUser()
@@ -25,8 +24,6 @@ namespace GUI
             InitializeComponent();
             lblTenKhachSan.Text = kQua.TenKhachSan;
             lblDiaDiemKhachSan.Text = kQua.DiaDiemKhachSan;
-            loaiKSan = kQua.Loai;
-            mota = kQua.MoTa;
             iD = kQua.IDKhachSan;
             string image1 = Path.Combine(appDirectory, kQua.HinhAnh1);
             pic_Anh.Image = Image.FromFile(image1);

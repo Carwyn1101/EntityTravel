@@ -47,7 +47,7 @@ CREATE TABLE ThongTinPhongCuaKhachSan
 	IDPhong INT PRIMARY KEY IDENTITY,
 	TenPhong nvarchar(max) null,
 	KichThuocPhong nvarchar(max) null,
-	GiaPhong nvarchar (max) null,
+	GiaPhong float,
 	TienNghiPhongTam1 nvarchar (max) null,
 	TienNghiPhongTam2 nvarchar (max) null,
 	TienNghiPhongTam3 nvarchar (max) null,
@@ -69,29 +69,29 @@ CREATE TABLE ThongTinPhongCuaKhachSan
 );
 Go
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',1)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',1)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',1)
+(N'Phòng Thường','20','450.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',1)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',2)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',2)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',2)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',2)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2, IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',3)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',3)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2, IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',3)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',3)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',4)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',4)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',4)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',4)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',5)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',5)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',5)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',5)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',6)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',6)
 insert into ThongTinPhongCuaKhachSan (TenPhong, KichThuocPhong, GiaPhong, TienNghiPhongTam1, TienNghiPhongTam2, TienNghiPhongTam3, TienNghiPhongTam4, HuongTamNhin1, HuongTamNhin2, TienNghiPhong1, TienNghiPhong2, TienNghiPhong3, TienNghiPhong4, TienNghiPhong5, TienNghiPhong6, HutThuoc1, HutThuoc2, UuDai, HinhAnh1, HinhAnh2,  IDKhachSan) values 
-(N'Phòng Thường','20','500,000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',6)
+(N'Phòng Thường','20','500.000',N'Dép',N'Vòi Sen',N'Bồn Tắm',N'Máy Sấy Tóc',N'Nhìn Ra Biến',N'Núi',N'Minibar',N'Điện Thoại',N'TV',N'Bàn',N'Ghế',N'Két',N'Không Hút Thuốc',N'Có nơi hút thuốc',null,'2.jpg','2.jpg',6)
 GO
 CREATE TABLE MaGiamGia
 (
@@ -105,23 +105,25 @@ CREATE TABLE DanhGia
 	IDDanhGia INT PRIMARY KEY IDENTITY,
 	TenKhachHang nvarchar(max),
 	TraiNghiem nvarchar(max),
-	DiemDanhGia nvarchar(max),
+	DiemDanhGia int,
 	DanhGiaNguoiDung nvarchar(max),
 	IDKhachSan INT Foreign key References ThongTinKhachSan(IDKhachSan) 
 );
 Go
 insert into DanhGia values 
-(N'A',N'Tuyệt Hảo',N'9+',N'Rất tuyệt vời, 10 điểm',1)
+(N'A',N'Tuyệt Hảo','9',N'Rất tuyệt vời, 10 điểm',1)
 insert into DanhGia values 
-(N'B',N'Tuyệt Hảo',N'9+',N'Rất tuyệt vời, 10 điểm',2)
+(N'B',N'Tuyệt Hảo','9',N'Rất tuyệt vời, 10 điểm',2)
 insert into DanhGia values 
-(N'C',N'Tuyệt Hảo',N'9+',N'Rất tuyệt vời, 10 điểm',3)
+(N'C',N'Tuyệt Hảo','9',N'Rất tuyệt vời, 10 điểm',3)
 insert into DanhGia values 
-(N'D',N'Tuyệt Hảo',N'9+',N'Rất tuyệt vời, 10 điểm',4)
+(N'D',N'Tuyệt Hảo','9',N'Rất tuyệt vời, 10 điểm',4)
 insert into DanhGia values 
-(N'E',N'Tuyệt Hảo',N'9+',N'Rất tuyệt vời, 10 điểm',5)
+(N'E',N'Tuyệt Hảo','9',N'Rất tuyệt vời, 10 điểm',5)
 insert into DanhGia values 
-(N'F',N'Tuyệt Hảo',N'9+',N'Rất tuyệt vời, 10 điểm',6)
+(N'F',N'Tuyệt Hảo','9',N'Rất tuyệt vời, 10 điểm',6)
+insert into DanhGia values 
+(N'A',N'Tuyệt Hảo','8',N'Rất tuyệt vời, 10 điểm',1)
 Go
 CREATE TABLE ThongTinKhachHang
 (

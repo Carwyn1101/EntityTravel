@@ -20,21 +20,8 @@ namespace GUI
         {
             InitializeComponent();
             linklblChiTietPhong.Text = kSan.TenPhong;
-            lblKichThuocPhong.Text = kSan.KichThuocPhong;
-            lblUuDai.Text = kSan.UuDai ;
-            lblSoGiaTien.Text = kSan.GiaPhong;           
-            if (string.IsNullOrEmpty(lblUuDai.Text))
-            {
-                lblTienGoc.Text = lblSoGiaTien.Text;
-                lblUuDai.Text = "0";
-            }  
-            else
-            {
-                decimal tmpSoGiaTien = decimal.Parse(lblSoGiaTien.Text);
-                decimal tmpUuDai = decimal.Parse(lblUuDai.Text);
-                decimal sum = tmpSoGiaTien/(1- tmpUuDai/100);
-                lblTienGoc.Text = sum.ToString("N0");
-            }
+            lblKichThuocPhong.Text = kSan.KichThuocPhong;           
+            lblSoGiaTien.Text = kSan.GiaPhong.ToString();           
             Program.iDPhongInstance = kSan.IDPhong;          
         }
         private void linklblChiTietPhong_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
