@@ -34,7 +34,7 @@ namespace GUI
         {        
             if(soLanAnBtnThue==0)
             {
-                this.Width += 480;
+                this.Width += 418;
                 panelHoaDon.Visible = false;
                 panelKhachHang.Visible = true;
                 panelKhachHang.Location = new Point(panelHoaDon.Location.X, panelHoaDon.Location.Y);

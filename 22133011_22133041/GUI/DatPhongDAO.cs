@@ -127,7 +127,6 @@ namespace GUI
                                 if (!(tmp.TienNghiPhong1 == "Wifi miễn phí" || tmp.TienNghiPhong2 == "Wifi miễn phí" || tmp.TienNghiPhong3 == "Wifi miễn phí" || tmp.TienNghiPhong4 == "Wifi miễn phí" || tmp.TienNghiPhong5 == "Wifi miễn phí" || tmp.TienNghiPhong6 == "Wifi miễn phí"))
                                     phongPhuHop = false;
                                 break;
-
                             default:                             
                                 break;
                         }
