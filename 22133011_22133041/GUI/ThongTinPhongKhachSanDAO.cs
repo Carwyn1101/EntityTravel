@@ -110,9 +110,7 @@ namespace GUI
                 khachSanToUpdate.TienNghiPhong4 = f.TienNghiPhong4;
                 khachSanToUpdate.TienNghiPhong5 = f.TienNghiPhong5;
                 khachSanToUpdate.TienNghiPhong6 = f.TienNghiPhong6;
-                khachSanToUpdate.HutThuoc1 = f.HutThuoc1;
-                khachSanToUpdate.HutThuoc2 = f.HutThuoc2;
-                khachSanToUpdate.UuDai = f.UuDai;
+                khachSanToUpdate.HutThuoc1 = f.HutThuoc1;               
                 khachSanToUpdate.HinhAnh1 = f.HinhAnh1;
                 khachSanToUpdate.HinhAnh2 = f.HinhAnh2;               
             }
@@ -142,7 +140,6 @@ namespace GUI
                 f.lblTienNghiPhong5.Text = kSan.TienNghiPhong5;
                 f.lblTienNghiPhong6.Text = kSan.TienNghiPhong6;
                 f.lblHutThuoc1.Text = kSan.HutThuoc1;
-                f.lblHutThuoc2.Text = kSan.HutThuoc2;
                 string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);
                 string image2 = Path.Combine(appDirectory, kSan.HinhAnh2);
                 f.pic_Anh1.Image = Image.FromFile(image1);
@@ -191,7 +188,6 @@ namespace GUI
                 f.cboTienNghiPhong5.Text = kSan.TienNghiPhong5;
                 f.cboTienNghiPhong6.Text = kSan.TienNghiPhong6;
                 f.cboHutThuoc1.Text = kSan.HutThuoc1;
-                f.cboHutThuoc2.Text = kSan.HutThuoc2;
                 tenAnh1 = kSan.HinhAnh1;
                 tenAnh2 = kSan.HinhAnh2;
                 string image1 = Path.Combine(appDirectory, kSan.HinhAnh1);

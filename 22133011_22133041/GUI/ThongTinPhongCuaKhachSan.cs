@@ -38,8 +38,6 @@ namespace GUI
         public string TienNghiPhong5 { get; set; }
         public string TienNghiPhong6 { get; set; }
         public string HutThuoc1 { get; set; }
-        public string HutThuoc2 { get; set; }
-        public string UuDai { get; set; }
         public string HinhAnh1 { get; set; }
         public string HinhAnh2 { get; set; }
         public Nullable<int> IDKhachSan { get; set; }

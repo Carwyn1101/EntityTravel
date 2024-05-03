@@ -32,7 +32,6 @@
             this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSuaAnh1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSuaAnh2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.cboHutThuoc2 = new System.Windows.Forms.ComboBox();
             this.cboHutThuoc1 = new System.Windows.Forms.ComboBox();
             this.cboTienNghiPhong2 = new System.Windows.Forms.ComboBox();
             this.cboTienNghiPhong3 = new System.Windows.Forms.ComboBox();
@@ -140,16 +139,6 @@
             this.btnSuaAnh2.TabIndex = 215;
             this.btnSuaAnh2.Text = "Sửa";
             this.btnSuaAnh2.Click += new System.EventHandler(this.btnSuaAnh2_Click);
-            // 
-            // cboHutThuoc2
-            // 
-            this.cboHutThuoc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboHutThuoc2.FormattingEnabled = true;
-            this.cboHutThuoc2.Location = new System.Drawing.Point(564, 585);
-            this.cboHutThuoc2.Margin = new System.Windows.Forms.Padding(2);
-            this.cboHutThuoc2.Name = "cboHutThuoc2";
-            this.cboHutThuoc2.Size = new System.Drawing.Size(185, 26);
-            this.cboHutThuoc2.TabIndex = 214;
             // 
             // cboHutThuoc1
             // 
@@ -434,7 +423,6 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSuaAnh1);
             this.Controls.Add(this.btnSuaAnh2);
-            this.Controls.Add(this.cboHutThuoc2);
             this.Controls.Add(this.cboHutThuoc1);
             this.Controls.Add(this.cboTienNghiPhong2);
             this.Controls.Add(this.cboTienNghiPhong3);
@@ -476,7 +464,6 @@
         public Guna.UI2.WinForms.Guna2GradientButton btnXoa;
         public Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh1;
         public Guna.UI2.WinForms.Guna2GradientButton btnSuaAnh2;
-        public System.Windows.Forms.ComboBox cboHutThuoc2;
         public System.Windows.Forms.ComboBox cboHutThuoc1;
         public System.Windows.Forms.ComboBox cboTienNghiPhong2;
         public System.Windows.Forms.ComboBox cboTienNghiPhong3;

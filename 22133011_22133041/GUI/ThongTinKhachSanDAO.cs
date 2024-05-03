@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.UI;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static System.Net.WebRequestMethods;
 
 namespace GUI
 {
@@ -142,7 +143,7 @@ namespace GUI
                 filename = Path.GetFileName(opf.FileName);
                 string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
                 string dest = Path.Combine(appDirectory, filename);
-                File.Copy(opf.FileName, dest, true);
+                System.IO.File.Copy(opf.FileName, dest, true);
             }
         }
         public void GetAllKhachSan(FlowLayoutPanel flpTrangChu)
@@ -158,14 +159,20 @@ namespace GUI
                 flpTrangChu.Controls.Add(uc);
             }
         }
-        public void SearchKhachSanByDiaDiem(FlowLayoutPanel flpTrangChuUser, string diaDiem)
+        public void SearchKhachSanByDiaDiem(FlowLayoutPanel flpTrangChuUser, string diaDiem, DateTime ngayNhan, DateTime ngayTra)
         {
-            var kSan = from p in dB.ThongTinKhachSans
-                       where p.DiaDiemKhachSan == diaDiem
-                       select p; 
-            foreach (var p in kSan)
+            var phongTrong = dB.ThongTinPhongCuaKhachSans
+                                .Where(p => !dB.DatPhongs.Any(d => d.IDPhong == p.IDPhong &&
+                                           ((ngayNhan >= d.NgayNhanPhong && ngayNhan < d.NgayTraPhong) ||
+                                            (ngayTra > d.NgayNhanPhong && ngayTra <= d.NgayTraPhong) ||
+                                            (ngayNhan <= d.NgayNhanPhong && ngayTra >= d.NgayTraPhong))))
+                                .Select(p => p.IDKhachSan)
+                                .Distinct()
+                                .ToList();
+            var kSan = dB.ThongTinKhachSans.Where(k => k.DiaDiemKhachSan == diaDiem && phongTrong.Contains(k.IDKhachSan)).ToList();
+            foreach (var khachSan in kSan)
             {
-                UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(p);
+                UCThongTinKhachSanUser uc = new UCThongTinKhachSanUser(khachSan);
                 uc.Margin = new Padding(10);
                 flpTrangChuUser.Controls.Add(uc);
             }

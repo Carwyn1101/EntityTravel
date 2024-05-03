@@ -64,7 +64,6 @@ namespace GUI
             kSan.TienNghiPhong5 = cboTienNghiPhong5.Text;
             kSan.TienNghiPhong6 = cboTienNghiPhong6.Text;
             kSan.HutThuoc1 = cboHutThuoc1.Text;
-            kSan.HutThuoc2 = cboHutThuoc2.Text;
             kSan.HinhAnh1 = tenAnh1;
             kSan.HinhAnh2 = tenAnh2;
             pKSanDAO.Sua(kSan);

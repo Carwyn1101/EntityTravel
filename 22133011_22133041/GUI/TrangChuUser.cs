@@ -28,12 +28,14 @@ namespace GUI
         private void TrangChuUser_Load(object sender, EventArgs e)
         {            
             kSanDAO.GetAllKhachSan(flpTrangChuUser);
+            dtpNgayNhan.Value = DateTime.Now;
+            dtpNgayTra.Value = DateTime.Now;
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             flpTrangChuUser.Controls.Clear();
             string diaDiem = cboDiaDiemTimKiem.Text;
-            kSanDAO.SearchKhachSanByDiaDiem(flpTrangChuUser, diaDiem);
+            kSanDAO.SearchKhachSanByDiaDiem(flpTrangChuUser, diaDiem, dtpNgayNhan.Value, dtpNgayTra.Value);
         }
         private void pic_DangXuat_Click(object sender, EventArgs e)
         {

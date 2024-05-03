@@ -23,7 +23,7 @@ namespace GUI
         {
             InitializeComponent();           
             flpTrangChuKhachSan.Controls.Clear();
-            //pKSanDAO.LoadDanhSachPhongUser(flpTrangChuKhachSan, Program.iDKhachSanInstance);
+            pKSanDAO.LoadDanhSachPhongUser(flpTrangChuKhachSan, Program.iDKhachSanInstance);
             Program.XemPhongCuaKhachSanInstance = this;
             dtpNgayNhanPhong.Value = DateTime.Now;
             dtpNgayTraPhong.Value = DateTime.Now;

@@ -143,9 +143,6 @@
     <Compile Include="MaGiamGia.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>TravelModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>TravelModel.tt</DependentUpon>
     </Compile>
