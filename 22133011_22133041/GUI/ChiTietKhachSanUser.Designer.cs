@@ -41,12 +41,22 @@
             this.pic_Anh2 = new System.Windows.Forms.PictureBox();
             this.pic_Anh4 = new System.Windows.Forms.PictureBox();
             this.pic_Anh1 = new System.Windows.Forms.PictureBox();
+            this.pnlTienDe = new System.Windows.Forms.Panel();
+            this.btnTimKiem = new System.Windows.Forms.PictureBox();
+            this.lblNgayTraPhong = new System.Windows.Forms.Label();
+            this.lblNgayNhanPhong = new System.Windows.Forms.Label();
+            this.dtpNgayTraPhong = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpNgayNhanPhong = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.lblPhong = new System.Windows.Forms.Label();
+            this.flpTrangChuKhachSan = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoaiPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh1)).BeginInit();
+            this.pnlTienDe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTimKiem)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLoai
@@ -82,7 +92,7 @@
             this.btnXemPhongTrong.FillColor2 = System.Drawing.Color.White;
             this.btnXemPhongTrong.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnXemPhongTrong.ForeColor = System.Drawing.Color.Black;
-            this.btnXemPhongTrong.Location = new System.Drawing.Point(307, 631);
+            this.btnXemPhongTrong.Location = new System.Drawing.Point(308, 643);
             this.btnXemPhongTrong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXemPhongTrong.Name = "btnXemPhongTrong";
             this.btnXemPhongTrong.Size = new System.Drawing.Size(212, 46);
@@ -194,11 +204,110 @@
             this.pic_Anh1.TabIndex = 125;
             this.pic_Anh1.TabStop = false;
             // 
+            // pnlTienDe
+            // 
+            this.pnlTienDe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTienDe.Controls.Add(this.btnTimKiem);
+            this.pnlTienDe.Controls.Add(this.lblNgayTraPhong);
+            this.pnlTienDe.Controls.Add(this.lblNgayNhanPhong);
+            this.pnlTienDe.Controls.Add(this.dtpNgayTraPhong);
+            this.pnlTienDe.Controls.Add(this.dtpNgayNhanPhong);
+            this.pnlTienDe.Controls.Add(this.lblPhong);
+            this.pnlTienDe.Location = new System.Drawing.Point(858, 0);
+            this.pnlTienDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlTienDe.Name = "pnlTienDe";
+            this.pnlTienDe.Size = new System.Drawing.Size(807, 145);
+            this.pnlTienDe.TabIndex = 137;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.search;
+            this.btnTimKiem.Location = new System.Drawing.Point(667, 71);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(39, 32);
+            this.btnTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTimKiem.TabIndex = 17;
+            this.btnTimKiem.TabStop = false;
+            // 
+            // lblNgayTraPhong
+            // 
+            this.lblNgayTraPhong.AutoSize = true;
+            this.lblNgayTraPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayTraPhong.Location = new System.Drawing.Point(352, 54);
+            this.lblNgayTraPhong.Name = "lblNgayTraPhong";
+            this.lblNgayTraPhong.Size = new System.Drawing.Size(129, 20);
+            this.lblNgayTraPhong.TabIndex = 16;
+            this.lblNgayTraPhong.Text = "Ngày Trả Phòng";
+            // 
+            // lblNgayNhanPhong
+            // 
+            this.lblNgayNhanPhong.AutoSize = true;
+            this.lblNgayNhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayNhanPhong.Location = new System.Drawing.Point(19, 54);
+            this.lblNgayNhanPhong.Name = "lblNgayNhanPhong";
+            this.lblNgayNhanPhong.Size = new System.Drawing.Size(143, 20);
+            this.lblNgayNhanPhong.TabIndex = 15;
+            this.lblNgayNhanPhong.Text = "Ngày Nhận Phòng";
+            // 
+            // dtpNgayTraPhong
+            // 
+            this.dtpNgayTraPhong.Checked = true;
+            this.dtpNgayTraPhong.FillColor = System.Drawing.Color.Orange;
+            this.dtpNgayTraPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayTraPhong.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgayTraPhong.Location = new System.Drawing.Point(356, 95);
+            this.dtpNgayTraPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpNgayTraPhong.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgayTraPhong.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayTraPhong.Name = "dtpNgayTraPhong";
+            this.dtpNgayTraPhong.Size = new System.Drawing.Size(249, 28);
+            this.dtpNgayTraPhong.TabIndex = 14;
+            this.dtpNgayTraPhong.Value = new System.DateTime(2024, 4, 28, 14, 2, 53, 395);
+            // 
+            // dtpNgayNhanPhong
+            // 
+            this.dtpNgayNhanPhong.Checked = true;
+            this.dtpNgayNhanPhong.FillColor = System.Drawing.Color.Orange;
+            this.dtpNgayNhanPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayNhanPhong.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgayNhanPhong.Location = new System.Drawing.Point(23, 95);
+            this.dtpNgayNhanPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpNgayNhanPhong.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgayNhanPhong.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayNhanPhong.Name = "dtpNgayNhanPhong";
+            this.dtpNgayNhanPhong.Size = new System.Drawing.Size(249, 28);
+            this.dtpNgayNhanPhong.TabIndex = 13;
+            this.dtpNgayNhanPhong.Value = new System.DateTime(2024, 4, 28, 14, 2, 53, 395);
+            // 
+            // lblPhong
+            // 
+            this.lblPhong.AutoSize = true;
+            this.lblPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhong.Location = new System.Drawing.Point(11, 6);
+            this.lblPhong.Name = "lblPhong";
+            this.lblPhong.Size = new System.Drawing.Size(169, 32);
+            this.lblPhong.TabIndex = 0;
+            this.lblPhong.Text = "Phòng trống";
+            // 
+            // flpTrangChuKhachSan
+            // 
+            this.flpTrangChuKhachSan.AutoScroll = true;
+            this.flpTrangChuKhachSan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpTrangChuKhachSan.Location = new System.Drawing.Point(858, 149);
+            this.flpTrangChuKhachSan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flpTrangChuKhachSan.Name = "flpTrangChuKhachSan";
+            this.flpTrangChuKhachSan.Size = new System.Drawing.Size(808, 563);
+            this.flpTrangChuKhachSan.TabIndex = 138;
+            // 
             // ChiTietKhachSanUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 709);
+            this.ClientSize = new System.Drawing.Size(1676, 723);
+            this.Controls.Add(this.pnlTienDe);
+            this.Controls.Add(this.flpTrangChuKhachSan);
             this.Controls.Add(this.lblLoai);
             this.Controls.Add(this.lblDiaDiem);
             this.Controls.Add(this.pictureBoxLoaiPhong);
@@ -213,7 +322,6 @@
             this.Controls.Add(this.richTextBoxMoTa);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ChiTietKhachSanUser";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTietKhachSanUser";
             this.Load += new System.EventHandler(this.ChiTietKhachSanUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoaiPhong)).EndInit();
@@ -222,8 +330,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Anh1)).EndInit();
+            this.pnlTienDe.ResumeLayout(false);
+            this.pnlTienDe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTimKiem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -240,5 +352,13 @@
         public System.Windows.Forms.PictureBox pic_Anh4;
         public System.Windows.Forms.PictureBox pic_Anh1;
         public System.Windows.Forms.RichTextBox richTextBoxMoTa;
+        private System.Windows.Forms.Panel pnlTienDe;
+        private System.Windows.Forms.PictureBox btnTimKiem;
+        private System.Windows.Forms.Label lblNgayTraPhong;
+        private System.Windows.Forms.Label lblNgayNhanPhong;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayTraPhong;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayNhanPhong;
+        private System.Windows.Forms.Label lblPhong;
+        private System.Windows.Forms.FlowLayoutPanel flpTrangChuKhachSan;
     }
 }

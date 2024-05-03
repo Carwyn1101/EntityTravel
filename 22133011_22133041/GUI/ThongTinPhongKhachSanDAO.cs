@@ -14,6 +14,7 @@ namespace GUI
     {
         DoAnCuoiKyEntity dB = new DoAnCuoiKyEntity();
         string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+        DateTime date =DateTime.Now;
         public void LoadDanhSachPhongUser(FlowLayoutPanel flpTrangChuKhachSan, int iDKhachSan)
         {
             var kSan = from p in dB.ThongTinPhongCuaKhachSans
@@ -42,29 +43,44 @@ namespace GUI
             MessageBox.Show("Thêm thông tin phòng khách sạn thành công!");
         }
         public void Xoa(int iDPhongKhachSan)
-        {           
-            var phong = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDPhong == iDPhongKhachSan select c1;
-            if (phong.Any())
-            {
-                MessageBox.Show("Phòng đang được thuê không thể thực hiện!");
-            }
-            else
-            {
+        {                  
                 var datPhong = from p in dB.DatPhongs where p.IDPhong == iDPhongKhachSan select p;
                 if (datPhong.Any())
                 {
                     foreach (var tmp in datPhong)
                     {
-                        dB.DatPhongs.Remove(tmp);
+                        if(tmp.NgayTraPhong.Value.Date >= date.Date)
+                        {
+                            MessageBox.Show("Phòng đang được thuê không thể thực hiện!");
+                        }                           
+                        else
+                        {
+                            dB.DatPhongs.Remove(tmp);
+                            var hDon = from b in dB.HoaDons where b.IDPhong == iDPhongKhachSan select b;
+                            if (hDon.Any())
+                            {
+                                foreach (var tmp1 in hDon)
+                                {
+                                    dB.HoaDons.Remove(tmp1);
+                                }
+                                dB.SaveChanges();
+                            }
+                            var phongKS = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(c2 => c2.IDPhong == iDPhongKhachSan);
+                            dB.ThongTinPhongCuaKhachSans.Remove(phongKS);
+                            dB.SaveChanges();
+                            MessageBox.Show("Xoá thông tin phòng khách sạn thành công!");
+                        }
                     }
-                    dB.SaveChanges();
+                    
                 }
+            else
+            {
                 var hDon = from b in dB.HoaDons where b.IDPhong == iDPhongKhachSan select b;
                 if (hDon.Any())
                 {
-                    foreach (var tmp in hDon)
+                    foreach (var tmp1 in hDon)
                     {
-                        dB.HoaDons.Remove(tmp);
+                        dB.HoaDons.Remove(tmp1);
                     }
                     dB.SaveChanges();
                 }
@@ -72,7 +88,7 @@ namespace GUI
                 dB.ThongTinPhongCuaKhachSans.Remove(phongKS);
                 dB.SaveChanges();
                 MessageBox.Show("Xoá thông tin phòng khách sạn thành công!");
-            }
+            }      
         }
         public void Sua(ThongTinPhongCuaKhachSan f)
         {

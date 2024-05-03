@@ -19,6 +19,7 @@ namespace GUI
         string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         DanhGiaDAO dGiaDAO = new DanhGiaDAO();
         ThongTinPhongKhachSanDAO pKSDAO = new ThongTinPhongKhachSanDAO();
+        DateTime date = DateTime.Now;
         public void LoadData(FlowLayoutPanel flpTrangChu, int iDNguoiDung)
         {
             var ketqua = from c in dB.ThongTinKhachSans where c.IDChuKhachSan == iDNguoiDung select c;
@@ -36,45 +37,75 @@ namespace GUI
             MessageBox.Show("Thêm thông tin khách sạn thành công!");           
         }
         public void Xoa(int iDKhachSan)
-        {            
-            var phong = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
-            if (phong.Any())
+        {
+            var datPhong = from p in dB.DatPhongs where p.IDKhachSan == iDKhachSan select p;
+            if (datPhong.Any())
             {
-                MessageBox.Show("Khách sạn hiện có phòng đang cho thuê không thể thực hiện!");
+                foreach (var tmp in datPhong)
+                {
+                    if (tmp.NgayTraPhong.Value.Date >= date.Date)
+                    {
+                        MessageBox.Show("Khách sạn đang có phòng được thuê không thể thực hiện!");
+                    }                            
+                    else
+                    {
+                        dB.DatPhongs.Remove(tmp);
+                        dB.SaveChanges();
+                        var danhGia = from c in dB.DanhGias where c.IDKhachSan == iDKhachSan select c;
+                        if (danhGia.Any())
+                        {
+                            foreach (var tmp3 in danhGia)
+                            {
+                                dB.DanhGias.Remove(tmp3);
+                            }
+                            dB.SaveChanges();
+                        }
+                        var hDon = from b in dB.HoaDons where b.ThongTinPhongCuaKhachSan.IDKhachSan == iDKhachSan select b;
+                        if (hDon.Any())
+                        {
+                            foreach (var tmp1 in hDon)
+                            {
+                                dB.HoaDons.Remove(tmp1);
+                            }
+                            dB.SaveChanges();
+                        }
+                        var phong1 = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
+                        foreach (var tmp2 in phong1)
+                        {
+                            dB.ThongTinPhongCuaKhachSans.Remove(tmp2);
+                        }
+                        dB.SaveChanges();
+                        var khachSan = dB.ThongTinKhachSans.FirstOrDefault(c2 => c2.IDKhachSan == iDKhachSan);
+                        dB.ThongTinKhachSans.Remove(khachSan);
+                        dB.SaveChanges();
+                        MessageBox.Show("Xóa khách sạn thành công!");
+                    }
+                }               
             }
             else
             {
                 var danhGia = from c in dB.DanhGias where c.IDKhachSan == iDKhachSan select c;
                 if (danhGia.Any())
                 {
-                    foreach (var tmp in danhGia)
+                    foreach (var tmp3 in danhGia)
                     {
-                        dB.DanhGias.Remove(tmp);
-                    }
-                    dB.SaveChanges();
-                }
-                var datPhong = from p in dB.DatPhongs where p.IDKhachSan == iDKhachSan select p;
-                if (datPhong.Any())
-                {
-                    foreach (var tmp in datPhong)
-                    {
-                        dB.DatPhongs.Remove(tmp);
+                        dB.DanhGias.Remove(tmp3);
                     }
                     dB.SaveChanges();
                 }
                 var hDon = from b in dB.HoaDons where b.ThongTinPhongCuaKhachSan.IDKhachSan == iDKhachSan select b;
                 if (hDon.Any())
                 {
-                    foreach (var tmp in hDon)
+                    foreach (var tmp1 in hDon)
                     {
-                        dB.HoaDons.Remove(tmp);
+                        dB.HoaDons.Remove(tmp1);
                     }
                     dB.SaveChanges();
                 }
                 var phong1 = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
-                foreach (var tmp in phong1)
+                foreach (var tmp2 in phong1)
                 {
-                    dB.ThongTinPhongCuaKhachSans.Remove(tmp);
+                    dB.ThongTinPhongCuaKhachSans.Remove(tmp2);
                 }
                 dB.SaveChanges();
                 var khachSan = dB.ThongTinKhachSans.FirstOrDefault(c2 => c2.IDKhachSan == iDKhachSan);
