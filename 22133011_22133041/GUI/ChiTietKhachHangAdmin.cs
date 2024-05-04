@@ -17,7 +17,6 @@ namespace GUI
         {
             InitializeComponent();
         }
-
         private void ChiTietKhachHangAdmin_Load(object sender, EventArgs e)
         {
             kHangDAO.LoadKhachHang(Program.iDPhongInstance, flpChiTietKhachHang);

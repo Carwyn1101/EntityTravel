@@ -166,3 +166,5 @@ C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\
 D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ChiTietKhachHangAdmin.resources
 D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ThemUuDai.resources
 C:\Users\trank\OneDrive\Máy tính\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCThongTinKhachHang.resources
+D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.UCThongTinKhachHang.resources
+D:\Học Thiệt\Lập trình Windows\DoAnEntityTest\EntityTravel\22133011_22133041\GUI\obj\Debug\GUI.ThongKe.resources

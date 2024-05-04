@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.SqlServer;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
@@ -70,12 +72,21 @@ namespace GUI
                             }
                             dB.SaveChanges();
                         }
+                        var maGiam = from p in dB.MaGiamGias where p.IDKhachSan == iDKhachSan select p;
+                        if (maGiam.Any())
+                        {
+                            foreach (var tmp1 in maGiam)
+                            {
+                                dB.MaGiamGias.Remove(tmp1);
+                            }
+                            dB.SaveChanges();
+                        }    
                         var phong1 = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
                         foreach (var tmp2 in phong1)
                         {
                             dB.ThongTinPhongCuaKhachSans.Remove(tmp2);
                         }
-                        dB.SaveChanges();
+                        dB.SaveChanges();                       
                         var khachSan = dB.ThongTinKhachSans.FirstOrDefault(c2 => c2.IDKhachSan == iDKhachSan);
                         dB.ThongTinKhachSans.Remove(khachSan);
                         dB.SaveChanges();
@@ -100,6 +111,15 @@ namespace GUI
                     foreach (var tmp1 in hDon)
                     {
                         dB.HoaDons.Remove(tmp1);
+                    }
+                    dB.SaveChanges();
+                }
+                var maGiam = from p in dB.MaGiamGias where p.IDKhachSan == iDKhachSan select p;
+                if (maGiam.Any())
+                {
+                    foreach (var tmp1 in maGiam)
+                    {
+                        dB.MaGiamGias.Remove(tmp1);
                     }
                     dB.SaveChanges();
                 }
@@ -223,6 +243,31 @@ namespace GUI
                 f.pic_Anh3.Image = Image.FromFile(image3);
                 f.pic_Anh4.Image = Image.FromFile(image4);
             }
+        }
+        public Dictionary<string, double> LoadDoanhThu()
+        {
+            var danhSachDoanhThu = new Dictionary<string, double>();
+
+            var danhSachKhachSan = dB.ThongTinKhachSans.ToList();
+            foreach (var khachSan in danhSachKhachSan)
+            {
+                var kQua = khachSan.ThongTinPhongCuaKhachSans
+                    .SelectMany(p => p.HoaDons.Select(q => q.TongTien))
+                    .ToList();
+
+                double tongDoanhThu = 0;
+                foreach (var tongTien in kQua)
+                {
+                    if (double.TryParse(tongTien, out double giaTri))
+                    {
+                        tongDoanhThu += giaTri;
+                    }
+                }
+
+                danhSachDoanhThu.Add(khachSan.TenKhachSan, tongDoanhThu);
+            }
+
+            return danhSachDoanhThu;
         }
     }
 }

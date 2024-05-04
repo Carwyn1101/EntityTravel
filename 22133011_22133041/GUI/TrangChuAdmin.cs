@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Windows.Forms.DataVisualization.Charting;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +18,8 @@ namespace GUI
         DatPhongDAO dPDAO = new DatPhongDAO();
         public TrangChuAdmin()
         {
-            InitializeComponent();           
-        }
+            InitializeComponent();
+        }       
         public TrangChuAdmin(string tenDangNhap, int iDNguoiDung)
         {
             InitializeComponent();
@@ -52,6 +53,13 @@ namespace GUI
         {
             
             kSDAO.LoadData(flpTrangChu, iDNguoiDung);
+        }
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKe thongKe = new ThongKe();
+            Dictionary<string, double> danhSachDoanhThu = kSDAO.LoadDoanhThu();
+            thongKe.VeBieuDo(danhSachDoanhThu);
+            thongKe.ShowDialog();
         }       
     }
 }

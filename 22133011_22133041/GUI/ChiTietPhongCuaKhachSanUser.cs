@@ -21,6 +21,7 @@ namespace GUI
         HoaDonDAO hoaDonDAO = new HoaDonDAO();
         DatPhongDAO datPhongDAO = new DatPhongDAO();
         UuDaiDAO uuDaiDAO = new UuDaiDAO();
+        CheckGiaTri check = new CheckGiaTri();
         int stt; string tmpTongTien;private int soLanAnBtnThue = 0, soLanAnBtnThanhToan = 0, soLanAnBtnLuu = 0;     
         public ChiTietPhongCuaKhachSanUser()
         {
@@ -45,26 +46,45 @@ namespace GUI
         {
             if (soLanAnBtnLuu==0)
             {
-                ThongTinKhachHang kHang = new ThongTinKhachHang();
-                kHang.IDKhachHang = Program.iDTaiKhoanInstance;
-                kHang.TenKhachHang = txtTenKhachHang.Text;
-                kHang.SDT = txtSoDienThoai.Text;
-                kHang.CCCD = txtCCCD.Text;
-                kHang.Mail = txtMail.Text;
-                kHangDAO.Them(kHang);
-
-                stt = kHang.SoThuTu;
-                txtTenKhachHangHD.Text = txtTenKhachHang.Text;
-                txtSoDienThoaiHD.Text = kHang.SDT;
-                txtCCCDHD.Text = kHang.CCCD;
-                txtMailHD.Text = kHang.Mail;
-                txtNgayNhanPhong.Text = Program.ngayNhanInstance.ToString("yyyy-MM-dd");
-                txtNgayTraPhong.Text = Program.ngayTraInstance.ToString("yyyy-MM-dd");
-                TinhTongTien();
-                panelKhachHang.Visible = false;              
-                panelHoaDon.Visible = true;
-                
-                soLanAnBtnLuu++;            
+                if (check.CheckValid(panelKhachHang))
+                {
+                    if (check.ValidPhoneNumber(txtSoDienThoai.Text))
+                    {
+                        if (check.ValidEmail(txtMail.Text))
+                        {
+                            ThongTinKhachHang kHang = new ThongTinKhachHang();
+                            kHang.IDKhachHang = Program.iDTaiKhoanInstance;
+                            kHang.TenKhachHang = txtTenKhachHang.Text;
+                            kHang.SDT = txtSoDienThoai.Text;
+                            kHang.CCCD = txtCCCD.Text;
+                            kHang.Mail = txtMail.Text;
+                            kHangDAO.Them(kHang);
+                            stt = kHang.SoThuTu;
+                            txtTenKhachHangHD.Text = txtTenKhachHang.Text;
+                            txtSoDienThoaiHD.Text = kHang.SDT;
+                            txtCCCDHD.Text = kHang.CCCD;
+                            txtMailHD.Text = kHang.Mail;
+                            txtNgayNhanPhong.Text = Program.ngayNhanInstance.ToString("yyyy-MM-dd");
+                            txtNgayTraPhong.Text = Program.ngayTraInstance.ToString("yyyy-MM-dd");
+                            TinhTongTien();
+                            panelKhachHang.Visible = false;
+                            panelHoaDon.Visible = true;
+                            soLanAnBtnLuu++;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Email không hợp lệ, vui lòng nhập lại email", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số điện thoại không hợp lệ, vui lòng nhập lại theo dạng 0xxxxxxxxx", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không được để trống, vui lòng nhập dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }                        
             }              
         }
         private void txtUuDai_TextChanged(object sender, EventArgs e)

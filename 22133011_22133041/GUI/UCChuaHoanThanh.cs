@@ -14,6 +14,7 @@ namespace GUI
     {
         int maDatPhong;
         DatPhongDAO dPDAO = new DatPhongDAO();
+        HoaDonDAO hDon = new HoaDonDAO();
         public UCChuaHoanThanh()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace GUI
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            hDon.Xoa(maDatPhong);
             dPDAO.Xoa(maDatPhong);
             Program.LichSuBookInstance.Controls.Clear();
             LichSuBook f = new LichSuBook();

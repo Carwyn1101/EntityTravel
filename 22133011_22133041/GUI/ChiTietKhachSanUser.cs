@@ -129,7 +129,6 @@ namespace GUI
                 HandleCheckBoxCheckedChanged(sender, e);
             }
         }
-
         private void checkBoxHuongTamNhin2_CheckedChanged(object sender, EventArgs e)
         {
             checkBoxHuongTamNhin2.Tag = 5;
