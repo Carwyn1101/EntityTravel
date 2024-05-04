@@ -244,11 +244,13 @@ namespace GUI
                 f.pic_Anh4.Image = Image.FromFile(image4);
             }
         }
-        public Dictionary<string, double> LoadDoanhThu()
+        public Dictionary<string, double> LoadDoanhThu(int iDChuKSan)
         {
             var danhSachDoanhThu = new Dictionary<string, double>();
 
-            var danhSachKhachSan = dB.ThongTinKhachSans.ToList();
+            var danhSachKhachSan = dB.ThongTinKhachSans
+                                    .Where(p => p.IDChuKhachSan == iDChuKSan)
+                                    .ToList();
             foreach (var khachSan in danhSachKhachSan)
             {
                 var kQua = khachSan.ThongTinPhongCuaKhachSans

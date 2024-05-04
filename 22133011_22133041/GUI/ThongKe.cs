@@ -21,19 +21,18 @@ namespace GUI
         }
         public void VeBieuDo(Dictionary<string, double> danhSachDoanhThu)
         {
-            // Cấu hình biểu đồ
             chartDoanhThu.ChartAreas.Add("area");
             chartDoanhThu.Series.Add("doanhThu");
             chartDoanhThu.Series["doanhThu"].ChartType = SeriesChartType.Column;
-
-            // Thêm dữ liệu vào biểu đồ
             foreach (var doanhThu in danhSachDoanhThu)
             {
                 chartDoanhThu.Series["doanhThu"].Points.AddY(doanhThu.Value);
                 chartDoanhThu.Series["doanhThu"].Points.Last().AxisLabel = doanhThu.Key;
             }
-
-            // Hiển thị biểu đồ trên form
+            chartDoanhThu.ChartAreas["area"].AxisY.LabelStyle.Format = "#,##0.## VNĐ"; 
+            Title chartTitle = chartDoanhThu.Titles.Add("Biểu đồ doanh thu của các khách sạn");
+            chartTitle.Font = new Font("Arial", 12, FontStyle.Bold); 
+            chartTitle.ForeColor = Color.DarkOrange; 
             chartDoanhThu.Dock = DockStyle.Fill;
             Controls.Add(chartDoanhThu);
         }

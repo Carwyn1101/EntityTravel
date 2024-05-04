@@ -57,7 +57,7 @@ namespace GUI
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             ThongKe thongKe = new ThongKe();
-            Dictionary<string, double> danhSachDoanhThu = kSDAO.LoadDoanhThu();
+            Dictionary<string, double> danhSachDoanhThu = kSDAO.LoadDoanhThu(iDNguoiDung);
             thongKe.VeBieuDo(danhSachDoanhThu);
             thongKe.ShowDialog();
         }       

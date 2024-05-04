@@ -35,8 +35,6 @@ namespace GUI
             Program.LichSuBookInstance.flpLichSuBook.Controls.Clear();
             dPDAO.LichSuBookLoad(Program.LichSuBookInstance.flpLichSuBook);
             Program.LichSuBookInstance.Show();
-
-
         }
     }
 }
