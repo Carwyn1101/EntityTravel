@@ -70,6 +70,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDanhSachPhong;
-        private System.Windows.Forms.FlowLayoutPanel flpLichSuBook;
+        public System.Windows.Forms.FlowLayoutPanel flpLichSuBook;
     }
 }

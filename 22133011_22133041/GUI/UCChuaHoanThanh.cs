@@ -31,10 +31,12 @@ namespace GUI
         private void btnHuy_Click(object sender, EventArgs e)
         {
             hDon.Xoa(maDatPhong);
-            dPDAO.Xoa(maDatPhong);
-            Program.LichSuBookInstance.Controls.Clear();
-            LichSuBook f = new LichSuBook();
-            f.ShowDialog();
+            dPDAO.Xoa(maDatPhong);            
+            Program.LichSuBookInstance.flpLichSuBook.Controls.Clear();
+            dPDAO.LichSuBookLoad(Program.LichSuBookInstance.flpLichSuBook);
+            Program.LichSuBookInstance.Show();
+
+
         }
     }
 }

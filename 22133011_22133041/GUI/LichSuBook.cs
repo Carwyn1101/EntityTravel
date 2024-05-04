@@ -16,10 +16,12 @@ namespace GUI
         public LichSuBook()
         {
             InitializeComponent();
+            Program.LichSuBookInstance = this;
         }
         private void LichSuBook_Load(object sender, EventArgs e)
         {
             dPDAO.LichSuBookLoad(flpLichSuBook);
+            
         }      
     }   
 }

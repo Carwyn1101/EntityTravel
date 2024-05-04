@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace GUI
 {
     public partial class UCThongTinPhongKhachSanUser : UserControl
-    {       
+    {
+        int iD;
         public UCThongTinPhongKhachSanUser()
         {
             InitializeComponent();
@@ -22,10 +23,11 @@ namespace GUI
             linklblChiTietPhong.Text = kSan.TenPhong;
             lblKichThuocPhong.Text = kSan.KichThuocPhong;
             lblSoGiaTien.Text = kSan.GiaPhong?.ToString("N0");
-            Program.iDPhongInstance = kSan.IDPhong;          
+            iD = kSan.IDPhong;          
         }
         private void linklblChiTietPhong_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.iDPhongInstance = iD;
             ChiTietPhongCuaKhachSanUser f = new ChiTietPhongCuaKhachSanUser();
             f.ShowDialog();
         }

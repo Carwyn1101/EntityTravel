@@ -54,14 +54,14 @@ namespace GUI
                     Program.ngayTraInstance = dtpNgayTraPhong.Value;
                     if (tieuChiLoc.Any(x => x))
                     {
-                        datPhongDAO.LoadPhongTrongVoiTieuChiLoc(Program.ngayNhanInstance, Program.ngayTraInstance, flpTrangChuKhachSan, tieuChiLoc);
+                        datPhongDAO.LoadPhongTrongVoiTieuChiLoc(dtpNgayNhanPhong.Value, dtpNgayTraPhong.Value, flpTrangChuKhachSan, tieuChiLoc);
                         ResetCheckBoxes();
                         dtpNgayNhanPhong.Value = DateTime.Now;
                         dtpNgayTraPhong.Value = DateTime.Now;
                     }
                     else
                     {
-                        datPhongDAO.LoadPhongTrong(Program.ngayNhanInstance, Program.ngayTraInstance, flpTrangChuKhachSan);
+                        datPhongDAO.LoadPhongTrong(dtpNgayNhanPhong.Value, dtpNgayTraPhong.Value, flpTrangChuKhachSan);
                     }
                 }
                 else
