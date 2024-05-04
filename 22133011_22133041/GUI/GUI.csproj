@@ -63,18 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckGiaTri.cs" />
-    <Compile Include="ChiTietHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChiTietHoaDon.Designer.cs">
-      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ChiTietKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChiTietKhachHang.Designer.cs">
-      <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChiTietKhachHangAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,12 +256,6 @@
     <Compile Include="XemPhongCuaKhachSan.Designer.cs">
       <DependentUpon>XemPhongCuaKhachSan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChiTietHoaDon.resx">
-      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChiTietKhachHang.resx">
-      <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietKhachHangAdmin.resx">
       <DependentUpon>ChiTietKhachHangAdmin.cs</DependentUpon>
     </EmbeddedResource>

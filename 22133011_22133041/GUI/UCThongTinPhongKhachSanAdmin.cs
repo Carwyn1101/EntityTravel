@@ -12,7 +12,7 @@ namespace GUI
 {
     public partial class UCThongTinPhongKhachSanAdmin : UserControl
     {
-        int iDKhachSan, iDPhong;
+        int iDPhong;
         public UCThongTinPhongKhachSanAdmin()
         {
             InitializeComponent();
@@ -24,7 +24,6 @@ namespace GUI
             lblKichThuocPhong.Text = pKSan.KichThuocPhong;
             lblSoGiaTien.Text = pKSan.GiaPhong?.ToString("N0") + " " + "VND";
             iDPhong = (int)pKSan.IDPhong;
-            iDKhachSan = (int)pKSan.IDKhachSan;
         }
         private void linklblChiTietPhong_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

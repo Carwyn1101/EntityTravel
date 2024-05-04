@@ -32,8 +32,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDiemDanhGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTraiNghiem = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnKhongHuuIch = new System.Windows.Forms.Button();
-            this.btnHuuIch = new System.Windows.Forms.Button();
             this.richTextBoxDanhGia = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
@@ -45,7 +43,7 @@
             this.lblTenKhachHang.AutoSize = false;
             this.lblTenKhachHang.BackColor = System.Drawing.Color.Transparent;
             this.lblTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenKhachHang.Location = new System.Drawing.Point(3, 16);
+            this.lblTenKhachHang.Location = new System.Drawing.Point(4, 25);
             this.lblTenKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenKhachHang.Name = "lblTenKhachHang";
             this.lblTenKhachHang.Size = new System.Drawing.Size(197, 34);
@@ -58,8 +56,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblDiemDanhGia);
             this.panel2.Controls.Add(this.lblTraiNghiem);
-            this.panel2.Controls.Add(this.btnKhongHuuIch);
-            this.panel2.Controls.Add(this.btnHuuIch);
             this.panel2.Controls.Add(this.richTextBoxDanhGia);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(212, 2);
@@ -94,37 +90,13 @@
             this.lblTraiNghiem.Text = "Tuyệt hảo";
             this.lblTraiNghiem.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnKhongHuuIch
-            // 
-            this.btnKhongHuuIch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnKhongHuuIch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhongHuuIch.Location = new System.Drawing.Point(412, 148);
-            this.btnKhongHuuIch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnKhongHuuIch.Name = "btnKhongHuuIch";
-            this.btnKhongHuuIch.Size = new System.Drawing.Size(163, 34);
-            this.btnKhongHuuIch.TabIndex = 1;
-            this.btnKhongHuuIch.Text = "Không hữu ích";
-            this.btnKhongHuuIch.UseVisualStyleBackColor = true;
-            // 
-            // btnHuuIch
-            // 
-            this.btnHuuIch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHuuIch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuuIch.Location = new System.Drawing.Point(243, 148);
-            this.btnHuuIch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHuuIch.Name = "btnHuuIch";
-            this.btnHuuIch.Size = new System.Drawing.Size(163, 34);
-            this.btnHuuIch.TabIndex = 0;
-            this.btnHuuIch.Text = "Hữu ích";
-            this.btnHuuIch.UseVisualStyleBackColor = true;
-            // 
             // richTextBoxDanhGia
             // 
             this.richTextBoxDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxDanhGia.Location = new System.Drawing.Point(5, 57);
             this.richTextBoxDanhGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxDanhGia.Name = "richTextBoxDanhGia";
-            this.richTextBoxDanhGia.Size = new System.Drawing.Size(569, 86);
+            this.richTextBoxDanhGia.Size = new System.Drawing.Size(569, 126);
             this.richTextBoxDanhGia.TabIndex = 27;
             this.richTextBoxDanhGia.Text = "Homestay rất đẹp";
             // 
@@ -158,8 +130,6 @@
         public System.Windows.Forms.Panel panel2;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblDiemDanhGia;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblTraiNghiem;
-        public System.Windows.Forms.Button btnKhongHuuIch;
-        public System.Windows.Forms.Button btnHuuIch;
         public System.Windows.Forms.RichTextBox richTextBoxDanhGia;
         public System.Windows.Forms.Panel panel1;
     }

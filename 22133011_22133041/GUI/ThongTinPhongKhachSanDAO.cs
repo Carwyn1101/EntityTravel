@@ -43,36 +43,37 @@ namespace GUI
             MessageBox.Show("Thêm thông tin phòng khách sạn thành công!");
         }
         public void Xoa(int iDPhongKhachSan)
-        {                  
-                var datPhong = from p in dB.DatPhongs where p.IDPhong == iDPhongKhachSan select p;
-                if (datPhong.Any())
+        {
+            var datPhong = from p in dB.DatPhongs where p.IDPhong == iDPhongKhachSan select p;
+            if (datPhong.Any())
+            {
+                foreach (var tmp in datPhong)
                 {
-                    foreach (var tmp in datPhong)
+                    if (tmp.NgayTraPhong.Value.Date >= date.Date)
                     {
-                        if(tmp.NgayTraPhong.Value.Date >= date.Date)
-                        {
-                            MessageBox.Show("Phòng đang được thuê không thể thực hiện!");
-                        }                           
-                        else
-                        {
-                            dB.DatPhongs.Remove(tmp);
-                            var hDon = from b in dB.HoaDons where b.IDPhong == iDPhongKhachSan select b;
-                            if (hDon.Any())
-                            {
-                                foreach (var tmp1 in hDon)
-                                {
-                                    dB.HoaDons.Remove(tmp1);
-                                }
-                                dB.SaveChanges();
-                            }
-                            var phongKS = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(c2 => c2.IDPhong == iDPhongKhachSan);
-                            dB.ThongTinPhongCuaKhachSans.Remove(phongKS);
-                            dB.SaveChanges();
-                            MessageBox.Show("Xoá thông tin phòng khách sạn thành công!");
-                        }
+                        MessageBox.Show("Phòng đang được thuê không thể thực hiện!");
+                        return;
                     }
-                    
+                    else
+                    {
+                        dB.DatPhongs.Remove(tmp);
+                    }
                 }
+                dB.SaveChanges();
+                var hDon = from b in dB.HoaDons where b.IDPhong == iDPhongKhachSan select b;
+                if (hDon.Any())
+                {
+                    foreach (var tmp1 in hDon)
+                    {
+                        dB.HoaDons.Remove(tmp1);
+                    }
+                    dB.SaveChanges();
+                }
+                var phongKS = dB.ThongTinPhongCuaKhachSans.FirstOrDefault(c2 => c2.IDPhong == iDPhongKhachSan);
+                dB.ThongTinPhongCuaKhachSans.Remove(phongKS);
+                dB.SaveChanges();
+                MessageBox.Show("Xoá thông tin phòng khách sạn thành công!");
+            }
             else
             {
                 var hDon = from b in dB.HoaDons where b.IDPhong == iDPhongKhachSan select b;
@@ -88,7 +89,7 @@ namespace GUI
                 dB.ThongTinPhongCuaKhachSans.Remove(phongKS);
                 dB.SaveChanges();
                 MessageBox.Show("Xoá thông tin phòng khách sạn thành công!");
-            }      
+            }
         }
         public void Sua(ThongTinPhongCuaKhachSan f)
         {
@@ -146,11 +147,6 @@ namespace GUI
                 f.pic_Anh2.Image = Image.FromFile(image2);
             }
         }      
-        public void CapNhatTrangThaiPhong(int iDPhong)
-        {
-            ThongTinPhongCuaKhachSan pKSan = dB.ThongTinPhongCuaKhachSans.Find(iDPhong);
-            dB.SaveChanges();
-        }
         public string TrungBinhGiaTien(int idKhachSan)
         {
             var giaTiens = dB.ThongTinPhongCuaKhachSans
@@ -159,8 +155,6 @@ namespace GUI
                             .ToList();
 
             var giaTienTrungBinh = giaTiens.Any() ? giaTiens.Average() : (double?)null;
-
-            // Sử dụng định dạng tùy chỉnh để bảo toàn số 0
             return giaTienTrungBinh?.ToString("N0");
         }
         public void LoadChiTietPhongAdmin(ChiTietPhongCuaKhachSanAdmin f, int iDPhong, out string tenAnh1, out string tenAnh2)

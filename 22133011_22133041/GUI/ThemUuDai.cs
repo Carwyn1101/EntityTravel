@@ -34,8 +34,7 @@ namespace GUI
             else
             {
                 MessageBox.Show("Không được để trống, vui lòng nhập dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            }           
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {

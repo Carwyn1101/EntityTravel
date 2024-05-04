@@ -993,7 +993,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 628);
+            this.ClientSize = new System.Drawing.Size(1297, 631);
             this.Controls.Add(this.panelKhachHang);
             this.Controls.Add(this.lblTenPhong);
             this.Controls.Add(this.pic_Anh2);

@@ -143,6 +143,5 @@ namespace GUI
                 MessageBox.Show("Không có phòng nào phù hợp dành cho bạn!");
             }
         }
-    }
-    
+    }   
 }

@@ -15,7 +15,6 @@ namespace GUI
     {    
         ThongTinKhachSanDAO kSDAO = new ThongTinKhachSanDAO();
         int iDNguoiDung; bool logOut;
-        DatPhongDAO dPDAO = new DatPhongDAO();
         public TrangChuAdmin()
         {
             InitializeComponent();
@@ -41,12 +40,12 @@ namespace GUI
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                logOut = true; // Đánh dấu đã đăng xuất
+                logOut = true; 
                 this.Hide();
                 DangNhap f = new DangNhap(logOut);
                 f.ShowDialog();
                 f = null;
-                this.Close(); // Đóng form đăng nhập khi đã đăng xuất
+                this.Close(); 
             }
         }
         private void TrangChuAdmin_Load(object sender, EventArgs e)

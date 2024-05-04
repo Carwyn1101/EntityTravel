@@ -31,7 +31,6 @@ namespace GUI
         public void TrungBinhDiemDanhGia(int idKhachSan, out double? diem)
         {
             var danhGias = dB.DanhGias.Where(dg => dg.IDKhachSan == idKhachSan).ToList();
-            // Tính trung bình các điểm đánh giá
             var diemTrungBinh = danhGias.Any() ? danhGias.Average(dg => dg.DiemDanhGia) : 0;
             diem = Math.Round((double)diemTrungBinh, 1);
         }

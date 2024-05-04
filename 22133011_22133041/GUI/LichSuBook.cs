@@ -20,8 +20,7 @@ namespace GUI
         }
         private void LichSuBook_Load(object sender, EventArgs e)
         {
-            dPDAO.LichSuBookLoad(flpLichSuBook);
-            
+            dPDAO.LichSuBookLoad(flpLichSuBook);           
         }      
     }   
 }

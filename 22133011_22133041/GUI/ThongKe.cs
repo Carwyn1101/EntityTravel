@@ -13,7 +13,6 @@ namespace GUI
 {
     public partial class ThongKe : Form
     {
-        ThongTinKhachSanDAO kSDAO = new ThongTinKhachSanDAO();
         Chart chartDoanhThu = new Chart();
         public ThongKe()
         {

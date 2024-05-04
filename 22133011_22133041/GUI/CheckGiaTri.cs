@@ -19,7 +19,6 @@ namespace GUI
         {
             return !string.IsNullOrWhiteSpace(rtextBox.Text);
         }
-
         public bool ValidComboBoxIsNotNullOrWhitespace(ComboBox cbBox)
         {
             return !string.IsNullOrWhiteSpace(cbBox.Text);
@@ -30,20 +29,15 @@ namespace GUI
         }
         public bool ValidPhoneNumber(string phoneNumber)
         {
-            //Kiểm tra số điện thoại có 10 chữ số và bắt đầu bằng số 0
-
             phoneNumber = phoneNumber.Replace(" ", "").Replace("-", "");
-
             if (phoneNumber.Length != 10)
             {
                 return false;
             }
-
             if (!phoneNumber.StartsWith("0"))
             {
                 return false;
             }
-
             foreach (char c in phoneNumber)
             {
                 if (!char.IsDigit(c))
@@ -55,10 +49,7 @@ namespace GUI
         }
         public bool ValidEmail(string email)
         {
-            // Biểu thức chính quy để kiểm tra định dạng email
             string emailPattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
-
-            // Kiểm tra email sử dụng biểu thức chính quy
             return Regex.IsMatch(email, emailPattern);
         }
         public bool NgayCheckOut(DateTime ngayNhanPhong, DateTime ngayTraPhong)
@@ -73,7 +64,6 @@ namespace GUI
         public bool CheckValid(Control parentControl)
         {
             bool valid = true;
-
             foreach (Control control in parentControl.Controls)
             {
                 if (control is Guna2TextBox textBox)

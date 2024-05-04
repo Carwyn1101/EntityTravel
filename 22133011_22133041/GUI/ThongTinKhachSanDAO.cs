@@ -49,50 +49,51 @@ namespace GUI
                     if (tmp.NgayTraPhong.Value.Date >= date.Date)
                     {
                         MessageBox.Show("Khách sạn đang có phòng được thuê không thể thực hiện!");
-                    }                            
+                        return;
+                    }  
                     else
                     {
                         dB.DatPhongs.Remove(tmp);
-                        dB.SaveChanges();
-                        var danhGia = from c in dB.DanhGias where c.IDKhachSan == iDKhachSan select c;
-                        if (danhGia.Any())
-                        {
-                            foreach (var tmp3 in danhGia)
-                            {
-                                dB.DanhGias.Remove(tmp3);
-                            }
-                            dB.SaveChanges();
-                        }
-                        var hDon = from b in dB.HoaDons where b.ThongTinPhongCuaKhachSan.IDKhachSan == iDKhachSan select b;
-                        if (hDon.Any())
-                        {
-                            foreach (var tmp1 in hDon)
-                            {
-                                dB.HoaDons.Remove(tmp1);
-                            }
-                            dB.SaveChanges();
-                        }
-                        var maGiam = from p in dB.MaGiamGias where p.IDKhachSan == iDKhachSan select p;
-                        if (maGiam.Any())
-                        {
-                            foreach (var tmp1 in maGiam)
-                            {
-                                dB.MaGiamGias.Remove(tmp1);
-                            }
-                            dB.SaveChanges();
-                        }    
-                        var phong1 = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
-                        foreach (var tmp2 in phong1)
-                        {
-                            dB.ThongTinPhongCuaKhachSans.Remove(tmp2);
-                        }
-                        dB.SaveChanges();                       
-                        var khachSan = dB.ThongTinKhachSans.FirstOrDefault(c2 => c2.IDKhachSan == iDKhachSan);
-                        dB.ThongTinKhachSans.Remove(khachSan);
-                        dB.SaveChanges();
-                        MessageBox.Show("Xóa khách sạn thành công!");
                     }
                 }               
+                dB.SaveChanges();
+                var danhGia = from c in dB.DanhGias where c.IDKhachSan == iDKhachSan select c;
+                if (danhGia.Any())
+                {
+                    foreach (var tmp3 in danhGia)
+                    {
+                        dB.DanhGias.Remove(tmp3);
+                    }
+                    dB.SaveChanges();
+                }
+                var hDon = from b in dB.HoaDons where b.ThongTinPhongCuaKhachSan.IDKhachSan == iDKhachSan select b;
+                if (hDon.Any())
+                {
+                    foreach (var tmp1 in hDon)
+                    {
+                        dB.HoaDons.Remove(tmp1);
+                    }
+                    dB.SaveChanges();
+                }
+                var maGiam = from p in dB.MaGiamGias where p.IDKhachSan == iDKhachSan select p;
+                if (maGiam.Any())
+                {
+                    foreach (var tmp1 in maGiam)
+                    {
+                        dB.MaGiamGias.Remove(tmp1);
+                    }
+                    dB.SaveChanges();
+                }
+                var phong1 = from c1 in dB.ThongTinPhongCuaKhachSans where c1.IDKhachSan == iDKhachSan select c1;
+                foreach (var tmp2 in phong1)
+                {
+                    dB.ThongTinPhongCuaKhachSans.Remove(tmp2);
+                }
+                dB.SaveChanges();
+                var khachSan = dB.ThongTinKhachSans.FirstOrDefault(c2 => c2.IDKhachSan == iDKhachSan);
+                dB.ThongTinKhachSans.Remove(khachSan);
+                dB.SaveChanges();
+                MessageBox.Show("Xóa khách sạn thành công!");
             }
             else
             {
@@ -265,10 +266,8 @@ namespace GUI
                         tongDoanhThu += giaTri;
                     }
                 }
-
                 danhSachDoanhThu.Add(khachSan.TenKhachSan, tongDoanhThu);
             }
-
             return danhSachDoanhThu;
         }
     }

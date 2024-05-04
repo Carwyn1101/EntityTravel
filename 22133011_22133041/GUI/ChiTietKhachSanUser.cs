@@ -20,13 +20,14 @@ namespace GUI
         public ChiTietKhachSanUser()
         {
             InitializeComponent();
+            Program.ChiTietKhachSanUserInstance = this;
         }                     
         private void ChiTietKhachSanUser_Load(object sender, EventArgs e)
         {
             kSanDAO.LoadChiTietKhachSanUser(this, Program.iDKhachSanInstance);
             dtpNgayNhanPhong.Value = DateTime.Now;
             dtpNgayTraPhong.Value = DateTime.Now;
-        }                       
+        }   
         private void ResetCheckBoxes()
         {
             checkBoxPhoBien1.Checked = false;
@@ -120,7 +121,6 @@ namespace GUI
                 HandleCheckBoxCheckedChanged(sender, e);
             }
         }
-
         private void checkBoxHuongTamNhin1_CheckedChanged(object sender, EventArgs e)
         {
             checkBoxHuongTamNhin1.Tag = 4;

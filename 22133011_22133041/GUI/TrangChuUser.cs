@@ -14,7 +14,6 @@ namespace GUI
     public partial class TrangChuUser : Form
     {
         ThongTinKhachSanDAO kSanDAO = new ThongTinKhachSanDAO();
-        DatPhongDAO dPDAO = new DatPhongDAO();
         bool logOut;
         public TrangChuUser()
         {
@@ -42,12 +41,12 @@ namespace GUI
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                logOut = true; // Đánh dấu đã đăng xuất
+                logOut = true; 
                 this.Hide();
                 DangNhap f = new DangNhap(logOut);
                 f.ShowDialog();
                 f = null;
-                this.Close(); // Đóng form đăng nhập khi đã đăng xuất
+                this.Close(); 
             }
         }
         public void ReLoad()

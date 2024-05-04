@@ -22,7 +22,8 @@ namespace GUI
         DatPhongDAO datPhongDAO = new DatPhongDAO();
         UuDaiDAO uuDaiDAO = new UuDaiDAO();
         CheckGiaTri check = new CheckGiaTri();
-        int stt; string tmpTongTien;private int soLanAnBtnThue = 0, soLanAnBtnThanhToan = 0, soLanAnBtnLuu = 0;     
+        int stt; string tmpTongTien;
+        int soLanAnBtnThue = 0, soLanAnBtnThanhToan = 0, soLanAnBtnLuu = 0;     
         public ChiTietPhongCuaKhachSanUser()
         {
             InitializeComponent();           
@@ -113,7 +114,6 @@ namespace GUI
                 hd.NgayTraPhong = DateTime.ParseExact(txtNgayTraPhong.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
                 hd.TongTien = txtTongTienThanhToan.Text;
                 hd.IDPhong = Program.iDPhongInstance;
-
                 hoaDonDAO.Them(hd);
                 DatPhong dp = new DatPhong();
                 dp.NgayNhanPhong = DateTime.ParseExact(txtNgayNhanPhong.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
@@ -123,6 +123,7 @@ namespace GUI
                 dp.IDKhachHang = Program.iDTaiKhoanInstance;
                 datPhongDAO.Them(dp);            
                 soLanAnBtnThanhToan++;
+                this.Close();
             }    
         }
         private void TinhTongTien()

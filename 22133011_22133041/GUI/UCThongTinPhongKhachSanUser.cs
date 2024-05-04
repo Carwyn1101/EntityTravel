@@ -30,6 +30,7 @@ namespace GUI
             Program.iDPhongInstance = iD;
             ChiTietPhongCuaKhachSanUser f = new ChiTietPhongCuaKhachSanUser();
             f.ShowDialog();
+            Program.ChiTietKhachSanUserInstance.Close();
         }
     }
 }

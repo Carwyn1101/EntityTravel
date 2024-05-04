@@ -156,61 +156,61 @@ CREATE TABLE DanhGia
 );
 Go
 insert into DanhGia values 
-(N'A',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',1)
+(N'Sang',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',1)
 insert into DanhGia values 
-(N'B',N'Tốt','8',N'View biển đẹp, trung tâm thành phố',2)
+(N'Sơn',N'Tốt','8',N'View biển đẹp, trung tâm thành phố',2)
 insert into DanhGia values 
-(N'C',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',3)
+(N'Phúc',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',3)
 insert into DanhGia values 
-(N'D',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',4)
+(N'Dương',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',4)
 insert into DanhGia values 
-(N'E',N'Tuyệt Hảo','10',N'View biển đẹp, trung tâm thành phố',5)
+(N'Thao',N'Tuyệt Hảo','10',N'View biển đẹp, trung tâm thành phố',5)
 insert into DanhGia values 
-(N'F',N'Tuyệt Hảo','10',N'View biển đẹp, trung tâm thành phố',6)
+(N'Vũ',N'Tuyệt Hảo','10',N'View biển đẹp, trung tâm thành phố',6)
 insert into DanhGia values 
-(N'D',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',7)
+(N'Hoàng',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',7)
 insert into DanhGia values 
-(N'E',N'Tốt','8',N'View biển đẹp, trung tâm thành phố',8)
+(N'Tiến',N'Tốt','8',N'View biển đẹp, trung tâm thành phố',8)
 insert into DanhGia values 
-(N'F',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',9)
+(N'Huy',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',9)
 
 insert into DanhGia values 
-(N'A',N'Tốt','8',N'Phòng sạch sẽ, thoải mái, view ban công đẹp',1)
+(N'Lựu',N'Tốt','8',N'Phòng sạch sẽ, thoải mái, view ban công đẹp',1)
 insert into DanhGia values 
-(N'B',N'Tốt','7',N'Đồ ăn ngon, nhân viên nhiệt tình',2)
+(N'Lê',N'Tốt','7',N'Đồ ăn ngon, nhân viên nhiệt tình',2)
 insert into DanhGia values 
-(N'C',N'Tuyệt Hảo','10',N'Khách sạn rất đẹp, bữa sáng ngon, địa điểm gần bãi biển',3)
+(N'Loan',N'Tuyệt Hảo','10',N'Khách sạn rất đẹp, bữa sáng ngon, địa điểm gần bãi biển',3)
 insert into DanhGia values 
-(N'D',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',4)
+(N'Thư',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',4)
 insert into DanhGia values 
-(N'E',N'Tạm','6',N'Nhân viên thái độ làm việc không chuyên nghiệp',5)
+(N'Tú',N'Tạm','6',N'Nhân viên thái độ làm việc không chuyên nghiệp',5)
 insert into DanhGia values 
-(N'F',N'Tạm','5',N'Phòng hơi bẩn',6)
+(N'Trang',N'Tạm','5',N'Phòng hơi bẩn',6)
 insert into DanhGia values 
-(N'D',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',7)
+(N'Thi',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',7)
 insert into DanhGia values 
-(N'A',N'Tốt','8',N'Phòng sạch sẽ, thoải mái, view ban công đẹp',8)
+(N'Thảo',N'Tốt','8',N'Phòng sạch sẽ, thoải mái, view ban công đẹp',8)
 insert into DanhGia values 
-(N'B',N'Tốt','7',N'Đồ ăn ngon, nhân viên nhiệt tình',9)
+(N'Thu',N'Tốt','7',N'Đồ ăn ngon, nhân viên nhiệt tình',9)
 
 insert into DanhGia values 
-(N'A',N'Tốt','8',N'Phòng sạch sẽ, thoải mái, view ban công đẹp',1)
+(N'Thúy',N'Tốt','8',N'Phòng sạch sẽ, thoải mái, view ban công đẹp',1)
 insert into DanhGia values 
-(N'B',N'Tốt','7',N'Đồ ăn ngon, nhân viên nhiệt tình',2)
+(N'Thùy',N'Tốt','7',N'Đồ ăn ngon, nhân viên nhiệt tình',2)
 insert into DanhGia values 
-(N'C',N'Tuyệt Hảo','10',N'Khách sạn rất đẹp, bữa sáng ngon, địa điểm gần bãi biển',3)
+(N'Thủy',N'Tuyệt Hảo','10',N'Khách sạn rất đẹp, bữa sáng ngon, địa điểm gần bãi biển',3)
 insert into DanhGia values 
-(N'D',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',4)
+(N'Yến',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',4)
 insert into DanhGia values 
-(N'E',N'Tạm','6',N'Nhân viên thái độ làm việc không chuyên nghiệp',5)
+(N'Mai',N'Tạm','6',N'Nhân viên thái độ làm việc không chuyên nghiệp',5)
 insert into DanhGia values 
-(N'F',N'Tạm','5',N'Phòng hơi bẩn',6)
+(N'Đào',N'Tạm','5',N'Phòng hơi bẩn',6)
 insert into DanhGia values 
-(N'D',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',7)
+(N'Hồng',N'Tuyệt Hảo','9',N'View biển đẹp, trung tâm thành phố',7)
 insert into DanhGia values 
-(N'A',N'Tốt','8',N'Phòng sạch sẽ, thoải mái, view ban công đẹp',8)
+(N'Peter',N'Tốt','8',N'Phòng sạch sẽ, thoải mái, view ban công đẹp',8)
 insert into DanhGia values 
-(N'B',N'Tốt','7',N'Đồ ăn ngon, nhân viên nhiệt tình',9)
+(N'An',N'Tốt','7',N'Đồ ăn ngon, nhân viên nhiệt tình',9)
 Go
 CREATE TABLE ThongTinKhachHang
 (
@@ -223,9 +223,9 @@ CREATE TABLE ThongTinKhachHang
 );
 Go
 insert into ThongTinKhachHang values 
-(3,'Tran Khanh Duong','0123456789','11111111','duong@gmail.com')
+(3,N'Trần Khánh Dương','0123456789','11111111','duong@gmail.com')
 insert into ThongTinKhachHang values 
-(4,'Nguyen Dinh Hong Phuc','0123456789','11111111','phuc@gmail.com')
+(4,N'Nguyễn Đinh Hồng Phúc','0123456789','11111111','phuc@gmail.com')
 Go
 CREATE TABLE DatPhong
 (
@@ -239,9 +239,9 @@ CREATE TABLE DatPhong
 );
 Go
 insert into DatPhong values 
-('2024-04-15','2024-04-17','Đã được thuê',3,4,2)
+('2024-04-15','2024-04-17',N'Đã được thuê',3,4,2)
 insert into DatPhong values 
-('2024-04-15','2024-04-17','Đã được thuê',4,5,2)
+('2024-04-15','2024-04-17',N'Đã được thuê',4,5,2)
 Go
 CREATE TABLE HoaDon
 (
@@ -259,10 +259,9 @@ CREATE TABLE HoaDon
 );
 Go
 insert into HoaDon values 
-(1,'Tran Khanh Duong','0123456789','11111111','duong@gmail.com','2024-04-15','2024-04-15','2024-04-17','1000000',4)
+(1,N'Trần Khánh Dương','0123456789','11111111','duong@gmail.com','2024-04-15','2024-04-15','2024-04-17','1000000',4)
 insert into HoaDon values 
-(2,'Nguyen Dinh Hong Phuc','0123456789','11111111','phuc@gmail.com','2024-04-15','2024-04-15','2024-04-17','1400000',5)
-
+(2,N'Nguyễn Đinh Hồng Phúc','0123456789','11111111','phuc@gmail.com','2024-04-15','2024-04-15','2024-04-17','1400000',5)
 
 SELECT *FROM TaiKhoan
 SELECT *FROM ThongTinKhachSan
