@@ -16,7 +16,7 @@ namespace GUI
             Program.iDTaiKhoanInstance = kq.IDNguoiDung;
             if (f.txtTenDangNhap.Text == kq.TenDangNhap && f.txtMatKhau.Text == kq.MatKhau && kq.LoaiNguoiDung == loaiTaiKhoan)
             {
-                MessageBox.Show("Đăng Nhập Thành Công", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                MessageBox.Show("Đăng Nhập Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 f.Hide();
                 if(kq.LoaiNguoiDung == "admin")
                 {

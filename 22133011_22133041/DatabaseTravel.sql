@@ -9,13 +9,9 @@ CREATE TABLE TaiKhoan
 );
 Go
 insert into TaiKhoan values
-(1,'admin1','123','admin');
+(1,'admin','123','admin');
 insert into TaiKhoan values
-(2,'admin2','123','admin');
-insert into TaiKhoan values
-(3,'duong','123','user');
-insert into TaiKhoan values
-(4,'phuc','123','user');
+(2,'user','123','user');
 Go
 CREATE TABLE ThongTinKhachSan
 (
@@ -44,11 +40,11 @@ insert into ThongTinKhachSan(TenKhachSan, DiaDiemKhachSan, Loai, MoTa, HinhAnh1,
 insert into ThongTinKhachSan(TenKhachSan, DiaDiemKhachSan, Loai, MoTa, HinhAnh1, HinhAnh2, HinhAnh3, HinhAnh4, IDChuKhachSan )values 
 ('Heaven',N'Đà Nẵng','Hotel',N'View biển, gần trung tâm thành phố','13.jpg','1.jpg','3.jpg','4.jpg',1)
 insert into ThongTinKhachSan(TenKhachSan, DiaDiemKhachSan, Loai, MoTa, HinhAnh1, HinhAnh2, HinhAnh3, HinhAnh4, IDChuKhachSan ) values 
-('LoTus',N'Huế','Homestay',N'View biển, gần trung tâm thành phố','14.jpg','1.jpg','3.jpg','4.jpg',2)
+('LoTus',N'Huế','Homestay',N'View biển, gần trung tâm thành phố','14.jpg','1.jpg','3.jpg','4.jpg',1)
 insert into ThongTinKhachSan(TenKhachSan, DiaDiemKhachSan, Loai, MoTa, HinhAnh1, HinhAnh2, HinhAnh3, HinhAnh4, IDChuKhachSan )values 
-('SunSet',N'Nha Trang','Homestay',N'View biển, gần trung tâm thành phố','15.jpg','1.jpg','3.jpg','4.jpg',2)
+('SunSet',N'Nha Trang','Homestay',N'View biển, gần trung tâm thành phố','15.jpg','1.jpg','3.jpg','4.jpg',1)
 insert into ThongTinKhachSan(TenKhachSan, DiaDiemKhachSan, Loai, MoTa, HinhAnh1, HinhAnh2, HinhAnh3, HinhAnh4, IDChuKhachSan )values 
-('LuNa House',N'Đà Nẵng','Homestay',N'Giá rẻ','16.jpg','1.jpg','3.jpg','4.jpg',2)
+('LuNa House',N'Đà Nẵng','Homestay',N'Giá rẻ','16.jpg','1.jpg','3.jpg','4.jpg',1)
 Go
 CREATE TABLE ThongTinPhongCuaKhachSan
 (
@@ -145,6 +141,25 @@ CREATE TABLE MaGiamGia
 	GiaTri int,
 	IDKhachSan INT Foreign key References ThongTinKhachSan(IDKhachSan),
 );
+
+insert into MaGiamGia values
+(N'Royal Family','10',1);
+insert into MaGiamGia values
+(N'Bell YuNi','10',2);
+insert into MaGiamGia values
+(N'Flower Boutique','10',3);
+insert into MaGiamGia values
+(N'Sea Hotel','10',4);
+insert into MaGiamGia values
+(N'Golden Light','10',5);
+insert into MaGiamGia values
+(N'Heaven','10',6);
+insert into MaGiamGia values
+(N'LoTus','10',7);
+insert into MaGiamGia values
+(N'SunSet','10',8);
+insert into MaGiamGia values
+(N'LuNa House','10',9);
 CREATE TABLE DanhGia
 (
 	IDDanhGia INT PRIMARY KEY IDENTITY,
@@ -223,9 +238,9 @@ CREATE TABLE ThongTinKhachHang
 );
 Go
 insert into ThongTinKhachHang values 
-(3,N'Trần Khánh Dương','0123456789','11111111','duong@gmail.com')
+(2,N'Trần Khánh Dương','0123456789','11111111','duong@gmail.com')
 insert into ThongTinKhachHang values 
-(4,N'Nguyễn Đinh Hồng Phúc','0123456789','11111111','phuc@gmail.com')
+(2,N'Nguyễn Đinh Hồng Phúc','0123456789','11111111','phuc@gmail.com')
 Go
 CREATE TABLE DatPhong
 (
@@ -239,9 +254,9 @@ CREATE TABLE DatPhong
 );
 Go
 insert into DatPhong values 
-('2024-04-15','2024-04-17',N'Đã được thuê',3,4,2)
+('2024-04-15','2024-04-17',N'Đã được thuê',2,4,2)
 insert into DatPhong values 
-('2024-04-15','2024-04-17',N'Đã được thuê',4,5,2)
+('2024-04-15','2024-04-17',N'Đã được thuê',2,5,2)
 Go
 CREATE TABLE HoaDon
 (

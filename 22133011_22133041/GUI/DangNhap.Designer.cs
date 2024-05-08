@@ -62,7 +62,7 @@
             this.PanelLogin.Controls.Add(this.txtMatKhau);
             this.PanelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.799999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin.Location = new System.Drawing.Point(3, 2);
-            this.PanelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelLogin.Margin = new System.Windows.Forms.Padding(4);
             this.PanelLogin.Name = "PanelLogin";
             this.PanelLogin.Size = new System.Drawing.Size(667, 732);
             this.PanelLogin.TabIndex = 7;
@@ -77,7 +77,7 @@
             this.ImageButtonFB.ImageRotate = 0F;
             this.ImageButtonFB.ImageSize = new System.Drawing.Size(60, 60);
             this.ImageButtonFB.Location = new System.Drawing.Point(136, 565);
-            this.ImageButtonFB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ImageButtonFB.Margin = new System.Windows.Forms.Padding(4);
             this.ImageButtonFB.Name = "ImageButtonFB";
             this.ImageButtonFB.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.ImageButtonFB.Size = new System.Drawing.Size(93, 86);
@@ -145,7 +145,7 @@
             // 
             this.PBTwitter.Image = ((System.Drawing.Image)(resources.GetObject("PBTwitter.Image")));
             this.PBTwitter.Location = new System.Drawing.Point(281, 565);
-            this.PBTwitter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PBTwitter.Margin = new System.Windows.Forms.Padding(4);
             this.PBTwitter.Name = "PBTwitter";
             this.PBTwitter.Size = new System.Drawing.Size(112, 86);
             this.PBTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +163,7 @@
             this.ImageButtonInsta.ImageRotate = 0F;
             this.ImageButtonInsta.ImageSize = new System.Drawing.Size(70, 70);
             this.ImageButtonInsta.Location = new System.Drawing.Point(448, 565);
-            this.ImageButtonInsta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ImageButtonInsta.Margin = new System.Windows.Forms.Padding(4);
             this.ImageButtonInsta.Name = "ImageButtonInsta";
             this.ImageButtonInsta.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.ImageButtonInsta.Size = new System.Drawing.Size(85, 79);
@@ -173,7 +173,7 @@
             // 
             this.chkAccUser.AutoSize = true;
             this.chkAccUser.Location = new System.Drawing.Point(443, 444);
-            this.chkAccUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkAccUser.Margin = new System.Windows.Forms.Padding(4);
             this.chkAccUser.Name = "chkAccUser";
             this.chkAccUser.Size = new System.Drawing.Size(57, 20);
             this.chkAccUser.TabIndex = 10;
@@ -186,7 +186,7 @@
             // 
             this.chkAccAdmin.AutoSize = true;
             this.chkAccAdmin.Location = new System.Drawing.Point(165, 444);
-            this.chkAccAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkAccAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.chkAccAdmin.Name = "chkAccAdmin";
             this.chkAccAdmin.Size = new System.Drawing.Size(66, 20);
             this.chkAccAdmin.TabIndex = 9;
@@ -209,7 +209,7 @@
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Location = new System.Drawing.Point(165, 382);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(340, 42);
             this.btnDangNhap.TabIndex = 4;
@@ -257,7 +257,7 @@
             this.PictureBox.Image = global::GUI.Properties.Resources._9;
             this.PictureBox.ImageRotate = 0F;
             this.PictureBox.Location = new System.Drawing.Point(669, -80);
-            this.PictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox.Name = "PictureBox";
             this.PictureBox.Size = new System.Drawing.Size(675, 814);
             this.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,10 +268,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1339, 737);
+            this.ClientSize = new System.Drawing.Size(1339, 738);
             this.Controls.Add(this.PanelLogin);
             this.Controls.Add(this.PictureBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangNhap";

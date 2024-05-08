@@ -31,10 +31,10 @@ namespace GUI
             dB.SaveChanges();
             MessageBox.Show("Thêm Ưu Đãi Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        public void XoaUuDai(string maGiam)
+        public void XoaUuDai(int maGiam)
         {
-            var kq = (from p in dB.MaGiamGias where p.MaGiam == maGiam select p).SingleOrDefault();
-            dB.MaGiamGias.Remove(kq);
+            MaGiamGia mGiam = dB.MaGiamGias.Find(maGiam);
+            dB.MaGiamGias.Remove(mGiam);
             dB.SaveChanges();
             MessageBox.Show("Xóa Ưu Đãi Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

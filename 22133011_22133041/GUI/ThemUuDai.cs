@@ -38,7 +38,8 @@ namespace GUI
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            uuDaiDAO.XoaUuDai(txtMaGiamGia.Text);
+            int soMa = Convert.ToInt32(dtgvDanhSachMaGiam.SelectedCells[0].OwningRow.Cells["STTMa"].Value.ToString());
+            uuDaiDAO.XoaUuDai(soMa);
             ReLoad();
         }
         private void btnSua_Click(object sender, EventArgs e)
