@@ -254,9 +254,9 @@ CREATE TABLE DatPhong
 );
 Go
 insert into DatPhong values 
-('2024-04-15','2024-04-17',N'Đã được thuê',2,4,2)
+('2024-05-8','2024-05-10',N'Đã được thuê',2,4,2)
 insert into DatPhong values 
-('2024-04-15','2024-04-17',N'Đã được thuê',2,5,2)
+('2024-05-8','2024-05-10',N'Đã được thuê',2,5,2)
 Go
 CREATE TABLE HoaDon
 (
